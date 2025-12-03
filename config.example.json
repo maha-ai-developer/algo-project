@@ -1,0 +1,5 @@
+{
+  "api_key": "your_kite_api_key_here",
+  "api_secret": "your_kite_api_secret_here",
+  "access_token": ""   // will be filled by script after login step
+}
