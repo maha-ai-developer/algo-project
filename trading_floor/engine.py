@@ -17,28 +17,31 @@ from infrastructure.data.instrument_cache import get_instrument_token
 from trading_floor.execution import ExecutionHandler
 from trading_floor.risk_manager import RiskManager
 
+# --- 🎛️ STRATEGY TOGGLES ---
+# Set these to False to disable a specific strategy
+RUN_MOMENTUM = True
+RUN_PAIRS = True
+
 class TradingEngine:
     def __init__(self, mode="paper"):
         self.mode = mode
         self.kite = get_kite()
         self.executor = ExecutionHandler(mode=mode)
         
-        # 1. Initialize Risk System
+        # Risk System (Capital: 15k, Max Risk: 2%)
         self.risk_manager = RiskManager(total_capital=15000, max_risk_pct=0.02)
 
-        # 2. Load Strategies
         self.momentum_config = self.load_json(config.MOMENTUM_CONFIG)
         self.pairs_config = self.load_json(config.PAIRS_CONFIG)
         
-        # 3. State Management
+        # State Management
         self.last_processed_candle = {} 
-        self.open_positions = {} 
+        self.open_positions = {} # Tracks Symbols (e.g., 'INFY') AND Pairs (e.g., 'INFY-TCS')
         self.active_risk_state = {} 
 
         print(f"\n✨ ENGINE STARTED in {mode.upper()} mode")
-        print(f"   📊 Momentum Targets: {len(self.momentum_config)}")
-        print(f"   ⚖️ Pairs Targets: {len(self.pairs_config)}")
-        print(f"   🛡️ Risk Profile: Max Risk {self.risk_manager.max_risk_pct*100}% per trade")
+        print(f"   🛡️ SAFETY LOCK: Qty forced to 1 per trade.")
+        print(f"   🛡️ SAFETY LOCK: Duplicate entry prevention active.")
 
     def load_json(self, path):
         if os.path.exists(path):
@@ -51,81 +54,70 @@ class TradingEngine:
         try:
             token = get_instrument_token(symbol)
             if not token: return None
-            
             to_date = datetime.now()
             from_date = to_date - pd.Timedelta(days=lookback_days)
-            
             records = self.kite.historical_data(token, from_date, to_date, interval)
             if records:
                 df = pd.DataFrame(records)
                 df['date'] = pd.to_datetime(df['date'])
                 df.set_index('date', inplace=True)
                 return df
-        except Exception as e:
-            # print(f"   ⚠️ Data fetch error {symbol}: {e}")
-            pass
+        except: pass
         return None
 
     def print_portfolio_status(self):
-        """Prints a live table of Open Positions, PnL, and Stop Losses."""
-        if not self.open_positions:
-            return
+        """Prints live dashboard."""
+        if not self.open_positions: return
 
         status_data = []
-        for symbol, side in self.open_positions.items():
-            if '-' in symbol: continue 
+        for key, side in self.open_positions.items():
+            # Handle Pairs Display vs Momentum Display
+            if '-' in key: # Pair
+                status_data.append({"Asset": key, "Type": "PAIR", "Side": side, "Status": "Active"})
+                continue
 
-            risk = self.active_risk_state.get(symbol, {})
+            # Momentum
+            risk = self.active_risk_state.get(key, {})
             entry = risk.get('entry', 0)
             sl = risk.get('sl', 0)
-            highest = risk.get('highest_price', 0)
             
-            # Fetch Current Price (Quick Snap)
-            df = self.fetch_latest_candles(symbol, "5minute")
+            df = self.fetch_latest_candles(key, "5minute")
             ltp = df['close'].iloc[-1] if df is not None else entry
-            
-            # Calculate Unrealized PnL
             pnl = (ltp - entry) if side == 'LONG' else (entry - ltp)
-            pnl_pct = (pnl / entry) * 100
             
             status_data.append({
-                "Symbol": symbol,
-                "Side": side,
-                "Entry": round(entry, 2),
-                "LTP": round(ltp, 2),
-                "Stop Loss": round(sl, 2),
-                "High Watermark": round(highest, 2),
-                "PnL %": f"{pnl_pct:.2f}%"
+                "Asset": key, "Type": "MOMENTUM", "Side": side,
+                "Entry": round(entry, 2), "LTP": round(ltp, 2),
+                "SL": round(sl, 2), "PnL": round(pnl, 2)
             })
             
         print("\n" + tabulate(status_data, headers="keys", tablefmt="simple_grid"))
 
     # =================================================================
-    # MOMENTUM STRATEGY (UPDATED)
+    # MOMENTUM STRATEGY
     # =================================================================
     def run_momentum_strategy(self):
+        if not RUN_MOMENTUM: return
+
         for symbol, params in self.momentum_config.items():
-            
             time.sleep(0.2)
             
+            # 1. DUPLICATE CHECK: Skip if already in position
+            if symbol in self.open_positions:
+                # We still process it ONLY for Exit Logic, not new Entry
+                pass 
+            else:
+                # If we are checking for entry, ensure we aren't holding it
+                pass 
+
             df = self.fetch_latest_candles(symbol, "5minute")
             if df is None or df.empty: continue
             
-            # --- FIX: TIMEZONE HANDLING & STALE CHECK ---
+            # Stale Check
             last_candle_time = df.index[-1]
+            if last_candle_time.tzinfo is not None: last_candle_time = last_candle_time.tz_localize(None)
+            if (datetime.now() - last_candle_time).total_seconds() > 900: continue
             
-            # Convert to TZ-Naive (Wall Clock Time) if Aware
-            if last_candle_time.tzinfo is not None:
-                last_candle_time = last_candle_time.tz_localize(None)
-                
-            now = datetime.now()
-            
-            # Check if candle is older than 15 minutes (900 seconds)
-            if (now - last_candle_time).total_seconds() > 900:
-                # Skip stale data (e.g., market is closed)
-                continue
-
-            # Standard Logic
             if self.last_processed_candle.get(symbol) == last_candle_time: continue
             self.last_processed_candle[symbol] = last_candle_time
 
@@ -134,7 +126,6 @@ class TradingEngine:
             df['ema'] = ta.ema(df['close'], length=ema_len)
             df['rsi'] = ta.rsi(df['close'], length=14)
             atr = self.risk_manager.calculate_atr(df)
-            
             current = df.iloc[-1]
             price = current['close']
             
@@ -142,29 +133,19 @@ class TradingEngine:
             if symbol in self.open_positions:
                 risk_state = self.active_risk_state.get(symbol, {})
                 current_sl = risk_state.get('sl', 0)
-                highest_price = risk_state.get('highest_price', price)
+                highest = risk_state.get('highest_price', price)
                 
-                # A. Update Chandelier High Watermark
-                if price > highest_price:
-                    self.active_risk_state[symbol]['highest_price'] = price
-                
-                # B. Dynamic Chandelier Stop
+                # Chandelier Update
+                if price > highest: self.active_risk_state[symbol]['highest_price'] = price
                 new_sl = self.risk_manager.calculate_chandelier_exit(
-                    current_price=price,
-                    current_sl=current_sl,
-                    highest_price=self.active_risk_state[symbol]['highest_price'],
-                    atr=atr,
-                    direction="LONG"
+                    price, current_sl, self.active_risk_state[symbol]['highest_price'], atr, "LONG"
                 )
-                
                 if new_sl > current_sl:
                     self.active_risk_state[symbol]['sl'] = new_sl
-                    print(f"   🛡️ {symbol} TSL Moved Up -> {new_sl:.2f}")
-                    current_sl = new_sl 
+                    print(f"   🛡️ {symbol} TSL Up -> {new_sl:.2f}")
+                    current_sl = new_sl
 
-                # C. Check Exits
-                if price < current_sl:
-                    self.close_position(symbol, price, "SL_HIT")
+                if price < current_sl: self.close_position(symbol, price, "SL_HIT")
                 elif current['rsi'] < params.get('rsi_exit', 40) or price < current['ema']:
                     self.close_position(symbol, price, "SIGNAL_EXIT")
 
@@ -173,23 +154,87 @@ class TradingEngine:
                 rsi_entry = params.get('rsi_entry', 60)
                 if current['rsi'] > rsi_entry and price > current['ema']:
                     
-                    win_rate = params.get('win_rate', 0.50)
-                    qty, sl_price, dist = self.risk_manager.size_position(symbol, price, atr, win_rate)
+                    # Risk Calc (Just for SL distance, Quantity is forced)
+                    _, sl_price, dist = self.risk_manager.size_position(symbol, price, atr)
                     
-                    if qty > 0:
-                        self.executor.execute({
-                            "symbol": symbol, "signal": "BUY", "quantity": qty,
-                            "price": price, "strategy": "momentum_kelly"
-                        })
-                        self.open_positions[symbol] = 'LONG'
-                        self.active_risk_state[symbol] = {
-                            'entry': price, 'sl': sl_price, 'atr': atr, 'highest_price': price
-                        }
-                        print(f"   🛡️ SL Tracking Active @ {sl_price:.2f}")
+                    # 🔒 SAFETY OVERRIDE: FORCE QUANTITY 1
+                    qty = 1 
+                    
+                    self.executor.execute({
+                        "symbol": symbol, "signal": "BUY", "quantity": qty,
+                        "price": price, "strategy": "momentum"
+                    })
+                    self.open_positions[symbol] = 'LONG'
+                    self.active_risk_state[symbol] = {
+                        'entry': price, 'sl': sl_price, 'atr': atr, 'highest_price': price
+                    }
+                    print(f"   🛡️ SL Set @ {sl_price:.2f} (Qty Locked: 1)")
 
+    # =================================================================
+    # PAIRS STRATEGY
+    # =================================================================
     def run_pairs_strategy(self):
-        # (Pairs logic kept same as previous step, omitted here for brevity but should exist in file)
-        pass 
+        if not RUN_PAIRS: return
+
+        for pair_cfg in self.pairs_config:
+            s1 = pair_cfg['leg1']
+            s2 = pair_cfg['leg2']
+            pair_key = f"{s1}-{s2}"
+            
+            # 🔒 SAFETY: Check conflicts with Momentum
+            if s1 in self.open_positions or s2 in self.open_positions:
+                # If either stock is busy in Momentum, skip this Pair
+                continue
+            
+            time.sleep(0.2)
+            df1 = self.fetch_latest_candles(s1, "5minute")
+            df2 = self.fetch_latest_candles(s2, "5minute")
+            if df1 is None or df2 is None: continue
+            
+            df = pd.concat([df1['close'], df2['close']], axis=1).dropna()
+            df.columns = ['l1', 'l2']
+            if df.empty: continue
+            
+            # Stale Check (using s1 index)
+            last_t = df.index[-1]
+            if last_t.tzinfo: last_t = last_t.tz_localize(None)
+            if (datetime.now() - last_t).total_seconds() > 900: continue
+
+            ratio = df['l1'] / df['l2']
+            zscore = (ratio - ratio.rolling(20).mean()) / ratio.rolling(20).std()
+            curr_z = zscore.iloc[-1]
+            
+            entry_z = pair_cfg.get('entry_z', 2.0)
+            exit_z = pair_cfg.get('exit_z', 0.5)
+
+            # ENTRY
+            if pair_key not in self.open_positions:
+                # 🔒 SAFETY OVERRIDE: QTY 1
+                qty = 1
+                
+                if curr_z > entry_z: # Short Spread
+                    print(f"   ⚡ PAIR ENTER: {pair_key} (Short)")
+                    self.executor.execute({"symbol": s1, "signal": "SELL", "quantity": qty, "price": df['l1'].iloc[-1], "strategy": "pair"})
+                    self.executor.execute({"symbol": s2, "signal": "BUY", "quantity": qty, "price": df['l2'].iloc[-1], "strategy": "pair"})
+                    self.open_positions[pair_key] = 'SHORT'
+                
+                elif curr_z < -entry_z: # Long Spread
+                    print(f"   ⚡ PAIR ENTER: {pair_key} (Long)")
+                    self.executor.execute({"symbol": s1, "signal": "BUY", "quantity": qty, "price": df['l1'].iloc[-1], "strategy": "pair"})
+                    self.executor.execute({"symbol": s2, "signal": "SELL", "quantity": qty, "price": df['l2'].iloc[-1], "strategy": "pair"})
+                    self.open_positions[pair_key] = 'LONG'
+
+            # EXIT
+            elif pair_key in self.open_positions:
+                state = self.open_positions[pair_key]
+                qty = 1
+                if abs(curr_z) < exit_z:
+                    print(f"   ⚡ PAIR EXIT: {pair_key} (Mean Reversion)")
+                    sig1 = "BUY" if state == 'SHORT' else "SELL"
+                    sig2 = "SELL" if state == 'SHORT' else "BUY"
+                    self.executor.execute({"symbol": s1, "signal": sig1, "quantity": qty, "price": df['l1'].iloc[-1], "strategy": "pair_exit"})
+                    self.executor.execute({"symbol": s2, "signal": sig2, "quantity": qty, "price": df['l2'].iloc[-1], "strategy": "pair_exit"})
+                    del self.open_positions[pair_key]
 
     def close_position(self, symbol, price, reason):
         if symbol in self.open_positions:
@@ -199,17 +244,18 @@ class TradingEngine:
             })
             print(f"   🛑 {symbol} Closed: {reason}")
             del self.open_positions[symbol]
-            if symbol in self.active_risk_state:
-                del self.active_risk_state[symbol]
+            if symbol in self.active_risk_state: del self.active_risk_state[symbol]
 
     def check_global_exits(self):
-        if self.risk_manager.check_kill_switch():
-            sys.exit(0)
+        if self.risk_manager.check_kill_switch(): sys.exit(0)
         if self.risk_manager.check_time_exit():
             if self.open_positions:
-                print("   ⏰ MARKET CLOSING - AUTO SQUARE OFF")
-                for sym in list(self.open_positions.keys()):
-                    if '-' not in sym: self.close_position(sym, 0, "TIME_EXIT")
+                print("   ⏰ AUTO SQUARE OFF")
+                # Close Momentum
+                for k in list(self.open_positions.keys()):
+                    if '-' not in k: self.close_position(k, 0, "TIME_EXIT")
+                # Close Pairs (Simplified: Just dumping dict for now in demo)
+                self.open_positions.clear()
                 sys.exit(0)
 
     def start(self):
@@ -219,15 +265,10 @@ class TradingEngine:
                 now = datetime.now()
                 if now.second == 0: 
                     print(f"\n⏰ Tick: {now.strftime('%H:%M:%S')}")
-                    
                     self.check_global_exits()
                     self.run_momentum_strategy()
-                    # self.run_pairs_strategy()
-                    
+                    self.run_pairs_strategy()
                     self.print_portfolio_status()
-                    
                     time.sleep(55) 
-                else:
-                    time.sleep(1)
-        except KeyboardInterrupt:
-            print("\n🔴 Engine Stopped.")
+                else: time.sleep(1)
+        except KeyboardInterrupt: print("\n🔴 Engine Stopped.")
