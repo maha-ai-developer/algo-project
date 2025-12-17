@@ -1,0 +1,11 @@
+{
+    "kite": {
+        "api_key": "YOUR_KITE_KEY_HERE",
+        "api_secret": "YOUR_KITE_SECRET_HERE",
+        "access_token": "",
+        "redirect_url": "http://127.0.0.1:5000/login"
+    },
+    "genai": {
+        "api_key": "YOUR_GOOGLE_GENAI_KEY_HERE"
+    }
+}

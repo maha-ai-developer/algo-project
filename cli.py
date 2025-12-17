@@ -2,217 +2,132 @@
 import argparse
 import sys
 import os
-from typing import Dict, Any
 
-# -----------------------------------------------------------
-# Broker authentication imports
-# -----------------------------------------------------------
-from broker.kite_auth import (
-    generate_login_url,
-    exchange_request_token,
-    get_kite,
-)
+# Add root to path so we can import 'infrastructure', 'strategies', etc.
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-# Required for fetching account details
-from broker.kite_positions import fetch_account_snapshot 
-
-# -----------------------------------------------------------
-# Core Modules
-# -----------------------------------------------------------
-from core.instrument_cache import refresh_instrument_cache
-from core.universe import UniverseBuilder
-from data_downloader import download_bulk
-
-# IMPORT THE NEW PROFESSIONAL ENGINE
-from live.engine import LiveEngine
+import infrastructure.config as config
+from infrastructure.broker.kite_auth import generate_login_url, exchange_request_token
+from infrastructure.broker.kite_positions import fetch_account_snapshot
+from infrastructure.data.data_manager import download_historical_data
 
 # ===========================================================
-# CLI COMMAND HANDLERS
+# COMMAND HANDLERS
 # ===========================================================
 
 def cmd_login(_args):
-    """Show Zerodha login URL."""
-    url = generate_login_url()
-    print("\n[LOGIN URL]\n", url)
-    print("\nSteps:")
-    print("1. Open this URL in browser")
-    print("2. Login to Zerodha Kite")
-    print("3. Copy request_token from redirect URL")
-    print("4. Run:\n   python cli.py token --request_token <request_token>\n")
+    try:
+        url = generate_login_url()
+        print("\n--- 🔐 ZERODHA LOGIN ---")
+        print(f"1. Open: {url}")
+        print("2. Login & Copy 'request_token' from URL")
+        print("3. Run: python cli.py token --request_token <TOKEN>\n")
+    except Exception as e:
+        print(f"❌ Error: {e}")
 
 def cmd_token(args):
-    """Exchange request_token -> access_token."""
-    print("[CLI] Exchanging request_token for access_token...")
+    print("\n--- 🔄 EXCHANGING TOKEN ---")
     try:
-        access_token = exchange_request_token(args.request_token)
-        print(f"[CLI] Access token updated successfully.")
+        token = exchange_request_token(args.request_token)
+        if token:
+            print(f"✅ Access Token saved to: {config.CONFIG_FILE}")
+        else:
+            print("❌ Failed.")
     except Exception as e:
-        print(f"[CLI] Error exchanging token: {e}")
-        sys.exit(1)
+        print(f"❌ Error: {e}")
 
 def cmd_account(_args):
-    """Fetches and prints the current account balance and positions."""
-    print("--- 🏦 ACCOUNT SNAPSHOT ---")
+    print("\n--- 🏦 ACCOUNT STATUS ---")
     try:
-        # fetch_account_snapshot returns 4 values: profile, margins, holdings, positions
-        result = fetch_account_snapshot()
-        
-        # Validate result structure
-        if not isinstance(result, (tuple, list)) or len(result) < 4:
-            print(f"❌ Error: API returned unexpected format: {result}")
-            return
-
-        p_obj, m_obj, h_obj, pos_obj = result
-
-        # --- 1. HANDLE PROFILE / USER INFO ---
-        print("\n💰 BALANCE INFO:")
-        user_info = "N/A"
-        if isinstance(p_obj, dict):
-            user_info = f"{p_obj.get('user_name', 'N/A')} ({p_obj.get('user_id', '')})"
-        print(f"  User:               {user_info}")
-
-        # --- 2. HANDLE MARGINS / EQUITY ---
-        net_equity = 0.0
-        available_cash = 0.0
-        
-        # The margin object is the FULL response from kite.margins()
-        if isinstance(m_obj, dict):
-            
-            # The net total equity is available directly under 'net' in the full margins dict
-            net_equity = float(m_obj.get('net', 0.0))
-            
-            # The granular details are often nested under 'equity'
-            eq = m_obj.get('equity', {})
-            
-            # 2a. Try to get Available Cash from the nested 'available' dict
-            avail_dict = eq.get('available', {})
-            if isinstance(avail_dict, dict):
-                # This should be the most reliable source for available cash
-                available_cash = float(avail_dict.get('cash', 0.0))
-            
-            # 2b. Fallback: If cash is 0, but net equity is > 0, assume available cash is net equity
-            # This handles the exact scenario you saw where the nested 'cash' is zeroed out
-            if available_cash < 1.0 and net_equity > 1.0:
-                 available_cash = net_equity
-            
-        
-        print(f"  Total Equity:       ₹ {net_equity:,.2f}")
-        print(f"  Available Cash:     ₹ {available_cash:,.2f}")
-
-        # --- 3. HANDLE POSITIONS ---
-        print("\n💼 POSITIONS:")
-        positions_list = []
-        if isinstance(pos_obj, dict):
-            positions_list = pos_obj.get("net", [])
-        elif isinstance(pos_obj, list):
-            positions_list = pos_obj
-        
-        if not positions_list:
-            print("  No open positions.")
-        else:
-            for p in positions_list:
-                if isinstance(p, dict) and int(p.get("quantity", 0)) != 0:
-                    sym = p.get('tradingsymbol', 'Unknown')
-                    qty = int(p.get('quantity'))
-                    pnl = float(p.get('pnl', 0.0))
-                    print(f"  {sym:<12} | Qty: {qty:>4} | PnL: ₹{pnl:,.2f}")
-
-        print("-----------------------------------")
-
+        profile, margins, _, positions = fetch_account_snapshot()
+        if profile:
+            print(f"👤 User: {profile.get('user_id')} | {profile.get('user_name')}")
+            print(f"💰 Cash: ₹{margins.get('net', 0):,.2f}")
+            print(f"📉 Open Positions: {len(positions.get('net', []))}")
     except Exception as e:
-        print(f"❌ ERROR fetching account data: {e}")
-        sys.exit(1)
-
-
-def cmd_instruments_refresh(_args):
-    """Refresh instrument cache."""
-    refresh_instrument_cache()
-
-def cmd_universe_build(_args):
-    """Build NIFTY 50 universe."""
-    builder = UniverseBuilder()
-    builder.build_nifty_50()
+        print(f"❌ Error: {e}")
 
 def cmd_download(args):
-    """Download historical data."""
-    download_bulk(args.symbols, args.from_date, args.to_date, args.interval)
+    """
+    Flexible Downloader:
+    1. --symbol "INFY" -> Single symbol
+    2. --file "data/artifacts/symbols.txt" -> List from file
+    """
+    print(f"\n--- ⬇️ DOWNLOADING DATA ({args.interval}) ---")
+    
+    symbols = []
+    if args.file and os.path.exists(args.file):
+        print(f"📄 Reading symbols from file: {args.file}")
+        with open(args.file, "r") as f:
+            symbols = [line.strip() for line in f if line.strip()]
+    elif args.symbol:
+        symbols = [args.symbol]
+    else:
+        print("❌ Error: Provide --symbol <NAME> or --file <PATH>")
+        return
 
+    # Use the Data Manager from Infrastructure
+    download_historical_data(symbols, args.from_date, args.to_date, args.interval)
+
+# --- RESEARCH LAB COMMANDS ---
+def cmd_scan_momentum(_args):
+    from research_lab.scan_momentum import scan_momentum
+    scan_momentum()
+
+def cmd_backtest_momentum(_args):
+    from research_lab.backtest_momentum import run_backtest
+    run_backtest()
+
+def cmd_scan_pairs(_args):
+    from research_lab.scan_pairs import scan_pairs
+    scan_pairs()
+
+def cmd_backtest_pairs(_args):
+    from research_lab.backtest_pairs import backtest_pairs
+    backtest_pairs()
+
+# --- TRADING FLOOR COMMANDS ---
 def cmd_engine(args):
-    """Start the Trading Engine."""
-    print("Starting Live Trading Engine...")
-    
-    # Process symbol files
-    momentum_symbols = []
-    if os.path.exists(args.momentum):
-        with open(args.momentum, "r") as f:
-            momentum_symbols = [line.strip().upper() for line in f if line.strip()]
-
-    # Initialize Engine
-    engine = LiveEngine(
-        symbols=momentum_symbols,
-        pair_file=args.pairs,
-        timeframe=args.timeframe,
-        place_order=args.place_order,
-        risk_pct=args.risk_pct
-    )
-    
-    # Start the core loop
+    from trading_floor.engine import TradingEngine
+    engine = TradingEngine(mode=args.mode)
     engine.start()
 
-
 def main():
-    parser = argparse.ArgumentParser(
-        description="Algo Trading CLI Tool for Data, Backtesting, and Live Trading."
-    )
-
+    parser = argparse.ArgumentParser(description="Financial Agent CLI")
     subparsers = parser.add_subparsers(title="command", dest="command", required=True)
 
-    # 1. Login
-    p_login = subparsers.add_parser("login", help="Show Zerodha login URL")
-    p_login.set_defaults(func=cmd_login)
+    # 1. AUTH & BROKER
+    subparsers.add_parser("login").set_defaults(func=cmd_login)
+    p_tok = subparsers.add_parser("token")
+    p_tok.add_argument("--request_token", required=True)
+    p_tok.set_defaults(func=cmd_token)
+    subparsers.add_parser("account").set_defaults(func=cmd_account)
 
-    # 2. Token Exchange
-    p_token = subparsers.add_parser("token", help="Exchange request_token for access_token")
-    p_token.add_argument("--request_token", required=True, help="Token from redirect URL")
-    p_token.set_defaults(func=cmd_token)
-
-    # 3. Account View (NEW COMMAND)
-    p_acc = subparsers.add_parser("account", help="View live account margin and positions")
-    p_acc.set_defaults(func=cmd_account)
-
-    # 4. Instruments
-    p_inst = subparsers.add_parser("instruments-refresh", help="Refresh instrument cache")
-    p_inst.set_defaults(func=cmd_instruments_refresh)
-
-    # 5. Universe
-    p_uni = subparsers.add_parser("universe-build", help="Build NIFTY 50 universe")
-    p_uni.set_defaults(func=cmd_universe_build)
-
-    # 6. Download
-    p_dl = subparsers.add_parser("download", help="Download historical data")
-    p_dl.add_argument("--symbols", default="symbols.txt", help="File containing symbols")
+    # 2. DATA
+    p_dl = subparsers.add_parser("download", help="Download Historical Data")
+    p_dl.add_argument("--symbol", help="Single Symbol (e.g. RELIANCE)")
+    p_dl.add_argument("--file", help="Path to symbols file")
     p_dl.add_argument("--from-date", required=True, help="YYYY-MM-DD")
     p_dl.add_argument("--to-date", required=True, help="YYYY-MM-DD")
-    p_dl.add_argument("--interval", default="5m", help="5m, 15m, 60m, day")
+    p_dl.add_argument("--interval", default="5m", help="5m, day")
     p_dl.set_defaults(func=cmd_download)
 
-    # 7. ENGINE (UPDATED TO USE PRO SYSTEM)
-    p_eng = subparsers.add_parser("engine", help="Start the Trading Engine")
-    p_eng.add_argument("--momentum", default="symbols.txt", help="Path to momentum symbols file")
-    p_eng.add_argument("--pairs", default="live_pairs.txt", help="Path to pairs file")
-    p_eng.add_argument("--timeframe", default="5m", help="Candle interval (e.g., 5m)")
-    p_eng.add_argument("--place-order", action="store_true", help="Set to place live orders (DANGER!)")
-    p_eng.add_argument("--risk-pct", type=float, default=1.0, help="Risk percent per trade (e.g., 1.0)")
+    # 3. RESEARCH LAB
+    subparsers.add_parser("scan_momentum").set_defaults(func=cmd_scan_momentum)
+    subparsers.add_parser("backtest_momentum").set_defaults(func=cmd_backtest_momentum)
+    subparsers.add_parser("scan_pairs").set_defaults(func=cmd_scan_pairs)
+    subparsers.add_parser("backtest_pairs").set_defaults(func=cmd_backtest_pairs)
+
+    # 4. TRADING FLOOR
+    p_eng = subparsers.add_parser("engine")
+    p_eng.add_argument("--mode", default="paper", choices=["paper", "live"])
     p_eng.set_defaults(func=cmd_engine)
 
-
-    # Parse and Execute
-    if len(sys.argv) == 1:
-        parser.print_help(sys.stderr)
-        sys.exit(1)
-
     args = parser.parse_args()
-    args.func(args)
+    if hasattr(args, 'func'):
+        args.func(args)
+    else:
+        parser.print_help()
 
 if __name__ == "__main__":
     main()

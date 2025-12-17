@@ -1,15 +1,27 @@
-# Sensitive Configs
-config/config.json
-config/kite_session.json
-
-# System & Environment
+# --- Python & Environment ---
 __pycache__/
 *.pyc
 venv/
 .env
+.DS_Store
 
-# Data & Logs (Local only)
-data/
-logs/
-db/trades.db
-backtest_results.csv
+# --- Configuration (SENSITIVE) ---
+# Ignore the real config files containing keys
+infrastructure/config/config.json
+infrastructure/config/kite_session.json
+
+# --- Data & Runtime ---
+# Ignore large datasets and logs
+data/historical/
+data/cache/
+data/logs/
+data/trades.db
+
+# --- Generated Artifacts ---
+# Ignore generated reports and scan results
+data/artifacts/*.csv
+data/artifacts/*.txt
+data/artifacts/*.json
+
+# Keep the folder structures (optional, if you have .gitkeep files)
+!data/universe/.gitkeep
