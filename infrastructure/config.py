@@ -29,6 +29,7 @@ PAIRS_DOWNLOAD_FILE = os.path.join(ARTIFACTS_DIR, "pairs.txt")
 FUNDAMENTAL_FILE = os.path.join(ARTIFACTS_DIR, "fundamental_analysis.csv") 
 MOMENTUM_CONFIG = os.path.join(ARTIFACTS_DIR, "momentum_config.json")
 PAIRS_CONFIG = os.path.join(ARTIFACTS_DIR, "pairs_config.json")
+SECTOR_CACHE_FILE = os.path.join(CACHE_DIR, "sector_map.json")
 
 # --- GLOBAL SETTINGS ---
 TIMEFRAME = "5m"

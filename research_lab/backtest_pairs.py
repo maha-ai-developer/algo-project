@@ -6,143 +6,137 @@ import json
 from datetime import datetime, timedelta
 from tabulate import tabulate
 
-# Path Setup
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import infrastructure.config as config
-from infrastructure.data.data_manager import download_historical_data, DataManager
-
-def calculate_zscore(series_a, series_b, window=20):
-    ratio = series_a / series_b
-    r_mean = ratio.rolling(window=window).mean()
-    r_std = ratio.rolling(window=window).std()
-    return (ratio - r_mean) / r_std
+from infrastructure.data.data_manager import download_historical_data
 
 def run_backtest():
-    print("--- 🔙 PHASE 3b: PAIRS BACKTEST & SELECTION ---")
+    print("--- 🔙 PAIRS BACKTEST (OUT-OF-SAMPLE & COST ADJUSTED) ---")
+    
+    # 💰 REALITY CHECK PARAMETERS
+    CAPITAL_PER_LEG = 5000   # Fixed Capital per leg
+    COST_PCT = 0.001         # 0.1% per trade (Entry + Exit)
+    ENTRY_Z = 2.5            # Strict Entry
+    EXIT_Z = 0.0             # Mean Reversion
     
     # 1. Load Candidates
     if not os.path.exists(config.PAIRS_CANDIDATES_FILE):
-        print("❌ Candidates missing. Run scan_pairs.py first.")
+        print("❌ Run 'scan_pairs' first.")
         return
 
     with open(config.PAIRS_CANDIDATES_FILE, "r") as f:
         candidates = json.load(f)
 
-    # 2. Download 5-min Data (Batch)
-    pairs_txt_path = os.path.join(config.ARTIFACTS_DIR, "pairs_dataset.txt")
-    if os.path.exists(pairs_txt_path):
-        with open(pairs_txt_path, "r") as f:
-            symbols = [s.strip() for s in f.readlines() if s.strip()]
-            
-        print(f"⬇️ Fetching 1 Year 5-min Data for {len(symbols)} symbols...")
-        to_date = datetime.now().strftime("%Y-%m-%d")
-        from_date = (datetime.now() - timedelta(days=365)).strftime("%Y-%m-%d")
-        download_historical_data(symbols, from_date, to_date, interval="5m")
-
-    # 3. Run Simulation
-    results = []
+    # 2. Download TEST Data (Last 60 Days)
+    print("\n⬇️ Fetching Test Data (60 Days 5-min)...")
+    to_date = datetime.now().strftime("%Y-%m-%d")
+    from_date = (datetime.now() - timedelta(days=60)).strftime("%Y-%m-%d")
     
-    print("\n🏎️  Running Simulation on Candidates...")
+    unique_symbols = set()
+    for p in candidates:
+        unique_symbols.add(p['leg1'])
+        unique_symbols.add(p['leg2'])
+        
+    download_historical_data(list(unique_symbols), from_date, to_date, interval="5minute")
+
+    results = []
+
+    print("\n🧪 Running Simulation...")
     for pair in candidates:
         s1, s2 = pair['leg1'], pair['leg2']
         
-        # Load Data
-        df1 = DataManager.load_data(s1, "5m")
-        df2 = DataManager.load_data(s2, "5m")
-        
-        if df1 is None or df2 is None: continue
-        
-        # Align Data
-        df = pd.concat([df1['close'], df2['close']], axis=1).dropna()
-        df.columns = ['l1', 'l2']
-        
-        if len(df) < 200: continue
+        try:
+            # Load Data
+            df1 = pd.read_csv(os.path.join(config.HISTORICAL_DIR, f"{s1}_5m.csv"))
+            df2 = pd.read_csv(os.path.join(config.HISTORICAL_DIR, f"{s2}_5m.csv"))
+            
+            # Align Indices
+            df1['date'] = pd.to_datetime(df1['date'])
+            df2['date'] = pd.to_datetime(df2['date'])
+            df1.set_index('date', inplace=True)
+            df2.set_index('date', inplace=True)
+            
+            # Inner Join
+            df = pd.merge(df1['close'], df2['close'], left_index=True, right_index=True, suffixes=('_1', '_2')).dropna()
+        except Exception as e:
+            continue
 
-        # STRATEGY LOGIC: Z-Score Mean Reversion
-        # Parameters (Fixed as per instructions: "No Optimization")
-        LOOKBACK = 20
-        ENTRY_Z = 2.0
-        EXIT_Z = 0.5
+        if df.empty: continue
+
+        # Logic
+        ratio = df['close_1'] / df['close_2']
+        zscore = (ratio - ratio.rolling(20).mean()) / ratio.rolling(20).std()
         
-        df['zscore'] = calculate_zscore(df['l1'], df['l2'], window=LOOKBACK)
-        
-        position = 0 # 0=Flat, 1=Long Spread (Buy L1, Sell L2), -1=Short Spread
-        entry_ratio = 0.0
-        pnl_points = 0.0
+        position = 0 
+        pnl_cash = 0.0
         trades = 0
+        entry_p1, entry_p2 = 0, 0
         
-        # Skip warmup
-        z_vals = df['zscore'].values
-        ratios = (df['l1'] / df['l2']).values
-        
-        for i in range(LOOKBACK, len(df)):
-            z = z_vals[i]
-            r = ratios[i]
+        # Simulation Loop
+        for i in range(20, len(df)):
+            z = zscore.iloc[i]
+            p1 = df['close_1'].iloc[i]
+            p2 = df['close_2'].iloc[i]
             
-            if np.isnan(z): continue
-
-            # ENTRY LOGIC
+            # ENTRY
             if position == 0:
-                if z > ENTRY_Z: 
-                    # Spread is High -> SELL Spread (Sell L1, Buy L2)
+                if z > ENTRY_Z: # SHORT SPREAD
                     position = -1
-                    entry_ratio = r
+                    entry_p1, entry_p2 = p1, p2
+                    pnl_cash -= (CAPITAL_PER_LEG * 2) * COST_PCT 
                     trades += 1
-                elif z < -ENTRY_Z:
-                    # Spread is Low -> BUY Spread (Buy L1, Sell L2)
+                    
+                elif z < -ENTRY_Z: # LONG SPREAD
                     position = 1
-                    entry_ratio = r
+                    entry_p1, entry_p2 = p1, p2
+                    pnl_cash -= (CAPITAL_PER_LEG * 2) * COST_PCT
                     trades += 1
-            
-            # EXIT LOGIC
-            elif position == -1: # Short
-                if z < EXIT_Z: # Reverted to mean
-                    pnl_points += (entry_ratio - r) # Short profit if Ratio goes down
-                    position = 0
-            
-            elif position == 1: # Long
-                if z > -EXIT_Z: # Reverted to mean
-                    pnl_points += (r - entry_ratio) # Long profit if Ratio goes up
+
+            # EXIT
+            elif position != 0:
+                if abs(z) < EXIT_Z: # MEAN REVERSION
+                    # Dollar Neutral Sizing
+                    qty1 = int(CAPITAL_PER_LEG / entry_p1)
+                    qty2 = int(CAPITAL_PER_LEG / entry_p2)
+                    
+                    if position == -1: 
+                        diff1 = (entry_p1 - p1) * qty1 
+                        diff2 = (p2 - entry_p2) * qty2 
+                    else: 
+                        diff1 = (p1 - entry_p1) * qty1 
+                        diff2 = (entry_p2 - p2) * qty2 
+                        
+                    pnl_cash += (diff1 + diff2)
+                    pnl_cash -= (CAPITAL_PER_LEG * 2) * COST_PCT 
                     position = 0
 
-        # Calculate ROI (Approximate based on ratio points)
-        # To make it comparable, we assume 1 unit of Ratio traded
-        
         if trades > 0:
             results.append({
                 "Pair": f"{s1}-{s2}",
-                "Leg1": s1,
-                "Leg2": s2,
+                "Sector": pair.get('sector', 'N/A'),
                 "Trades": trades,
-                "Net PnL": round(pnl_points, 4),
-                "P-Value": pair['pvalue']
+                "Net PnL (₹)": round(pnl_cash, 2)
             })
 
-    # 4. Select Top 3
+    # Display Top Results
     if results:
-        df_res = pd.DataFrame(results).sort_values(by="Net PnL", ascending=False)
-        top_5 = df_res.head(5)
+        df_res = pd.DataFrame(results).sort_values(by="Net PnL (₹)", ascending=False)
+        print("\n" + tabulate(df_res.head(10), headers="keys", tablefmt="simple_grid"))
         
-        print("\n" + tabulate(top_5, headers="keys", tablefmt="grid"))
+        # Auto-Select Champion
+        best = df_res.iloc[0]
+        s1, s2 = best['Pair'].split('-')
+        print(f"\n🏆 Champion Pair: {best['Pair']} (Profit: ₹{best['Net PnL (₹)']})")
         
-        # Save Final Config
-        final_config = []
-        for _, row in top_5.iterrows():
-            final_config.append({
-                "leg1": row['Leg1'],
-                "leg2": row['Leg2'],
-                "strategy": "pairs_zscore",
-                "lookback": 20,
-                "entry_z": 2.0,
-                "exit_z": 0.5
-            })
-            
+        cfg = [{
+            "leg1": s1, "leg2": s2,
+            "entry_z": ENTRY_Z, "exit_z": EXIT_Z
+        }]
         with open(config.PAIRS_CONFIG, "w") as f:
-            json.dump(final_config, f, indent=4)
-            
-        print(f"\n✅ Top 5 Pairs saved to {config.PAIRS_CONFIG}")
+            json.dump(cfg, f, indent=4)
+        print("✅ Updated pairs_config.json with Champion Pair.")
     else:
-        print("\n❌ No profitable pairs found.")
+        print("❌ No profitable pairs found in backtest.")
 
 if __name__ == "__main__":
     run_backtest()

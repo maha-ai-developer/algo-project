@@ -40,54 +40,55 @@ def cmd_token(args):
 def cmd_account(_args):
     print("\n--- 🏦 ACCOUNT STATUS ---")
     try:
-        profile, margins, _, positions = fetch_account_snapshot()
+        profile, margins, _, _ = fetch_account_snapshot()
         if profile:
-            print(f"👤 User: {profile.get('user_id')} | {profile.get('user_name')}")
+            print(f"👤 User: {profile.get('user_name')} ({profile.get('user_id')})")
             print(f"💰 Cash: ₹{margins.get('net', 0):,.2f}")
-            print(f"📉 Open Positions: {len(positions.get('net', []))}")
     except Exception as e:
         print(f"❌ Error: {e}")
 
 def cmd_download(args):
-    """
-    Flexible Downloader:
-    1. --symbol "INFY" -> Single symbol
-    2. --file "data/artifacts/symbols.txt" -> List from file
-    """
-    print(f"\n--- ⬇️ DOWNLOADING DATA ({args.interval}) ---")
-    
+    print("\n--- ⬇️ DOWNLOADING DATA ---")
     symbols = []
-    if args.file and os.path.exists(args.file):
-        print(f"📄 Reading symbols from file: {args.file}")
-        with open(args.file, "r") as f:
-            symbols = [line.strip() for line in f if line.strip()]
-    elif args.symbol:
+    if args.symbol:
         symbols = [args.symbol]
+    elif args.file:
+        if os.path.exists(args.file):
+            with open(args.file, 'r') as f:
+                symbols = [line.strip() for line in f if line.strip()]
+        else:
+            print("❌ File not found.")
+            return
+
+    if symbols:
+        download_historical_data(symbols, args.from_date, args.to_date, args.interval)
     else:
-        print("❌ Error: Provide --symbol <NAME> or --file <PATH>")
-        return
+        print("❌ No symbols provided.")
 
-    # Use the Data Manager from Infrastructure
-    download_historical_data(symbols, args.from_date, args.to_date, args.interval)
+# --- RESEARCH LAB HANDLERS ---
+def cmd_scan_fundamental(args):
+    """Runs the AI Fundamental & Sector Scanner"""
+    from research_lab.scan_fundamental import run_fundamental_scan
+    run_fundamental_scan()
 
-# --- RESEARCH LAB COMMANDS ---
-def cmd_scan_momentum(_args):
-    from research_lab.scan_momentum import scan_momentum
-    scan_momentum()
+def cmd_scan_momentum(args):
+    from research_lab.scan_momentum import scan_momentum_candidates
+    scan_momentum_candidates()
 
-def cmd_backtest_momentum(_args):
+def cmd_backtest_momentum(args):
     from research_lab.backtest_momentum import run_backtest
     run_backtest()
 
-def cmd_scan_pairs(_args):
+def cmd_scan_pairs(args):
+    """Runs the Sector-Aware Pair Scanner"""
     from research_lab.scan_pairs import scan_pairs
     scan_pairs()
 
-def cmd_backtest_pairs(_args):
-    from research_lab.backtest_pairs import backtest_pairs
-    backtest_pairs()
+def cmd_backtest_pairs(args):
+    from research_lab.backtest_pairs import run_backtest
+    run_backtest()
 
-# --- TRADING FLOOR COMMANDS ---
+# --- TRADING FLOOR HANDLERS ---
 def cmd_engine(args):
     from trading_floor.engine import TradingEngine
     engine = TradingEngine(mode=args.mode)
@@ -96,11 +97,15 @@ def cmd_engine(args):
 def cmd_report(args):
     generate_daily_report()
 
-def main():
-    parser = argparse.ArgumentParser(description="Financial Agent CLI")
-    subparsers = parser.add_subparsers(title="command", dest="command", required=True)
+# ===========================================================
+# MAIN PARSER
+# ===========================================================
 
-    # 1. AUTH & BROKER
+def main():
+    parser = argparse.ArgumentParser(description="Algo Trading CLI")
+    subparsers = parser.add_subparsers(dest="command", required=True)
+
+    # 1. AUTH
     subparsers.add_parser("login").set_defaults(func=cmd_login)
     p_tok = subparsers.add_parser("token")
     p_tok.add_argument("--request_token", required=True)
@@ -117,8 +122,13 @@ def main():
     p_dl.set_defaults(func=cmd_download)
 
     # 3. RESEARCH LAB
+    # NEW: Run this first to generate Sectors & Quality scores
+    subparsers.add_parser("scan_fundamental", help="AI Fundamental Analysis").set_defaults(func=cmd_scan_fundamental)
+    
     subparsers.add_parser("scan_momentum").set_defaults(func=cmd_scan_momentum)
     subparsers.add_parser("backtest_momentum").set_defaults(func=cmd_backtest_momentum)
+    
+    # Run this SECOND (uses output of scan_fundamental)
     subparsers.add_parser("scan_pairs").set_defaults(func=cmd_scan_pairs)
     subparsers.add_parser("backtest_pairs").set_defaults(func=cmd_backtest_pairs)
 
@@ -127,15 +137,12 @@ def main():
     p_eng.add_argument("--mode", default="paper", choices=["paper", "live"])
     p_eng.set_defaults(func=cmd_engine)
 
-    # 5. REPORT Command
-    parser_report = subparsers.add_parser('report', help='Generate Daily PnL Report')
-    parser_report.set_defaults(func=cmd_report)
+    # 5. REPORTING
+    subparsers.add_parser("report", help="Generate Daily PnL Report").set_defaults(func=cmd_report)
 
+    # PARSE
     args = parser.parse_args()
-    if hasattr(args, 'func'):
-        args.func(args)
-    else:
-        parser.print_help()
+    args.func(args)
 
 if __name__ == "__main__":
     main()

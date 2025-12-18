@@ -13,7 +13,7 @@ from strategies.fundamental.valuation import DCFModel
 from strategies.fundamental.quality import QualityCheck
 
 def run_fundamental_scan():
-    print("--- 🧠 AI FUNDAMENTAL SCANNER ---")
+    print("--- 🧠 AI FUNDAMENTAL & SECTOR SCANNER ---")
     
     # 1. Load Universe
     if not os.path.exists(config.UNIVERSE_DIR):
@@ -22,68 +22,52 @@ def run_fundamental_scan():
 
     universe_files = [f for f in os.listdir(config.UNIVERSE_DIR) if f.endswith(".csv")]
     if not universe_files:
-        print("❌ No universe CSV found in data/universe/")
-        print("   -> Please download the NIFTY 50 CSV from NSE and place it there.")
+        print("❌ No universe CSV found.")
         return
     
-    csv_path = os.path.join(config.UNIVERSE_DIR, universe_files[0]) # Pick the first one
+    csv_path = os.path.join(config.UNIVERSE_DIR, universe_files[0])
     print(f"📂 Universe: {csv_path}")
     
     symbols = load_nifty_symbols(csv_path)
-    
-    # --- FIX: Stop here if no symbols found ---
-    if not symbols:
-        print("❌ Error: Found 0 symbols. Check the CSV format.")
-        return
+    if not symbols: return
         
-    print(f"🔍 Found {len(symbols)} symbols. Starting Deep Research...\n")
-
-    # 2. Initialize Agents
-    try:
-        agent = GeminiAgent()
-    except Exception as e:
-        print(f"❌ AI Agent Init Failed: {e}")
-        print("   -> Check your config.json for 'genai' API key.")
-        return
-
+    print(f"🔍 Found {len(symbols)} symbols. Starting Analysis...")
+    
+    # 2. Initialize Models
+    agent = GeminiAgent()
     dcf_engine = DCFModel()
     quality_engine = QualityCheck()
     
     results = []
-
-    # 3. Analyze Loop (Running on first 5 for testing)
-    # Remove [:5] to run on all stocks
-    for i, sym in enumerate(symbols): 
-        print(f"[{i+1}/{len(symbols)}] 🔬 Analyzing {sym}...")
-        
-        # A. AI Extraction
+    
+    # 3. Process Each Symbol
+    for sym in symbols:
         data = agent.analyze_company(sym)
-        if not data: 
-            print(f"   ⚠️ Skipping {sym} (AI Extraction Failed)")
+        
+        if not data:
             continue
-
+            
         fin = data.get('financials', {})
         dcf_in = data.get('dcf_inputs', {})
         qual = data.get('qualitative', {})
+        sector = data.get('sector', 'OTHERS') 
 
-        # B. Quality Check
-        quality_input = {
-            "sales_growth": fin.get('sales_growth_3yr_avg', 0),
-            "profit_growth": fin.get('profit_growth_3yr_avg', 0),
-            "roe": fin.get('roe_latest', 0),
-            "debt_to_equity": fin.get('debt_to_equity', 0)
+        # A. Rename keys for Quality Engine
+        check_data = {
+            'sales_growth': fin.get('sales_growth_3yr_avg', 0),
+            'profit_growth': fin.get('profit_growth_3yr_avg', 0),
+            'roe': fin.get('roe_latest', 0),
+            'debt_to_equity': fin.get('debt_to_equity', 0)
         }
-        q_result = quality_engine.evaluate(quality_input)
         
-        # C. Valuation Check (DCF)
-        base_fcf = dcf_in.get('free_cash_flow_latest_cr', 0)
-        growth = dcf_in.get('growth_rate_projection', 0.10)
+        # B. Run Quality Check
+        # --- FIXED LINE BELOW ---
+        q_result = quality_engine.evaluate(check_data) 
+        # Note: q_result is now a dictionary: {'score': 8, 'status': 'INVESTIBLE', ...}
         
-        # Simple projection
-        projected_fcf = [base_fcf * ((1 + growth) ** y) for y in range(1, 6)]
-        
-        # Estimate WACC inputs if missing
-        d_e = fin.get('debt_to_equity', 0.5)
+        # C. Run Valuation (DCF)
+        # Calculate WACC components
+        d_e = check_data['debt_to_equity']
         equity_weight = 1 / (1 + d_e)
         debt_weight = d_e / (1 + d_e)
         
@@ -94,6 +78,11 @@ def run_fundamental_scan():
             cost_of_debt=0.09,
             tax_rate=dcf_in.get('tax_rate', 0.25)
         )
+        
+        # Project Cash Flows (Simplified for scanner: 5 years)
+        fcf = dcf_in.get('free_cash_flow_latest_cr', 0)
+        g = dcf_in.get('growth_rate_projection', 0.10)
+        projected_fcf = [fcf * ((1 + g) ** i) for i in range(1, 6)]
         
         val_result = dcf_engine.get_intrinsic_value(
             free_cash_flows=projected_fcf,
@@ -106,9 +95,10 @@ def run_fundamental_scan():
         # D. Store Result
         results.append({
             "Symbol": sym,
+            "Sector": sector,
             "Mgmt Score": qual.get('management_integrity_score', 0),
             "Moat": qual.get('moat_rating', 'N/A'),
-            "Quality": q_result['status'],
+            "Quality": q_result['status'], # <--- Uses the dict correctly
             "Fair Value": val_result['fair_value'],
             "Buy Price": val_result['buy_price'],
             "AI Reasoning": (qual.get('reasoning') or "")[:50] + "..."
@@ -117,8 +107,10 @@ def run_fundamental_scan():
     # 4. Final Report
     if results:
         df = pd.DataFrame(results)
+        # Sort by Sector then Quality
+        df.sort_values(by=["Sector", "Quality"], ascending=[True, False], inplace=True)
         print("\n" + tabulate(df, headers="keys", tablefmt="grid"))
-        
+
         save_path = os.path.join(config.ARTIFACTS_DIR, "fundamental_analysis.csv")
         df.to_csv(save_path, index=False)
         print(f"\n✅ Report saved to {save_path}")
