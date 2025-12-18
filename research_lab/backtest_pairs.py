@@ -121,13 +121,13 @@ def run_backtest():
     # 4. Select Top 3
     if results:
         df_res = pd.DataFrame(results).sort_values(by="Net PnL", ascending=False)
-        top_3 = df_res.head(3)
+        top_5 = df_res.head(5)
         
-        print("\n" + tabulate(top_3, headers="keys", tablefmt="grid"))
+        print("\n" + tabulate(top_5, headers="keys", tablefmt="grid"))
         
         # Save Final Config
         final_config = []
-        for _, row in top_3.iterrows():
+        for _, row in top_5.iterrows():
             final_config.append({
                 "leg1": row['Leg1'],
                 "leg2": row['Leg2'],
@@ -140,7 +140,7 @@ def run_backtest():
         with open(config.PAIRS_CONFIG, "w") as f:
             json.dump(final_config, f, indent=4)
             
-        print(f"\n✅ Top 3 Pairs saved to {config.PAIRS_CONFIG}")
+        print(f"\n✅ Top 5 Pairs saved to {config.PAIRS_CONFIG}")
     else:
         print("\n❌ No profitable pairs found.")
 

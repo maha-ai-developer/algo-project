@@ -10,6 +10,7 @@ import infrastructure.config as config
 from infrastructure.broker.kite_auth import generate_login_url, exchange_request_token
 from infrastructure.broker.kite_positions import fetch_account_snapshot
 from infrastructure.data.data_manager import download_historical_data
+from reporting.daily_report import generate_daily_report
 
 # ===========================================================
 # COMMAND HANDLERS
@@ -92,6 +93,9 @@ def cmd_engine(args):
     engine = TradingEngine(mode=args.mode)
     engine.start()
 
+def cmd_report(args):
+    generate_daily_report()
+
 def main():
     parser = argparse.ArgumentParser(description="Financial Agent CLI")
     subparsers = parser.add_subparsers(title="command", dest="command", required=True)
@@ -122,6 +126,10 @@ def main():
     p_eng = subparsers.add_parser("engine")
     p_eng.add_argument("--mode", default="paper", choices=["paper", "live"])
     p_eng.set_defaults(func=cmd_engine)
+
+    # 5. REPORT Command
+    parser_report = subparsers.add_parser('report', help='Generate Daily PnL Report')
+    parser_report.set_defaults(func=cmd_report)
 
     args = parser.parse_args()
     if hasattr(args, 'func'):

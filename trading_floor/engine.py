@@ -18,8 +18,7 @@ from trading_floor.execution import ExecutionHandler
 from trading_floor.risk_manager import RiskManager
 
 # --- 🎛️ STRATEGY TOGGLES ---
-# Set these to False to disable a specific strategy
-RUN_MOMENTUM = True
+RUN_MOMENTUM = False
 RUN_PAIRS = True
 
 class TradingEngine:
@@ -36,7 +35,7 @@ class TradingEngine:
         
         # State Management
         self.last_processed_candle = {} 
-        self.open_positions = {} # Tracks Symbols (e.g., 'INFY') AND Pairs (e.g., 'INFY-TCS')
+        self.open_positions = {} 
         self.active_risk_state = {} 
 
         print(f"\n✨ ENGINE STARTED in {mode.upper()} mode")
@@ -102,13 +101,8 @@ class TradingEngine:
         for symbol, params in self.momentum_config.items():
             time.sleep(0.2)
             
-            # 1. DUPLICATE CHECK: Skip if already in position
-            if symbol in self.open_positions:
-                # We still process it ONLY for Exit Logic, not new Entry
-                pass 
-            else:
-                # If we are checking for entry, ensure we aren't holding it
-                pass 
+            if symbol in self.open_positions: pass 
+            else: pass 
 
             df = self.fetch_latest_candles(symbol, "5minute")
             if df is None or df.empty: continue
@@ -153,25 +147,24 @@ class TradingEngine:
             elif symbol not in self.open_positions:
                 rsi_entry = params.get('rsi_entry', 60)
                 if current['rsi'] > rsi_entry and price > current['ema']:
-                    
-                    # Risk Calc (Just for SL distance, Quantity is forced)
                     _, sl_price, dist = self.risk_manager.size_position(symbol, price, atr)
-                    
-                    # 🔒 SAFETY OVERRIDE: FORCE QUANTITY 1
                     qty = 1 
                     
-                    self.executor.execute({
+                    # Store success status
+                    success = self.executor.execute({
                         "symbol": symbol, "signal": "BUY", "quantity": qty,
                         "price": price, "strategy": "momentum"
                     })
-                    self.open_positions[symbol] = 'LONG'
-                    self.active_risk_state[symbol] = {
-                        'entry': price, 'sl': sl_price, 'atr': atr, 'highest_price': price
-                    }
-                    print(f"   🛡️ SL Set @ {sl_price:.2f} (Qty Locked: 1)")
+                    
+                    if success:
+                        self.open_positions[symbol] = 'LONG'
+                        self.active_risk_state[symbol] = {
+                            'entry': price, 'sl': sl_price, 'atr': atr, 'highest_price': price
+                        }
+                        print(f"   🛡️ SL Set @ {sl_price:.2f} (Qty Locked: 1)")
 
     # =================================================================
-    # PAIRS STRATEGY
+    # PAIRS STRATEGY (ATOMIC UPDATES)
     # =================================================================
     def run_pairs_strategy(self):
         if not RUN_PAIRS: return
@@ -181,10 +174,7 @@ class TradingEngine:
             s2 = pair_cfg['leg2']
             pair_key = f"{s1}-{s2}"
             
-            # 🔒 SAFETY: Check conflicts with Momentum
-            if s1 in self.open_positions or s2 in self.open_positions:
-                # If either stock is busy in Momentum, skip this Pair
-                continue
+            if s1 in self.open_positions or s2 in self.open_positions: continue
             
             time.sleep(0.2)
             df1 = self.fetch_latest_candles(s1, "5minute")
@@ -195,7 +185,7 @@ class TradingEngine:
             df.columns = ['l1', 'l2']
             if df.empty: continue
             
-            # Stale Check (using s1 index)
+            # Stale Check
             last_t = df.index[-1]
             if last_t.tzinfo: last_t = last_t.tz_localize(None)
             if (datetime.now() - last_t).total_seconds() > 900: continue
@@ -209,20 +199,27 @@ class TradingEngine:
 
             # ENTRY
             if pair_key not in self.open_positions:
-                # 🔒 SAFETY OVERRIDE: QTY 1
                 qty = 1
                 
                 if curr_z > entry_z: # Short Spread
                     print(f"   ⚡ PAIR ENTER: {pair_key} (Short)")
-                    self.executor.execute({"symbol": s1, "signal": "SELL", "quantity": qty, "price": df['l1'].iloc[-1], "strategy": "pair"})
-                    self.executor.execute({"symbol": s2, "signal": "BUY", "quantity": qty, "price": df['l2'].iloc[-1], "strategy": "pair"})
-                    self.open_positions[pair_key] = 'SHORT'
+                    s1_ok = self.executor.execute({"symbol": s1, "signal": "SELL", "quantity": qty, "price": df['l1'].iloc[-1], "strategy": "pair"})
+                    s2_ok = self.executor.execute({"symbol": s2, "signal": "BUY", "quantity": qty, "price": df['l2'].iloc[-1], "strategy": "pair"})
+                    
+                    if s1_ok and s2_ok:
+                        self.open_positions[pair_key] = 'SHORT'
+                    else:
+                        print(f"   ❌ CRITICAL: One or both legs failed for {pair_key}. Manual Check Required.")
                 
                 elif curr_z < -entry_z: # Long Spread
                     print(f"   ⚡ PAIR ENTER: {pair_key} (Long)")
-                    self.executor.execute({"symbol": s1, "signal": "BUY", "quantity": qty, "price": df['l1'].iloc[-1], "strategy": "pair"})
-                    self.executor.execute({"symbol": s2, "signal": "SELL", "quantity": qty, "price": df['l2'].iloc[-1], "strategy": "pair"})
-                    self.open_positions[pair_key] = 'LONG'
+                    s1_ok = self.executor.execute({"symbol": s1, "signal": "BUY", "quantity": qty, "price": df['l1'].iloc[-1], "strategy": "pair"})
+                    s2_ok = self.executor.execute({"symbol": s2, "signal": "SELL", "quantity": qty, "price": df['l2'].iloc[-1], "strategy": "pair"})
+                    
+                    if s1_ok and s2_ok:
+                        self.open_positions[pair_key] = 'LONG'
+                    else:
+                        print(f"   ❌ CRITICAL: One or both legs failed for {pair_key}. Manual Check Required.")
 
             # EXIT
             elif pair_key in self.open_positions:
@@ -232,9 +229,15 @@ class TradingEngine:
                     print(f"   ⚡ PAIR EXIT: {pair_key} (Mean Reversion)")
                     sig1 = "BUY" if state == 'SHORT' else "SELL"
                     sig2 = "SELL" if state == 'SHORT' else "BUY"
-                    self.executor.execute({"symbol": s1, "signal": sig1, "quantity": qty, "price": df['l1'].iloc[-1], "strategy": "pair_exit"})
-                    self.executor.execute({"symbol": s2, "signal": sig2, "quantity": qty, "price": df['l2'].iloc[-1], "strategy": "pair_exit"})
-                    del self.open_positions[pair_key]
+                    
+                    s1_ok = self.executor.execute({"symbol": s1, "signal": sig1, "quantity": qty, "price": df['l1'].iloc[-1], "strategy": "pair_exit"})
+                    s2_ok = self.executor.execute({"symbol": s2, "signal": sig2, "quantity": qty, "price": df['l2'].iloc[-1], "strategy": "pair_exit"})
+                    
+                    # Only delete from memory if BOTH exits succeeded
+                    if s1_ok and s2_ok:
+                        del self.open_positions[pair_key]
+                    else:
+                        print(f"   ⚠️ EXIT FAILED for {pair_key}. Will retry next tick.")
 
     def close_position(self, symbol, price, reason):
         if symbol in self.open_positions:
@@ -247,15 +250,58 @@ class TradingEngine:
             if symbol in self.active_risk_state: del self.active_risk_state[symbol]
 
     def check_global_exits(self):
-        if self.risk_manager.check_kill_switch(): sys.exit(0)
+        # 1. Kill Switch Check
+        if self.risk_manager.check_kill_switch():
+            print("   💀 KILL SWITCH: Max Daily Loss Reached.")
+            sys.exit(0)
+
+        # 2. Time Exit Check (3:15 PM)
         if self.risk_manager.check_time_exit():
             if self.open_positions:
-                print("   ⏰ AUTO SQUARE OFF")
-                # Close Momentum
-                for k in list(self.open_positions.keys()):
-                    if '-' not in k: self.close_position(k, 0, "TIME_EXIT")
-                # Close Pairs (Simplified: Just dumping dict for now in demo)
+                print("\n   ⏰ MARKET CLOSING (3:15 PM) - INITIATING AUTO SQUARE OFF")
+                
+                # Iterate over a COPY of the keys since we are modifying the dictionary
+                for key, side in list(self.open_positions.items()):
+                    
+                    # CASE A: Momentum Position (Single Stock)
+                    if '-' not in key: 
+                        print(f"   🔻 EXITING MOMENTUM: {key}")
+                        self.close_position(key, 0, "TIME_EXIT")
+                    
+                    # CASE B: Pair Position
+                    else:
+                        try:
+                            # Parse the pair key "LT-TITAN" -> "LT", "TITAN"
+                            s1, s2 = key.split('-')
+                            qty = 1  # Safety Lock Qty
+                            
+                            print(f"   🔻 EXITING PAIR: {key} ({side})")
+                            
+                            # Determine Exit Direction based on Current Side
+                            if side == 'LONG':
+                                # Long Pair = Long S1, Short S2 -> Exit: Sell S1, Buy S2
+                                sig1, sig2 = "SELL", "BUY"
+                            else: # SHORT
+                                # Short Pair = Short S1, Long S2 -> Exit: Buy S1, Sell S2
+                                sig1, sig2 = "BUY", "SELL"
+                            
+                            # Execute MARKET Orders via strategy="TIME_EXIT"
+                            # This sends an explicit instruction to execution.py to use MARKET orders
+                            self.executor.execute({
+                                "symbol": s1, "signal": sig1, "quantity": qty, 
+                                "price": 0, "strategy": "TIME_EXIT"
+                            })
+                            self.executor.execute({
+                                "symbol": s2, "signal": sig2, "quantity": qty, 
+                                "price": 0, "strategy": "TIME_EXIT"
+                            })
+                            
+                        except Exception as e:
+                            print(f"   ❌ Error squaring off {key}: {e}")
+
+                # Clear Memory and Stop
                 self.open_positions.clear()
+                print("   🏁 All Positions Squared Off. System Shutdown.")
                 sys.exit(0)
 
     def start(self):

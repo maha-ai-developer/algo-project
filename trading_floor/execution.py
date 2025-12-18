@@ -46,7 +46,7 @@ class ExecutionHandler:
 
     def execute(self, order_dict):
         """
-        Executes orders as LIMIT with Buffer to avoid slippage.
+        Executes orders. Returns True if successful, False if failed.
         """
         symbol = order_dict['symbol']
         signal = order_dict['signal'] # "BUY" or "SELL"
@@ -60,17 +60,13 @@ class ExecutionHandler:
         if self.mode == "live":
             try:
                 # 1. Determine Order Type
-                # Panic Exits (Time/SL) -> MARKET (Get out at any cost)
                 if strategy in ["TIME_EXIT", "SL_HIT"]:
                     order_type = "MARKET"
                     final_price = 0
                     print(f"   ⚠️ Panic Exit ({strategy}): Using MARKET Order")
-                
-                # Normal Entries/Exits -> LIMIT (Avoid Slippage)
                 else:
                     order_type = "LIMIT"
-                    # Add 0.3% Buffer to ensure fill (Market Protection)
-                    # Buy Limit = LTP + 0.3% | Sell Limit = LTP - 0.3%
+                    # Add 0.3% Buffer
                     if signal == "BUY":
                         final_price = ltp * 1.003
                     else:
@@ -79,7 +75,7 @@ class ExecutionHandler:
                     print(f"   🛡️ Using LIMIT Order: {final_price:.2f} (LTP: {ltp})")
 
                 # 2. Place Order
-                # Note: Updated 'transaction_type' -> 'side' to match your uploaded kite_orders.py
+                # Note: 'transaction_type' is handled inside place_order via 'side'
                 order_id = place_order(
                     symbol=symbol,
                     side=signal, 
@@ -92,11 +88,16 @@ class ExecutionHandler:
                 if order_id:
                     print(f"   ✅ LIVE Order Placed! ID: {order_id}")
                     self.log_trade(symbol, signal, qty, ltp, strategy)
+                    return True # SUCCESS
+                else:
+                    return False # FAILURE (e.g. Tick size error)
             
             except Exception as e:
                 print(f"   ❌ LIVE Execution Failed: {e}")
+                return False
 
         else:
             # PAPER TRADE
             print(f"   📄 [PAPER] Simulated {signal} {symbol} @ {ltp:.2f}")
             self.log_trade(symbol, signal, qty, ltp, strategy)
+            return True
