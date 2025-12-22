@@ -3,211 +3,198 @@ import json
 import os
 import sys
 import pandas as pd
-import pandas_ta_classic as ta
 import numpy as np
-from datetime import datetime
-from tabulate import tabulate
+from datetime import datetime, timedelta
 
 # Path Setup
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import infrastructure.config as config
 from infrastructure.broker.kite_auth import get_kite
-from infrastructure.data.instrument_cache import get_instrument_token
 from trading_floor.execution import ExecutionHandler
 from trading_floor.risk_manager import RiskManager
+from strategies.pairs import PairStrategy
 
-# --- 🎛️ STRATEGY TOGGLES ---
-RUN_MOMENTUM = False
-RUN_PAIRS = True
+# --- ⚙️ USER SETTINGS ---
+# "MIS"  = Intraday (5x Leverage). Allows Shorting.
+# "CNC"  = Delivery (1x Leverage). No Shorting.
+PRODUCT_TYPE = "MIS" 
 
-# --- 💰 CAPITAL ALLOCATION (UPDATED) ---
-CAPITAL_PER_LEG = 5000  # <--- CHANGED TO ₹5,000
+# --- 💰 CAPITAL SETTING ---
+# Set to ₹50,000 as requested
+TOTAL_CAPITAL = 50000 
 
 class TradingEngine:
     def __init__(self, mode="paper"):
-        self.mode = mode
+        self.mode = mode.upper()
+        print(f"\n--- 🚀 STAT ARB ENGINE ({self.mode}) ---")
+        print(f"   ⚙️ Product Type: {PRODUCT_TYPE}")
+        print(f"   💰 Capital Base: ₹{TOTAL_CAPITAL:,}")
+        
+        # 1. Initialize Components
         self.kite = get_kite()
-        self.executor = ExecutionHandler(mode=mode)
+        self.executor = ExecutionHandler(mode=self.mode)
         
-        # Risk System (Capital: 50k for margin safety)
-        self.risk_manager = RiskManager(total_capital=50000, max_risk_pct=0.02)
-
-        self.momentum_config = self.load_json(config.MOMENTUM_CONFIG)
-        self.pairs_config = self.load_json(config.PAIRS_CONFIG)
+        # Risk Manager configured with your capital
+        self.risk_manager = RiskManager(capital_per_pair=TOTAL_CAPITAL)
         
-        self.last_processed_candle = {} 
-        self.open_positions = {} 
-        self.active_risk_state = {} 
-
-        print(f"\n✨ ENGINE STARTED in {mode.upper()} mode")
-        print(f"   💰 Sizing Model: Dollar Neutral (Target ₹{CAPITAL_PER_LEG} per leg)")
-
-    def load_json(self, path):
-        if os.path.exists(path):
-            try:
-                with open(path, 'r') as f: return json.load(f)
-            except: return {}
-        return {} if path == config.MOMENTUM_CONFIG else []
-
-    def fetch_latest_candles(self, symbol, interval="5minute", lookback_days=5):
+        # 2. Load Pair Configuration
+        if not os.path.exists(config.PAIRS_CONFIG):
+            print(f"❌ Config not found: {config.PAIRS_CONFIG}")
+            sys.exit(1)
+            
+        with open(config.PAIRS_CONFIG, "r") as f:
+            self.pairs_config = json.load(f)
+            
+        # 3. Cache Instrument Tokens (Essential for Live Data)
+        print("📊 Fetching Instrument Tokens from Zerodha...")
+        self.tokens = {}
         try:
-            token = get_instrument_token(symbol)
-            if not token: return None
-            to_date = datetime.now()
-            from_date = to_date - pd.Timedelta(days=lookback_days)
-            records = self.kite.historical_data(token, from_date, to_date, interval)
-            if records:
-                df = pd.DataFrame(records)
-                df['date'] = pd.to_datetime(df['date'])
-                df.set_index('date', inplace=True)
-                return df
-        except: pass
-        return None
-
-    def print_portfolio_status(self):
-        """Prints live dashboard."""
-        if not self.open_positions: return
-
-        status_data = []
-        for key, side in self.open_positions.items():
-            if '-' in key: # Pair
-                display_side = side['side'] if isinstance(side, dict) else side
-                status_data.append({"Asset": key, "Type": "PAIR", "Side": display_side, "Status": "Active"})
-                continue
+            self.instruments = self.kite.instruments("NSE")
+            self.inst_map = {i['tradingsymbol']: i['instrument_token'] for i in self.instruments}
+        except Exception as e:
+            print(f"   ⚠️ Failed to fetch instruments: {e}")
+            self.inst_map = {}
+        
+        # 4. Initialize Strategy Brains
+        self.strategies = {}
+        self.active_trades = {} 
+        
+        for p in self.pairs_config:
+            pair_key = f"{p['leg1']}-{p['leg2']}"
             
-            risk = self.active_risk_state.get(key, {})
-            entry = risk.get('entry', 0)
-            status_data.append({"Asset": key, "Type": "MOMENTUM", "Side": side, "Entry": entry})
+            # Cache Tokens
+            if p['leg1'] in self.inst_map: self.tokens[p['leg1']] = self.inst_map[p['leg1']]
+            if p['leg2'] in self.inst_map: self.tokens[p['leg2']] = self.inst_map[p['leg2']]
             
-        print("\n" + tabulate(status_data, headers="keys", tablefmt="simple_grid"))
-
-    def run_momentum_strategy(self):
-        pass 
-
-    # =================================================================
-    # PAIRS STRATEGY (UPDATED: VALUE MATCHING)
-    # =================================================================
-    def run_pairs_strategy(self):
-        if not RUN_PAIRS: return
-
-        for pair_cfg in self.pairs_config:
-            s1 = pair_cfg['leg1']
-            s2 = pair_cfg['leg2']
-            pair_key = f"{s1}-{s2}"
+            print(f"   🧠 Loaded Agent: {pair_key:<20} (Beta: {p['hedge_ratio']:.2f})")
             
-            if s1 in self.open_positions or s2 in self.open_positions: continue
-            
-            time.sleep(0.2)
-            df1 = self.fetch_latest_candles(s1, "5minute")
-            df2 = self.fetch_latest_candles(s2, "5minute")
-            if df1 is None or df2 is None: continue
-            
-            df = pd.concat([df1['close'], df2['close']], axis=1).dropna()
-            df.columns = ['l1', 'l2']
-            if df.empty: continue
-            
-            last_t = df.index[-1]
-            if last_t.tzinfo: last_t = last_t.tz_localize(None)
-            if (datetime.now() - last_t).total_seconds() > 900: continue
+            self.strategies[pair_key] = PairStrategy(
+                hedge_ratio=p['hedge_ratio'],
+                intercept=p['intercept']
+            )
 
-            # Z-Score Calculation
-            ratio = df['l1'] / df['l2']
-            zscore = (ratio - ratio.rolling(20).mean()) / ratio.rolling(20).std()
-            curr_z = zscore.iloc[-1]
-            
-            # --- CONFIGURATION (STRICT) ---
-            entry_z = 2.5  
-            exit_z = 0.0   
+    def get_market_data(self, symbol):
+        """Fetches LIVE Market Data (Daily Candles)"""
+        if symbol not in self.tokens:
+            print(f"   ⚠️ Token missing for {symbol}")
+            return pd.Series()
 
-            # --- DYNAMIC SIZING CALCULATOR ---
-            price_1 = df['l1'].iloc[-1]
-            price_2 = df['l2'].iloc[-1]
-            
-            # Use the global CAPITAL_PER_LEG
-            qty_1 = int(CAPITAL_PER_LEG / price_1)
-            qty_2 = int(CAPITAL_PER_LEG / price_2)
-            
-            # Minimum safety
-            qty_1 = max(1, qty_1)
-            qty_2 = max(1, qty_2)
+        token = self.tokens[symbol]
+        to_date = datetime.now()
+        from_date = to_date - timedelta(days=120) 
 
-            # ENTRY LOGIC
-            if pair_key not in self.open_positions:
-                
-                if curr_z > entry_z: # Short Spread (Sell S1, Buy S2)
-                    print(f"   ⚡ PAIR ENTER: {pair_key} (Short) | Val: ~{int(qty_1*price_1)} / ~{int(qty_2*price_2)}")
-                    s1_ok = self.executor.execute({"symbol": s1, "signal": "SELL", "quantity": qty_1, "price": price_1, "strategy": "pair"})
-                    s2_ok = self.executor.execute({"symbol": s2, "signal": "BUY", "quantity": qty_2, "price": price_2, "strategy": "pair"})
-                    
-                    if s1_ok and s2_ok:
-                        self.open_positions[pair_key] = {'side': 'SHORT', 'q1': qty_1, 'q2': qty_2}
-                
-                elif curr_z < -entry_z: # Long Spread (Buy S1, Sell S2)
-                    print(f"   ⚡ PAIR ENTER: {pair_key} (Long) | Val: ~{int(qty_1*price_1)} / ~{int(qty_2*price_2)}")
-                    s1_ok = self.executor.execute({"symbol": s1, "signal": "BUY", "quantity": qty_1, "price": price_1, "strategy": "pair"})
-                    s2_ok = self.executor.execute({"symbol": s2, "signal": "SELL", "quantity": qty_2, "price": price_2, "strategy": "pair"})
-                    
-                    if s1_ok and s2_ok:
-                        self.open_positions[pair_key] = {'side': 'LONG', 'q1': qty_1, 'q2': qty_2}
+        try:
+            data = self.kite.historical_data(token, from_date, to_date, "day")
+            if not data: return pd.Series()
+            df = pd.DataFrame(data)
+            return df['close']
+        except Exception as e:
+            print(f"   ⚠️ API Error for {symbol}: {e}")
+            return pd.Series()
 
-            # EXIT LOGIC
-            elif pair_key in self.open_positions:
-                pos_data = self.open_positions[pair_key]
-                state = pos_data['side']
-                q1 = pos_data['q1']
-                q2 = pos_data['q2']
-                
-                if abs(curr_z) < exit_z:
-                    print(f"   ⚡ PAIR EXIT: {pair_key} (Mean Reversion)")
-                    sig1 = "BUY" if state == 'SHORT' else "SELL"
-                    sig2 = "SELL" if state == 'SHORT' else "BUY"
-                    
-                    s1_ok = self.executor.execute({"symbol": s1, "signal": sig1, "quantity": q1, "price": price_1, "strategy": "pair_exit"})
-                    s2_ok = self.executor.execute({"symbol": s2, "signal": sig2, "quantity": q2, "price": price_2, "strategy": "pair_exit"})
-                    
-                    if s1_ok and s2_ok:
-                        del self.open_positions[pair_key]
-
-    def close_position(self, symbol, price, reason):
-        if symbol in self.open_positions:
-            self.executor.execute({
-                "symbol": symbol, "signal": "SELL", "quantity": 1,
-                "price": price, "strategy": reason
-            })
-            del self.open_positions[symbol]
-
-    def check_global_exits(self):
-        if self.risk_manager.check_time_exit():
-            if self.open_positions:
-                print("\n   ⏰ MARKET CLOSING - AUTO SQUARE OFF")
-                for key, data in list(self.open_positions.items()):
-                    if '-' in key: # PAIR
-                        s1, s2 = key.split('-')
-                        q1, q2 = data['q1'], data['q2']
-                        side = data['side']
-                        
-                        sig1 = "SELL" if side == 'LONG' else "BUY"
-                        sig2 = "BUY" if side == 'LONG' else "SELL"
-                        
-                        self.executor.execute({"symbol": s1, "signal": sig1, "quantity": q1, "price": 0, "strategy": "TIME_EXIT"})
-                        self.executor.execute({"symbol": s2, "signal": sig2, "quantity": q2, "price": 0, "strategy": "TIME_EXIT"})
-                    else: # MOMENTUM
-                        self.close_position(key, 0, "TIME_EXIT")
-                self.open_positions.clear()
-                sys.exit(0)
-
-    def start(self):
-        print("\n🟢 Engine is Running... (Press Ctrl+C to Stop)")
+    def run(self):
+        print(f"\n✅ Engine Running... Monitoring {len(self.pairs_config)} Pairs.")
+        print("   (Press Ctrl+C to Stop)\n")
         try:
             while True:
-                now = datetime.now()
-                if now.second == 0: 
-                    print(f"\n⏰ Tick: {now.strftime('%H:%M:%S')}")
-                    self.check_global_exits()
-                    self.run_momentum_strategy()
-                    self.run_pairs_strategy()
-                    self.print_portfolio_status()
-                    time.sleep(55) 
-                else: time.sleep(1)
-        except KeyboardInterrupt: print("\n🔴 Engine Stopped.")
+                print(f"⏰ Heartbeat: {datetime.now().strftime('%H:%M:%S')}")
+                
+                for p in self.pairs_config:
+                    self.process_pair(p)
+                    time.sleep(0.5) 
+                    
+                time.sleep(60) 
+                
+        except KeyboardInterrupt:
+            print("\n🛑 Stopping Engine.")
+
+    def process_pair(self, p):
+        s1, s2 = p['leg1'], p['leg2']
+        pair_key = f"{s1}-{s2}"
+        strategy = self.strategies[pair_key]
+        
+        # 1. Fetch Live Data
+        data_y = self.get_market_data(s1)
+        data_x = self.get_market_data(s2)
+        
+        if len(data_y) < 60 or len(data_x) < 60: return
+        
+        # Capture Latest Prices for Execution
+        current_price_y = data_y.iloc[-1]
+        current_price_x = data_x.iloc[-1]
+
+        # 2. Ask Strategy
+        response = strategy.generate_signal(data_y, data_x)
+        
+        health = response.get('health', 'UNKNOWN')
+        z = response.get('zscore', 0.0)
+        signal = response['signal']
+        
+        print(f"   👉 {pair_key:<20} | Health: {health:<6} | Z: {z:>5.2f} | Sig: {signal}")
+
+        # 3. Risk Checks (Now passing Prices to close_position)
+        if health == "RED":
+            if pair_key in self.active_trades:
+                print(f"   🔴 GUARDIAN KILL: Closing {pair_key} ({response.get('health_reason')})")
+                self.close_position(pair_key, s1, s2, current_price_y, current_price_x)
+            return
+
+        is_stop, stop_msg = self.risk_manager.check_stop_loss(z, stop_z_threshold=4.0)
+        if is_stop and pair_key in self.active_trades:
+            print(f"   🟠 STOP LOSS: {stop_msg}")
+            self.close_position(pair_key, s1, s2, current_price_y, current_price_x)
+            return
+
+        is_tp, tp_msg = self.risk_manager.check_take_profit(z)
+        if is_tp and pair_key in self.active_trades:
+            print(f"   🟢 TAKE PROFIT: {tp_msg}")
+            self.close_position(pair_key, s1, s2, current_price_y, current_price_x)
+            return
+
+        # 4. Entry
+        if pair_key not in self.active_trades:
+            qty_y, qty_x = self.risk_manager.calculate_sizing(current_price_y, current_price_x, p['hedge_ratio'])
+            
+            if qty_y == 0 or qty_x == 0: return
+
+            if signal == "LONG_SPREAD":
+                print(f"   🚀 ENTRY LONG: Buy {qty_y} {s1}, Sell {qty_x} {s2}")
+                self.executor.place_pair_order(
+                    s1, "BUY", qty_y, current_price_y,
+                    s2, "SELL", qty_x, current_price_x, 
+                    product=PRODUCT_TYPE
+                )
+                self.active_trades[pair_key] = {"side": "LONG", "q1": qty_y, "q2": qty_x}
+                
+            elif signal == "SHORT_SPREAD":
+                print(f"   🚀 ENTRY SHORT: Sell {qty_y} {s1}, Buy {qty_x} {s2}")
+                self.executor.place_pair_order(
+                    s1, "SELL", qty_y, current_price_y,
+                    s2, "BUY", qty_x, current_price_x,
+                    product=PRODUCT_TYPE
+                )
+                self.active_trades[pair_key] = {"side": "SHORT", "q1": qty_y, "q2": qty_x}
+
+    def close_position(self, pair_key, s1, s2, px1, px2):
+        if pair_key not in self.active_trades: return
+        trade = self.active_trades[pair_key]
+        print(f"   📉 CLOSING POSITION: {pair_key}")
+        
+        if trade['side'] == "LONG":
+            self.executor.place_pair_order(
+                s1, "SELL", trade['q1'], px1,
+                s2, "BUY", trade['q2'], px2,
+                product=PRODUCT_TYPE
+            )
+        else:
+            self.executor.place_pair_order(
+                s1, "BUY", trade['q1'], px1,
+                s2, "SELL", trade['q2'], px2,
+                product=PRODUCT_TYPE
+            )
+            
+        del self.active_trades[pair_key]
+
+if __name__ == "__main__":
+    pass
