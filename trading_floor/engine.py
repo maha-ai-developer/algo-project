@@ -118,11 +118,22 @@ class TradingEngine:
         data_y = self.get_market_data(s1)
         data_x = self.get_market_data(s2)
         
-        if len(data_y) < 60 or len(data_x) < 60: return
+        if len(data_y) < 60 or len(data_x) < 60: 
+            return
+
+        # --- ✅ NEW SAFETY FILTER ---
+        # Check if the latest price is valid (> 0 and not NaN)
+        last_y = data_y.iloc[-1]
+        last_x = data_x.iloc[-1]
+        
+        if last_y <= 0 or last_x <= 0 or pd.isna(last_y) or pd.isna(last_x):
+            print(f"   🛡️ BLOCKED BAD DATA for {pair_key}: {s1}={last_y}, {s2}={last_x}")
+            return # Skip this cycle, do not poison the Guardian
+        # ----------------------------
         
         # Capture Latest Prices for Execution
-        current_price_y = data_y.iloc[-1]
-        current_price_x = data_x.iloc[-1]
+        current_price_y = last_y
+        current_price_x = last_x
 
         # 2. Ask Strategy
         response = strategy.generate_signal(data_y, data_x)
