@@ -26,10 +26,10 @@ for d in [DATA_DIR, ARTIFACTS_DIR, LOG_DIR, CACHE_DIR, UNIVERSE_DIR, CONFIG_DIR]
 UNIVERSE_FILE = os.path.join(ARTIFACTS_DIR, "symbols.txt") 
 PAIRS_CANDIDATES_FILE = os.path.join(ARTIFACTS_DIR, "pairs_candidates.json") 
 PAIRS_DOWNLOAD_FILE = os.path.join(ARTIFACTS_DIR, "pairs.txt")
-FUNDAMENTAL_FILE = os.path.join(ARTIFACTS_DIR, "fundamental_analysis.csv") 
+FUNDAMENTAL_FILE = os.path.join(ARTIFACTS_DIR, "fundamental_analysis.csv")
+SECTOR_REPORT_FILE = os.path.join(ARTIFACTS_DIR, "sector_report.csv") 
 MOMENTUM_CONFIG = os.path.join(ARTIFACTS_DIR, "momentum_config.json")
 PAIRS_CONFIG = os.path.join(ARTIFACTS_DIR, "pairs_config.json")
-SECTOR_CACHE_FILE = os.path.join(CACHE_DIR, "sector_map.json")
 
 # --- GLOBAL SETTINGS ---
 TIMEFRAME = "5m"
@@ -40,6 +40,7 @@ PAIR_PVALUE_MAX = 0.05
 # --- AI MODEL SETTINGS ---
 # Options:
 # - gemini-3-pro-preview
+# - gemini-3-flash-preview
 # - gemini-2.5-flash
 # - gemini-2.5-flash-lite
 # - gemini-2.5-pro

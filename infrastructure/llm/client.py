@@ -8,28 +8,18 @@ class GeminiAgent:
     def __init__(self):
         if not config.GENAI_API_KEY:
             raise ValueError("❌ GENAI_API_KEY missing in config.json")
-            
         self.client = genai.Client(api_key=config.GENAI_API_KEY)
-        # Default to flash for speed, or pro for reasoning
-        self.model_id = getattr(config, "GENAI_MODEL", "gemini-2.0-flash")
+        self.model_id = getattr(config, "GENAI_MODEL", "gemini-2.5-pro")
         print(f"   🤖 Agent initialized with model: {self.model_id}")
 
-    def analyze_company(self, symbol):
+    def analyze_fundamentals(self, symbol):
         """
-        Fetches Fundamentals AND Sector in a single AI call.
+        STAGE 1: Universal Financial Health Check.
+        No Sector info here. Just Growth, ROE, Debt.
         """
-        print(f"   🔎 Researching {symbol}...")
-
-        # 1. Update Schema to include SECTOR
         schema = {
             "type": "OBJECT",
             "properties": {
-                "company_name": {"type": "STRING"},
-                "sector": {
-                    "type": "STRING", 
-                    "enum": ["BANK", "IT", "AUTO", "FMCG", "PHARMA", "ENERGY", "METAL", "FINANCE", "CONSUMER", "INFRA", "TELECOM", "REALTY", "CHEMICALS", "OTHERS"],
-                    "description": "Primary business sector of the company."
-                },
                 "financials": {
                     "type": "OBJECT",
                     "properties": {
@@ -56,42 +46,83 @@ class GeminiAgent:
                     "type": "OBJECT",
                     "properties": {
                         "management_integrity_score": {"type": "NUMBER"},
-                        "moat_rating": {"type": "STRING", "enum": ["Wide", "Narrow", "None"]},
                         "reasoning": {"type": "STRING"}
                     }
                 }
             },
-            "required": ["company_name", "sector", "financials", "dcf_inputs", "qualitative"]
+            "required": ["financials", "dcf_inputs", "qualitative"]
         }
 
-        # 2. Update Prompt
         prompt = f"""
-        Perform a fundamental analysis of the Indian stock '{symbol}' (NSE).
-        Use Google Search to find the latest Annual Report data, Screener.in data, and recent >
-		
-		Task 1: Identify the Company Name and its Primary SECTOR
-        Task 2: Extract Key Ratios (Sales Growth, ROE, Debt/Equity).
-        Task 3: Extract DCF Inputs (Latest Free Cash Flow, Outstanding Shares, Net Debt).
-        Task 4: Assess Qualitative factors (Management scandals? Competitive Advantage?).
+        Analyze Indian stock '{symbol}' (NSE).
+        Task: Extract UNIVERSAL fundamental metrics.
+        - 3-Year Sales/Profit Growth (CAGR).
+        - ROE, Debt/Equity.
+        - DCF Inputs (FCF, Shares, Net Debt).
+        """
+        try:
+            response = self.client.models.generate_content(
+                model=self.model_id, contents=prompt,
+                config=types.GenerateContentConfig(
+                    tools=[types.Tool(google_search=types.GoogleSearch())],
+                    response_mime_type="application/json", response_schema=schema
+                )
+            )
+            return json.loads(response.text)
+        except: return None
 
-        Important:
-        - Return all numbers in CRORES where applicable.
-        - Growth rates and Ratios should be decimals (e.g., 20% = 0.20).
-        - Be conservative in growth projections.
-		- Be accurate with the Sector
+    def analyze_sector_specifics(self, symbol):
+        """
+        STAGE 2: Deep Sector Analysis (Varsity Logic).
+        """
+        schema = {
+            "type": "OBJECT",
+            "properties": {
+                "broad_sector": {
+                    "type": "STRING",
+                    "description": "One of: [BANK, IT, AUTO, FMCG, PHARMA, ENERGY, METAL, CEMENT, INFRA, CONSUMER, FINANCE]"
+                },
+                "niche_industry": {"type": "STRING"},
+                "sector_kpis": {
+                    "type": "OBJECT",
+                    "description": "Specific KPIs like NIM for Banks, SSSG for Retail, Deal Wins for IT",
+                    "properties": {
+                        "kpi_1": {"type": "STRING", "description": "Name: Value (e.g., 'NIM: 3.5%')"},
+                        "kpi_2": {"type": "STRING"},
+                        "kpi_3": {"type": "STRING"}
+                    }
+                },
+                "moat_rating": {"type": "STRING", "enum": ["Wide", "Narrow", "None"]},
+                "competitive_position": {
+                    "type": "STRING",
+                    "enum": ["LEADER", "CHALLENGER", "LAGGARD"]
+                }
+            },
+            "required": ["broad_sector", "sector_kpis", "competitive_position"]
+        }
+
+        prompt = f"""
+        Perform a SECTOR-SPECIFIC analysis for '{symbol}' (NSE).
+        
+        Step 1: Identify the Broad Sector and Niche Industry.
+        
+        Step 2: Extract the 3 most critical KPIs based on standard Equity Research:
+        - BANKS: Gross NPA%, Net Interest Margin (NIM), CASA Ratio.
+        - IT: Attrition Rate, Deal Wins (TCV), Revenue/Employee.
+        - AUTO: Volume Growth, Margin per Vehicle.
+        - CEMENT/STEEL: Capacity Utilization, EBITDA/Tonne.
+        - RETAIL/FMCG: Inventory Turnover, Same Store Sales Growth (SSSG).
+        
+        Step 3: Classify as LEADER (Top 1-2), CHALLENGER, or LAGGARD.
         """
 
         try:
             response = self.client.models.generate_content(
-                model=self.model_id,
-                contents=prompt,
+                model=self.model_id, contents=prompt,
                 config=types.GenerateContentConfig(
                     tools=[types.Tool(google_search=types.GoogleSearch())],
-                    response_mime_type="application/json",
-                    response_schema=schema
+                    response_mime_type="application/json", response_schema=schema
                 )
             )
             return json.loads(response.text)
-        except Exception as e:
-            print(f"❌ AI Error for {symbol}: {e}")
-            return None
+        except: return None

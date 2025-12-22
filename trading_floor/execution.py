@@ -2,18 +2,20 @@ import sqlite3
 import datetime
 import os
 import sys
+import time
 
-# Path Setup
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import infrastructure.config as config
-from infrastructure.broker.kite_orders import place_order
+
+# ✅ Import the broker function
+from infrastructure.broker.kite_orders import place_order 
 
 class ExecutionHandler:
-    def __init__(self, mode="paper"):
-        self.mode = mode
+    def __init__(self, mode="PAPER"):
+        self.mode = mode.upper()
         self.db_path = os.path.join(config.DATA_DIR, "trades.db")
         self.init_db()
-        print(f"   👮 Execution Handler Initialized (Mode: {self.mode.upper()})")
+        print(f"   👮 Execution Handler: {self.mode}")
 
     def init_db(self):
         conn = sqlite3.connect(self.db_path)
@@ -23,7 +25,7 @@ class ExecutionHandler:
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 timestamp DATETIME,
                 symbol TEXT,
-                signal TEXT,
+                side TEXT,
                 quantity INTEGER,
                 price REAL,
                 strategy TEXT,
@@ -33,71 +35,63 @@ class ExecutionHandler:
         conn.commit()
         conn.close()
 
-    def log_trade(self, symbol, signal, qty, price, strategy):
+    def log_trade(self, symbol, side, qty, price, strategy):
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
         cursor.execute('''
-            INSERT INTO trades (timestamp, symbol, signal, quantity, price, strategy, mode)
+            INSERT INTO trades (timestamp, symbol, side, quantity, price, strategy, mode)
             VALUES (?, ?, ?, ?, ?, ?, ?)
-        ''', (datetime.datetime.now(), symbol, signal, qty, price, strategy, self.mode))
+        ''', (datetime.datetime.now(), symbol, side, qty, price, strategy, self.mode))
         conn.commit()
         conn.close()
-        print(f"   📝 Trade Logged: {signal} {qty} {symbol} @ {price}")
 
-    def execute(self, order_dict):
+    def get_marketable_limit_price(self, side, current_price, buffer_pct=0.01):
         """
-        Executes orders. Returns True if successful, False if failed.
+        Calculates a 'Safe' Limit Price.
+        BUY:  Current Price + 1% (Willing to pay a bit more to ensure fill)
+        SELL: Current Price - 1% (Willing to sell a bit lower to ensure fill)
         """
-        symbol = order_dict['symbol']
-        signal = order_dict['signal'] # "BUY" or "SELL"
-        qty = order_dict['quantity']
-        ltp = order_dict.get('price', 0)
-        strategy = order_dict.get('strategy', 'manual')
-        tag = order_dict.get('tag', 'algo')
-
-        print(f"\n   🚀 EXECUTION ALERT: {signal} {symbol} (Qty: {qty})")
-
-        if self.mode == "live":
-            try:
-                # 1. Determine Order Type
-                if strategy in ["TIME_EXIT", "SL_HIT"]:
-                    order_type = "MARKET"
-                    final_price = 0
-                    print(f"   ⚠️ Panic Exit ({strategy}): Using MARKET Order")
-                else:
-                    order_type = "LIMIT"
-                    # Add 0.3% Buffer
-                    if signal == "BUY":
-                        final_price = ltp * 1.003
-                    else:
-                        final_price = ltp * 0.997
-                    
-                    print(f"   🛡️ Using LIMIT Order: {final_price:.2f} (LTP: {ltp})")
-
-                # 2. Place Order
-                # Note: 'transaction_type' is handled inside place_order via 'side'
-                order_id = place_order(
-                    symbol=symbol,
-                    side=signal, 
-                    quantity=qty,
-                    price=final_price,
-                    order_type=order_type,
-                    tag=tag
-                )
-
-                if order_id:
-                    print(f"   ✅ LIVE Order Placed! ID: {order_id}")
-                    self.log_trade(symbol, signal, qty, ltp, strategy)
-                    return True # SUCCESS
-                else:
-                    return False # FAILURE (e.g. Tick size error)
-            
-            except Exception as e:
-                print(f"   ❌ LIVE Execution Failed: {e}")
-                return False
-
+        if side == "BUY":
+            return round(current_price * (1 + buffer_pct), 2)
         else:
-            # PAPER TRADE
-            print(f"   📄 [PAPER] Simulated {signal} {symbol} @ {ltp:.2f}")
-            self.log_trade(symbol, signal, qty, ltp, strategy)
-            return True
+            return round(current_price * (1 - buffer_pct), 2)
+
+    def place_pair_order(self, sym1, side1, qty1, px1, sym2, side2, qty2, px2, product="MIS"):
+        """
+        Executes two legs using MARKETABLE LIMIT ORDERS to protect against slippage.
+        """
+        # Calculate Safe Limit Prices (1% Buffer)
+        limit_px1 = self.get_marketable_limit_price(side1, px1)
+        limit_px2 = self.get_marketable_limit_price(side2, px2)
+
+        print(f"      🚀 EXECUTING PAIR (Slippage Prot): {sym1} ({side1} {qty1} @ {limit_px1}) & {sym2} ({side2} {qty2} @ {limit_px2})")
+        
+        # --- LIVE MODE SWITCH ---
+        if self.mode == "LIVE":
+            print(f"      📡 SENDING PROTECTED ORDERS TO KITE...")
+            
+            # 1. Place Leg 1 (Limit Order with Buffer)
+            # We use 'LIMIT' type, but the price is aggressive to ensure immediate fill.
+            id1 = place_order(sym1, side1, qty1, price=limit_px1, order_type="LIMIT", product=product)
+            
+            if not id1: 
+                print(f"      ❌ Leg 1 ({sym1}) Failed. Aborting Leg 2.")
+                return False
+            
+            # 2. Place Leg 2 (Limit Order with Buffer)
+            id2 = place_order(sym2, side2, qty2, price=limit_px2, order_type="LIMIT", product=product)
+            
+            if not id2:
+                print(f"      ❌ Leg 2 ({sym2}) Failed. ⚠️ URGENT: You have an open leg on {sym1}!")
+                # Note: In a real HFT system, you would execute a 'Cleanup' trade here to close Leg 1.
+                return False
+            
+            print(f"      ✅ Pair Executed Successfully. IDs: {id1}, {id2}")
+            
+        else:
+            print("      📝 PAPER TRADE LOGGED (No API Call)")
+
+        # Log trades with the INTENDED execution price (px1, px2), not the limit cap
+        self.log_trade(sym1, side1, qty1, px1, "StatArb")
+        self.log_trade(sym2, side2, qty2, px2, "StatArb")
+        return True

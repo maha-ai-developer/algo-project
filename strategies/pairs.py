@@ -1,55 +1,100 @@
 import pandas as pd
 import numpy as np
+from strategies.stat_arb_bot import StatArbBot
+from strategies.guardian import AssumptionGuardian
 
 class PairStrategy:
-    def __init__(self, lookback=20, entry_std=2.0, exit_std=0.5):
-        self.lookback = lookback
-        self.entry_std = entry_std
-        self.exit_std = exit_std
-
-    def calculate_zscore(self, series_a, series_b):
-        # Calculate the ratio (Spread)
-        ratio = series_a / series_b
+    """
+    Professional Strategy Wrapper with 'Live Assumption Health Dashboard'.
+    """
+    def __init__(self, hedge_ratio, intercept):
+        # The Brain (Math)
+        self.bot = StatArbBot(entry_z=2.0, exit_z=0.0, stop_z=4.0)
+        self.bot.beta = hedge_ratio
+        self.bot.intercept = intercept
         
-        # Calculate rolling mean and std deviation
-        rolling_mean = ratio.rolling(window=self.lookback).mean()
-        rolling_std = ratio.rolling(window=self.lookback).std()
-        
-        # Calculate Z-Score
-        zscore = (ratio - rolling_mean) / rolling_std
-        return zscore
+        # The Guardian (Health Monitor)
+        self.guardian = AssumptionGuardian(lookback_window=60)
+        self.guardian.calibrate(hedge_ratio)
 
-    def generate_signal(self, df_a, df_b):
+    def generate_signal(self, input_y, input_x):
         """
-        Expects two dataframes with 'close' columns.
+        1. Clean Data (DataFrame -> Series)
+        2. Check Health (Guardian)
+        3. Calculate Z-Score
         """
-        # Align data
-        df = pd.concat([df_a['close'], df_b['close']], axis=1).dropna()
-        df.columns = ['leg1', 'leg2']
-        
-        if len(df) < self.lookback:
-            return {'signal': 'WAIT', 'zscore': 0}
+        # --- FIX 1: Ensure Inputs are Series (Not DataFrames) ---
+        # If input is a DataFrame (e.g. has columns like 'close'), strip it to a Series
+        if isinstance(input_y, pd.DataFrame):
+            # Try to get 'close', otherwise take the first column
+            if 'close' in input_y.columns:
+                s_y = input_y['close']
+            else:
+                s_y = input_y.iloc[:, 0]
+        else:
+            s_y = input_y
 
-        z_series = self.calculate_zscore(df['leg1'], df['leg2'])
-        current_z = z_series.iloc[-1]
+        if isinstance(input_x, pd.DataFrame):
+            if 'close' in input_x.columns:
+                s_x = input_x['close']
+            else:
+                s_x = input_x.iloc[:, 0]
+        else:
+            s_x = input_x
+
+        # Align Data
+        df = pd.concat([s_y, s_x], axis=1).dropna()
+        if len(df) < 20: 
+            return {'signal': 'WAIT', 'health': 'YELLOW', 'zscore': 0.0}
+        
+        # Separate back into clean Series
+        clean_y = df.iloc[:, 0]
+        clean_x = df.iloc[:, 1]
+
+        # Latest Prices (Scalars)
+        latest_y = clean_y.iloc[-1]
+        latest_x = clean_x.iloc[-1]
+        
+        # 1. Feed Data to Guardian
+        self.guardian.update_data(latest_y, latest_x)
+        
+        # 2. Get Health Diagnosis
+        status, reason = self.guardian.diagnose()
+        
+        # 3. Act on Health Status
+        if status == "RED":
+            return {
+                'signal': 'STOP_LOSS',
+                'reason': f"SYSTEM HALT: {reason}",
+                'health': status,
+                'health_reason': reason,
+                'zscore': 0.0
+            }
+            
+        # 4. Run Math (Only if healthy)
+        z_series = self.bot.generate_full_series(clean_y, clean_x)
+        
+        # --- FIX 2: Ensure Z-Score is a scalar Float ---
+        if z_series.empty:
+            return {'signal': 'WAIT', 'health': status, 'zscore': 0.0}
+            
+        current_z = float(z_series.iloc[-1]) # <--- FORCE FLOAT
         
         signal = "WAIT"
-        # Logic: Mean Reversion
-        # If Z > 2: Ratio is high (Leg1 Expensive, Leg2 Cheap) -> Short Spread
-        if current_z > self.entry_std:
-            signal = "SHORT_SPREAD" # Sell Leg1, Buy Leg2
-            
-        # If Z < -2: Ratio is low (Leg1 Cheap, Leg2 Expensive) -> Long Spread
-        elif current_z < -self.entry_std:
-            signal = "LONG_SPREAD"  # Buy Leg1, Sell Leg2
-            
-        # Exit Logic
-        elif abs(current_z) < self.exit_std:
+        
+        # Logic
+        if current_z < -self.bot.entry_z and current_z > -self.bot.stop_z:
+            signal = "LONG_SPREAD"
+        elif current_z > self.bot.entry_z and current_z < self.bot.stop_z:
+            signal = "SHORT_SPREAD"
+        elif abs(current_z) < 0.5:
             signal = "EXIT"
-
+        elif abs(current_z) > self.bot.stop_z:
+            signal = "STOP_LOSS" # Z-Score Stop Loss
+            
         return {
             'signal': signal,
             'zscore': round(current_z, 2),
-            'price_leg1': df['leg1'].iloc[-1],
-            'price_leg2': df['leg2'].iloc[-1]
+            'health': status,
+            'health_reason': reason
         }
