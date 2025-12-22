@@ -55,6 +55,11 @@ class PairStrategy:
         latest_y = clean_y.iloc[-1]
         latest_x = clean_x.iloc[-1]
         
+        # ✅ SAFETY FILTER: Ignore Zeros or NaNs
+        if latest_y <= 0 or latest_x <= 0 or pd.isna(latest_y) or pd.isna(latest_x):
+            # If bad data, return previous state but DO NOT update Guardian memory
+            return {'signal': 'WAIT', 'health': 'YELLOW', 'zscore': 0.0}
+
         # 1. Feed Data to Guardian
         self.guardian.update_data(latest_y, latest_x)
         
