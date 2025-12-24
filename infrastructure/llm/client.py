@@ -26,10 +26,12 @@ class GeminiAgent:
                         "sales_growth_3yr_avg": {"type": "NUMBER"},
                         "profit_growth_3yr_avg": {"type": "NUMBER"},
                         "roe_latest": {"type": "NUMBER"},
+                        "roce_latest": {"type": "NUMBER"},
+                        "pe_ratio": {"type": "NUMBER"},
                         "debt_to_equity": {"type": "NUMBER"},
                         "beta": {"type": "NUMBER"}
                     },
-                    "required": ["sales_growth_3yr_avg", "roe_latest", "debt_to_equity"]
+                    "required": ["sales_growth_3yr_avg", "roe_latest", "roce_latest", "pe_ratio", "debt_to_equity"]
                 },
                 "dcf_inputs": {
                     "type": "OBJECT",
@@ -57,8 +59,9 @@ class GeminiAgent:
         Analyze Indian stock '{symbol}' (NSE).
         Task: Extract UNIVERSAL fundamental metrics.
         - 3-Year Sales/Profit Growth (CAGR).
-        - ROE, Debt/Equity.
+        - ROE, ROCE, P/E Ratio, Debt/Equity.
         - DCF Inputs (FCF, Shares, Net Debt).
+        Ref: Fundamental-Analysis.pdf
         """
         try:
             response = self.client.models.generate_content(

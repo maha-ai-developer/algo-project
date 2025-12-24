@@ -42,3 +42,45 @@ def get_optimal_quantity(equity, max_risk_pct, entry_price, stop_loss_price, win
     print(f"   ⧖ Optimized Risk: ₹{optimized_risk_amount:.1f} | Risk/Share ₹{risk_per_share:.1f} -> Qty {qty}")
 
     return max(1, qty) # Always return at least 1 to test
+
+
+def check_margin_availability(equity, initial_margin, m2m_buffer_pct=0.20):
+    """
+    Verifies sufficient margin before placing Futures trade.
+    Ref: Futures Trading.pdf - Initial Margin + M2M Buffer
+    
+    Args:
+        equity: Available capital
+        initial_margin: Required margin for the position
+        m2m_buffer_pct: Extra buffer for mark-to-market (default 20%)
+    
+    Returns:
+        (bool, str): (is_sufficient, reason)
+    """
+    required_capital = initial_margin * (1 + m2m_buffer_pct)
+    
+    if equity >= required_capital:
+        return True, f"Margin OK: ₹{equity:,.0f} >= ₹{required_capital:,.0f}"
+    else:
+        shortfall = required_capital - equity
+        return False, f"Margin INSUFFICIENT: Need ₹{shortfall:,.0f} more"
+
+
+def get_futures_margin(symbol, qty, price, margin_pct=0.15):
+    """
+    Estimates margin requirement for a Futures position.
+    Default margin ~15% of contract value (varies by underlying).
+    
+    Args:
+        symbol: Trading symbol
+        qty: Quantity (lot size * number of lots)
+        price: Current price
+        margin_pct: Margin percentage (default 15%)
+    
+    Returns:
+        float: Estimated margin requirement
+    """
+    contract_value = qty * price
+    margin_required = contract_value * margin_pct
+    print(f"   💰 Margin Estimate: {symbol} | Value ₹{contract_value:,.0f} | Margin ₹{margin_required:,.0f}")
+    return margin_required

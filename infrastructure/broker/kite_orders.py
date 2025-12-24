@@ -52,14 +52,15 @@ def round_to_tick(price, tick_size=0.05):
     return round(value, 2)
 
 # --- UPDATED FUNCTION SIGNATURE ---
-def place_order(symbol, side, quantity, price=0, trigger_price=0, order_type="LIMIT", product="MIS", tag="algo_trade"):
+def place_order(symbol, side, quantity, price=0, trigger_price=0, order_type="LIMIT", product="MIS", exchange="NSE", tag="algo_trade"):
     """
     Places an order via Kite Connect.
     
-    CRITICAL UPDATE: Added 'product' parameter.
+    CRITICAL UPDATE: Added 'product' and 'exchange' parameters.
     - Use "MIS" for Intraday.
     - Use "NRML" for Futures Overnight.
     - Use "CNC" for Equity Delivery Overnight.
+    - Use "NFO" exchange for Futures, "NSE" for Equity.
     """
     try:
         kite = get_kite()
@@ -81,15 +82,20 @@ def place_order(symbol, side, quantity, price=0, trigger_price=0, order_type="LI
         elif product == "NRML": kite_product = kite.PRODUCT_NRML
         else: kite_product = kite.PRODUCT_MIS
 
-        # 5. Round Prices
+        # 5. Map Exchange (Fix #2: NFO for Futures)
+        if exchange == "NFO": kite_exchange = kite.EXCHANGE_NFO
+        elif exchange == "BSE": kite_exchange = kite.EXCHANGE_BSE
+        else: kite_exchange = kite.EXCHANGE_NSE
+
+        # 6. Round Prices
         limit_price = round_to_tick(price, tick_size) if order_type in ["LIMIT", "SL"] else None
         trig_price = round_to_tick(trigger_price, tick_size) if trigger_price and trigger_price > 0 else None
 
-        print(f"📞 Sending {side}: {symbol} Qty {quantity} | Type: {order_type} | Product: {product}")
+        print(f"📞 Sending {side}: {symbol} Qty {quantity} | Type: {order_type} | Product: {product} | Exchange: {exchange}")
 
         order_id = kite.place_order(
             variety=kite.VARIETY_REGULAR,
-            exchange=kite.EXCHANGE_NSE,
+            exchange=kite_exchange,  # <--- USING VARIABLE NOW
             tradingsymbol=symbol,
             transaction_type=tx_type,
             quantity=quantity,

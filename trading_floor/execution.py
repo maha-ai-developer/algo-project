@@ -95,3 +95,42 @@ class ExecutionHandler:
         self.log_trade(sym1, side1, qty1, px1, "StatArb")
         self.log_trade(sym2, side2, qty2, px2, "StatArb")
         return True
+
+    def place_stop_loss_order(self, symbol, side, qty, trigger_price, product="NRML", exchange="NFO"):
+        """
+        Places a Stop-Loss Market (SL-M) order for guaranteed exit.
+        Ref: Risk-Management&Trading-Psychology.pdf
+        
+        SL-M orders execute at MARKET price once trigger is hit,
+        guaranteeing exit even in fast-moving markets.
+        
+        Args:
+            symbol: Trading symbol
+            side: "BUY" or "SELL" (opposite of position)
+            qty: Quantity to exit
+            trigger_price: Price at which to trigger the stop
+            product: "NRML" for futures overnight (default)
+            exchange: "NFO" for futures (default)
+        
+        Returns:
+            Order ID or None
+        """
+        print(f"      🛡️ STOP-LOSS ORDER: {side} {qty} {symbol} @ trigger ₹{trigger_price}")
+        
+        if self.mode == "LIVE":
+            order_id = place_order(
+                symbol=symbol,
+                side=side,
+                quantity=qty,
+                trigger_price=trigger_price,
+                order_type="SL-M",  # Stop-Loss MARKET for guaranteed fill
+                product=product,
+                exchange=exchange
+            )
+            if order_id:
+                print(f"      ✅ SL-M Order Placed! ID: {order_id}")
+            return order_id
+        else:
+            print(f"      📝 PAPER SL-M: {side} {qty} {symbol} @ trigger ₹{trigger_price}")
+            self.log_trade(symbol, f"SL-{side}", qty, trigger_price, "StatArb_SL")
+            return "PAPER_SL"
