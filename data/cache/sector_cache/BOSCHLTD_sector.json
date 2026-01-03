@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Auto Ancillaries (Mobility Solutions)",
+    "sector_kpis": {
+      "kpi_1": "Revenue Growth: 9.1% YoY (Q2 FY26)",
+      "kpi_2": "EBITDA Margin: ~13.4% (LTM)",
+      "kpi_3": "Auto Segment Growth: 11.9% YoY (Q2 FY26)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:39:19.466412",
+  "_symbol": "BOSCHLTD"
+}

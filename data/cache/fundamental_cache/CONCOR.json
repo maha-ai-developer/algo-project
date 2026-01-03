@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 5.29,
+      "profit_growth_3yr_avg": 6.19,
+      "roe_latest": 10.8,
+      "roce_latest": 13.9,
+      "pe_ratio": 30.6,
+      "debt_to_equity": 0.07,
+      "beta": 1.33
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 642.3,
+      "growth_rate_projection": 13.4,
+      "shares_outstanding_cr": 76.16,
+      "net_debt_cr": 640.0,
+      "tax_rate": 26.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "CONCOR is a 'Navratna' PSU with a dominant position in railway logistics and a strong balance sheet. While it benefits from the Dedicated Freight Corridor (DFC) and government backing, it faces competition from private players and bureaucratic efficiency challenges."
+    }
+  },
+  "_cached_at": "2025-12-31T11:30:33.351923",
+  "_symbol": "CONCOR"
+}

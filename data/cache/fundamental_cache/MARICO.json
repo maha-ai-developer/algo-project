@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 6.84,
+      "profit_growth_3yr_avg": 9.99,
+      "roe_latest": 41.1,
+      "roce_latest": 45.2,
+      "pe_ratio": 57.9,
+      "debt_to_equity": 0.14,
+      "beta": 0.13
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1250.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 129.0,
+      "net_debt_cr": -1135.0,
+      "tax_rate": 22.5
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Marico is widely regarded for its high corporate governance standards and professional management under MD Saugata Gupta. The company maintains a clean balance sheet with low debt and high return ratios (ROE > 35%). Promoter pledging is negligible (~2%), and the company has a consistent track record of dividend payouts and transparent financial disclosures."
+    }
+  },
+  "_cached_at": "2025-12-31T11:52:38.001874",
+  "_symbol": "MARICO"
+}

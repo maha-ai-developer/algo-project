@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 20.68,
+      "profit_growth_3yr_avg": 53.28,
+      "roe_latest": 28.8,
+      "roce_latest": 38.86,
+      "pe_ratio": 61.62,
+      "debt_to_equity": 0.0,
+      "beta": 0.73
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1117.85,
+      "growth_rate_projection": 11.0,
+      "shares_outstanding_cr": 21.19,
+      "net_debt_cr": -5390.0,
+      "tax_rate": 25.4
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "ABB India is a subsidiary of the Swiss multinational ABB Ltd, adhering to high global standards of corporate governance and compliance. The company maintains a debt-free balance sheet, robust cash reserves (approx. \u20b95,390 Cr), and transparent financial reporting. It has a strong focus on ESG (Environmental, Social, and Governance) parameters, with significant reductions in GHG emissions and high scores in employee engagement. The board is diverse and has no reported major governance issues."
+    }
+  },
+  "_cached_at": "2025-12-31T11:17:25.282730",
+  "_symbol": "ABB"
+}

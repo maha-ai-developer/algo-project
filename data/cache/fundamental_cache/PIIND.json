@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.25,
+      "profit_growth_3yr_avg": 31.56,
+      "roe_latest": 17.6,
+      "roce_latest": 22.9,
+      "pe_ratio": 32.1,
+      "debt_to_equity": 0.02,
+      "beta": 0.37
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1415.2,
+      "growth_rate_projection": 16.0,
+      "shares_outstanding_cr": 15.17,
+      "net_debt_cr": -3700.0,
+      "tax_rate": 22.26
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "PI Industries demonstrates strong corporate governance with transparent integrated reporting and a professional management team. The company has a consistent track record of capital allocation and high institutional ownership (FII/DII > 36%), reflecting market trust. No major regulatory or ethical issues have been reported."
+    }
+  },
+  "_cached_at": "2025-12-31T12:01:22.700364",
+  "_symbol": "PIIND"
+}

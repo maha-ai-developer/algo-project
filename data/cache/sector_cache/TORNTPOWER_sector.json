@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Integrated Power Utility",
+    "sector_kpis": {
+      "kpi_1": "AT&C Losses: 3.5%-7.0% (Best-in-class)",
+      "kpi_2": "EBITDA Margin: 18%-20%",
+      "kpi_3": "Net Debt to EBITDA: 1.41x"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:14:28.717533",
+  "_symbol": "TORNTPOWER"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Renewable Energy - Wind Turbine Manufacturing & O&M Services",
+    "sector_kpis": {
+      "kpi_1": "Order Book: 5.1 GW",
+      "kpi_2": "Net Debt to EBITDA: Net Cash Positive",
+      "kpi_3": "Fleet Management (O&M): 14.9 GW"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:36.074007",
+  "_symbol": "SUZLON"
+}

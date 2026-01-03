@@ -1,48 +1,195 @@
 Symbol,Quality,Mgmt Score,Fair Value,Buy Price,Reasoning
-TRENT,INVESTIBLE,10.0,-387.75,-348.98,"Trent Limited is a part of the Tata Group, ensurin"
-APOLLOHOSP,INVESTIBLE,0.85,-6147594533.43,-5532835080.09,Apollo Hospitals is led by the highly respected Dr
-SHRIRAMFIN,INVESTIBLE,8.0,-473.01,-425.71,The company belongs to the well-established Shrira
-BAJAJ-AUTO,INVESTIBLE,9.0,-1589.02,-1430.12,"Bajaj Auto is part of the Bajaj Group, known for s"
-MARUTI,INVESTIBLE,90.0,8524.77,7672.29,Maruti Suzuki is the market leader in the Indian p
-ULTRACEMCO,INVESTIBLE,9.0,-1052.51,-947.26,UltraTech Cement is the flagship company of the Ad
-COALINDIA,INVESTIBLE,8.5,-386.97,-348.27,Coal India is a 'Maharatna' PSU with strong govern
-MAXHEALTH,INVESTIBLE,8.0,-114.86,-103.38,"The company is led by Abhay Soi, who is credited w"
-NESTLEIND,INVESTIBLE,0.9,-41.11,-37.0,"Nestle India, a subsidiary of the Swiss MNC Nestle"
-ADANIPORTS,INVESTIBLE,0.75,-1208.24,-1087.41,"SEBI recently dismissed Hindenburg allegations, pr"
-M&M,INVESTIBLE,90.0,973.81,876.43,M&M is widely recognized for its high corporate go
-TCS,INVESTIBLE,9.5,3738.28,3364.46,"TCS is the flagship company of the Tata Group, whi"
-AXISBANK,INVESTIBLE,90.0,-163110.61,-146799.55,Axis Bank is the third-largest private sector bank
-ETERNAL,INVESTIBLE,8.5,-21.92,-19.72,Eternal Limited (formerly Zomato) has demonstrated
-BEL,INVESTIBLE,0.9,120.13,108.12,Bharat Electronics Limited (BEL) is a 'Navratna' P
-BHARTIARTL,INVESTIBLE,0.9,-505.65,-455.08,Bharti Airtel operates in a consolidated telecom o
-HINDALCO,INVESTIBLE,9.0,-1489.13,-1340.21,Hindalco is a flagship company of the Aditya Birla
-JIOFIN,INVESTIBLE,9.0,-245.47,-220.92,Jio Financial Services is backed by Reliance Indus
-EICHERMOT,INVESTIBLE,9.0,3401.26,3061.14,Eicher Motors is widely recognized for its strong 
-KOTAKBANK,INVESTIBLE,9.0,-1990.81,-1791.73,Kotak Mahindra Bank is widely recognized for its '
-INFY,INVESTIBLE,0.9,-866.09,-779.48,Infosys is widely recognized for its strong corpor
-HDFCBANK,INVESTIBLE,9.0,-12570113.09,-11313101.78,HDFC Bank is widely regarded as a 'Gold Standard' 
-ITC,INVESTIBLE,0.9,643.3,578.97,ITC is widely recognized for its high corporate go
-TITAN,INVESTIBLE,0.95,-76681.35,-69013.22,"Titan Company is part of the Tata Group, a conglom"
-TECHM,INVESTIBLE,9.0,-1298.82,-1168.93,Tech Mahindra is a key entity of the Mahindra Grou
-LT,INVESTIBLE,9.0,-253568.0,-228211.2,"Larsen & Toubro is widely regarded as a blue-chip,"
-SBILIFE,INVESTIBLE,80.0,6906.19,6215.57,"Backed by State Bank of India (strong parentage), "
-BAJFINANCE,INVESTIBLE,0.9,-384.37,-345.93,Bajaj Finance is led by the reputable Bajaj group 
-NTPC,INVESTIBLE,8.5,-628.01,-565.21,NTPC is a 'Maharatna' PSU (Public Sector Undertaki
-HCLTECH,INVESTIBLE,9.0,12049.87,10844.88,HCL Technologies is consistently recognized for hi
-ICICIBANK,INVESTIBLE,9.0,-28578.41,-25720.57,Under the leadership of Mr. Sandeep Bakhshi since 
-CIPLA,INVESTIBLE,9.0,1635.28,1471.75,Cipla is widely respected for its 'Caring for Life
-SBIN,INVESTIBLE,0.9,1658.8,1492.92,State Bank of India (SBIN) demonstrates high manag
-BAJAJFINSV,INVESTIBLE,0.9,-1637.53,-1473.77,"Bajaj Finserv is part of the Bajaj Group, which is"
-TATACONSUM,INVESTIBLE,9.0,-284.49,-256.04,Tata Consumer Products benefits from the impeccabl
-TATASTEEL,INVESTIBLE,9.5,-609.96,-548.96,Tata Steel is a flagship company of the Tata Group
-RELIANCE,INVESTIBLE,9.0,-632.18,-568.96,Reliance Industries Limited (RIL) is led by Mukesh
-ONGC,INVESTIBLE,8.0,-1195.76,-1076.19,"ONGC is a 'Maharatna' PSU, indicating the highest "
-ASIANPAINT,INVESTIBLE,9.0,-274.57,-247.12,Asian Paints is a market leader with over 50% mark
-HINDUNILVR,INVESTIBLE,0.9,2638.41,2374.57,Hindustan Unilever is a subsidiary of Unilever and
-SUNPHARMA,INVESTIBLE,6.0,-648.76,-583.89,Sun Pharma is a global leader with a strong promot
-HDFCLIFE,INVESTIBLE,90.0,-7889.49,-7100.54,HDFC Life operates under the HDFC Group (now HDFC 
-TMPV,INVESTIBLE,9.0,-2495982.22,-2246383.99,Tata Motors Passenger Vehicles (TMPV) benefits fro
-DRREDDY,INVESTIBLE,8.5,-307.91,-277.12,Dr. Reddy's Laboratories is a Nifty 50 constituent
-WIPRO,INVESTIBLE,9.0,-210.3,-189.27,"Wipro is backed by the Premji family, known for th"
-ADANIENT,INVESTIBLE,2.0,-625.94,-563.35,Management integrity is significantly questioned f
-INDIGO,INVESTIBLE,65.0,-1057.37,-951.64,While IndiGo has been a market leader with a stron
+ABB,INVESTIBLE,9.0,2260.0,2034.0,ABB India is a subsidiary of the Swiss multination
+ABCAPITAL,INVESTIBLE,0.9,-511.97,-460.77,Aditya Birla Capital is the holding company for th
+360ONE,INVESTIBLE,0.9,-632.78,-569.5,360 ONE WAM (formerly IIFL Wealth) is India's larg
+ADANIENT,INVESTIBLE,2.0,-500.5,-450.45,Management integrity is under severe scrutiny foll
+ADANIGREEN,INVESTIBLE,3.0,3148594890.5,2833735401.45,Management integrity is severely compromised by th
+ADANIPORTS,INVESTIBLE,6.0,-683.5,-615.15,Adani Ports is the dominant market leader in India
+ALKEM,INVESTIBLE,7.0,-1131.55,-1018.4,Alkem Laboratories maintains a strong market posit
+AMBUJACEM,INVESTIBLE,6.0,-719.63,-647.66,"Part of the Adani Group, the company demonstrates "
+AMBER,INVESTIBLE,0.85,-115471.85,-103924.67,Amber Enterprises exhibits strong corporate govern
+ANGELONE,INVESTIBLE,8.0,66132.49,59519.24,Angel One demonstrates robust corporate governance
+APLAPOLLO,INVESTIBLE,0.85,-101.07,-90.97,The management has maintained a strong market lead
+APOLLOHOSP,INVESTIBLE,8.0,-8176.07,-7358.47,Apollo Hospitals is led by the reputable Reddy fam
+ASIANPAINT,INVESTIBLE,9.5,-492.26,-443.03,Asian Paints is widely regarding as a 'Gold Standa
+ASTRAL,INVESTIBLE,0.9,-1769.13,-1592.21,High promoter holding (~54%) indicates strong skin
+ASHOKLEY,INVESTIBLE,6.5,-2.3,-2.07,Ashok Leyland is the flagship company of the Hindu
+AUBANK,INVESTIBLE,9.0,-22.46,-20.21,AU Small Finance Bank is led by its founder Sanjay
+AUROPHARMA,INVESTIBLE,6.0,-516.38,-464.74,Aurobindo Pharma has a history of regulatory hurdl
+AXISBANK,INVESTIBLE,9.0,-216056.45,-194450.8,Axis Bank is rated in the top-tier 'Leadership' ca
+BAJAJ-AUTO,INVESTIBLE,9.5,67747.37,60972.63,The Bajaj Group is widely recognized for its high 
+BAJFINANCE,INVESTIBLE,9.0,-361.25,-325.12,"Bajaj Finance is part of the Bajaj Group, widely r"
+BAJAJHLDNG,INVESTIBLE,9.0,4317.97,3886.17,Bajaj Holdings is part of the renowned Bajaj Group
+BAJAJFINSV,INVESTIBLE,9.0,-1808.46,-1627.62,"Bajaj Finserv is part of the Bajaj Group, widely r"
+BANKINDIA,INVESTIBLE,7.5,-30.77,-27.7,Bank of India demonstrates strong financial moment
+BANKBARODA,INVESTIBLE,7.0,-8848.33,-7963.5,Bank of Baroda is a major Public Sector Undertakin
+BANDHANBNK,INVESTIBLE,0.8,-17.44,-15.69,Bandhan Bank has recently appointed Partha Pratim 
+BEL,INVESTIBLE,90.0,119.64,107.68,Bharat Electronics Limited (BEL) is a 'Navratna' P
+BDL,INVESTIBLE,8.0,309.62,278.66,Bharat Dynamics is a Miniratna Category-I Public S
+BHARATFORG,INVESTIBLE,8.5,-351.11,-316.0,"Bharat Forge, a flagship company of the Kalyani Gr"
+BHARTIARTL,INVESTIBLE,9.5,-481.46,-433.31,Bharti Airtel consistently holds the highest corpo
+BHEL,INVESTIBLE,8.0,-51.09,-45.98,BHEL is a 'Maharatna' Public Sector Undertaking (P
+BIOCON,INVESTIBLE,8.0,-2944.85,-2650.36,"Biocon is led by Kiran Mazumdar-Shaw, a highly res"
+BLUESTARCO,INVESTIBLE,9.0,-201.95,-181.76,Blue Star is professionally managed by the Advani 
+BOSCHLTD,INVESTIBLE,90.0,22932.36,20639.13,Bosch Limited is the flagship Indian subsidiary of
+BRITANNIA,INVESTIBLE,0.85,-6889.94,-6200.95,Britannia Industries is part of the Wadia Group an
+BPCL,INVESTIBLE,8.0,-5507.47,-4956.72,BPCL is a 'Maharatna' PSU with robust governance f
+BSE,INVESTIBLE,7.0,1323.98,1191.58,BSE Ltd is a highly regulated market infrastructur
+CAMS,INVESTIBLE,9.0,-298.21,-268.39,CAMS operates as a dominant leader (duopoly) with 
+CANBK,INVESTIBLE,6.5,-12903.92,-11613.53,"Management is generally stable as a PSU, but there"
+CDSL,INVESTIBLE,9.0,1559.32,1403.39,CDSL is a professionally managed institution backe
+CGPOWER,INVESTIBLE,9.0,75.78,68.2,The company is now backed by the Murugappa Group (
+CIPLA,INVESTIBLE,9.0,278261.38,250435.24,Cipla is renowned for its humanitarian approach ('
+CHOLAFIN,INVESTIBLE,7.0,-1730.29,-1557.26,Cholamandalam is part of the reputed Murugappa Gro
+COLPAL,INVESTIBLE,0.9,-3344.7,-3010.23,Colgate-Palmolive (India) is a subsidiary of a glo
+COALINDIA,INVESTIBLE,0.8,306.01,275.41,State-owned enterprise (PSU) with generally high t
+COFORGE,INVESTIBLE,9.0,-341.13,-307.01,Coforge demonstrates strong governance with a prof
+CONCOR,INVESTIBLE,8.0,-265.29,-238.76,CONCOR is a 'Navratna' PSU with a dominant positio
+CROMPTON,INVESTIBLE,90.0,-176.33,-158.7,Crompton Greaves Consumer Electricals is a profess
+CUMMINSIND,INVESTIBLE,0.9,1356.3,1220.67,Cummins India is a subsidiary of Cummins Inc. (USA
+DABUR,INVESTIBLE,8.0,-96.52,-86.87,Dabur India maintains a strong reputation for corp
+DALBHARAT,INVESTIBLE,8.5,-190.16,-171.15,The Dalmia Bharat Group is a reputable conglomerat
+DELHIVERY,INVESTIBLE,0.85,21.59,19.43,Managed by founders with strong professional backg
+DIXON,INVESTIBLE,0.9,-1025.24,-922.72,Dixon Technologies exhibits high management integr
+DIVISLAB,INVESTIBLE,90.0,420.6,378.54,Divi's Laboratories is led by Dr. Murali Divi with
+DMART,INVESTIBLE,10.0,-442.6,-398.34,"Promoted by Radhakishan Damani, a veteran investor"
+DRREDDY,INVESTIBLE,0.8,-183.8,-165.42,Dr. Reddy's is led by a professionally competent m
+DLF,INVESTIBLE,80.0,-426.23,-383.6,DLF has significantly improved its corporate gover
+EICHERMOT,INVESTIBLE,9.0,3374.98,3037.48,"Eicher Motors is led by Siddhartha Lal, who is cre"
+EXIDEIND,INVESTIBLE,8.0,-14.47,-13.02,Exide Industries is part of the reputed Rajan Rahe
+ETERNAL,INVESTIBLE,9.0,-9.38,-8.44,Management (led by Deepinder Goyal) shows high int
+FEDERALBNK,INVESTIBLE,0.9,43.55,39.19,Federal Bank is an old private sector bank with a 
+GAIL,INVESTIBLE,6.5,-99.64,-89.68,GAIL is a 'Maharatna' PSU with a generally robust 
+FORTIS,INVESTIBLE,8.0,-96.04,-86.43,Since the acquisition by IHH Healthcare Berhad in 
+GLENMARK,INVESTIBLE,5.0,-642.46,-578.21,Management integrity is a concern due to repeated 
+GODREJPROP,INVESTIBLE,9.5,3169.82,2852.84,Godrej Properties is part of the illustrious Godre
+HAVELLS,INVESTIBLE,9.0,-5922.47,-5330.23,Havells India is widely regarded for its strong pr
+HAL,INVESTIBLE,85.0,15200.4,13680.36,Strong government backing (PSU) with a virtual mon
+HCLTECH,INVESTIBLE,9.0,22228.54,20005.69,HCL Technologies is a top-tier global IT services 
+HDFCAMC,INVESTIBLE,9.5,1081.4,973.26,"HDFC AMC operates under the HDFC Group, a conglome"
+HDFCBANK,INVESTIBLE,0.95,-445422.43,-400880.19,HDFC Bank is widely regarded as the 'gold standard
+HDFCLIFE,INVESTIBLE,90.0,-921.77,-829.59,HDFC Life is part of the renowned HDFC Group (now 
+HEROMOTOCO,INVESTIBLE,0.75,334184.14,300765.73,Hero MotoCorp is a market leader with a strong leg
+HINDUNILVR,INVESTIBLE,9.5,-8263.9,-7437.51,Hindustan Unilever (HUL) is widely regarded as a b
+HINDALCO,INVESTIBLE,6.0,-4109.82,-3698.84,Hindalco is a flagship company of the reputable Ad
+HINDPETRO,INVESTIBLE,4.0,-15956.08,-14360.47,The company has faced multiple recent governance c
+HUDCO,INVESTIBLE,8.5,-524.05,-471.64,HUDCO is a 'Miniratna' Central Public Sector Enter
+HINDZINC,INVESTIBLE,0.4,-74493.95,-67044.56,While operationally world-class (lowest cost zinc 
+ICICIBANK,INVESTIBLE,9.0,-30063.86,-27057.47,"Under the leadership of CEO Sandeep Bakhshi, ICICI"
+ICICIGI,INVESTIBLE,4.5,1541.57,1387.42,"ICICI Lombard is a subsidiary of ICICI Bank, one o"
+ICICIPRULI,INVESTIBLE,0.9,-100.26,-90.23,ICICI Prudential Life Insurance is a leading priva
+IDEA,INVESTIBLE,0.8,-18.74,-16.87,Backed by the reputable Aditya Birla Group and Vod
+IEX,INVESTIBLE,0.85,317.97,286.17,IEX displays robust financial health with a debt-f
+IDFCFIRSTB,INVESTIBLE,9.0,4559.93,4103.93,"Led by V. Vaidyanathan, the management has a stron"
+INDHOTEL,INVESTIBLE,95.0,-1485.27,-1336.74,The Indian Hotels Company (IHCL) is a part of the 
+INDIGO,INVESTIBLE,0.9,-8487.26,-7638.53,InterGlobe Aviation (IndiGo) commands a dominant m
+INDIANB,INVESTIBLE,8.0,-27312.66,-24581.39,Indian Bank is a prominent Public Sector Undertaki
+INDUSTOWER,INVESTIBLE,8.0,-2888.81,-2599.93,"Controlled by the Bharti Group (Airtel), Indus Tow"
+INFY,INVESTIBLE,9.0,-777.24,-699.51,Infosys is a bellwether of the Indian IT industry 
+INOXWIND,INVESTIBLE,7.0,-115.42,-103.88,The company is part of the established Inox GFL Gr
+IRCTC,INVESTIBLE,8.0,482.08,433.87,IRCTC is a 'Mini Ratna' PSU with a near-monopoly i
+IOC,INVESTIBLE,8.0,-16823.16,-15140.84,"Indian Oil Corporation is a Maharatna PSU, indicat"
+ITC,INVESTIBLE,9.0,414.38,372.94,ITC is widely regarded as a professionally managed
+IRFC,INVESTIBLE,9.0,-207.84,-187.05,IRFC is a 'Miniratna' PSU under the Ministry of Ra
+IREDA,INVESTIBLE,8.0,-37.25,-33.52,IREDA is a 'Navratna' Public Sector Undertaking (P
+JIOFIN,INVESTIBLE,9.0,161.85,145.67,The company is part of the Reliance Industries gro
+JSWENERGY,INVESTIBLE,0.85,2269.52,2042.57,Part of the reputable JSW Group with a strong trac
+JSWSTEEL,INVESTIBLE,8.0,-1619.77,-1457.79,The JSW Group management has demonstrated strong e
+KAYNES,INVESTIBLE,4.0,2911.19,2620.07,While the company has delivered exceptional growth
+KALYANKJIL,INVESTIBLE,0.85,-242189.61,-217970.65,Kalyan Jewellers is led by the Kalyanaraman family
+KEI,INVESTIBLE,9.0,-27570.36,-24813.32,KEI Industries is led by a professional management
+KFINTECH,INVESTIBLE,85.0,-4498.16,-4048.34,KFin Technologies operates in a duopoly market (RT
+KOTAKBANK,INVESTIBLE,9.0,-216.03,-194.43,Kotak Mahindra Bank is widely regarded for its hig
+KPITTECH,INVESTIBLE,8.5,-359.76,-323.78,KPIT Technologies is a specialized player in the h
+LAURUSLABS,INVESTIBLE,8.5,5.92,5.33,Management demonstrates strong governance with a h
+LICHSGFIN,INVESTIBLE,8.0,-4352.41,-3917.17,LIC Housing Finance is a subsidiary of Life Insura
+LICI,INVESTIBLE,9.0,903.66,813.29,LICI is a PSU backed by a sovereign guarantee unde
+LODHA,INVESTIBLE,8.5,-182.4,-164.16,Management demonstrates strong execution with cons
+LT,INVESTIBLE,9.0,-6340486.94,-5706438.25,Larsen & Toubro is a professionally managed conglo
+LTF,INVESTIBLE,9.0,-293.98,-264.59,L&T Finance is a subsidiary of the highly respecte
+LTIM,INVESTIBLE,9.0,-2486.89,-2238.21,LTIMindtree is part of the Larsen & Toubro (L&T) G
+LUPIN,INVESTIBLE,7.0,-554.62,-499.16,Lupin exhibits strong corporate governance with tr
+MANKIND,INVESTIBLE,9.0,-969.04,-872.14,Mankind Pharma is led by the Juneja family with a 
+M&M,INVESTIBLE,9.0,2301.08,2070.97,The Mahindra Group is widely recognized for its st
+MARUTI,INVESTIBLE,9.0,4823.85,4341.46,Maruti Suzuki is a subsidiary of Suzuki Motor Corp
+MARICO,INVESTIBLE,9.0,-93.08,-83.77,Marico is widely regarded for its high corporate g
+MAXHEALTH,INVESTIBLE,8.5,-64.63,-58.17,Max Healthcare is led by a professional management
+MAZDOCK,INVESTIBLE,8.0,1633.11,1469.8,Mazagon Dock Shipbuilders (MAZDOCK) acts as a stra
+MCX,INVESTIBLE,8.5,5752.94,5177.65,MCX holds a near-monopoly (>95% market share) in I
+MFSL,INVESTIBLE,85.0,-1540.21,-1386.18,Max Financial Services acts as the holding company
+MOTHERSON,INVESTIBLE,0.85,-46.38,-41.74,The Sehgal family management is highly regarded fo
+MPHASIS,INVESTIBLE,8.5,-749.98,-674.98,"Controlled by Blackstone, a reputable global priva"
+NAUKRI,INVESTIBLE,0.95,624.7,562.23,"Info Edge is led by Sanjeev Bikhchandani, widely r"
+NATIONALUM,INVESTIBLE,9.0,639.13,575.22,National Aluminium Company (NALCO) is a Navratna C
+MUTHOOTFIN,INVESTIBLE,0.9,-1708.16,-1537.35,Muthoot Finance is the market leader in the Indian
+NBCC,INVESTIBLE,0.8,-1.99,-1.79,NBCC is a 'Navratna' Central Public Sector Enterpr
+NESTLEIND,INVESTIBLE,8.0,-110.95,-99.85,Nestle India maintains high standards of corporate
+NTPC,INVESTIBLE,8.5,-585.28,-526.76,NTPC is a 'Maharatna' PSU with robust government o
+NHPC,INVESTIBLE,8.0,1260.65,1134.58,NHPC is a 'Miniratna' Public Sector Undertaking (P
+NYKAA,INVESTIBLE,8.5,-65.68,-59.11,Nykaa is led by Falguni Nayar with a strong founde
+NUVAMA,INVESTIBLE,0.85,-135.75,-122.18,Nuvama Wealth Management (formerly Edelweiss Secur
+OFSS,INVESTIBLE,9.0,31390.69,28251.62,Oracle Financial Services Software (OFSS) is a sub
+OBEROIRLTY,INVESTIBLE,8.0,-523.89,-471.5,Oberoi Realty is a premium brand with a strong rep
+OIL,INVESTIBLE,8.0,729.8,656.82,Oil India is a 'Maharatna' PSU with strong governm
+ONGC,INVESTIBLE,8.0,-1620.27,-1458.24,"ONGC is a 'Maharatna' PSU, representing the highes"
+PAGEIND,INVESTIBLE,9.0,-8665.19,-7798.67,Page Industries holds the exclusive license for Jo
+PATANJALI,INVESTIBLE,4.0,-345.78,-311.21,While the company has demonstrated a financial tur
+PAYTM,INVESTIBLE,4.0,330.95,297.86,Management credibility has been severely impacted 
+PERSISTENT,INVESTIBLE,9.0,-7429.16,-6686.25,Persistent Systems is widely regarded for its stro
+PFC,INVESTIBLE,8.0,-2544.31,-2289.88,Power Finance Corporation (PFC) is a 'Maharatna' C
+PETRONET,INVESTIBLE,85.0,1962.02,1765.82,Petronet LNG is a joint venture promoted by four l
+PGEL,INVESTIBLE,8.0,17.07,15.36,Management has delivered exceptional growth (10x r
+PIDILITIND,INVESTIBLE,9.0,870.76,783.68,Pidilite Industries is a classic 'compounder' stoc
+PHOENIXLTD,INVESTIBLE,8.0,-190.45,-171.4,The Phoenix Mills Limited is a leading real estate
+PIIND,INVESTIBLE,9.0,17457.64,15711.88,PI Industries demonstrates strong corporate govern
+PNB,INVESTIBLE,0.75,-357.41,-321.67,Management has shown transparency by proactively r
+PNBHOUSING,INVESTIBLE,7.5,225.77,203.2,The company has demonstrated strong recovery in as
+POLYCAB,INVESTIBLE,5.0,3379.74,3041.77,While the company has demonstrated exceptional exe
+POWERGRID,INVESTIBLE,0.8,-317454.56,-285709.1,Power Grid Corporation of India is a 'Maharatna' P
+POLICYBZR,INVESTIBLE,8.5,-62.17,-55.95,PB Fintech holds a dominant market position with a
+POWERINDIA,INVESTIBLE,0.9,10687.59,9618.83,Hitachi Energy India is a subsidiary of the reputa
+PREMIERENE,INVESTIBLE,0.95,315.52,283.97,Premier Energies demonstrates strong management in
+PPLPHARMA,INVESTIBLE,8.0,-189.83,-170.85,Piramal Pharma benefits from the strong pedigree o
+RECLTD,INVESTIBLE,9.0,-1842.03,-1657.82,REC Limited is a 'Maharatna' Central Public Sector
+RBLBANK,INVESTIBLE,7.0,-204731527.02,-184258374.32,Management has navigated a stabilization phase fol
+RELIANCE,INVESTIBLE,8.5,-383.81,-345.43,"Reliance Industries, led by Mukesh Ambani, has dem"
+RVNL,INVESTIBLE,0.85,-310.99,-279.89,Rail Vikas Nigam Limited (RVNL) is a 'Navratna' CP
+SAIL,INVESTIBLE,6.0,-1269.39,-1142.45,State-owned enterprise (PSU) with generally stable
+SBICARD,INVESTIBLE,8.5,-458.36,-412.52,SBI Cards is a subsidiary of the State Bank of Ind
+SHREECEM,INVESTIBLE,3.0,22721.99,20449.79,Management integrity is a significant concern due 
+SBILIFE,INVESTIBLE,9.0,14569.3,13112.37,SBI Life is a joint venture between State Bank of 
+SBIN,INVESTIBLE,9.0,-357179.73,-321461.75,State Bank of India (SBIN) is the largest public s
+SIEMENS,INVESTIBLE,90.0,2097.75,1887.97,Siemens Limited is a 75% subsidiary of Siemens AG 
+SHRIRAMFIN,INVESTIBLE,90.0,-943.61,-849.25,Shriram Finance (part of the Shriram Group) exhibi
+SOLARINDS,INVESTIBLE,8.0,-946.23,-851.61,Solar Industries is a market leader in industrial 
+SRF,INVESTIBLE,9.0,-676.08,-608.47,SRF demonstrates high management integrity with a 
+SONACOMS,INVESTIBLE,90.0,-197.56,-177.81,The company exhibits strong corporate governance w
+SUNPHARMA,INVESTIBLE,7.5,-4310.89,-3879.8,Management led by Dilip Shanghvi is generally rega
+SUPREMEIND,INVESTIBLE,9.0,1584.43,1425.99,"Supreme Industries is led by the Taparia Group, kn"
+SUZLON,INVESTIBLE,5.0,3.51,3.16,While the company has executed a successful financ
+SWIGGY,INVESTIBLE,8.0,-181.67,-163.5,Swiggy is led by a professional management team (C
+SYNGENE,INVESTIBLE,8.5,933.41,840.07,Syngene is a subsidiary of Biocon with a high-inte
+TATACONSUM,INVESTIBLE,9.0,-297.46,-267.71,"Part of the Tata Group, which is renowned for its "
+TATAELXSI,INVESTIBLE,90.0,-2754.86,-2479.38,Tata Elxsi benefits from the strong lineage of the
+TATAPOWER,INVESTIBLE,9.0,-229.65,-206.68,"Part of the prestigious Tata Group, renowned for i"
+TATATECH,INVESTIBLE,9.0,126861.03,114174.92,Tata Technologies benefits from the impeccable rep
+TCS,INVESTIBLE,10.0,5909.83,5318.85,"TCS is the crown jewel of the Tata Group, renowned"
+TECHM,INVESTIBLE,9.0,10532.55,9479.3,Tech Mahindra is part of the reputable Mahindra Gr
+TITAN,INVESTIBLE,10.0,-267.96,-241.17,"Titan Company is a part of the Tata Group, which i"
+TIINDIA,INVESTIBLE,9.0,-81.2,-73.08,Tube Investments of India is a flagship company of
+TORNTPHARM,INVESTIBLE,0.9,-1794.06,-1614.66,The Torrent Group is a well-established Indian con
+TORNTPOWER,INVESTIBLE,90.0,-1304.25,-1173.83,"Torrent Power is part of the Torrent Group, known "
+TMPV,INVESTIBLE,9.0,-542104.18,-487893.76,"The company is part of the Tata Group, which is re"
+TRENT,INVESTIBLE,10.0,-221.92,-199.73,"Trent Limited is part of the Tata Group, one of In"
+TVSMOTOR,INVESTIBLE,9.0,-580.0,-522.0,"TVS Motor is part of the reputed TVS Group, known "
+ULTRACEMCO,INVESTIBLE,9.0,-673.29,-605.96,UltraTech Cement is the flagship company of the Ad
+UNIONBANK,INVESTIBLE,7.0,-1042.06,-937.85,"The bank has faced minor governance controversies,"
+UNITDSPR,INVESTIBLE,9.0,495.64,446.08,Controlled by global beverage giant Diageo PLC (ap
+UNOMINDA,INVESTIBLE,0.9,-29.89,-26.9,The company demonstrates strong corporate governan
+VBL,INVESTIBLE,0.9,19.59,17.63,Varun Beverages demonstrates strong corporate gove
+VEDL,INVESTIBLE,3.0,-259.49,-233.54,Management demonstrates strong operational capabil
+VOLTAS,INVESTIBLE,7.5,-378.29,-340.46,"Voltas is a Tata Group company, generally implying"
+WAAREEENER,INVESTIBLE,0.7,-550.57,-495.52,The company exhibits stellar financial performance
+WIPRO,INVESTIBLE,9.0,-122.0,-109.8,Wipro is renowned for its high standards of corpor
+YESBANK,INVESTIBLE,85.0,-14.78,-13.3,Under the leadership of MD & CEO Prashant Kumar an
+ZYDUSLIFE,INVESTIBLE,0.75,-295.55,-265.99,The company is led by the Patel family (Promoters 

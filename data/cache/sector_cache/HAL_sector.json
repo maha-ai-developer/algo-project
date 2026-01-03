@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Aerospace & Defense",
+    "sector_kpis": {
+      "kpi_1": "Order Book: \u20b994,000 Crore+",
+      "kpi_2": "EBITDA Margin: 26.5%",
+      "kpi_3": "Order-to-Sales Ratio: 3.1x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:06:40.014380",
+  "_symbol": "HAL"
+}

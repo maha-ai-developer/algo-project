@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 45.3,
+      "profit_growth_3yr_avg": 51.85,
+      "roe_latest": 25.02,
+      "roce_latest": 27.09,
+      "pe_ratio": 79.81,
+      "debt_to_equity": 0.0,
+      "beta": 0.83
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 869.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 5.1,
+      "net_debt_cr": -2299.0,
+      "tax_rate": 20.48
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "MCX holds a near-monopoly (>95% market share) in India's commodity derivatives market and maintains a zero-debt balance sheet. The recent transition to a new technology platform developed by TCS (Project Udaan) marks a significant shift, aimed at reducing long-term costs and reliance on previous vendors, despite initial delays. Governance is overseen by SEBI, ensuring high compliance standards. The high P/E reflects market optimism about its scalable, asset-light business model."
+    }
+  },
+  "_cached_at": "2025-12-31T11:53:17.527638",
+  "_symbol": "MCX"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "LNG Import & Regasification",
+    "sector_kpis": {
+      "kpi_1": "Dahej Terminal Utilization: 109%",
+      "kpi_2": "Annual Volume Throughput: 934 TBTU",
+      "kpi_3": "LNG Import Market Share: ~75%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:11:35.817162",
+  "_symbol": "PETRONET"
+}

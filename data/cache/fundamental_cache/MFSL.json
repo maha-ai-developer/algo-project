@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.2,
+      "profit_growth_3yr_avg": -15.0,
+      "roe_latest": 8.16,
+      "roce_latest": 8.13,
+      "pe_ratio": 100.61,
+      "debt_to_equity": 0.22,
+      "beta": 1.1
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 6104.0,
+      "growth_rate_projection": 18.0,
+      "shares_outstanding_cr": 34.51,
+      "net_debt_cr": 522.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 85.0,
+      "reasoning": "Max Financial Services acts as the holding company for Max Life Insurance, a high-quality franchise with a strong partnership with Axis Bank (owning ~20%). Management integrity is rated highly ('Good Quality' by independent agencies), despite a minor regulatory penalty of Rs 3 Cr by IRDAI in 2022 regarding share transfer norms, which was promptly settled. The company maintains robust governance standards and professional management."
+    }
+  },
+  "_cached_at": "2025-12-31T11:53:58.489619",
+  "_symbol": "MFSL"
+}

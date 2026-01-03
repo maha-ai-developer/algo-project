@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 19.1,
+      "profit_growth_3yr_avg": 28.62,
+      "roe_latest": 25.91,
+      "roce_latest": 34.84,
+      "pe_ratio": 54.5,
+      "debt_to_equity": 0.03,
+      "beta": 0.62
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 354.0,
+      "growth_rate_projection": 20.0,
+      "shares_outstanding_cr": 17.24,
+      "net_debt_cr": -574.0,
+      "tax_rate": 26.14
+    },
+    "qualitative": {
+      "management_integrity_score": 85.0,
+      "reasoning": "KFin Technologies operates in a duopoly market (RTA services) with high entry barriers and strong recurring revenue. The company has demonstrated robust financial performance with healthy ROCE (~35%) and profit growth (~28% CAGR). Management has successfully pivoted towards international expansion and alternative asset classes to drive future growth (>20% guidance). High institutional holding (~47%) and a cash-rich balance sheet further support a high integrity score, though the stock trades at a premium valuation."
+    }
+  },
+  "_cached_at": "2025-12-31T11:48:10.742215",
+  "_symbol": "KFINTECH"
+}

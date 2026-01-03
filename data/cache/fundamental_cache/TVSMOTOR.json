@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 22.0,
+      "profit_growth_3yr_avg": 41.0,
+      "roe_latest": 27.6,
+      "roce_latest": 25.0,
+      "pe_ratio": 66.8,
+      "debt_to_equity": 3.25,
+      "beta": 1.05
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2503.0,
+      "growth_rate_projection": 20.0,
+      "shares_outstanding_cr": 47.51,
+      "net_debt_cr": 26260.0,
+      "tax_rate": 33.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "TVS Motor is part of the reputed TVS Group, known for high standards of corporate governance, transparency, and ethical business practices. The board is diverse with independent oversight. No major governance controversies have been reported recently."
+    }
+  },
+  "_cached_at": "2025-12-31T12:14:01.693587",
+  "_symbol": "TVSMOTOR"
+}

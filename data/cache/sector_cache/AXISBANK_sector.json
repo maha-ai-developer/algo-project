@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "BANK",
+    "niche_industry": "Private Sector Bank",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA%: 1.46% (Q2 FY26)",
+      "kpi_2": "NIM: 3.73% (Q2 FY26)",
+      "kpi_3": "CASA Ratio: 40% (Q2 FY26)"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T12:36:16.374244",
+  "_symbol": "AXISBANK"
+}

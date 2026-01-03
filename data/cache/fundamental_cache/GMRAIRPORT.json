@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 218.61,
+      "profit_growth_3yr_avg": 11.45,
+      "roe_latest": -12.42,
+      "roce_latest": 6.92,
+      "pe_ratio": 0,
+      "debt_to_equity": 2.56,
+      "beta": 0.84
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 358,
+      "growth_rate_projection": 10,
+      "shares_outstanding_cr": 1056,
+      "net_debt_cr": 37319,
+      "tax_rate": 25
+    },
+    "qualitative": {
+      "management_integrity_score": 7,
+      "reasoning": "GMR Airports operates world-class assets (Delhi, Hyderabad airports) with monopolistic characteristics and long-term concessions. However, the company is burdened with high debt and currently reports net losses, leading to negative or depressed return ratios. Future value depends on traffic growth, non-aero revenue expansion, and successful deleveraging."
+    }
+  },
+  "_cached_at": "2025-12-31T11:35:47.515303",
+  "_symbol": "GMRAIRPORT"
+}

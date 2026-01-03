@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Oil and Gas Exploration and Production",
+    "sector_kpis": {
+      "kpi_1": "Reserve Replacement Ratio (RRR): 1.35x",
+      "kpi_2": "Average Crude Realization: $76.90/bbl",
+      "kpi_3": "Annual Hydrocarbon Production: 41.1 MMT"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:11:15.990048",
+  "_symbol": "ONGC"
+}

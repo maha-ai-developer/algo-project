@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Life Insurance",
+    "sector_kpis": {
+      "kpi_1": "VNB Margin: 17.1%",
+      "kpi_2": "Solvency Ratio: 2.02",
+      "kpi_3": "13th Month Persistency: 76.66%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:09:17.000021",
+  "_symbol": "LICI"
+}

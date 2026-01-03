@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 10.16,
+      "profit_growth_3yr_avg": -38.74,
+      "roe_latest": 5.74,
+      "roce_latest": 8.65,
+      "pe_ratio": 39.0,
+      "debt_to_equity": 0.11,
+      "beta": 1.26
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 73.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 85.0,
+      "net_debt_cr": 300.0,
+      "tax_rate": 28.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Exide Industries is part of the reputed Rajan Raheja Group and has maintained a consistent dividend payout history. The management is proactively pivoting towards Lithium-ion technology with significant investments (e.g., Exide Energy Solutions), demonstrating foresight and adaptability. Corporate governance standards are generally considered high, with no major recent regulatory red flags or accounting scandals reported."
+    }
+  },
+  "_cached_at": "2025-12-31T11:34:14.098678",
+  "_symbol": "EXIDEIND"
+}

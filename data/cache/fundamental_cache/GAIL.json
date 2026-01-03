@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.41,
+      "profit_growth_3yr_avg": 2.96,
+      "roe_latest": 15.39,
+      "roce_latest": 17.11,
+      "pe_ratio": 12.5,
+      "debt_to_equity": 0.19,
+      "beta": 0.53
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 5056.0,
+      "growth_rate_projection": 6.0,
+      "shares_outstanding_cr": 657.51,
+      "net_debt_cr": 19144.0,
+      "tax_rate": 22.6
+    },
+    "qualitative": {
+      "management_integrity_score": 6.5,
+      "reasoning": "GAIL is a 'Maharatna' PSU with a generally robust governance framework and improved ESG ratings (Score 66 in FY25). However, the integrity score is constrained by recent corruption incidents, notably the CBI arrest of an Executive Director and other officials in September 2023 for alleged bribery in pipeline projects. While the company maintains 'Excellent' MoU ratings with the government, these lapses indicate gaps in internal vigilance."
+    }
+  },
+  "_cached_at": "2025-12-31T11:35:05.867759",
+  "_symbol": "GAIL"
+}

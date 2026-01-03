@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 5.89,
+      "profit_growth_3yr_avg": 3.21,
+      "roe_latest": 14.44,
+      "roce_latest": 19.76,
+      "pe_ratio": 81.5,
+      "debt_to_equity": 0.0,
+      "beta": 1.37
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 330.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 36.65,
+      "net_debt_cr": -4180.0,
+      "tax_rate": 26.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Bharat Dynamics is a Miniratna Category-I Public Sector Undertaking (PSU) under the Ministry of Defence, Government of India. As a state-owned enterprise, it adheres to strict government vigilance guidelines and corporate governance norms. While it may face typical bureaucratic delays associated with PSUs, there are no significant recent reports of management fraud or governance scandals. The company maintains a 'Zero Debt' status and follows standard transparency protocols required for listed PSUs."
+    }
+  },
+  "_cached_at": "2025-12-31T11:25:24.000337",
+  "_symbol": "BDL"
+}

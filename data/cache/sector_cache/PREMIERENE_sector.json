@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Solar Photovoltaic (PV) Manufacturing",
+    "sector_kpis": {
+      "kpi_1": "Order Book: \u20b913,250 Cr",
+      "kpi_2": "EBITDA Margin: 30.5%",
+      "kpi_3": "Capacity Utilization: 81%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:12:33.201058",
+  "_symbol": "PREMIERENE"
+}

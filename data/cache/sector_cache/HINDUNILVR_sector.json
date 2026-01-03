@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FMCG",
+    "niche_industry": "Home & Personal Care",
+    "sector_kpis": {
+      "kpi_1": "Underlying Volume Growth: 2%",
+      "kpi_2": "EBITDA Margin: 23.4%",
+      "kpi_3": "A&P Spend: 10.3% of Sales"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:07:04.085039",
+  "_symbol": "HINDUNILVR"
+}

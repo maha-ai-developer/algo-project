@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Life Insurance",
+    "sector_kpis": {
+      "kpi_1": "VNB Margin: 26.3%",
+      "kpi_2": "13th Month Persistency: 87.0%",
+      "kpi_3": "Solvency Ratio: 187%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:06:51.784106",
+  "_symbol": "HDFCLIFE"
+}

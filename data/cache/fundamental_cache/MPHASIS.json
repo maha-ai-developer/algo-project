@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 7.85,
+      "profit_growth_3yr_avg": 7.45,
+      "roe_latest": 18.6,
+      "roce_latest": 22.7,
+      "pe_ratio": 36.2,
+      "debt_to_equity": 0.12,
+      "beta": 0.51
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1360,
+      "growth_rate_projection": 8.5,
+      "shares_outstanding_cr": 19.02,
+      "net_debt_cr": -1401,
+      "tax_rate": 24.8
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "Controlled by Blackstone, a reputable global private equity firm. The company demonstrates high standards of corporate governance, consistent dividend payouts, and transparent financial reporting. Management (led by CEO Nitin Rakesh) is professional and stable."
+    }
+  },
+  "_cached_at": "2025-12-31T11:54:03.402348",
+  "_symbol": "MPHASIS"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 35.28,
+      "profit_growth_3yr_avg": 118.84,
+      "roe_latest": 4.35,
+      "roce_latest": 6.38,
+      "pe_ratio": 35.2,
+      "debt_to_equity": 1.1,
+      "beta": 0.5
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -38332,
+      "growth_rate_projection": 20.0,
+      "shares_outstanding_cr": 732.21,
+      "net_debt_cr": 36450,
+      "tax_rate": 18.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Led by V. Vaidyanathan, the management has a strong reputation for ethical banking, transparency, and corporate governance. The 'Safety First' approach and clean-up of legacy infrastructure loans demonstrate prudent long-term planning."
+    }
+  },
+  "_cached_at": "2025-12-31T11:41:41.616941",
+  "_symbol": "IDFCFIRSTB"
+}

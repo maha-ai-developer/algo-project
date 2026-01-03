@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "General Insurance",
+    "sector_kpis": {
+      "kpi_1": "Combined Ratio: 102.3%",
+      "kpi_2": "Solvency Ratio: 2.62x",
+      "kpi_3": "GDPI Growth: 17.8%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:07:20.467310",
+  "_symbol": "ICICIGI"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 38.34,
+      "profit_growth_3yr_avg": 25.5,
+      "roe_latest": 27.1,
+      "roce_latest": 25.8,
+      "pe_ratio": 27.4,
+      "debt_to_equity": 0.62,
+      "beta": 0.44
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -891.0,
+      "growth_rate_projection": 25.0,
+      "shares_outstanding_cr": 9.08,
+      "net_debt_cr": -6509.0,
+      "tax_rate": 27.67
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Angel One demonstrates robust corporate governance, adhering to tightened SEBI norms and maintaining transparent disclosures. Management has set clear long-term growth targets (25-30% for core broking) and is expanding into wealth management. While recent financial performance has faced headwinds due to regulatory changes and cyclicality, the governance framework and strategic execution remain strong, with no major ethical concerns reported."
+    }
+  },
+  "_cached_at": "2025-12-31T11:20:25.503070",
+  "_symbol": "ANGELONE"
+}

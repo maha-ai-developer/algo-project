@@ -48,7 +48,7 @@ class FundamentalCache:
     """
     
     def __init__(self, cache_dir: Optional[str] = None):
-        self.cache_dir = cache_dir or os.path.join(config.DATA_DIR, "fundamental_cache")
+        self.cache_dir = cache_dir or os.path.join(config.CACHE_DIR, "fundamental_cache")
         os.makedirs(self.cache_dir, exist_ok=True)
         self._lock = threading.Lock()
     
@@ -111,7 +111,7 @@ class ProgressManager:
     """
     
     def __init__(self, progress_file: Optional[str] = None):
-        self.progress_file = progress_file or os.path.join(config.DATA_DIR, "fundamental_progress.json")
+        self.progress_file = progress_file or os.path.join(config.CACHE_DIR, "fundamental_progress.json")
         self._lock = threading.Lock()
         self.results: List[Dict] = []
         self.processed: set = set()
@@ -218,14 +218,24 @@ def run_fundamental_scan(use_cache: bool = True, resume: bool = True, max_worker
     print("--- 🧠 STEP 1: FUNDAMENTAL HEALTH CHECK (v2.0 Optimized) ---")
     print(f"   ⚙️ Workers: {max_workers} | Cache: {use_cache} | Resume: {resume}")
     
-    # 1. Load Universe
-    files = [f for f in os.listdir(config.UNIVERSE_DIR) if f.endswith(".csv")]
-    if not files:
-        print("❌ No universe file found.")
-        return
-    csv_path = os.path.join(config.UNIVERSE_DIR, files[0])
+    # 1. Load Universe (Priority: futures_symbols.txt > CSV)
+    futures_file = os.path.join(config.UNIVERSE_DIR, "futures_symbols.txt")
     
-    symbols = load_nifty_symbols(csv_path, min_turnover_cr=0)
+    if os.path.exists(futures_file):
+        # Use dynamically fetched futures symbols
+        with open(futures_file, 'r') as f:
+            symbols = [line.strip() for line in f if line.strip()]
+        print(f"   ✅ Loaded {len(symbols)} stocks from futures_symbols.txt")
+    else:
+        # Fallback: Load from CSV
+        files = [f for f in os.listdir(config.UNIVERSE_DIR) if f.endswith(".csv")]
+        if not files:
+            print("❌ No universe file found. Run 'python cli.py fetch_universe' first.")
+            return
+        csv_path = os.path.join(config.UNIVERSE_DIR, files[0])
+        symbols = load_nifty_symbols(csv_path, min_turnover_cr=0)
+        print(f"   💡 Tip: Run 'python cli.py fetch_universe' to use live futures symbols")
+    
     if not symbols:
         print("❌ No symbols loaded.")
         return

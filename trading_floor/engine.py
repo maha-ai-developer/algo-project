@@ -43,6 +43,19 @@ MAX_CONCURRENT_PAIRS = 5       # Maximum simultaneous pair positions
 MAX_LOSS_PER_PAIR = 10000      # Maximum loss per pair (₹10K = 20% of 50K capital)
 MAX_PAIRS_PER_SECTOR = 2       # Sector diversification limit
 
+# === PDF-COMPLIANT THRESHOLDS (Zerodha Varsity) ===
+Z_ENTRY_THRESHOLD = 2.5        # Entry at ±2.5 SD (Page 47)
+Z_EXIT_THRESHOLD = 1.0         # Exit at ±1.0 SD (mean reversion target)
+Z_STOP_THRESHOLD = 3.0         # Stop loss at ±3.0 SD
+MAX_INTERCEPT_RISK_PCT = 0.20  # Intercept explains max 20% of Y price (Chapter 14)
+
+# === ANTI-CHURNING PROTECTION ===
+POST_EXIT_COOLDOWN_HOURS = 24  # Prevent re-entry to same pair for 24 hours after exit
+
+# === DISPLAY SETTINGS ===
+VERBOSE = False  # Set to True for detailed per-pair logging
+COMPACT_MODE = True  # Show compact table summary instead of scrolling output
+
 
 class TradingEngine:
     """
@@ -95,6 +108,9 @@ class TradingEngine:
         if self.active_trades:
             print(f"   📂 Restored {len(self.active_trades)} active trades from state")
         
+        # Anti-churning: Track when pairs were last exited
+        self.exit_cooldowns: Dict[str, datetime] = {}
+        
         # Load pair configuration
         self.pairs_config = self._load_pairs_config()
         
@@ -108,11 +124,16 @@ class TradingEngine:
         # Initialize strategy instances
         self.strategies: Dict[str, PairStrategy] = {}
         for p in self.pairs_config:
-            pair_key = f"{p['stock_y']}-{p['stock_x']}"
-            print(f"   🧠 Loaded Agent: {pair_key:<20} (Beta: {p['beta']:.2f})")
+            # Support both key formats: 'stock_y'/'stock_x' (old) and 'leg1'/'leg2' (new)
+            s_y = p.get('stock_y') or p.get('leg1')
+            s_x = p.get('stock_x') or p.get('leg2')
+            beta = p.get('beta') or p.get('hedge_ratio', 1.0)
+            
+            pair_key = f"{s_y}-{s_x}"
+            print(f"   🧠 Loaded Agent: {pair_key:<20} (Beta: {beta:.2f})")
             self.strategies[pair_key] = PairStrategy(
-                hedge_ratio=p['beta'],
-                intercept=p['intercept']
+                hedge_ratio=beta,
+                intercept=p.get('intercept', 0.0)
             )
         
         # Create temporary strategies for orphan positions (so they can exit)
@@ -144,7 +165,9 @@ class TradingEngine:
         # Get all pair keys from current config
         config_pairs = set()
         for p in self.pairs_config:
-            config_pairs.add(f"{p['stock_y']}-{p['stock_x']}")
+            s_y = p.get('stock_y') or p.get('leg1')
+            s_x = p.get('stock_x') or p.get('leg2')
+            config_pairs.add(f"{s_y}-{s_x}")
         
         orphans = {}
         
@@ -159,8 +182,10 @@ class TradingEngine:
                         with open(config.PAIRS_CANDIDATES_FILE, 'r') as f:
                             candidates = json.load(f)
                         for c in candidates:
-                            if f"{c['stock_y']}-{c['stock_x']}" == pair_key:
-                                hedge_ratio = c.get('hedge_ratio', 1.0)
+                            c_y = c.get('stock_y') or c.get('leg1')
+                            c_x = c.get('stock_x') or c.get('leg2')
+                            if f"{c_y}-{c_x}" == pair_key:
+                                hedge_ratio = c.get('hedge_ratio') or c.get('beta', 1.0)
                                 intercept = c.get('intercept', 0.0)
                                 break
                     except:
@@ -184,10 +209,12 @@ class TradingEngine:
             inst_map = {i['tradingsymbol']: i['instrument_token'] for i in instruments}
             
             for p in self.pairs_config:
-                if p['stock_y'] in inst_map:
-                    tokens[p['stock_y']] = inst_map[p['stock_y']]
-                if p['stock_x'] in inst_map:
-                    tokens[p['stock_x']] = inst_map[p['stock_x']]
+                s_y = p.get('stock_y') or p.get('leg1')
+                s_x = p.get('stock_x') or p.get('leg2')
+                if s_y in inst_map:
+                    tokens[s_y] = inst_map[s_y]
+                if s_x in inst_map:
+                    tokens[s_x] = inst_map[s_x]
             
             print(f"   ✅ Cached {len(tokens)} tokens")
         except Exception as e:
@@ -214,6 +241,9 @@ class TradingEngine:
             print(f"   👻 Also tracking {len(self.orphan_pairs)} orphan position(s) for exit.")
         print("   (Press Ctrl+C to Stop)\n")
         
+        # Initialize pair results for compact display
+        self.pair_results = {}
+        
         # Start WebSocket if available (Optimization #6)
         if self.ticker:
             token_list = list(self.tokens.values())
@@ -221,19 +251,91 @@ class TradingEngine:
         
         try:
             while True:
-                print(f"⏰ Heartbeat: {datetime.now().strftime('%H:%M:%S')}")
+                # Clear screen for compact mode
+                if COMPACT_MODE:
+                    print("\033[H\033[J", end="")
+                    self._display_compact_header()
+                else:
+                    print(f"⏰ Heartbeat: {datetime.now().strftime('%H:%M:%S')}")
                 
                 # Parallel data fetch for all symbols (Optimization #1)
                 self._process_all_pairs_parallel()
                 
-                # Print cache stats
-                stats = self.data_cache.get_stats()
-                print(f"   📊 Cache: {stats['cache_hits']} hits, {stats['cache_misses']} misses, {stats['api_calls']} API calls")
+                # Display compact table
+                if COMPACT_MODE:
+                    self._display_compact_table()
                 
                 time.sleep(PROCESS_INTERVAL_SEC)
                 
         except KeyboardInterrupt:
             self._shutdown()
+    
+    def _display_compact_header(self):
+        """Display compact header for table mode."""
+        now = datetime.now().strftime('%d %b %Y  %H:%M:%S')
+        mode_str = f"🔴 LIVE" if self.mode == "LIVE" else "🟡 PAPER"
+        print("="*90)
+        print(f"{'🚀 STAT ARB ENGINE v2.0':^90}")
+        print(f"{'⏰ ' + now + ' | ' + mode_str:^90}")
+        print("="*90)
+        print(f"Active: {len(self.active_trades)} | Monitoring: {len(self.pairs_config)} pairs | Refresh: {PROCESS_INTERVAL_SEC}s")
+        print("="*90)
+    
+    def _display_compact_table(self):
+        """Display all pairs in a compact table."""
+        # Header
+        print()
+        print(f"{'PAIR':<24}│{'Z-SCORE':^10}│{'SIGNAL':^12}│{'STATUS':^28}│{'INTERCEPT':^10}")
+        print("─"*24 + "┼" + "─"*10 + "┼" + "─"*12 + "┼" + "─"*28 + "┼" + "─"*10)
+        
+        for pair_key, result in self.pair_results.items():
+            z = result.get('z', 0)
+            signal = result.get('signal', 'WAIT')
+            status = result.get('status', '')
+            intercept_pct = result.get('intercept_pct', 0)
+            
+            # Z-score color indicator
+            if abs(z) > 3.0:
+                z_str = f"⚠️{z:+.2f}"  # Stop zone
+            elif abs(z) > 2.5:
+                z_str = f"🔴{z:+.2f}"  # Entry zone
+            elif abs(z) < 1.0:
+                z_str = f"🎯{z:+.2f}"  # Exit zone
+            else:
+                z_str = f"{z:+.2f}"
+            
+            # Signal indicator
+            if 'SHORT' in signal:
+                sig_str = "📉 SHORT"
+            elif 'LONG' in signal:
+                sig_str = "📈 LONG"
+            elif 'EXIT' in signal:
+                sig_str = "🎯 EXIT"
+            else:
+                sig_str = "⏸️ WAIT"
+            
+            # Intercept indicator
+            if intercept_pct > 20:
+                int_str = f"❌{intercept_pct:.0f}%"
+            elif intercept_pct > 10:
+                int_str = f"⚠️{intercept_pct:.0f}%"
+            else:
+                int_str = f"✅{intercept_pct:.0f}%"
+            
+            print(f"{pair_key:<24}│{z_str:^10}│{sig_str:^12}│{status:<28}│{int_str:^10}")
+        
+        # Footer with active trades
+        print("─"*90)
+        if self.active_trades:
+            print(f"\n📍 ACTIVE POSITIONS: {len(self.active_trades)}")
+            for pk, trade in self.active_trades.items():
+                entry_z = trade.get('entry_zscore', 0)
+                side = trade.get('side', '')
+                print(f"   • {pk}: {side} @ Z={entry_z:.2f}")
+        else:
+            print(f"\n📭 No active positions")
+        
+        print(f"\n💡 Rules: Entry ±2.5 | Exit ±1.0 | Stop ±3.0 | Cooldown 24h")
     
     def _process_all_pairs_parallel(self):
         """
@@ -242,8 +344,10 @@ class TradingEngine:
         # Collect all symbols needed (including orphans)
         all_symbols = set()
         for p in self.pairs_config:
-            all_symbols.add(p['stock_y'])
-            all_symbols.add(p['stock_x'])
+            s_y = p.get('stock_y') or p.get('leg1')
+            s_x = p.get('stock_x') or p.get('leg2')
+            all_symbols.add(s_y)
+            all_symbols.add(s_x)
         
         # Add orphan symbols
         for pair_key in self.orphan_pairs:
@@ -268,7 +372,9 @@ class TradingEngine:
     
     def _process_pair(self, p: dict, price_data: Dict[str, pd.Series]):
         """Process a single pair using pre-fetched data."""
-        s1, s2 = p['stock_y'], p['stock_x']
+        # Support both key formats
+        s1 = p.get('stock_y') or p.get('leg1')
+        s2 = p.get('stock_x') or p.get('leg2')
         pair_key = f"{s1}-{s2}"
         strategy = self.strategies[pair_key]
         
@@ -305,35 +411,51 @@ class TradingEngine:
         lot_y = p.get('lot_size_y', 1)
         lot_x = p.get('lot_size_x', 1)
         
-        # Header line
-        print(f"   {'─'*60}")
-        print(f"   👉 {pair_key} | {health} | Z={z:+.2f}")
-        
-        # ═══════════════════════════════════════════════════════════
-        # MODEL VALIDATION CHECKLIST
-        # ═══════════════════════════════════════════════════════════
-        
-        # 1. ADF Stationarity Check
-        stationarity_pct = (1 - adf_pvalue) * 100
-        adf_pass = adf_pvalue < 0.05
-        print(f"   📊 ADF: p={adf_pvalue:.3f} → {stationarity_pct:.1f}% stationary {'✓' if adf_pass else '✗'}")
-        
-        # 2. Intercept Ratio Check (CRITICAL)
+        # Intercept Ratio Check (for model validity)
         intercept_ratio = (abs(intercept) / current_price_y * 100) if current_price_y > 0 else 0
-        explained_pct = 100 - intercept_ratio
         
-        if intercept_ratio > 70:
-            print(f"   🚫 INTERCEPT: {intercept:.0f} / {current_price_y:.0f} = {intercept_ratio:.0f}% → REJECT (>70%)")
-            print(f"      ⛔ Model explains only {explained_pct:.0f}% of Y's price - NOT TRADEABLE")
+        if intercept_ratio > MAX_INTERCEPT_RISK_PCT * 100:
             model_valid = False
-        elif intercept_ratio > 50:
-            print(f"   ⚠️ INTERCEPT: {intercept:.0f} / {current_price_y:.0f} = {intercept_ratio:.0f}% → WEAK (>50%)")
-            print(f"      ⚡ Model explains only {explained_pct:.0f}% of Y's price - HIGH RISK")
-            model_valid = True  # Allow but flag
         else:
-            print(f"   ✅ INTERCEPT: {intercept:.0f} / {current_price_y:.0f} = {intercept_ratio:.0f}% → APPROVED")
-            print(f"      📈 Model explains {explained_pct:.0f}% of Y's price - STRONG")
             model_valid = True
+        
+        # Determine signal and status for compact display
+        if abs(z) > Z_STOP_THRESHOLD:
+            sig_str = "BLOCKED"
+            status_str = f"Z past stop ({Z_STOP_THRESHOLD})"
+        elif abs(z) > Z_ENTRY_THRESHOLD:
+            sig_str = "SHORT" if z > 0 else "LONG"
+            status_str = f"Entry signal ({'valid' if model_valid else 'invalid'})"
+        elif abs(z) < Z_EXIT_THRESHOLD:
+            sig_str = "EXIT"
+            status_str = "Mean reversion zone"
+        else:
+            sig_str = "WAIT"
+            status_str = f"{Z_EXIT_THRESHOLD}<|Z|<{Z_ENTRY_THRESHOLD}"
+        
+        # Store result for compact table
+        self.pair_results[pair_key] = {
+            'z': z,
+            'signal': sig_str,
+            'status': status_str,
+            'intercept_pct': intercept_ratio,
+            'health': health,
+            'model_valid': model_valid
+        }
+        
+        # Verbose logging (only when VERBOSE=True)
+        if VERBOSE:
+            print(f"   {'─'*60}")
+            print(f"   👉 {pair_key} | {health} | Z={z:+.2f}")
+            stationarity_pct = (1 - adf_pvalue) * 100
+            adf_pass = adf_pvalue < 0.05
+            print(f"   📊 ADF: p={adf_pvalue:.3f} → {stationarity_pct:.1f}% stationary {'✓' if adf_pass else '✗'}")
+            if not model_valid:
+                print(f"   🚫 INTERCEPT: {intercept_ratio:.0f}% > {MAX_INTERCEPT_RISK_PCT*100:.0f}% → REJECT")
+            elif intercept_ratio > 10:
+                print(f"   ⚠️ INTERCEPT: {intercept_ratio:.0f}% → MARGINAL")
+            else:
+                print(f"   ✅ INTERCEPT: {intercept_ratio:.0f}% → EXCELLENT")
         
         # 3. Beta-Neutral Position Sizing
         if lot_x >= lot_y:
@@ -353,8 +475,9 @@ class TradingEngine:
         mismatch_shares = shares_x - beta_required_x
         mismatch_pct = abs(mismatch_shares) / beta_required_x * 100 if beta_required_x > 0 else 0
         
-        print(f"   💼 SIZING: {lots_y_calc}L×{lot_y}={shares_y} Y | {lots_x_calc}L×{lot_x}={shares_x} X")
-        print(f"      ⚖️ Beta-Neutral: {shares_y}×{beta:.2f}={beta_required_x:.0f} vs {shares_x}")
+        if VERBOSE:
+            print(f"   💼 SIZING: {lots_y_calc}L×{lot_y}={shares_y} Y | {lots_x_calc}L×{lot_x}={shares_x} X")
+            print(f"      ⚖️ Beta-Neutral: {shares_y}×{beta:.2f}={beta_required_x:.0f} vs {shares_x}")
         
         # 3a. Try to find better scaling combination (up to 5x)
         best_lots_y, best_lots_x, best_mismatch = lots_y_calc, lots_x_calc, mismatch_pct
@@ -370,36 +493,32 @@ class TradingEngine:
         
         # 3b. Mismatch Decision
         if mismatch_pct > 20:
-            # Check if scaling helps
-            if best_mismatch < mismatch_pct * 0.7:  # At least 30% improvement
-                print(f"      ⚠️ MISMATCH: {mismatch_pct:.1f}% → TRY {best_lots_y}L×{best_lots_x}L = {best_mismatch:.1f}%")
+            if best_mismatch < mismatch_pct * 0.7:
+                if VERBOSE: print(f"      ⚠️ MISMATCH: {mismatch_pct:.1f}% → TRY {best_lots_y}L×{best_lots_x}L = {best_mismatch:.1f}%")
             else:
-                print(f"      🚫 MISMATCH: {mismatch_pct:.1f}% > 20% threshold")
-                print(f"         💡 SPOT ADJUSTMENT: {abs(mismatch_shares):.0f} shares needed in spot market")
-                # Calculate spot value
-                spot_value = abs(mismatch_shares) * current_price_x
-                print(f"         💰 Spot hedge value: ₹{spot_value:,.0f}")
+                if VERBOSE: print(f"      🚫 MISMATCH: {mismatch_pct:.1f}% > 20% threshold")
                 model_valid = False
         elif mismatch_pct > 10:
-            print(f"      ⚠️ MISMATCH: {mismatch_pct:.1f}% → Consider spot adjustment of {abs(mismatch_shares):.0f} shares")
+            if VERBOSE: print(f"      ⚠️ MISMATCH: {mismatch_pct:.1f}% → Consider spot adjustment")
         else:
-            print(f"      ✅ MISMATCH: {mismatch_pct:.1f}% → ACCEPTABLE")
+            if VERBOSE: print(f"      ✅ MISMATCH: {mismatch_pct:.1f}% → ACCEPTABLE")
         
-        # 4. Z-Score Signal
-        if abs(z) > 2.0:
-            if z > 2.0:
-                direction = f"SHORT {s1} + LONG {s2}"
+        # 4. Z-Score Signal (PDF-Compliant: Entry ±2.5, Exit ±1.0)
+        if VERBOSE:
+            if abs(z) > 2.5:
+                if z > 2.5:
+                    direction = f"SHORT {s1} + LONG {s2}"
+                else:
+                    direction = f"LONG {s1} + SHORT {s2}"
+                print(f"   📈 Z={z:+.2f} → ENTRY: {direction}")
+            elif abs(z) < 1.0:
+                print(f"   📈 Z={z:+.2f} → EXIT zone (mean reversion)")
             else:
-                direction = f"LONG {s1} + SHORT {s2}"
-            print(f"   📈 Z={z:+.2f} → ENTRY: {direction}")
-        elif abs(z) < 0.5:
-            print(f"   📈 Z={z:+.2f} → EXIT zone (mean reversion)")
-        else:
-            print(f"   📈 Z={z:+.2f} → WAIT zone")
+                print(f"   📈 Z={z:+.2f} → WAIT zone")
         
         # 5. DECISION RULE
         if not model_valid:
-            print(f"   ❌ DECISION: REJECT - Model invalid or mismatch >20%")
+            if VERBOSE: print(f"   ❌ DECISION: REJECT - Model invalid or mismatch >20%")
             return  # Block this pair from trading
         
         # Risk checks
@@ -409,7 +528,7 @@ class TradingEngine:
                 self._close_position(pair_key, s1, s2, current_price_y, current_price_x, "GUARDIAN_HALT")
             return
         
-        is_stop, stop_msg = self.risk_manager.check_stop_loss(z, stop_z_threshold=3.0)  # Checklist: ±3.0
+        is_stop, stop_msg = self.risk_manager.check_stop_loss(z, stop_z_threshold=Z_STOP_THRESHOLD)
         if is_stop and pair_key in self.active_trades:
             print(f"   🟠 STOP LOSS: {stop_msg}")
             self._close_position(pair_key, s1, s2, current_price_y, current_price_x, "STOP_LOSS")
@@ -421,21 +540,20 @@ class TradingEngine:
             self._close_position(pair_key, s1, s2, current_price_y, current_price_x, "TAKE_PROFIT")
             return
         
-        # Time-based exit check (Checklist Phase 8: 25 trading sessions)
+        # Time-based exit check
         if pair_key in self.active_trades:
             trade = self.active_trades[pair_key]
             entry_time = trade.get('entry_time')
             if entry_time:
                 entry_date = datetime.fromisoformat(entry_time).date()
                 days_held = (datetime.now().date() - entry_date).days
-                # Approximate trading sessions (weekdays only)
                 sessions_held = int(days_held * 5 / 7)
                 if sessions_held >= MAX_HOLDING_SESSIONS:
-                    print(f"   ⏰ TIME EXIT: {pair_key} held {sessions_held} sessions (max: {MAX_HOLDING_SESSIONS})")
+                    print(f"   ⏰ TIME EXIT: {pair_key} held {sessions_held} sessions")
                     self._close_position(pair_key, s1, s2, current_price_y, current_price_x, "TIME_EXIT")
                     return
             
-            # Phase 7.1: Position Monitoring - Calculate Unrealized P&L
+            # Position Monitoring - Calculate Unrealized P&L
             entry_y = trade.get('entry_price_y', current_price_y)
             entry_x = trade.get('entry_price_x', current_price_x)
             qty_y = trade.get('q1', 0)
@@ -443,36 +561,45 @@ class TradingEngine:
             side = trade.get('side', 'LONG')
             
             if side == "LONG":
-                # Long spread: Long Y, Short X
                 pnl_y = (current_price_y - entry_y) * qty_y
                 pnl_x = (entry_x - current_price_x) * qty_x
             else:
-                # Short spread: Short Y, Long X
                 pnl_y = (entry_y - current_price_y) * qty_y
                 pnl_x = (current_price_x - entry_x) * qty_x
             
             net_pnl = pnl_y + pnl_x
             
-            # Update trade_data with current monitoring info
+            # Update trade_data
             trade['current_zscore'] = z
             trade['unrealized_pnl'] = round(net_pnl, 2)
             trade['last_update'] = datetime.now().isoformat()
             self.state_manager.save(self.active_trades)
             
-            # Log position status
-            pnl_symbol = "📈" if net_pnl > 0 else "📉"
-            print(f"   {pnl_symbol} POSITION: {pair_key} | Z: {z:.2f} | P&L: ₹{net_pnl:,.0f} (Y:₹{pnl_y:,.0f}, X:₹{pnl_x:,.0f})")
+            # Log position status (always show active positions)
+            if VERBOSE:
+                pnl_symbol = "📈" if net_pnl > 0 else "📉"
+                print(f"   {pnl_symbol} POSITION: {pair_key} | Z: {z:.2f} | P&L: ₹{net_pnl:,.0f}")
         
-        # Entry logic (only for config pairs, not orphans)
+        # Entry logic
         if pair_key not in self.active_trades:
+            if abs(z) > Z_STOP_THRESHOLD:
+                if VERBOSE: print(f"   🚫 BLOCKED: Z={z:.2f} past stop loss ({Z_STOP_THRESHOLD})")
+                return
+            
+            # Only attempt entry on valid entry signals (LONG_SPREAD or SHORT_SPREAD)
+            if signal not in ["LONG_SPREAD", "SHORT_SPREAD"]:
+                return
+            
+            beta = p.get('beta') or p.get('hedge_ratio', 1.0)
             self._handle_entry(
                 pair_key, signal, s1, s2, 
                 current_price_y, current_price_x, 
-                p['beta'], p.get('intercept', 0),
+                beta, p.get('intercept', 0),
                 entry_zscore=z,  # Phase 6.3: Record entry Z-Score
                 sector=p.get('sector', 'UNKNOWN')  # Phase 9: Sector diversification
             )
     
+
     def _process_orphan_pair(self, pair_key: str, orphan_data: Dict, price_data: Dict[str, pd.Series]):
         """
         Process an orphan pair: exit-only monitoring (no new entries).
@@ -518,7 +645,7 @@ class TradingEngine:
         if pair_key in self.active_trades:
             # Check for exit conditions
             is_tp, tp_msg = self.risk_manager.check_take_profit(z)
-            is_stop, stop_msg = self.risk_manager.check_stop_loss(z, stop_z_threshold=3.0)  # Checklist: ±3.0
+            is_stop, stop_msg = self.risk_manager.check_stop_loss(z, stop_z_threshold=Z_STOP_THRESHOLD)  # PDF: ±3.0
             
             if health == "RED":
                 print(f"   👻 ORPHAN GUARDIAN EXIT: {pair_key}")
@@ -615,8 +742,7 @@ class TradingEngine:
         if not liq_ok:
             print(f"   🚫 BLOCKED: {liq_msg}")
             return
-        else:
-            print(f"   💧 LIQUIDITY: {liq_msg}")
+        # Liquidity OK - proceed silently
         
         # Get lot sizes for proper beta-neutral sizing (Phase 5)
         from infrastructure.data.futures_utils import get_lot_size

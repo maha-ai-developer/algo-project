@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "METAL",
+    "niche_industry": "Integrated Steel Manufacturing",
+    "sector_kpis": {
+      "kpi_1": "Capacity Utilization: 91%",
+      "kpi_2": "EBITDA per Tonne: Rs 10250",
+      "kpi_3": "Net Debt to EBITDA: 2.62x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:08:29.076245",
+  "_symbol": "JSWSTEEL"
+}

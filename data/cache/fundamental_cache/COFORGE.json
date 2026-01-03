@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 23.28,
+      "profit_growth_3yr_avg": 7.0,
+      "roe_latest": 17.06,
+      "roce_latest": 20.88,
+      "pe_ratio": 49.0,
+      "debt_to_equity": 0.11,
+      "beta": 1.14
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 710.0,
+      "growth_rate_projection": 25.0,
+      "shares_outstanding_cr": 33.5,
+      "net_debt_cr": 77.8,
+      "tax_rate": 23.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Coforge demonstrates strong governance with a professional management team led by CEO Sudhir Singh, maintaining leadership stability since 2017. The company has a very high institutional shareholding (>88%) and no promoter pledge, indicating robust investor confidence. It adheres to high ethical standards with transparent ESG reporting and no significant regulatory or governance controversies found."
+    }
+  },
+  "_cached_at": "2025-12-31T11:30:27.617542",
+  "_symbol": "COFORGE"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 1.47,
+      "profit_growth_3yr_avg": -9.5,
+      "roe_latest": 15.4,
+      "roce_latest": 20.5,
+      "pe_ratio": 69.2,
+      "debt_to_equity": 0.0,
+      "beta": 0.8
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 215.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 26.55,
+      "net_debt_cr": -3523.0,
+      "tax_rate": 26.0
+    },
+    "qualitative": {
+      "management_integrity_score": 90.0,
+      "reasoning": "Divi's Laboratories is led by Dr. Murali Divi with a high promoter holding (~52%), demonstrating strong alignment with shareholders. The company is renowned for its operational efficiency, high margins, and long-standing relationships with global big pharma innovators. While there have been occasional USFDA observations (Form 483), the management has a consistent track record of resolving them efficiently. Corporate governance is rated highly with a clean balance sheet and transparent reporting."
+    }
+  },
+  "_cached_at": "2025-12-31T11:32:33.776006",
+  "_symbol": "DIVISLAB"
+}

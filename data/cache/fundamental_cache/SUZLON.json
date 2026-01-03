@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 18.27,
+      "profit_growth_3yr_avg": 85.1,
+      "roe_latest": 41.4,
+      "roce_latest": 32.5,
+      "pe_ratio": 22.7,
+      "debt_to_equity": 0.05,
+      "beta": 1.09
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 190,
+      "growth_rate_projection": 25.0,
+      "shares_outstanding_cr": 1371,
+      "net_debt_cr": -1100,
+      "tax_rate": 0.0
+    },
+    "qualitative": {
+      "management_integrity_score": 5.0,
+      "reasoning": "While the company has executed a successful financial turnaround and became net debt-free, the resignation of Independent Director Marc Desaedeleer in June 2024 citing 'lack of openness and transparency' raises significant corporate governance concerns."
+    }
+  },
+  "_cached_at": "2025-12-31T12:09:27.463091",
+  "_symbol": "SUZLON"
+}

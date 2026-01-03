@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 11.48,
+      "profit_growth_3yr_avg": 26.65,
+      "roe_latest": 38.89,
+      "roce_latest": 48.57,
+      "pe_ratio": 6.94,
+      "debt_to_equity": 0.13,
+      "beta": 0.78
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 9800,
+      "growth_rate_projection": 0.05,
+      "shares_outstanding_cr": 616.16,
+      "net_debt_cr": -23000,
+      "tax_rate": 0.248
+    },
+    "qualitative": {
+      "management_integrity_score": 0.8,
+      "reasoning": "State-owned enterprise (PSU) with generally high transparency and government backing. While there are no major financial fraud scandals, the company has faced minor regulatory fines for non-compliance with SEBI norms regarding the appointment of independent directors."
+    }
+  },
+  "_cached_at": "2025-12-31T11:30:02.313302",
+  "_symbol": "COALINDIA"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "IT Services & Consulting",
+    "sector_kpis": {
+      "kpi_1": "Attrition Rate: 13.7% (LTM)",
+      "kpi_2": "Deal Wins (TCV): $2.5 Billion (Q3FY25)",
+      "kpi_3": "Revenue per Employee: ~$61,100 (Annualized)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:08:05.279255",
+  "_symbol": "INFY"
+}

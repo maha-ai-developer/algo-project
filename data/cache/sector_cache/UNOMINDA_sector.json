@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Auto Ancillaries - Diversified (Lighting, Switches, Casting, Acoustics)",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 11.1%",
+      "kpi_2": "Revenue Growth (YoY): 26%",
+      "kpi_3": "EV Content per Vehicle potential: INR 35,000-50,000"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:14:49.391451",
+  "_symbol": "UNOMINDA"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 10.0,
+      "profit_growth_3yr_avg": 20.0,
+      "roe_latest": 23.0,
+      "roce_latest": 29.8,
+      "pe_ratio": 66.3,
+      "debt_to_equity": 0.02,
+      "beta": 1.07
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2032.0,
+      "growth_rate_projection": 13.0,
+      "shares_outstanding_cr": 101.8,
+      "net_debt_cr": -311.0,
+      "tax_rate": 25.2
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Pidilite Industries is a classic 'compounder' stock, dominated by its flagship brand Fevicol which holds a near-monopoly in the Indian adhesive market. The company exhibits exceptional financial health with negligible debt, high ROCE (29.8%), and consistent cash flow generation. Management (Parekh family) is widely respected for corporate governance and long-term vision. The high P/E ratio reflects the market's premium valuation for its quality and wide economic moat."
+    }
+  },
+  "_cached_at": "2025-12-31T12:00:31.090609",
+  "_symbol": "PIDILITIND"
+}

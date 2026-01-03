@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.8,
+      "profit_growth_3yr_avg": 16.6,
+      "roe_latest": 22.8,
+      "roce_latest": 28.1,
+      "pe_ratio": 31.4,
+      "debt_to_equity": 0.03,
+      "beta": 0.73
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 5700,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 27.92,
+      "net_debt_cr": -16386,
+      "tax_rate": 23.2
+    },
+    "qualitative": {
+      "management_integrity_score": 9.5,
+      "reasoning": "The Bajaj Group is widely recognized for its high corporate governance standards, transparency, and shareholder-friendly policies. The management, led by Rajiv Bajaj, is known for candid communication and prudent capital allocation, evidenced by a consistent dividend payout history (often exceeding 90% of profits including buybacks) and a debt-free balance sheet with substantial cash reserves."
+    }
+  },
+  "_cached_at": "2025-12-31T11:22:56.411803",
+  "_symbol": "BAJAJ-AUTO"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Housing & Infrastructure Finance (PSU)",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 1.21%",
+      "kpi_2": "Net Interest Margin (NIM): 2.94%",
+      "kpi_3": "Capital Adequacy Ratio (CRAR): 41.72%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:07:17.792402",
+  "_symbol": "HUDCO"
+}

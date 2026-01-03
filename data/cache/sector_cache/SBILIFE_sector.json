@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Life Insurance",
+    "sector_kpis": {
+      "kpi_1": "VNB Margin: 26.8%",
+      "kpi_2": "13th Month Persistency: 87.4%",
+      "kpi_3": "Solvency Ratio: 2.04x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:01.257041",
+  "_symbol": "SBILIFE"
+}

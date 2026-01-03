@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CEMENT",
+    "niche_industry": "Cement & Building Materials",
+    "sector_kpis": {
+      "kpi_1": "EBITDA per Tonne: Rs 1,114 (FY24 average)",
+      "kpi_2": "Installed Capacity: 56.4 MTPA",
+      "kpi_3": "Capacity Utilization: 77% (FY24)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:12:57.188381",
+  "_symbol": "SHREECEM"
+}

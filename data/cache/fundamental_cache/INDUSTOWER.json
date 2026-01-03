@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 3.0,
+      "profit_growth_3yr_avg": 16.0,
+      "roe_latest": 32.5,
+      "roce_latest": 29.0,
+      "pe_ratio": 12.0,
+      "debt_to_equity": 0.6,
+      "beta": 1.1
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 11600.0,
+      "growth_rate_projection": 4.0,
+      "shares_outstanding_cr": 263.55,
+      "net_debt_cr": 16700.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Controlled by the Bharti Group (Airtel), Indus Towers adheres to high corporate governance standards. The management has demonstrated resilience and transparency in handling critical operational challenges, specifically regarding the recovery of significant dues from Vodafone Idea while maintaining contract stability and supporting the telecom infrastructure ecosystem."
+    }
+  },
+  "_cached_at": "2025-12-31T11:43:30.367057",
+  "_symbol": "INDUSTOWER"
+}

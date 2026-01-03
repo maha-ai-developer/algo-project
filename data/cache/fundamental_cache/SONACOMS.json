@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 18.9,
+      "profit_growth_3yr_avg": 17.9,
+      "roe_latest": 17.6,
+      "roce_latest": 19.7,
+      "pe_ratio": 51.6,
+      "debt_to_equity": 0.04,
+      "beta": 0.11
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 360,
+      "growth_rate_projection": 19,
+      "shares_outstanding_cr": 62.17,
+      "net_debt_cr": -420,
+      "tax_rate": 25.16
+    },
+    "qualitative": {
+      "management_integrity_score": 90,
+      "reasoning": "The company exhibits strong corporate governance with a professional management structure independent of the promoter family, as evidenced by its decisive rebuttal of recent interference claims. High institutional holding (~60-70%) and a pristine, almost debt-free balance sheet further validate management's integrity and capital allocation efficiency."
+    }
+  },
+  "_cached_at": "2025-12-31T12:08:29.097424",
+  "_symbol": "SONACOMS"
+}

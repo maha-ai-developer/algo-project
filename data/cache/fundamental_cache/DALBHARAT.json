@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.38,
+      "profit_growth_3yr_avg": 1.26,
+      "roe_latest": 6.43,
+      "roce_latest": 6.42,
+      "pe_ratio": 35.47,
+      "debt_to_equity": 0.4,
+      "beta": 0.81
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 175,
+      "growth_rate_projection": 12,
+      "shares_outstanding_cr": 18.76,
+      "net_debt_cr": 2049,
+      "tax_rate": 17.82
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "The Dalmia Bharat Group is a reputable conglomerate with a strong focus on corporate governance, sustainability (one of the lowest carbon footprints in the cement industry), and ethical business practices. Management has set clear long-term goals for capacity expansion (targeting 110-130 MT by 2031) and professional leadership is in place. No major regulatory red flags or controversies regarding management integrity were identified in recent reports."
+    }
+  },
+  "_cached_at": "2025-12-31T11:31:33.565956",
+  "_symbol": "DALBHARAT"
+}

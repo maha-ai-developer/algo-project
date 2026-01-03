@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Passenger Vehicles",
+    "sector_kpis": {
+      "kpi_1": "Volume Growth: 9.5% (FY24)",
+      "kpi_2": "EBITDA Margin: 11.6% (Normalized)",
+      "kpi_3": "Market Share: 41.6% (PV Segment)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:09:40.758845",
+  "_symbol": "MARUTI"
+}

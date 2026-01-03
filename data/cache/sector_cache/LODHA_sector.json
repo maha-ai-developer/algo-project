@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Residential Real Estate Development",
+    "sector_kpis": {
+      "kpi_1": "Pre-sales: INR 14,520 Cr",
+      "kpi_2": "Net Debt/Equity: 0.17x",
+      "kpi_3": "Collections: INR 11,260 Cr"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:09:19.458274",
+  "_symbol": "LODHA"
+}

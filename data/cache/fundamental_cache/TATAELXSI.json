@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.71,
+      "profit_growth_3yr_avg": 12.61,
+      "roe_latest": 29.45,
+      "roce_latest": 36.3,
+      "pe_ratio": 48.24,
+      "debt_to_equity": 0.06,
+      "beta": 0.52
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 695,
+      "growth_rate_projection": 7,
+      "shares_outstanding_cr": 6.23,
+      "net_debt_cr": -1270,
+      "tax_rate": 24.5
+    },
+    "qualitative": {
+      "management_integrity_score": 90,
+      "reasoning": "Tata Elxsi benefits from the strong lineage of the Tata Group, ensuring high corporate governance and management integrity. The company maintains a pristine balance sheet with negative net debt and robust return ratios (ROE ~29%, ROCE ~36%). However, recent financials indicate a slowdown, with TTM profit growth turning negative (-18%) and analysts projecting a modest 7% CAGR over the next few years. Despite this, the stock trades at a premium valuation (P/E ~48), likely factoring in its quality and long-term potential in EV and design tech, though short-term headwinds in the tech sector persist."
+    }
+  },
+  "_cached_at": "2025-12-31T12:10:22.556925",
+  "_symbol": "TATAELXSI"
+}

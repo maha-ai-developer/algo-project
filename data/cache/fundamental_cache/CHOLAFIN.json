@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 36.84,
+      "profit_growth_3yr_avg": 25.65,
+      "roe_latest": 19.72,
+      "roce_latest": 10.15,
+      "pe_ratio": 30.8,
+      "debt_to_equity": 7.23,
+      "beta": 0.39
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -32613,
+      "growth_rate_projection": 20,
+      "shares_outstanding_cr": 84.39,
+      "net_debt_cr": 166000,
+      "tax_rate": 25.8
+    },
+    "qualitative": {
+      "management_integrity_score": 7,
+      "reasoning": "Cholamandalam is part of the reputed Murugappa Group, known for strong corporate governance. While recent allegations by Cobrapost regarding related party transactions caused short-term volatility, management firmly denied them, and major brokerages maintained their confidence. The company maintains high asset quality and consistent growth, typical of a top-tier NBFC."
+    }
+  },
+  "_cached_at": "2025-12-31T11:29:12.872082",
+  "_symbol": "CHOLAFIN"
+}

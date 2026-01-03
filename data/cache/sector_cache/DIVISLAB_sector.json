@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "Active Pharmaceutical Ingredients (API) and Custom Synthesis",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 35.5%",
+      "kpi_2": "Export Revenue Contribution: 88%",
+      "kpi_3": "Asset Turnover Ratio: 0.75x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:05:49.742058",
+  "_symbol": "DIVISLAB"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 39.0,
+      "profit_growth_3yr_avg": 9.85,
+      "roe_latest": -49.4,
+      "roce_latest": -29.2,
+      "pe_ratio": -26.13,
+      "debt_to_equity": 0.03,
+      "beta": 1.32
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -2970.0,
+      "growth_rate_projection": 38.0,
+      "shares_outstanding_cr": 223.84,
+      "net_debt_cr": -9695.0,
+      "tax_rate": 0.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Swiggy is led by a professional management team (Co-founder Sriharsha Majety) and backed by top-tier global investors like Prosus and SoftBank. The company has maintained a transparent listing process and holds a strong duopoly position in the Indian food delivery market alongside Zomato. Despite current losses, management has demonstrated a clear path to profitability by significantly improving unit economics and expanding into high-growth Quick Commerce (Instamart)."
+    }
+  },
+  "_cached_at": "2025-12-31T12:09:41.798585",
+  "_symbol": "SWIGGY"
+}

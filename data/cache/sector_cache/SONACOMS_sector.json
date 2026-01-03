@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "EV Powertrain & Precision Driveline Systems",
+    "sector_kpis": {
+      "kpi_1": "BEV Revenue Share: 39%",
+      "kpi_2": "EBITDA Margin: 27%",
+      "kpi_3": "Order Book: INR 23,200 Cr"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:22.351606",
+  "_symbol": "SONACOMS"
+}

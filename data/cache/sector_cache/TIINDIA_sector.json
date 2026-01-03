@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Precision Engineering and Auto Components",
+    "sector_kpis": {
+      "kpi_1": "Revenue Growth: 18.2%",
+      "kpi_2": "EBITDA Margin: 12.5%",
+      "kpi_3": "ROCE: 34.0%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:14:18.060535",
+  "_symbol": "TIINDIA"
+}

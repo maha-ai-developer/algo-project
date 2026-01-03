@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "Hospitals & Healthcare Services",
+    "sector_kpis": {
+      "kpi_1": "ARPOB (Avg Revenue Per Occupied Bed): \u20b959,011 (Q2 FY25, +3% YoY)",
+      "kpi_2": "Bed Occupancy Rate: 73% (Q2 FY25, up from 68% YoY)",
+      "kpi_3": "Healthcare Services EBITDA Margin: 24.9% (Q2 FY25)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:34:38.278102",
+  "_symbol": "APOLLOHOSP"
+}

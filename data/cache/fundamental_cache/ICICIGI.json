@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.0,
+      "profit_growth_3yr_avg": 25.4,
+      "roe_latest": 19.14,
+      "roce_latest": 25.31,
+      "pe_ratio": 34.8,
+      "debt_to_equity": 0.01,
+      "beta": 0.81
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2217.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 49.8,
+      "net_debt_cr": -300.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 4.5,
+      "reasoning": "ICICI Lombard is a subsidiary of ICICI Bank, one of India's largest and most well-regulated financial institutions. The company maintains high standards of corporate governance, transparent financial reporting (Integrated Annual Reports), and consistent market leadership in the private general insurance sector. There have been no significant regulatory adverse actions or governance scandals specific to the insurance entity in recent years. The management team is experienced and has delivered consistent returns."
+    }
+  },
+  "_cached_at": "2025-12-31T11:40:32.171520",
+  "_symbol": "ICICIGI"
+}

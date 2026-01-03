@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 9.34,
+      "profit_growth_3yr_avg": 23.59,
+      "roe_latest": 13.78,
+      "roce_latest": 19.94,
+      "pe_ratio": 113.57,
+      "debt_to_equity": 0,
+      "beta": 0.89
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1364.68,
+      "growth_rate_projection": 35.0,
+      "shares_outstanding_cr": 4.46,
+      "net_debt_cr": -3806.0,
+      "tax_rate": 25.64
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "Hitachi Energy India is a subsidiary of the reputable global conglomerate Hitachi Group, adhering to strong corporate governance standards with a diverse and experienced board. The company maintains a pristine balance sheet with zero debt and substantial cash reserves, reflecting prudent financial stewardship. While a recent GST audit dispute exists, it is viewed as a standard operational challenge rather than a governance failure. Related party transactions are conducted at arm's length."
+    }
+  },
+  "_cached_at": "2025-12-31T12:02:49.569745",
+  "_symbol": "POWERINDIA"
+}

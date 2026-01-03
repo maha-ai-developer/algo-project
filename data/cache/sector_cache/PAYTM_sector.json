@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Digital Payments and Fintech Ecosystem",
+    "sector_kpis": {
+      "kpi_1": "Monthly Transacting Users (MTU): 78 Million",
+      "kpi_2": "Gross Merchandise Value (GMV): 4.4 Trillion INR",
+      "kpi_3": "Contribution Margin: 54%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:11:25.288527",
+  "_symbol": "PAYTM"
+}

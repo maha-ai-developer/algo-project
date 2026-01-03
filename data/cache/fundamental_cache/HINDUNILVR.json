@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 6.3,
+      "profit_growth_3yr_avg": 6.5,
+      "roe_latest": 21.2,
+      "roce_latest": 29.4,
+      "pe_ratio": 49.4,
+      "debt_to_equity": 0.03,
+      "beta": 0.37
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 13472.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 235.0,
+      "net_debt_cr": -6471.0,
+      "tax_rate": 23.1
+    },
+    "qualitative": {
+      "management_integrity_score": 9.5,
+      "reasoning": "Hindustan Unilever (HUL) is widely regarded as a benchmark for corporate governance in India, backed by its strong parentage (Unilever Group). The company maintains high transparency with detailed tax transparency reports, consistent dividend payouts (often ~100% of profits), and a professional management structure. It has no history of major accounting irregularities or fraud."
+    }
+  },
+  "_cached_at": "2025-12-31T11:38:54.296208",
+  "_symbol": "HINDUNILVR"
+}

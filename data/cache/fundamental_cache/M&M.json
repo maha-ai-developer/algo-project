@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 20.9,
+      "profit_growth_3yr_avg": 24.7,
+      "roe_latest": 19.73,
+      "roce_latest": 13.9,
+      "pe_ratio": 31.98,
+      "debt_to_equity": 1.32,
+      "beta": 1.74
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -7216,
+      "growth_rate_projection": 20,
+      "shares_outstanding_cr": 111.6,
+      "net_debt_cr": 108835,
+      "tax_rate": 26.24
+    },
+    "qualitative": {
+      "management_integrity_score": 9,
+      "reasoning": "The Mahindra Group is widely recognized for its strong corporate governance and ethical leadership under Anand Mahindra. The company consistently ranks high in sustainability and transparency indices, such as the Dow Jones Sustainability Index, and maintains a high level of disclosure with no significant recent governance controversies."
+    }
+  },
+  "_cached_at": "2025-12-31T11:51:43.729896",
+  "_symbol": "M&M"
+}

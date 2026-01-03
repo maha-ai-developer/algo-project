@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 7.5,
+      "profit_growth_3yr_avg": 15.7,
+      "roe_latest": 28.0,
+      "roce_latest": 36.8,
+      "pe_ratio": 24.5,
+      "debt_to_equity": 0.0,
+      "beta": 0.91
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 16220,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 1253,
+      "net_debt_cr": -18200,
+      "tax_rate": 24.5
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "ITC is widely regarded as a professionally managed conglomerate with a strong track record of corporate governance. It has a diversified board and transparent financial reporting, consistently ranking high on ESG parameters in India."
+    }
+  },
+  "_cached_at": "2025-12-31T11:44:53.151661",
+  "_symbol": "ITC"
+}

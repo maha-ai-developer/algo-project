@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Lifestyle and Value Fashion Retail",
+    "sector_kpis": {
+      "kpi_1": "Same Store Sales Growth (SSSG): 10%+",
+      "kpi_2": "Inventory Turnover: 7.5x",
+      "kpi_3": "Revenue per Square Foot: 15800"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:14:33.800457",
+  "_symbol": "TRENT"
+}

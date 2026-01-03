@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "NBFC - Vehicle Finance",
+    "sector_kpis": {
+      "kpi_1": "AUM Growth: 33%",
+      "kpi_2": "Net Interest Margin (NIM): 7.5%",
+      "kpi_3": "Gross Stage 3 Assets: 2.8%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:41:45.699604",
+  "_symbol": "CHOLAFIN"
+}

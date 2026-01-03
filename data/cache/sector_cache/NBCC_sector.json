@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Project Management Consultancy (PMC) and Real Estate Development",
+    "sector_kpis": {
+      "kpi_1": "Order Book: \u20b981,300 Cr",
+      "kpi_2": "EBITDA Margin: 5.4%",
+      "kpi_3": "Order Book to Sales Ratio: 7.8x"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:31.712986",
+  "_symbol": "NBCC"
+}

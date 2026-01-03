@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 18.3,
+      "profit_growth_3yr_avg": 44.2,
+      "roe_latest": 16.6,
+      "roce_latest": 17.72,
+      "pe_ratio": 7.7,
+      "debt_to_equity": 0.79,
+      "beta": 1.37
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 59415,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 907,
+      "net_debt_cr": -100323,
+      "tax_rate": 23.27
+    },
+    "qualitative": {
+      "management_integrity_score": 6.5,
+      "reasoning": "Management is generally stable as a PSU, but there are recent reports of branch-level fraud (e.g., manager cheating customers in Bengaluru) and historical regulatory fines (2018 UK anti-money laundering breaches). However, overall governance follows standard public sector protocols."
+    }
+  },
+  "_cached_at": "2025-12-31T11:28:22.484304",
+  "_symbol": "CANBK"
+}

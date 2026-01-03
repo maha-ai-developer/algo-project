@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 22.7,
+      "profit_growth_3yr_avg": 44.0,
+      "roe_latest": 13.2,
+      "roce_latest": 14.9,
+      "pe_ratio": 30.1,
+      "debt_to_equity": 1.75,
+      "beta": 1.5
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 3700,
+      "growth_rate_projection": 14.0,
+      "shares_outstanding_cr": 319.5,
+      "net_debt_cr": 40328,
+      "tax_rate": 25.3
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Part of the prestigious Tata Group, renowned for its high corporate governance standards, ethical business practices, and transparency. The company adheres to the 'Tata Code of Conduct' and emphasizes sustainability and social responsibility (ESG) alongside profitability. No major recent governance red flags found."
+    }
+  },
+  "_cached_at": "2025-12-31T12:10:39.758909",
+  "_symbol": "TATAPOWER"
+}

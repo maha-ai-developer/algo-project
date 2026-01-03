@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 8.3,
+      "profit_growth_3yr_avg": 8.0,
+      "roe_latest": 17.3,
+      "roce_latest": 16.2,
+      "pe_ratio": 7.51,
+      "debt_to_equity": 0.64,
+      "beta": 0.94
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 19550.0,
+      "growth_rate_projection": 5.0,
+      "shares_outstanding_cr": 433.85,
+      "net_debt_cr": 35536.0,
+      "tax_rate": 25.17
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "BPCL is a 'Maharatna' PSU with robust governance frameworks and professional management. While operationally efficient and transparent, it is subject to government policy influence, particularly regarding fuel pricing, which can impact minority shareholder interests."
+    }
+  },
+  "_cached_at": "2025-12-31T11:27:25.558241",
+  "_symbol": "BPCL"
+}

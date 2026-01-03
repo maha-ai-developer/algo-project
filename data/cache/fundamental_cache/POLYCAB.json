@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 21.9,
+      "profit_growth_3yr_avg": 29.06,
+      "roe_latest": 25.75,
+      "roce_latest": 29.72,
+      "pe_ratio": 44.86,
+      "debt_to_equity": 0.02,
+      "beta": 1.05
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1124,
+      "growth_rate_projection": 16.5,
+      "shares_outstanding_cr": 15.1,
+      "net_debt_cr": -2573,
+      "tax_rate": 24.47
+    },
+    "qualitative": {
+      "management_integrity_score": 5,
+      "reasoning": "While the company has demonstrated exceptional execution and financial growth (Project LEAP targets achieved early), the Income Tax Department raids in Dec 2023 alleging unaccounted cash sales of approx. \u20b91,000 Cr raise significant governance and integrity concerns. Although the stock has recovered and management states no material adverse impact has been crystallized yet, the allegations of off-book transactions warrant a penalty on the integrity score."
+    }
+  },
+  "_cached_at": "2025-12-31T12:02:06.434850",
+  "_symbol": "POLYCAB"
+}

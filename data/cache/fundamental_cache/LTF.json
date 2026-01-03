@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 18.0,
+      "profit_growth_3yr_avg": 45.0,
+      "roe_latest": 10.8,
+      "roce_latest": 8.72,
+      "pe_ratio": 28.3,
+      "debt_to_equity": 3.61,
+      "beta": 1.15
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -16781.0,
+      "growth_rate_projection": 25.0,
+      "shares_outstanding_cr": 250.26,
+      "net_debt_cr": 90400.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "L&T Finance is a subsidiary of the highly respected Larsen & Toubro group, ensuring high corporate governance standards. The management has successfully executed its 'Lakshya 2026' strategy, shifting the portfolio mix to over 90% retail assets ahead of schedule, improving asset quality (GS3 < 3%), and maintaining transparency in reporting. The consistent delivery on strategic goals underscores strong management integrity and capability."
+    }
+  },
+  "_cached_at": "2025-12-31T11:50:31.435992",
+  "_symbol": "LTF"
+}

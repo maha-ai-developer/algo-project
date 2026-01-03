@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Luxury Hospitality & Resorts",
+    "sector_kpis": {
+      "kpi_1": "RevPAR: \u20b915,996 (Q3FY25 Standalone)",
+      "kpi_2": "Average Room Rate (ARR): \u20b920,440 (Q3FY25)",
+      "kpi_3": "Occupancy Rate: 80% (Q4FY25)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:07:44.636918",
+  "_symbol": "INDHOTEL"
+}

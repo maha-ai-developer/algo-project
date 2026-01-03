@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Electrical Wires and Cables",
+    "sector_kpis": {
+      "kpi_1": "Capacity Utilization: 91%",
+      "kpi_2": "EBITDA Margin: 11.02%",
+      "kpi_3": "B2C Sales Mix: 45%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:08:40.714190",
+  "_symbol": "KEI"
+}

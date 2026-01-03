@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Retail-focused Diversified NBFC",
+    "sector_kpis": {
+      "kpi_1": "NIM + Fees: 10.59%",
+      "kpi_2": "Gross NPA (GS3): 3.14%",
+      "kpi_3": "Retail Mix: 98%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:09:33.344181",
+  "_symbol": "LTF"
+}

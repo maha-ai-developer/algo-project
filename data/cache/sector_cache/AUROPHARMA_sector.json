@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "Generics & Active Pharmaceutical Ingredients (API)",
+    "sector_kpis": {
+      "kpi_1": "US Formulations Revenue: \u20b93,638 Cr (Q2 FY26)",
+      "kpi_2": "EBITDA Margin: 20.3% (Q2 FY26)",
+      "kpi_3": "R&D Spend: ~5.0% of Revenue"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:35:35.009379",
+  "_symbol": "AUROPHARMA"
+}

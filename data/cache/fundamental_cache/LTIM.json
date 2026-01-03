@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 13.0,
+      "profit_growth_3yr_avg": 5.0,
+      "roe_latest": 21.8,
+      "roce_latest": 31.9,
+      "pe_ratio": 37.0,
+      "debt_to_equity": 0.1,
+      "beta": 1.26
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 4837,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 29.6,
+      "net_debt_cr": -11524,
+      "tax_rate": 24.2
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "LTIMindtree is part of the Larsen & Toubro (L&T) Group, a conglomerate renowned for high standards of corporate governance, professional management, and transparency. The merger between L&T Infotech and Mindtree has been executed with strategic clarity. Financial reporting is detailed and consistent. The company maintains a healthy balance sheet with negative net debt and robust cash flows, typical of top-tier IT services firms. The slight moderation in recent growth figures reflects broader sector headwinds rather than internal governance issues."
+    }
+  },
+  "_cached_at": "2025-12-31T11:50:50.482704",
+  "_symbol": "LTIM"
+}

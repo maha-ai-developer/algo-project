@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 8.5,
+      "profit_growth_3yr_avg": 9.9,
+      "roe_latest": 52.9,
+      "roce_latest": 53.0,
+      "pe_ratio": 62.8,
+      "debt_to_equity": 0.58,
+      "beta": 0.53
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1990,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 24.09,
+      "net_debt_cr": 1276,
+      "tax_rate": 25.6
+    },
+    "qualitative": {
+      "management_integrity_score": 0.85,
+      "reasoning": "Britannia Industries is part of the Wadia Group and is widely regarded for its strong brand equity and professional management. The company maintains a robust corporate governance framework with no major reported accounting irregularities or fraud. It has received multiple awards for environmental, health, and safety practices. While the promoter group has faced challenges in other ventures (e.g., Go First), Britannia's operations remain distinct and profitable with a high return on equity."
+    }
+  },
+  "_cached_at": "2025-12-31T11:27:18.213229",
+  "_symbol": "BRITANNIA"
+}

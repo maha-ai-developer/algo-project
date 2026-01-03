@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Life Insurance",
+    "sector_kpis": {
+      "kpi_1": "VNB Margin: 25.3%",
+      "kpi_2": "Embedded Value: 20,449 Cr",
+      "kpi_3": "13th Month Persistency: 85%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:06.562001",
+  "_symbol": "MFSL"
+}

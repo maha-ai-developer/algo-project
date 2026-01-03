@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 51.7,
+      "profit_growth_3yr_avg": 26.93,
+      "roe_latest": 7.17,
+      "roce_latest": 6.85,
+      "pe_ratio": 218.0,
+      "debt_to_equity": 0.0,
+      "beta": 1.59
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -303.0,
+      "growth_rate_projection": 30.0,
+      "shares_outstanding_cr": 46.27,
+      "net_debt_cr": -2766.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "PB Fintech holds a dominant market position with a 93% share in online insurance aggregation (Policybazaar). The company successfully executed a turnaround from losses to profitability in FY2025, demonstrating strong operational leverage. Management, led by founders Yashish Dahiya and Alok Bansal, retains high credibility with significant institutional backing (FIIs/DIIs hold >70%). Balance sheet is robust with zero debt and substantial cash reserves. Minor regulatory enquiries are typical for the fintech sector and do not indicate systemic governance issues."
+    }
+  },
+  "_cached_at": "2025-12-31T12:02:36.004243",
+  "_symbol": "POLICYBZR"
+}

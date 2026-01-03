@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 15.77,
+      "profit_growth_3yr_avg": -10.14,
+      "roe_latest": 8.39,
+      "roce_latest": 8.9,
+      "pe_ratio": 43.86,
+      "debt_to_equity": 1.9,
+      "beta": 0.58
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -33832,
+      "growth_rate_projection": 12,
+      "shares_outstanding_cr": 67.85,
+      "net_debt_cr": 178219,
+      "tax_rate": 28.35
+    },
+    "qualitative": {
+      "management_integrity_score": 9,
+      "reasoning": "Grasim is a flagship company of the Aditya Birla Group, which is widely recognized for its high standards of corporate governance, transparency, and ethical business practices ('Force for Good' philosophy). The board structure and disclosures are robust."
+    }
+  },
+  "_cached_at": "2025-12-31T11:36:47.332488",
+  "_symbol": "GRASIM"
+}

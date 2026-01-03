@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FMCG",
+    "niche_industry": "Consumer Goods (Personal Care, Edible Oils, and Health Foods)",
+    "sector_kpis": {
+      "kpi_1": "Domestic Volume Growth: 8% (Q2FY25)",
+      "kpi_2": "EBITDA Margin: 20.2%",
+      "kpi_3": "Inventory Turnover Ratio: 8.4"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:09:47.924859",
+  "_symbol": "MARICO"
+}

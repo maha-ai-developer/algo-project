@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "Contract Research and Manufacturing Services (CRAMS)",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 29.8%",
+      "kpi_2": "Active Client Count: 420+",
+      "kpi_3": "Fixed Asset Turnover: 1.1x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:39.760358",
+  "_symbol": "SYNGENE"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 16.3,
+      "profit_growth_3yr_avg": 37.57,
+      "roe_latest": 25.5,
+      "roce_latest": 33.2,
+      "pe_ratio": 54.87,
+      "debt_to_equity": 0.0,
+      "beta": 1.73
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -323,
+      "growth_rate_projection": 18.0,
+      "shares_outstanding_cr": 270.0,
+      "net_debt_cr": -5053.0,
+      "tax_rate": 25.82
+    },
+    "qualitative": {
+      "management_integrity_score": 0.8,
+      "reasoning": "NBCC is a 'Navratna' Central Public Sector Enterprise (CPSE) under the Ministry of Housing and Urban Affairs, ensuring high government oversight and stability. The company maintains a debt-free balance sheet and a robust order book. However, as a PSU, it may face bureaucratic inefficiencies compared to private peers. Recent financials show strong profit growth and high return ratios (ROE/ROCE), though operating cash flows have been volatile."
+    }
+  },
+  "_cached_at": "2025-12-31T11:55:25.529009",
+  "_symbol": "NBCC"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 33.7,
+      "profit_growth_3yr_avg": 47.6,
+      "roe_latest": 15.9,
+      "roce_latest": 17.7,
+      "pe_ratio": 54.0,
+      "debt_to_equity": 1.0,
+      "beta": 0.96
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 782.0,
+      "growth_rate_projection": 22.0,
+      "shares_outstanding_cr": 103.27,
+      "net_debt_cr": 4530.0,
+      "tax_rate": 25.6
+    },
+    "qualitative": {
+      "management_integrity_score": 0.85,
+      "reasoning": "Kalyan Jewellers is led by the Kalyanaraman family with a long-standing reputation (established 1993) and strong brand equity in India and the Middle East. While there were recent social media rumors regarding bribery involving a fund manager, these were strongly denied by both the asset management firm (Motilal Oswal) and Kalyan's management as 'baseless and malicious,' and the stock price recovered. The company maintains high transparency standards with 'My Kalyan' centers and gold purity certifications. Corporate governance scores (Piotroski, Altman Z) are stable."
+    }
+  },
+  "_cached_at": "2025-12-31T11:47:27.525074",
+  "_symbol": "KALYANKJIL"
+}

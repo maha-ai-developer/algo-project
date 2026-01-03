@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Paints & Coatings",
+    "sector_kpis": {
+      "kpi_1": "Domestic Volume Growth: ~3% (Q2 FY26)",
+      "kpi_2": "EBITDA Margin: 17.6% (Q2 FY26)",
+      "kpi_3": "Market Share: ~52%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:34:57.834237",
+  "_symbol": "ASIANPAINT"
+}

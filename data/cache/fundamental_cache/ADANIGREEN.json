@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 22.49,
+      "profit_growth_3yr_avg": 90.6,
+      "roe_latest": 14.6,
+      "roce_latest": 8.7,
+      "pe_ratio": 75.7,
+      "debt_to_equity": 6.59,
+      "beta": 1.7
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -16412,
+      "growth_rate_projection": 25,
+      "shares_outstanding_cr": 164.72,
+      "net_debt_cr": 77828,
+      "tax_rate": 14.17
+    },
+    "qualitative": {
+      "management_integrity_score": 3,
+      "reasoning": "Management integrity is severely compromised by the November 2024 US DOJ indictment of Gautam Adani and executives for an alleged $250 million bribery scheme to Indian officials to secure solar contracts, despite subsequent reports of potential FCPA enforcement suspension."
+    }
+  },
+  "_cached_at": "2025-12-31T11:18:51.296161",
+  "_symbol": "ADANIGREEN"
+}

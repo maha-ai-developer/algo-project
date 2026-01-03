@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Investment Holding Company",
+    "sector_kpis": {
+      "kpi_1": "Book Value per Share: \u20b96,095",
+      "kpi_2": "Dividend Yield: 0.84%",
+      "kpi_3": "Price to Book (P/B) Ratio: 1.83x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:36:44.024056",
+  "_symbol": "BAJAJHLDNG"
+}

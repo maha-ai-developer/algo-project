@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 22.0,
+      "profit_growth_3yr_avg": 28.3,
+      "roe_latest": 13.4,
+      "roce_latest": 11.0,
+      "pe_ratio": 33.5,
+      "debt_to_equity": 2.3,
+      "beta": 1.2
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 4254.0,
+      "growth_rate_projection": 20.0,
+      "shares_outstanding_cr": 160.0,
+      "net_debt_cr": 283000.0,
+      "tax_rate": 26.5
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Bajaj Finserv is part of the Bajaj Group, widely recognized for its high corporate governance standards, transparent financial reporting, and shareholder-friendly policies. The management has a consistent track record of delivering on long-term growth targets (e.g., stated 18-22% profit CAGR goals) and maintaining prudent risk management in its lending and insurance subsidiaries."
+    }
+  },
+  "_cached_at": "2025-12-31T11:23:43.915834",
+  "_symbol": "BAJAJFINSV"
+}

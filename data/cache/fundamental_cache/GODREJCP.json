@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 8.63,
+      "profit_growth_3yr_avg": -2.99,
+      "roe_latest": -4.5,
+      "roce_latest": 19.64,
+      "pe_ratio": 66.99,
+      "debt_to_equity": 0.26,
+      "beta": 0.32
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1761.8,
+      "growth_rate_projection": 10,
+      "shares_outstanding_cr": 102.3,
+      "net_debt_cr": 978,
+      "tax_rate": 26.5
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "The Godrej Group is a 'Gold Standard' for corporate governance in India, known for transparency and ethical conduct. The FY24 reported loss was due to a strategic 'kitchen-sinking' exercise (impairment of African assets) to clean up the balance sheet, a move management communicated clearly. The core business remains robust with high ROCE (excluding one-offs), and the professional management team (led by Sudhir Sitapati) is highly regarded."
+    }
+  },
+  "_cached_at": "2025-12-31T11:36:27.940582",
+  "_symbol": "GODREJCP"
+}

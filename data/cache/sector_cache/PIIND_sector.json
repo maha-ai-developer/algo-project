@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "Agrochemicals & Custom Synthesis Manufacturing (CSM)",
+    "sector_kpis": {
+      "kpi_1": "CSM Order Book: $1.8 Billion",
+      "kpi_2": "EBITDA Margin: 25.7%",
+      "kpi_3": "Export Revenue Contribution: 78%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:11:47.734172",
+  "_symbol": "PIIND"
+}

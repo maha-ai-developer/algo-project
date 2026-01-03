@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Electronic Manufacturing Services (EMS) & Consumer Durables",
+    "sector_kpis": {
+      "kpi_1": "Revenue Growth: 72% YoY",
+      "kpi_2": "EBITDA Margin: 8.2%",
+      "kpi_3": "Asset Turnover Ratio: 3.5x"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:11:37.700091",
+  "_symbol": "PGEL"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 23.4,
+      "profit_growth_3yr_avg": -18.5,
+      "roe_latest": 10.4,
+      "roce_latest": 13.1,
+      "pe_ratio": 170.6,
+      "debt_to_equity": 2.0,
+      "beta": 1.13
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 257,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 66.0,
+      "net_debt_cr": 1200,
+      "tax_rate": 25.3
+    },
+    "qualitative": {
+      "management_integrity_score": 0.75,
+      "reasoning": "Part of the reputable Jubilant Bhartia Group with generally strong corporate governance standards. However, recent reports (Feb 2025) of an FIR against the Chairman related to a personal legal matter have created some negative sentiment, though operational governance remains robust."
+    }
+  },
+  "_cached_at": "2025-12-31T11:47:32.849466",
+  "_symbol": "JUBLFOOD"
+}

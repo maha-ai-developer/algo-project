@@ -75,9 +75,7 @@ class RiskManager:
             print(f"      ⚠️ Margin exceeded: ₹{total_margin:,.0f} > ₹{usable_capital:,.0f}")
             return 0, 0
         
-        # Clean single-line output
-        match_icon = "✅" if mismatch_pct <= 5 else "⚠️"
-        print(f"      {match_icon} SIZE: Y={lots_y}×{lot_y}={qty_y:,} | X={lots_x}×{lot_x}={qty_x:,} | Y×β={qty_y*beta:,.0f}≈{qty_x} ({mismatch_pct:.1f}%)")
+        # Sizing calculated silently for compact mode
         
         return qty_y, qty_x
     

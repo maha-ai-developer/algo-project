@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 3.23,
+      "profit_growth_3yr_avg": 3.0,
+      "roe_latest": 17.26,
+      "roce_latest": 12.89,
+      "pe_ratio": 15.93,
+      "debt_to_equity": 1.41,
+      "beta": 0.6
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 24789.0,
+      "growth_rate_projection": 5.0,
+      "shares_outstanding_cr": 930.1,
+      "net_debt_cr": 121150.0,
+      "tax_rate": 19.55
+    },
+    "qualitative": {
+      "management_integrity_score": 0.8,
+      "reasoning": "Power Grid Corporation of India is a 'Maharatna' PSU, indicating a high level of operational autonomy and government backing. It operates as a near-monopoly in the interstate transmission sector, ensuring stable cash flows and consistent dividend payouts. While financial reporting is transparent and regulated by CERC, the company has faced minor governance lapses, such as recent fines by BSE/NSE for non-compliance with board composition norms (specifically regarding independent directors), which is a common bureaucratic delay in PSUs. Overall integrity remains high due to its critical role in national infrastructure."
+    }
+  },
+  "_cached_at": "2025-12-31T12:02:30.165997",
+  "_symbol": "POWERGRID"
+}

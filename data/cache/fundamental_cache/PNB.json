@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.8,
+      "profit_growth_3yr_avg": 68.8,
+      "roe_latest": 15.2,
+      "roce_latest": 6.32,
+      "pe_ratio": 8.26,
+      "debt_to_equity": 1.54,
+      "beta": 0.46
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 20474.0,
+      "growth_rate_projection": 11.0,
+      "shares_outstanding_cr": 1149.29,
+      "net_debt_cr": 5995.0,
+      "tax_rate": 12.7
+    },
+    "qualitative": {
+      "management_integrity_score": 0.75,
+      "reasoning": "Management has shown transparency by proactively reporting and fully provisioning for legacy frauds (e.g., \u20b92,434 Cr SREI exposure in Dec 2025) without impacting current capital adequacy. Asset quality has significantly improved with GNPA dropping below 3.5%, indicating better risk governance compared to the past."
+    }
+  },
+  "_cached_at": "2025-12-31T12:01:33.874390",
+  "_symbol": "PNB"
+}

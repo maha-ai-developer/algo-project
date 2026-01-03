@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 17.85,
+      "profit_growth_3yr_avg": 34.19,
+      "roe_latest": 19.1,
+      "roce_latest": 26.3,
+      "pe_ratio": 52.7,
+      "debt_to_equity": 0.01,
+      "beta": 0.46
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1290,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 35.61,
+      "net_debt_cr": -3553,
+      "tax_rate": 25.3
+    },
+    "qualitative": {
+      "management_integrity_score": 90,
+      "reasoning": "Siemens Limited is a 75% subsidiary of Siemens AG (Germany), known for high corporate governance standards. The company maintains a pristine balance sheet with negative net debt and strong return ratios (ROCE ~26%). It is well-positioned to benefit from India's infrastructure and industrial capex cycle, particularly in power transmission and mobility. The primary risk is its premium valuation."
+    }
+  },
+  "_cached_at": "2025-12-31T12:07:38.713907",
+  "_symbol": "SIEMENS"
+}

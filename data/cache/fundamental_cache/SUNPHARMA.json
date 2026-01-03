@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 13.9,
+      "profit_growth_3yr_avg": 255.2,
+      "roe_latest": 16.2,
+      "roce_latest": 20.2,
+      "pe_ratio": 39.5,
+      "debt_to_equity": 0.03,
+      "beta": 0.44
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 8734,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 240,
+      "net_debt_cr": -22665,
+      "tax_rate": 25.3
+    },
+    "qualitative": {
+      "management_integrity_score": 7.5,
+      "reasoning": "Management led by Dilip Shanghvi is generally regarded as competent, having built a global generic pharma giant. However, the company faced significant corporate governance scrutiny in 2018-2019 regarding related party transactions (Aditya Medisales) and whistleblower complaints, which led to a SEBI forensic audit and a settlement in 2021. Since then, the company has taken corrective measures, simplified its structure, and reduced related-party exposure. Recent years have been stable with no major new governance red flags, but the past incidents weigh slightly on the score."
+    }
+  },
+  "_cached_at": "2025-12-31T12:08:46.411542",
+  "_symbol": "SUNPHARMA"
+}

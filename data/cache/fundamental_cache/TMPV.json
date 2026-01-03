@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 13.67,
+      "profit_growth_3yr_avg": 80.9,
+      "roe_latest": 28.1,
+      "roce_latest": 20.0,
+      "pe_ratio": 10.0,
+      "debt_to_equity": 0.54,
+      "beta": 1.05
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 28700,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 368,
+      "net_debt_cr": 20330,
+      "tax_rate": 32.85
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "The company is part of the Tata Group, which is renowned for its high corporate governance standards, ethical leadership, and transparency. The recent demerger into a dedicated passenger vehicle entity (TMPV) demonstrates management's focus on unlocking shareholder value and operational efficiency."
+    }
+  },
+  "_cached_at": "2025-12-31T12:13:17.660560",
+  "_symbol": "TMPV"
+}

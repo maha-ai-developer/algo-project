@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Telecommunications",
+    "sector_kpis": {
+      "kpi_1": "ARPU: \u20b9256 (Q2 FY26)",
+      "kpi_2": "Data Usage per Customer: 28.3 GB/month",
+      "kpi_3": "India EBITDA Margin: 60.0%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:39:16.394555",
+  "_symbol": "BHARTIARTL"
+}

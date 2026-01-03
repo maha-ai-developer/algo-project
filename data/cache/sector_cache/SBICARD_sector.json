@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Credit Cards & Payment Services",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 3.27%",
+      "kpi_2": "Net Interest Margin (NIM): 10.9%",
+      "kpi_3": "Market Share (Cards): 18.5%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:12:55.115033",
+  "_symbol": "SBICARD"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 27.0,
+      "profit_growth_3yr_avg": 50.3,
+      "roe_latest": 16.3,
+      "roce_latest": 7.11,
+      "pe_ratio": 14.98,
+      "debt_to_equity": 1.21,
+      "beta": 1.32
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 41938.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 309.86,
+      "net_debt_cr": 153623.0,
+      "tax_rate": 24.56
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Axis Bank is rated in the top-tier 'Leadership' category in the Indian Corporate Governance Scorecard (score of 77) and has shown stable leadership under MD & CEO Amitabh Chaudhry. The bank has successfully navigated recent challenges and improved its asset quality (GNPA/NNPA reduction) without major regulatory controversies in the current period."
+    }
+  },
+  "_cached_at": "2025-12-31T11:22:47.021528",
+  "_symbol": "AXISBANK"
+}

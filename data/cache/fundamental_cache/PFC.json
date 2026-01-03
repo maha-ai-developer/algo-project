@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 11.65,
+      "profit_growth_3yr_avg": 20.08,
+      "roe_latest": 21.11,
+      "roce_latest": 9.74,
+      "pe_ratio": 4.73,
+      "debt_to_equity": 6.03,
+      "beta": 1.62
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -67083,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 330,
+      "net_debt_cr": 968824,
+      "tax_rate": 20.88
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "Power Finance Corporation (PFC) is a 'Maharatna' Central Public Sector Undertaking (CPSE), indicating the highest level of operational autonomy and government backing in India. This status ensures strong management stability, adherence to compliance, and low bankruptcy risk despite high leverage typical of financial institutions. However, as a PSU, it may face bureaucratic hurdles compared to private peers."
+    }
+  },
+  "_cached_at": "2025-12-31T11:59:51.570894",
+  "_symbol": "PFC"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Ports & Logistics",
+    "sector_kpis": {
+      "kpi_1": "Cargo Volume: 420 MMT (FY24, +24% YoY)",
+      "kpi_2": "Market Share: ~27% (All India Cargo), ~44% (Containers)",
+      "kpi_3": "Domestic Port EBITDA Margin: ~72%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:32:51.871542",
+  "_symbol": "ADANIPORTS"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Housing Finance",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA Ratio: 4.41%",
+      "kpi_2": "Net Interest Margin (NIM): 3.00%",
+      "kpi_3": "Net Interest Spread: 2.42%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:09:06.141848",
+  "_symbol": "LICHSGFIN"
+}

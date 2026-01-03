@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 46.06,
+      "profit_growth_3yr_avg": 46.98,
+      "roe_latest": 82.19,
+      "roce_latest": 13.07,
+      "pe_ratio": 37.97,
+      "debt_to_equity": 8.66,
+      "beta": 0.77
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 24208,
+      "growth_rate_projection": 14,
+      "shares_outstanding_cr": 38.66,
+      "net_debt_cr": 25185,
+      "tax_rate": 7.51
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "InterGlobe Aviation (IndiGo) commands a dominant market share (>60%) in the Indian aviation sector, driven by high operational efficiency and a low-cost carrier model. The company's financials show a strong post-COVID recovery with high ROE (82.19%), though this is significantly leveraged by lease liabilities (Debt/Equity ~8.66). The management is professionally run and highly regarded for operational excellence and governance, despite previous promoter disagreements. The large gap between ROE and ROCE (13.07%) highlights the impact of leverage. Future growth is projected to be robust (14%+) given the expanding Indian aviation market."
+    }
+  },
+  "_cached_at": "2025-12-31T11:42:51.247933",
+  "_symbol": "INDIGO"
+}

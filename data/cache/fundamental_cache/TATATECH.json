@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 20.45,
+      "profit_growth_3yr_avg": 57.21,
+      "roe_latest": 19.97,
+      "roce_latest": 25.8,
+      "pe_ratio": 38.1,
+      "debt_to_equity": 0.05,
+      "beta": 1.35
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 670.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 40.57,
+      "net_debt_cr": -739.0,
+      "tax_rate": 22.17
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Tata Technologies benefits from the impeccable reputation of the Tata Group, ensuring high standards of corporate governance and management integrity. The company has a strong balance sheet with negative net debt, a robust focus on the high-growth EV and ER&D sectors, and consistent financial performance."
+    }
+  },
+  "_cached_at": "2025-12-31T12:11:08.429641",
+  "_symbol": "TATATECH"
+}

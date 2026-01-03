@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.82,
+      "profit_growth_3yr_avg": 23.95,
+      "roe_latest": 26.46,
+      "roce_latest": 27.32,
+      "pe_ratio": 60.41,
+      "debt_to_equity": 0.4,
+      "beta": 0.57
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1838.0,
+      "growth_rate_projection": 14.0,
+      "shares_outstanding_cr": 33.84,
+      "net_debt_cr": 1885.0,
+      "tax_rate": 29.6
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "The Torrent Group is a well-established Indian conglomerate known for professional management and high corporate governance standards. A high promoter holding of approximately 68% suggests strong alignment with minority shareholder interests. The company has a consistent track record of dividend payments and transparent financial disclosures."
+    }
+  },
+  "_cached_at": "2025-12-31T12:12:58.598158",
+  "_symbol": "TORNTPHARM"
+}

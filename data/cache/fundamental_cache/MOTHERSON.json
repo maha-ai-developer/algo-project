@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 21.39,
+      "profit_growth_3yr_avg": 10.66,
+      "roe_latest": 12.2,
+      "roce_latest": 13.7,
+      "pe_ratio": 38.53,
+      "debt_to_equity": 0.5,
+      "beta": 0.95
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1805,
+      "growth_rate_projection": 15,
+      "shares_outstanding_cr": 1060,
+      "net_debt_cr": 9770,
+      "tax_rate": 24.16
+    },
+    "qualitative": {
+      "management_integrity_score": 0.85,
+      "reasoning": "The Sehgal family management is highly regarded for its execution of the '3CX10' diversification strategy and successful integration of over 23 global acquisitions. The company holds a CRISIL AAA credit rating, indicating the highest degree of safety regarding financial obligations. Corporate governance practices are rated as 'Adequate' by CRISIL. The recent 1:2 bonus issue demonstrates a shareholder-friendly approach. Transparency in reporting is high, with clear disclosures on the recent demerger and restructuring."
+    }
+  },
+  "_cached_at": "2025-12-31T11:54:02.583337",
+  "_symbol": "MOTHERSON"
+}

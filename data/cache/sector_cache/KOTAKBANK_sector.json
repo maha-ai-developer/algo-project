@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "BANK",
+    "niche_industry": "Private Sector Banking",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 1.48%",
+      "kpi_2": "NIM: 4.65%",
+      "kpi_3": "CASA Ratio: 40.9%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:08:58.365400",
+  "_symbol": "KOTAKBANK"
+}

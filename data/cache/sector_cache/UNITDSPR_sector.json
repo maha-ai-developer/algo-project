@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FMCG",
+    "niche_industry": "Spirits & Distilleries",
+    "sector_kpis": {
+      "kpi_1": "Prestige & Above Mix: 89.2%",
+      "kpi_2": "EBITDA Margin: 17.1%",
+      "kpi_3": "Inventory Turnover: 2.93x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:14:59.634194",
+  "_symbol": "UNITDSPR"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "Digital Transformation, Infrastructure, and Engineering R&D Services",
+    "sector_kpis": {
+      "kpi_1": "Attrition Rate (LTM): 12.4%",
+      "kpi_2": "New Deal Wins (TCV): $9.76 Billion (FY24)",
+      "kpi_3": "Revenue per Employee: $58,466"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:06:48.480586",
+  "_symbol": "HCLTECH"
+}

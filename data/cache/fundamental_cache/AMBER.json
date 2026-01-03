@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 29.05,
+      "profit_growth_3yr_avg": 41.17,
+      "roe_latest": 10.66,
+      "roce_latest": 11.7,
+      "pe_ratio": 110.71,
+      "debt_to_equity": 0.77,
+      "beta": 1.17
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 136.1,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 3.39,
+      "net_debt_cr": 1845.0,
+      "tax_rate": 26.0
+    },
+    "qualitative": {
+      "management_integrity_score": 0.85,
+      "reasoning": "Amber Enterprises exhibits strong corporate governance with transparent financial reporting and detailed policies on ethics, anti-bribery, and whistleblowing. The management (Singh family) has demonstrated professional execution, successfully diversifying into components and mobility applications, and maintaining a dominant market share in the Indian RAC ODM industry. Despite capital-intensive operations, the company maintains stable ownership and regular investor communication."
+    }
+  },
+  "_cached_at": "2025-12-31T11:19:44.545179",
+  "_symbol": "AMBER"
+}

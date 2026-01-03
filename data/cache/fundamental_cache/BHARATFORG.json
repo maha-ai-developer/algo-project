@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.24,
+      "profit_growth_3yr_avg": 7.05,
+      "roe_latest": 11.14,
+      "roce_latest": 12.43,
+      "pe_ratio": 64.0,
+      "debt_to_equity": 0.68,
+      "beta": 0.99
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 346.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 47.8,
+      "net_debt_cr": 5673.0,
+      "tax_rate": 37.27
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "Bharat Forge, a flagship company of the Kalyani Group, demonstrates strong corporate governance with high transparency. The promoter holding is stable at ~44% with 0% pledged shares, a positive indicator of financial health and management confidence. The board is diverse and adheres to compliance regulations. Despite some sector cyclicality, management's strategic pivot towards defense and aerospace (Vision 2030) and recent debt reduction efforts reflect proactive and prudent leadership."
+    }
+  },
+  "_cached_at": "2025-12-31T11:25:40.255581",
+  "_symbol": "BHARATFORG"
+}

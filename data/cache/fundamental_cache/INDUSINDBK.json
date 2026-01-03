@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 16.0,
+      "profit_growth_3yr_avg": -19.0,
+      "roe_latest": -1.16,
+      "roce_latest": 6.47,
+      "pe_ratio": -86.34,
+      "debt_to_equity": 0.83,
+      "beta": 1.55
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 17547.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 77.94,
+      "net_debt_cr": -5671.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 2.0,
+      "reasoning": "Severe governance failure highlighted by a \u20b92,600 crore accounting discrepancy in the derivatives portfolio unveiled in 2025. The scandal triggered an SFIO probe, forced management changes, and resulted in restated financials with hidden losses, severely damaging credibility."
+    }
+  },
+  "_cached_at": "2025-12-31T11:43:21.784435",
+  "_symbol": "INDUSINDBK"
+}

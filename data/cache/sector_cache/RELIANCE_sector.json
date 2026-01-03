@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Integrated Energy and Consumer Conglomerate",
+    "sector_kpis": {
+      "kpi_1": "GRM (Gross Refining Margin): $11.5/bbl",
+      "kpi_2": "ARPU (Jio): \u20b9181.7",
+      "kpi_3": "EBITDA Margin (O2C): 14.5%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:12:39.957369",
+  "_symbol": "RELIANCE"
+}

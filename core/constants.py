@@ -12,11 +12,14 @@ LOOKBACK_PERIOD = 200           # Days of historical data
 MIN_DATA_COVERAGE = 0.95        # 95% data completeness required
 
 # ═══════════════════════════════════════════════════════════════════════════
+# ═══════════════════════════════════════════════════════════════════════════
 # VALIDATION THRESHOLDS
 # ═══════════════════════════════════════════════════════════════════════════
 
-ADF_THRESHOLD = 0.05            # P-value ≤ 0.05 for stationarity
-ADF_EXCELLENT = 0.01            # P-value ≤ 0.01 is excellent
+ADF_THRESHOLD = 0.05            # P-value ≤ 0.05 per Zerodha Varsity PDF (5% significance)
+ADF_EXCELLENT = 0.01            # For excellent/strict validation
+HURST_THRESHOLD = 0.50          # Strict Mean Reversion (H < 0.5)
+MIN_CROSSING_RATE = 12          # Minimum 12 mean crossings per year
 ERROR_RATIO_EXCELLENT = 0.15    # Error ratio < 0.15 is excellent
 ERROR_RATIO_GOOD = 0.25         # Error ratio < 0.25 is good
 ERROR_RATIO_MAX = 0.40          # Error ratio < 0.40 is acceptable

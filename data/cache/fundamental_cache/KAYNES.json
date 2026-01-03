@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 56.8,
+      "profit_growth_3yr_avg": 91.7,
+      "roe_latest": 10.7,
+      "roce_latest": 14.3,
+      "pe_ratio": 74.1,
+      "debt_to_equity": 0.12,
+      "beta": 0.19
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -1430,
+      "growth_rate_projection": 57.0,
+      "shares_outstanding_cr": 6.7,
+      "net_debt_cr": -1197,
+      "tax_rate": 20.8
+    },
+    "qualitative": {
+      "management_integrity_score": 4,
+      "reasoning": "While the company has delivered exceptional growth (Sales CAGR ~57%), serious corporate governance concerns were raised in Dec 2025 regarding inconsistent related-party disclosures, aggressive capitalization of R&D expenses to inflate profits, and rising contingent liabilities. Management admitted to 'inadvertent' non-disclosures, significantly impacting investor trust despite the strong order book."
+    }
+  },
+  "_cached_at": "2025-12-31T11:47:21.584246",
+  "_symbol": "KAYNES"
+}

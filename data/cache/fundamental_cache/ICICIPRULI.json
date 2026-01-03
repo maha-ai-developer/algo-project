@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 4.5,
+      "profit_growth_3yr_avg": 16.0,
+      "roe_latest": 10.76,
+      "roce_latest": 10.15,
+      "pe_ratio": 72.5,
+      "debt_to_equity": 0.23,
+      "beta": 0.52
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1307.0,
+      "growth_rate_projection": 13.5,
+      "shares_outstanding_cr": 144.7,
+      "net_debt_cr": 2744.0,
+      "tax_rate": 20.0
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "ICICI Prudential Life Insurance is a leading private insurer in India with strong parentage (ICICI Bank & Prudential Plc). Traditional valuation metrics like P/E (72.5x) appear high, which is typical for life insurers where Embedded Value (EV) and Value of New Business (VNB) are preferred indicators. The 3-year profit growth (16%) is robust, though sales growth (premium income) has been moderate (4.5%). The company focuses on improving its VNB margin and product mix. Note: For DCF inputs, Net Profit is used as a proxy for Free Cash Flow, as standard FCF is often negative or volatile for insurers due to investment float and regulatory capital requirements."
+    }
+  },
+  "_cached_at": "2025-12-31T11:40:37.515315",
+  "_symbol": "ICICIPRULI"
+}

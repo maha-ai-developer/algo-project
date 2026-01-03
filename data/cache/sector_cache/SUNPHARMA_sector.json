@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "Specialty Generics & Global Formulations",
+    "sector_kpis": {
+      "kpi_1": "Global Specialty Sales: $1.04 Billion (FY24)",
+      "kpi_2": "R&D Spend: 6.7% of Sales",
+      "kpi_3": "EBITDA Margin: 26.9% (FY24)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:31.347923",
+  "_symbol": "SUNPHARMA"
+}

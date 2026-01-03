@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 19.7,
+      "profit_growth_3yr_avg": 23.3,
+      "roe_latest": 11.6,
+      "roce_latest": 15.3,
+      "pe_ratio": 60.8,
+      "debt_to_equity": 0.47,
+      "beta": 0.99
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 302,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 35.76,
+      "net_debt_cr": 3784,
+      "tax_rate": 19.3
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "The Phoenix Mills Limited is a leading real estate developer with a strong reputation for corporate governance and execution. Management has delivered consistent long-term growth (5-year profit CAGR of 23.3%) and successfully navigated the post-COVID recovery, doubling retail consumption across its portfolio. The company maintains healthy debt levels (D/E < 0.5) despite capital-intensive expansion."
+    }
+  },
+  "_cached_at": "2025-12-31T12:00:55.715399",
+  "_symbol": "PHOENIXLTD"
+}

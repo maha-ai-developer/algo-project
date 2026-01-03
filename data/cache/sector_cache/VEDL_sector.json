@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "METAL",
+    "niche_industry": "Diversified Natural Resources",
+    "sector_kpis": {
+      "kpi_1": "Aluminium EBITDA/Tonne: $485",
+      "kpi_2": "Zinc Production: 1.03 Million Tonnes",
+      "kpi_3": "Net Debt/EBITDA: 1.64x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:14:57.787407",
+  "_symbol": "VEDL"
+}

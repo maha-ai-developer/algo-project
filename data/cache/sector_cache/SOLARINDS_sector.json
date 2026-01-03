@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Industrial Explosives & Defense",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 25.8%",
+      "kpi_2": "Total Order Book: \u20b917,000 Cr",
+      "kpi_3": "Domestic Explosives Market Share: ~30%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:21.737495",
+  "_symbol": "SOLARINDS"
+}

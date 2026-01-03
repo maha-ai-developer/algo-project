@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.1,
+      "profit_growth_3yr_avg": 31.3,
+      "roe_latest": 18.4,
+      "roce_latest": 16.6,
+      "pe_ratio": 60.4,
+      "debt_to_equity": 0.66,
+      "beta": 1.07
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 860,
+      "growth_rate_projection": 16.0,
+      "shares_outstanding_cr": 14.38,
+      "net_debt_cr": 2200,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Apollo Hospitals is led by the reputable Reddy family with a professional management layer. The company has demonstrated strong corporate governance by reducing promoter pledging significantly over recent years and strategically restructuring subsidiaries (Apollo HealthCo) to unlock value and deleverage. While past pledging was a concern, current levels are manageable and transparency is high."
+    }
+  },
+  "_cached_at": "2025-12-31T11:20:46.325964",
+  "_symbol": "APOLLOHOSP"
+}

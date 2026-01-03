@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Wealth & Asset Management",
+    "sector_kpis": {
+      "kpi_1": "Total AUM: \u20b96.72 Lakh Cr (ARR AUM: \u20b92.95 Lakh Cr)",
+      "kpi_2": "ARR Retention / Yield: ~76 bps",
+      "kpi_3": "Cost-to-Income Ratio: ~47-48%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:32:02.628991",
+  "_symbol": "360ONE"
+}

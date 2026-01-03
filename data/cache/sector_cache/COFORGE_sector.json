@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "Digital IT Solutions (Travel, Insurance & BFS)",
+    "sector_kpis": {
+      "kpi_1": "LTM Attrition Rate: 11.3%",
+      "kpi_2": "Annual Order Intake: $2.1 Billion",
+      "kpi_3": "Revenue per Employee: $42,413"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:05:21.093460",
+  "_symbol": "COFORGE"
+}

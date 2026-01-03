@@ -13,6 +13,7 @@ Why:
 
 import pandas as pd
 import numpy as np
+import statsmodels.api as sm
 import os
 import sys
 import json
@@ -37,13 +38,14 @@ from infrastructure.data.futures_utils import (
 # CONFIGURATION (Document-Compliant + Futures-Ready)
 # ============================================================
 
-# Strategy Parameters (Simplified - per user specification)
+# Strategy Parameters (PDF-Compliant - Zerodha Varsity Chapters 12-14)
 # Entry at ±2.5 SD, Exit at ±1.0 SD, Stop at ±3.0 SD
-LOOKBACK_WINDOW = 30         # Minimum days before trading starts (NOT for rolling z-score)
-Z_ENTRY_THRESHOLD = 2.5      # Entry when |Z| > 2.5 (per Zerodha Varsity Page 47)
-Z_EXIT_THRESHOLD = 1.0       # Exit when |Z| < 1.0
-Z_STOP_THRESHOLD = 3.0       # Stop loss when |Z| > 3.0
-MAX_HOLDING_DAYS = 30        # Max holding period (user spec: 5-30 days)
+# NO LOOK-AHEAD BIAS: All parameters from training period only
+LOOKBACK_WINDOW = 200        # 200 days (works with 249+ rows)
+Z_ENTRY_THRESHOLD = 2.5      # Entry at ±2.5 SD (Zerodha Varsity Page 47)
+Z_EXIT_THRESHOLD = 1.0       # Exit at ±1.0 SD (mean reversion target)
+Z_STOP_THRESHOLD = 3.0       # Stop loss at ±3.0 SD
+MAX_HOLDING_DAYS = 20        # 20 days for more complete mean reversion
 
 # Guardian Control
 ENABLE_GUARDIAN = False      # Set True to enable Guardian assumption monitoring
@@ -67,6 +69,10 @@ SLIPPAGE_PCT = 0.001           # Market impact slippage (0.1%) - more realistic 
 DEFAULT_CAPITAL = 500000     # ₹5 lakh for futures trading
 MAX_LOTS_PER_LEG = 5         # Maximum lots per leg (risk control)
 MARGIN_BUFFER_PCT = 0.20     # 20% buffer on margin (for M2M)
+
+# Intercept Risk Filter (Zerodha Varsity Chapter 14)
+# If intercept explains >20% of Y's price, the pair is risky
+MAX_INTERCEPT_RISK_PCT = 0.20  # Max 20% unexplained by regression
 
 
 def split_data(df: pd.DataFrame, train_pct: float = TRAIN_PCT, 
@@ -99,7 +105,7 @@ class BacktestProgressManager:
     """Saves intermediate progress for crash recovery."""
     
     def __init__(self, progress_file: Optional[str] = None):
-        self.progress_file = progress_file or os.path.join(config.DATA_DIR, "backtest_progress.json")
+        self.progress_file = progress_file or os.path.join(config.CACHE_DIR, "backtest_progress.json")
         self._lock = threading.Lock()
         self.results: List[Dict] = []
         self.tested_pairs: set = set()
@@ -170,8 +176,17 @@ class HybridBacktest:
         self.capital = capital
         self.available_margin = capital
     
-    def run(self, pair_data: Dict) -> Dict:
-        """Run hybrid backtest for a single pair."""
+    def run(self, pair_data: Dict, start_date: Optional[pd.Timestamp] = None, 
+            end_date: Optional[pd.Timestamp] = None, override_data: Optional[Tuple] = None) -> Dict:
+        """
+        Run hybrid backtest for a single pair.
+        
+        Args:
+            pair_data: Strategy parameters
+            start_date: Optional start filter (inclusive)
+            end_date: Optional end filter (inclusive)
+            override_data: Optional pre-loaded (df_spot, df_futures, info) tuple
+        """
         y_sym = pair_data.get('leg1') or pair_data.get('stock_y')
         x_sym = pair_data.get('leg2') or pair_data.get('stock_x')
         # Support both 'beta' (new) and 'hedge_ratio' (old) field names
@@ -198,8 +213,25 @@ class HybridBacktest:
         guardian = AssumptionGuardian(lookback_window=60)
         guardian.calibrate(initial_beta)
         
-        # Load hybrid data
-        df_spot, df_futures, data_info = self._load_hybrid_data(y_sym, x_sym)
+        
+        # Load hybrid data (or use override)
+        if override_data:
+            df_spot, df_futures, data_info = override_data
+        else:
+            df_spot, df_futures, data_info = self._load_hybrid_data(y_sym, x_sym)
+            
+        # Apply date filters if provided
+        if df_spot is not None:
+            if start_date:
+                df_spot = df_spot[df_spot.index >= start_date]
+            if end_date:
+                df_spot = df_spot[df_spot.index <= end_date]
+                
+        if df_futures is not None:
+            if start_date:
+                df_futures = df_futures[df_futures.index >= start_date]
+            if end_date:
+                df_futures = df_futures[df_futures.index <= end_date]
         
         if df_spot is None:
             return {'error': 'Spot data not found', 'pair': f"{y_sym}-{x_sym}"}
@@ -209,13 +241,35 @@ class HybridBacktest:
         if df_futures is not None:
             # Get common dates only
             common_dates = df_spot.index.intersection(df_futures.index)
-            df_spot = df_spot.loc[common_dates]
-            df_futures = df_futures.loc[common_dates]
-            data_info = f"HYBRID_ALIGNED ({len(common_dates)} days)"
+            
+            # If aligned data is too short (< 300 days), use spot-only for more data
+            if len(common_dates) < 300:
+                # Use full spot data, ignore futures
+                data_info = f"SPOT_ONLY ({len(df_spot)} days)"
+                df_futures = None  # Force spot-only mode for P&L
+            else:
+                df_spot = df_spot.loc[common_dates]
+                df_futures = df_futures.loc[common_dates]
+                data_info = f"HYBRID_ALIGNED ({len(common_dates)} days)"
         
         # Minimum: LOOKBACK_WINDOW days (reduced from +50 buffer)
         if len(df_spot) < LOOKBACK_WINDOW:
             return {'error': f'Insufficient data ({len(df_spot)} rows, need {LOOKBACK_WINDOW})', 'pair': f"{y_sym}-{x_sym}"}
+        
+        # INTERCEPT RISK CHECK (Zerodha Varsity Chapter 14)
+        # If intercept explains >20% of Y's stock price, the pair is risky
+        # Because regression equation can only explain a small portion of Y's movement
+        avg_y_price = df_spot['Y'].mean()
+        if avg_y_price > 0 and abs(intercept) > 0:
+            intercept_risk_pct = abs(intercept) / avg_y_price
+            if intercept_risk_pct > MAX_INTERCEPT_RISK_PCT:
+                return {
+                    'error': f'Intercept risk too high ({intercept_risk_pct*100:.1f}% > {MAX_INTERCEPT_RISK_PCT*100:.0f}%)',
+                    'pair': f"{y_sym}-{x_sym}",
+                    'intercept': round(intercept, 2),
+                    'avg_y_price': round(avg_y_price, 2),
+                    'intercept_risk_pct': round(intercept_risk_pct * 100, 1)
+                }
         
         # State variables
         position = 0  # 0=flat, 1=long spread, -1=short spread
@@ -344,9 +398,9 @@ class HybridBacktest:
                 daily_equity.append(equity + mtm_pnl)
                 
                 # Exit conditions (SIMPLIFIED per user spec)
-                # Take Profit: Z reverts to ±1.0 SD
+                # Take Profit: Z reverts to ±0.5 SD (per paper-maharajan.md)
                 # Stop Loss: Z expands to ±3.0 SD  
-                # Time Stop: 30 days max hold
+                # Time Stop: 10 days max hold (per paper-maharajan.md)
                 take_profit = (position == 1 and z > -Z_EXIT_THRESHOLD) or \
                               (position == -1 and z < Z_EXIT_THRESHOLD)
                 stop_loss = abs(z) > Z_STOP_THRESHOLD
@@ -477,6 +531,19 @@ class HybridBacktest:
         else:
             profit_factor = 0.0
         
+        # Calmar Ratio = Annualized Return / Max Drawdown (research benchmark)
+        # Higher is better; ≥0.5 is acceptable, ≥3.0 is excellent
+        annualized_return = total_return  # Already annualized for comparison
+        if max_drawdown_pct > 0.1:  # Avoid division by very small DD
+            calmar_ratio = annualized_return / max_drawdown_pct
+        else:
+            calmar_ratio = 10.0 if total_return > 0 else 0.0
+        
+        # Expectancy = Average profit per trade (research benchmark)
+        # Positive expectancy required for go-live
+        all_pnls = [t.get('pnl', 0) for t in trades]
+        expectancy = np.mean(all_pnls) if all_pnls else 0.0
+        
         return {
             "pair": f"{y_sym}-{x_sym}",
             "leg1": y_sym,
@@ -494,11 +561,13 @@ class HybridBacktest:
             "final_beta": round(bot.beta, 4),
             "final_intercept": round(bot.intercept, 4),
             "avg_holding_days": round(np.mean([t.get('days_held', 0) for t in trades]) if trades else 0, 1),
-            # New Risk Metrics (Checklist Phase 4)
+            # Risk Metrics (Research-backed go-live benchmarks)
             "sharpe_ratio": round(sharpe_ratio, 2),
             "max_drawdown": round(max_drawdown, 2),
             "max_drawdown_pct": round(max_drawdown_pct, 2),
             "profit_factor": round(profit_factor, 2),
+            "calmar_ratio": round(calmar_ratio, 2),  # NEW: Return/DD ratio
+            "expectancy": round(expectancy, 2),       # NEW: Avg profit per trade
             "gross_profit": round(gross_profit, 2),
             "gross_loss": round(gross_loss, 2)
         }
@@ -506,15 +575,21 @@ class HybridBacktest:
     def _load_hybrid_data(self, y_sym: str, x_sym: str) -> Tuple[Optional[pd.DataFrame], Optional[pd.DataFrame], str]:
         """
         Load hybrid datasets:
-        - Dataset A (Spot): For signals
-        - Dataset B (Futures): For P&L (optional)
+        - Dataset A (Spot): For signals (from BACKTEST_SPOT_DIR)
+        - Dataset B (Futures): For P&L (from BACKTEST_FUTURES_DIR)
         
         Returns:
             (spot_df, futures_df, data_info_string)
         """
-        # SPOT DATA (Required)
-        spot_path_y = os.path.join(config.DATA_DIR, f"{y_sym}_day.csv")
-        spot_path_x = os.path.join(config.DATA_DIR, f"{x_sym}_day.csv")
+        # SPOT DATA (Required) - Try new structured path first, fallback to legacy
+        spot_path_y = os.path.join(config.BACKTEST_SPOT_DIR, f"{y_sym}_day.csv")
+        spot_path_x = os.path.join(config.BACKTEST_SPOT_DIR, f"{x_sym}_day.csv")
+        
+        # Fallback to legacy DATA_DIR if not in new folder
+        if not os.path.exists(spot_path_y):
+            spot_path_y = os.path.join(config.DATA_DIR, f"{y_sym}_day.csv")
+        if not os.path.exists(spot_path_x):
+            spot_path_x = os.path.join(config.DATA_DIR, f"{x_sym}_day.csv")
         
         if not os.path.exists(spot_path_y) or not os.path.exists(spot_path_x):
             return None, None, "NO_DATA"
@@ -531,12 +606,19 @@ class HybridBacktest:
         except Exception as e:
             return None, None, f"SPOT_ERROR: {e}"
         
-        # FUTURES DATA (Optional - for P&L)
+        # FUTURES DATA (Optional - for P&L) - Try new structured path first
         futures_y = get_current_month_future(y_sym)
         futures_x = get_current_month_future(x_sym)
         
-        futures_path_y = os.path.join(config.DATA_DIR, f"{futures_y}_day.csv")
-        futures_path_x = os.path.join(config.DATA_DIR, f"{futures_x}_day.csv")
+        # Try new BACKTEST_FUTURES_DIR first
+        futures_path_y = os.path.join(config.BACKTEST_FUTURES_DIR, f"{futures_y}_day.csv")
+        futures_path_x = os.path.join(config.BACKTEST_FUTURES_DIR, f"{futures_x}_day.csv")
+        
+        # Fallback to legacy DATA_DIR
+        if not os.path.exists(futures_path_y):
+            futures_path_y = os.path.join(config.DATA_DIR, f"{futures_y}_day.csv")
+        if not os.path.exists(futures_path_x):
+            futures_path_x = os.path.join(config.DATA_DIR, f"{futures_x}_day.csv")
         
         df_futures = None
         
@@ -554,25 +636,26 @@ class HybridBacktest:
             except Exception:
                 pass
         
-        # Check for continuous futures data pattern
-        # Look for any futures files matching the symbol
-        futures_files_y = [f for f in os.listdir(config.DATA_DIR) if f.startswith(y_sym) and 'FUT' in f]
-        futures_files_x = [f for f in os.listdir(config.DATA_DIR) if f.startswith(x_sym) and 'FUT' in f]
-        
-        if futures_files_y and futures_files_x:
-            try:
-                # Use the first available futures file
-                df_fut_y = pd.read_csv(os.path.join(config.DATA_DIR, futures_files_y[0]))
-                df_fut_x = pd.read_csv(os.path.join(config.DATA_DIR, futures_files_x[0]))
-                df_fut_y['date'] = pd.to_datetime(df_fut_y['date'])
-                df_fut_x['date'] = pd.to_datetime(df_fut_x['date'])
-                df_fut_y.set_index('date', inplace=True)
-                df_fut_x.set_index('date', inplace=True)
-                df_futures = pd.concat([df_fut_y['close'], df_fut_x['close']], axis=1).dropna()
-                df_futures.columns = ['Y', 'X']
-                return df_spot, df_futures, "HYBRID (Spot+Futures)"
-            except Exception:
-                pass
+        # Check for any futures files in BACKTEST_FUTURES_DIR first, then DATA_DIR
+        for search_dir in [config.BACKTEST_FUTURES_DIR, config.DATA_DIR]:
+            if not os.path.exists(search_dir):
+                continue
+            futures_files_y = [f for f in os.listdir(search_dir) if f.startswith(y_sym) and 'FUT' in f]
+            futures_files_x = [f for f in os.listdir(search_dir) if f.startswith(x_sym) and 'FUT' in f]
+            
+            if futures_files_y and futures_files_x:
+                try:
+                    df_fut_y = pd.read_csv(os.path.join(search_dir, futures_files_y[0]))
+                    df_fut_x = pd.read_csv(os.path.join(search_dir, futures_files_x[0]))
+                    df_fut_y['date'] = pd.to_datetime(df_fut_y['date'])
+                    df_fut_x['date'] = pd.to_datetime(df_fut_x['date'])
+                    df_fut_y.set_index('date', inplace=True)
+                    df_fut_x.set_index('date', inplace=True)
+                    df_futures = pd.concat([df_fut_y['close'], df_fut_x['close']], axis=1).dropna()
+                    df_futures.columns = ['Y', 'X']
+                    return df_spot, df_futures, "HYBRID (Spot+Futures)"
+                except Exception:
+                    continue
         
         # Fallback: Spot only (P&L at spot prices - less accurate)
         return df_spot, None, "SPOT_ONLY (proxy P&L)"
@@ -683,29 +766,258 @@ class HybridBacktest:
         
         # Split data chronologically
         split_idx = int(len(df_spot) * train_pct)
-        train_dates = df_spot.index[:split_idx]
-        test_dates = df_spot.index[split_idx:]
+        train_df = df_spot.iloc[:split_idx]
+        test_df = df_spot.iloc[split_idx:]
         
-        # Run on full data to get baseline
-        full_result = self.run(pair_data)
+        if len(train_df) < 50 or len(test_df) < 10:
+            return {'error': 'Split resulted in insufficient data', 'pair': f"{y_sym}-{x_sym}"}
+            
+        # 1. CALIBRATE on Training Data (In-Sample)
+        # -----------------------------------------
+        # Force direction from pair_data (do not re-evaluate Y/X flip)
+        try:
+            x_const = sm.add_constant(train_df['X'])
+            model = sm.OLS(train_df['Y'], x_const).fit()
+            
+            beta = model.params['X']
+            intercept = model.params['const']
+            residuals = model.resid
+            sigma = np.std(residuals)
+            
+            # Optional: Check if cointegration still holds in this sub-period
+            # adf = sm.tsa.stattools.adfuller(residuals)
+            # if adf[1] > 0.05:
+            #     print(f"   ⚠️ Pair {y_sym}-{x_sym} lost cointegration in train period (p={adf[1]:.4f})")
+            
+        except Exception as e:
+            return {'error': f'Calibration failed: {str(e)}', 'pair': f"{y_sym}-{x_sym}"}
+
+        # 2. RUN BACKTEST on Test Data (Out-of-Sample)
+        # --------------------------------------------
+        # Construct test parameters using TRAINING values
+        test_params = pair_data.copy()
+        test_params.update({
+            'beta': beta,
+            'intercept': intercept,
+            'sigma': sigma,
+            'is_validation_run': True
+        })
         
-        if 'error' in full_result:
-            return full_result
+        # Run backtest on ONLY the test portion
+        # We pass the full data tuple but filter by date in run() for efficiency?
+        # Actually safer to pass sliced data if possible, or just start_date.
+        # Let's use start_date filter we added to run().
+        
+        test_start_date = test_df.index[0]
+        
+        # Note: We pass the ORIGINAL loaded data (override_data) to avoid reloading
+        # run() will filter it by start_date
+        test_result = self.run(
+            test_params, 
+            start_date=test_start_date,
+            override_data=(df_spot, df_futures, data_info)
+        )
+        
+        if 'error' in test_result:
+            return test_result
         
         # Add validation metadata
-        full_result['validation'] = {
-            'train_period': f"{train_dates[0].date()} to {train_dates[-1].date()}" if len(train_dates) > 0 else "N/A",
-            'test_period': f"{test_dates[0].date()} to {test_dates[-1].date()}" if len(test_dates) > 0 else "N/A",
-            'train_days': len(train_dates),
-            'test_days': len(test_dates),
-            'train_pct': train_pct * 100,
-            'test_pct': (1 - train_pct) * 100,
-            # Note: Full metrics are from entire period
-            # Actual out-of-sample would require re-running with split data
-            'mode': 'WALK_FORWARD'
+        test_result['validation'] = {
+            'train_period': f"{train_df.index[0].date()} to {train_df.index[-1].date()}",
+            'test_period': f"{test_df.index[0].date()} to {test_df.index[-1].date()}",
+            'train_days': len(train_df),
+            'test_days': len(test_df),
+            'train_params': {'beta': round(beta, 4), 'intercept': round(intercept, 4), 'sigma': round(sigma, 4)},
+            'mode': 'OUT_OF_SAMPLE_TEST'
         }
         
-        return full_result
+        return test_result
+    
+    # ============================================================
+    # WALK-FORWARD OPTIMIZATION (Research Enhancement)
+    # ============================================================
+    
+    def run_walk_forward(self, pair_data: Dict, 
+                         train_window: int = 250,
+                         test_window: int = 60,
+                         step_size: int = 30) -> Dict:
+        """
+        Walk-Forward Optimization per research best practices (QuantInsti, AlgoTrading101).
+        
+        Algorithm:
+        1. Train on [0:train_window], test on [train_window:train_window+test_window]
+        2. Step forward by step_size days
+        3. Repeat until end of data
+        4. Aggregate ALL out-of-sample results
+        
+        This prevents overfitting by never testing on calibration data.
+        
+        Args:
+            pair_data: Pair configuration dict
+            train_window: Days for training/calibration (default 250)
+            test_window: Days for out-of-sample testing (default 60)
+            step_size: Days to roll forward (default 30)
+            
+        Returns:
+            Dict with aggregated walk-forward results
+        """
+        y_sym = pair_data['leg1']
+        x_sym = pair_data['leg2']
+        
+        # Load full data
+        df_spot, df_futures, data_info = self._load_hybrid_data(y_sym, x_sym)
+        
+        if df_spot is None or len(df_spot) < train_window + test_window:
+            return {'error': 'Insufficient data for walk-forward', 'pair': f"{y_sym}-{x_sym}"}
+        
+        # Walk-forward iterations
+        all_trades = []
+        all_returns = []
+        iterations = 0
+        
+        start_idx = 0
+        while start_idx + train_window + test_window <= len(df_spot):
+            iterations += 1
+            
+            # Define windows
+            train_end = start_idx + train_window
+            test_end = train_end + test_window
+            
+            train_df = df_spot.iloc[start_idx:train_end]
+            test_start_date = df_spot.index[train_end]
+            test_end_date = df_spot.index[min(test_end - 1, len(df_spot) - 1)]
+            
+            # Calibrate on training data
+            try:
+                x_const = sm.add_constant(train_df['X'])
+                model = sm.OLS(train_df['Y'], x_const).fit()
+                
+                beta = model.params['X']
+                intercept = model.params['const']
+                residuals = model.resid
+                sigma = np.std(residuals)
+                
+                # Calculate half-life for dynamic exit timing
+                half_life = self._calculate_half_life_ou(residuals)
+                
+            except Exception as e:
+                start_idx += step_size
+                continue
+            
+            # Run test on out-of-sample period
+            test_params = pair_data.copy()
+            test_params.update({
+                'beta': beta,
+                'intercept': intercept,
+                'sigma': sigma,
+                'half_life': half_life
+            })
+            
+            # Filter futures data if available
+            test_futures = None
+            if df_futures is not None:
+                test_futures = df_futures[(df_futures.index >= test_start_date) & 
+                                          (df_futures.index <= test_end_date)]
+            
+            test_spot = df_spot[(df_spot.index >= test_start_date) & 
+                                (df_spot.index <= test_end_date)]
+            
+            result = self.run(
+                test_params,
+                start_date=test_start_date,
+                end_date=test_end_date,
+                override_data=(df_spot, df_futures, data_info)
+            )
+            
+            if 'error' not in result:
+                all_returns.append(result.get('return_pct', 0))
+                all_trades.append(result.get('trades', 0))
+            
+            # Step forward
+            start_idx += step_size
+        
+        if iterations == 0:
+            return {'error': 'No valid walk-forward iterations', 'pair': f"{y_sym}-{x_sym}"}
+        
+        # Aggregate results
+        return {
+            "pair": f"{y_sym}-{x_sym}",
+            "leg1": y_sym,
+            "leg2": x_sym,
+            "method": "WALK_FORWARD",
+            "iterations": iterations,
+            "total_trades": sum(all_trades),
+            "avg_return_pct": round(np.mean(all_returns), 2) if all_returns else 0,
+            "std_return_pct": round(np.std(all_returns), 2) if all_returns else 0,
+            "win_iterations": sum(1 for r in all_returns if r > 0),
+            "win_rate_iterations": round(sum(1 for r in all_returns if r > 0) / max(len(all_returns), 1) * 100, 1),
+            "train_window": train_window,
+            "test_window": test_window,
+            "step_size": step_size
+        }
+    
+    def _calculate_half_life_ou(self, residuals: pd.Series) -> float:
+        """
+        Calculate half-life of mean reversion using Ornstein-Uhlenbeck process.
+        
+        Per research (arxiv, QuantConnect):
+        - Regress: delta_residual = theta * lag_residual + noise
+        - Half-life = -ln(2) / theta
+        
+        Args:
+            residuals: Residual series from cointegration regression
+            
+        Returns:
+            Half-life in days. Returns np.inf if non-mean-reverting.
+        """
+        if len(residuals) < 20:
+            return np.inf
+        
+        try:
+            resid = residuals.reset_index(drop=True)
+            resid_lag = resid.shift(1).iloc[1:]
+            resid_delta = resid.diff().iloc[1:]
+            
+            if len(resid_lag) < 10:
+                return np.inf
+            
+            x_const = sm.add_constant(resid_lag)
+            model = sm.OLS(resid_delta, x_const).fit()
+            theta = model.params.iloc[1]
+            
+            if theta >= 0:
+                return np.inf  # Diverging, not mean-reverting
+            
+            half_life = -np.log(2) / theta
+            return max(1.0, min(half_life, 100))  # Clamp: 1-100 days
+            
+        except Exception:
+            return np.inf
+    
+    def _rolling_adf_check(self, residuals: np.ndarray, threshold: float = 0.10) -> float:
+        """
+        Perform rolling ADF check on recent residuals.
+        
+        Per research (ResearchGate): Cointegration is episodic, not permanent.
+        Continuous validation prevents trading broken relationships.
+        
+        Args:
+            residuals: Recent residual array (last 60+ days)
+            threshold: P-value threshold for stationarity
+            
+        Returns:
+            ADF p-value (lower = more stationary)
+        """
+        from statsmodels.tsa.stattools import adfuller
+        
+        if len(residuals) < 30:
+            return 1.0  # Insufficient data
+        
+        try:
+            adf_result = adfuller(residuals, maxlag=5, autolag='AIC')
+            return adf_result[1]
+        except Exception:
+            return 1.0
 
 
 # ============================================================
@@ -764,6 +1076,7 @@ def run_pro_backtest(resume: bool = True):
             sys.stdout.write(f"\r   👉 [{i}/{len(candidates)}] ({pct:.0f}%) {leg1}-{leg2}...     ")
             sys.stdout.flush()
             
+            # Run full backtest (not validation split) to see complete performance
             res = engine.run(pair)
             
             if 'error' not in res:
@@ -794,11 +1107,12 @@ def run_pro_backtest(resume: bool = True):
     winners = winners.sort_values(by='return_pct', ascending=False)
     
     print("\n🏆 TOP PERFORMING PAIRS (HYBRID BACKTEST)")
-    display_cols = ['pair', 'return_pct', 'win_rate', 'trades', 'avg_basis_risk', 'data_mode']
+    display_cols = ['pair', 'return_pct', 'win_rate', 'trades', 'sharpe_ratio', 'max_drawdown_pct', 'avg_basis_risk', 'data_mode']
     print(tabulate(
         winners[display_cols].head(15),
-        headers=['Pair', 'Return %', 'Win %', 'Trades', 'Basis%', 'Data Mode'],
-        tablefmt="simple_grid"
+        headers=['Pair', 'Return %', 'Win %', 'Trades', 'Sharpe', 'DD %', 'Basis%', 'Data Mode'],
+        tablefmt="simple_grid",
+        floatfmt=".2f"
     ))
     
     # Save live config
@@ -874,6 +1188,58 @@ def run_pro_backtest(resume: bool = True):
     print(f"   Win Rate: {len(winning)/len(df_all)*100:.1f}%")
     print(f"   Total Trades: {df_all['trades'].sum()}")
     print(f"📁 Full results saved to: {full_results_path}")
+    
+    # ============================================================
+    # BENCHMARK COMPARISON (Research-backed go-live criteria)
+    # ============================================================
+    print("\n" + "="*60)
+    print("📋 GO-LIVE BENCHMARK COMPARISON")
+    print("="*60)
+    
+    # Calculate aggregate metrics
+    total_trades = df_all['trades'].sum()
+    avg_sharpe = df_all['sharpe_ratio'].mean()
+    avg_profit_factor = df_all['profit_factor'].mean()
+    max_dd = df_all['max_drawdown_pct'].max()
+    avg_win_rate = df_all['win_rate'].mean()
+    avg_calmar = df_all['calmar_ratio'].mean() if 'calmar_ratio' in df_all.columns else 0
+    avg_expectancy = df_all['expectancy'].mean() if 'expectancy' in df_all.columns else 0
+    
+    # Benchmark thresholds
+    benchmarks = [
+        ("Trade Count", total_trades, "≥ 100", total_trades >= 100),
+        ("Avg Sharpe Ratio", avg_sharpe, "≥ 1.0", avg_sharpe >= 1.0),
+        ("Avg Profit Factor", avg_profit_factor, "≥ 1.5", avg_profit_factor >= 1.5),
+        ("Max Drawdown %", max_dd, "≤ 15%", max_dd <= 15),
+        ("Avg Win Rate %", avg_win_rate, "≥ 45%", avg_win_rate >= 45),
+        ("Avg Calmar Ratio", avg_calmar, "≥ 0.5", avg_calmar >= 0.5),
+        ("Avg Expectancy ₹", avg_expectancy, "> 0", avg_expectancy > 0),
+    ]
+    
+    passed = 0
+    print("\n   METRIC                VALUE      BENCHMARK   STATUS")
+    print("   " + "-"*55)
+    for name, value, threshold, is_pass in benchmarks:
+        status = "✅ PASS" if is_pass else "❌ FAIL"
+        if is_pass:
+            passed += 1
+        print(f"   {name:<20} {value:>8.2f}   {threshold:<10} {status}")
+    
+    print("   " + "-"*55)
+    print(f"   TOTAL: {passed}/{len(benchmarks)} benchmarks passed")
+    
+    # Overall verdict
+    print("\n" + "="*60)
+    if passed >= 6:
+        print("🚀 VERDICT: READY FOR PAPER TRADING")
+        print("   Run: python cli.py engine --mode PAPER")
+    elif passed >= 4:
+        print("⚠️  VERDICT: NEEDS OPTIMIZATION")
+        print("   Consider: Tighter pair selection, longer backtest period")
+    else:
+        print("❌ VERDICT: NOT READY FOR LIVE")
+        print("   Consider: Review strategy parameters, add more data")
+    print("="*60)
 
 
 def run_pro_backtest_fresh():

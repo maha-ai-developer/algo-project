@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "CDMO and Complex Hospital Generics",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 18%",
+      "kpi_2": "CDMO Revenue Share: 58%",
+      "kpi_3": "Net Debt / EBITDA: 3.8x"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:12:25.654888",
+  "_symbol": "PPLPHARMA"
+}

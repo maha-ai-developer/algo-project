@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 20.3,
+      "profit_growth_3yr_avg": 26.7,
+      "roe_latest": 17.9,
+      "roce_latest": 7.87,
+      "pe_ratio": 18.0,
+      "debt_to_equity": 0.64,
+      "beta": 1.13
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 153606.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 715.0,
+      "net_debt_cr": 47000.0,
+      "tax_rate": 25.6
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Under the leadership of CEO Sandeep Bakhshi, ICICI Bank has demonstrated a robust turnaround with a focus on 'Core Operating Profit' and distinct improvement in asset quality (Net NPA < 0.5%). The management has successfully navigated past governance controversies, instilling confidence through consistent performance, digital leadership, and a risk-calibrated growth strategy."
+    }
+  },
+  "_cached_at": "2025-12-31T11:40:12.702832",
+  "_symbol": "ICICIBANK"
+}

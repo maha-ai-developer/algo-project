@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 64.0,
+      "profit_growth_3yr_avg": 100.0,
+      "roe_latest": 14.9,
+      "roce_latest": 19.4,
+      "pe_ratio": 64.36,
+      "debt_to_equity": 0.2,
+      "beta": 1.0
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -38.3,
+      "growth_rate_projection": 35.0,
+      "shares_outstanding_cr": 28.31,
+      "net_debt_cr": -146.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Management has delivered exceptional growth (10x revenue in 8 years) and successfully diversified into high-growth verticals like EVs. Although promoter holding decreased by ~5.3% via block deals and dilution from a recent QIP, the stake was absorbed by reputable institutional investors (Singapore Govt, Motilal Oswal), signaling confidence. The QIP funds (\u20b91,500 Cr) are earmarked for capacity expansion and debt reduction, aligning with their aggressive 35-40% revenue growth guidance."
+    }
+  },
+  "_cached_at": "2025-12-31T12:00:28.019287",
+  "_symbol": "PGEL"
+}

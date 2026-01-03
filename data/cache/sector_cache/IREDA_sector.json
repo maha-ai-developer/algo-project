@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Renewable Energy Financing (NBFC)",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 2.19%",
+      "kpi_2": "Net Interest Margin (NIM): 3.82%",
+      "kpi_3": "Loan Book Growth: 35.8% YoY"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:08:17.403298",
+  "_symbol": "IREDA"
+}

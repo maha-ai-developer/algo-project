@@ -1,48 +1,195 @@
 Symbol,Broad_Sector,Niche_Industry,Position,Moat,Key_KPIs
-TMPV,AUTO,"Passenger Vehicles (PV), Electric Vehicles (EV) & Luxury Cars (JLR)",CHALLENGER,Narrow,Volume Growth: Flat to Negative (Recent YoY revenue decline of ~5% indicating volume pressure) | EBITDA Margin: ~12-14% (Driven by JLR's improving profitability and premiumization) | EV Market Share: ~65-70% (Undisputed Leader in India's EV segment)
-BAJAJ-AUTO,AUTO,2 & 3 Wheelers,LEADER,Wide,EBITDA Margin: 20.2% (Q2 FY25) | Volume Growth: 16% YoY (Q2 FY25) | 3W Market Share: ~71% (Domestic Leader)
-MARUTI,AUTO,Passenger Vehicles (PV),LEADER,Wide,Volume Growth: 1.7% YoY (Q2 FY26) | EBITDA Margin: 10.5% (Contracted 140bps YoY) | Market Share: ~41% (Leader in PV)
-M&M,AUTO,Utility Vehicles & Farm Equipment,LEADER,Narrow,Auto Volume Growth: 9% YoY (Q2 FY25) | EBITDA Margin: 14.2% (Q2 FY25) | Tractor Market Share: 42.5% (Leader)
-EICHERMOT,AUTO,Premium Motorcycles (250cc-750cc) & Commercial Vehicles,LEADER,Wide,Volume Growth (Royal Enfield): 45% YoY (Q2 FY26) | EBITDA Margin: 24.5% (Q2 FY26) | Market Share (250cc-750cc): ~90% (Dominant Leader)
-AXISBANK,BANK,Private Sector Banking,CHALLENGER,Narrow,Net Interest Margin (NIM): 3.99% | Gross NPA%: 1.44% | CASA Ratio: ~41%
-KOTAKBANK,BANK,Private Sector Banking,CHALLENGER,Wide,Gross NPA%: 1.49% | Net Interest Margin (NIM): 4.91% | CASA Ratio: 43.6%
-HDFCBANK,BANK,Private Sector Banking,LEADER,Wide,Gross NPA%: 1.36% | Net Interest Margin (NIM): 3.46% | CASA Ratio: ~35.3%
-ICICIBANK,BANK,Private Sector Bank,LEADER,Narrow,Gross NPA%: 1.58% | Net Interest Margin (NIM): 4.30% | CASA Ratio: 39.2%
-SBIN,BANK,Public Sector Bank (PSU),LEADER,Narrow,Gross NPA%: 1.73% | NIM (Domestic): 3.09% | CASA Ratio: 39.63%
-ULTRACEMCO,CEMENT,Cement & Construction Materials,LEADER,Wide,EBITDA/Tonne: ₹732 (Q2 FY25) | Capacity Utilization: 68% (Q2 FY25) | Domestic Volume Growth: 3% YoY
-TRENT,CONSUMER,Fashion & Lifestyle Retail,LEADER,Narrow,"LFL Growth (SSSG): Double-digit (Q2 FY25) | Store Count: 800+ (226 Westside, 577 Zudio) | EBITDA Margin: ~15.9%"
-ETERNAL,CONSUMER,Consumer Technology (Food Delivery & Quick Commerce),LEADER,Wide,Quick Commerce GOV Growth: 137% YoY | Food Delivery Adj. EBITDA Margin: 5.3% (of NOV) | Consolidated Revenue Growth: 183% YoY
-TITAN,CONSUMER,Jewelry & Watches Retail,LEADER,Wide,Jewelry Revenue Growth: 21% YoY (Q2 FY26) | Jewelry EBIT Margin: 11.1% (Q2 FY26) | Same Store Sales Growth (SSSG): ~14% (Q2 FY26)
-ASIANPAINT,CONSUMER,Paints & Coatings,LEADER,Wide,Domestic Volume Growth: 10.9% (Q2 FY26) | EBITDA Margin: 17.6% (Q2 FY26) | Market Share: ~52-55% (Value Share)
-INDIGO,CONSUMER,Aviation,LEADER,Narrow,Domestic Market Share: ~63% | Yield (Revenue/km): ₹4.69 | Passenger Load Factor (PLF): 82.5%
-NTPC,ENERGY,Power Generation (Thermal & Renewables),LEADER,Wide,Plant Load Factor (PLF): 77.25% (Coal) | Annual Generation: 422 BU | Installed Capacity: ~76 GW
-ONGC,ENERGY,Oil & Gas Exploration & Production,LEADER,Narrow,Crude Oil Production: 4.58 MMT (Q2 FY25) | Natural Gas Production: 4.91 BCM (Q2 FY25) | Net Realization: $78.33/bbl (Q2 FY25)
-RELIANCE,ENERGY,"O2C, Telecom & Retail Conglomerate",LEADER,Wide,O2C EBITDA Margin: 9.3% (Q2 FY26) | Jio ARPU: ₹206.8 (Q4 FY25) | Retail EBITDA Margin: 8.6% (Q2 FY26)
-JIOFIN,FINANCE,Non-Banking Financial Company (NBFC),CHALLENGER,Narrow,"NBFC AUM: ₹14,712 Cr | Consolidated PAT: ₹695 Cr | Total Income: ₹1,002 Cr"
-SHRIRAMFIN,FINANCE,NBFC - Commercial Vehicle & Retail Finance,LEADER,Wide,Gross Stage 3 (GNPA): 4.57% | Net Interest Margin (NIM): ~8.1% | AUM Growth: 15.7%
-SBILIFE,FINANCE,Life Insurance,LEADER,Wide,VNB Margin: 26.9% (Q2 FY25) | 13th Month Persistency: 86.4% | Solvency Ratio: 2.04
-BAJFINANCE,FINANCE,Non-Banking Financial Company (NBFC) - Consumer Finance,LEADER,Wide,Assets Under Management (AUM): ₹4.62 Lakh Cr | Gross NPA: 0.30% | Return on Equity (RoE): 19.2%
-BAJAJFINSV,FINANCE,Diversified Financial Services (NBFC & Insurance),LEADER,Wide,Gross NPA: 1.24% | AUM Growth: 24% | Solvency Ratio (Gen Insurance): 339%
-HDFCLIFE,FINANCE,Life Insurance,LEADER,Narrow,VNB Margin: 24.1% | Solvency Ratio: 175% | 13th Month Persistency: 80.8%
-NESTLEIND,FMCG,Packaged Foods & Beverages,LEADER,Wide,Domestic Sales Growth: 3.3% (Q3 FY25) | EBITDA Margin: 22.6% (Q3 FY25) | Market Share (Infant Cereals): ~96% (Leader)
-ITC,FMCG,Cigarettes & FMCG,LEADER,Wide,Cigarette Volume Growth: 3.3% (Q2 FY25) | FMCG-Others EBITDA Margin: 10.0% (Q2 FY25) | ROCE: 39.4% (FY24)
-TATACONSUM,FMCG,Food & Beverages,LEADER,Wide,"Volume Growth (India Tea): -4% (Q2 FY25) | EBITDA Margin: 14.9% (Q2 FY25) | Market Position: #1 in Salt, #2 in Tea"
-HINDUNILVR,FMCG,"Personal Care, Home Care, Foods & Refreshment",LEADER,Wide,Underlying Volume Growth (UVG): 3% (Q2 FY25) | EBITDA Margin: ~23.8% (Q2 FY25) | Underlying Sales Growth (USG): 2% (Q2 FY25)
-ADANIPORTS,INFRA,Ports & Logistics,LEADER,Wide,Cargo Volume: 124 MMT (Q2 FY26) | EBITDA Margin: 60.5% (Q2 FY26) | Market Share: 28.1% (India)
-BEL,INFRA,Defence Electronics & Aerospace,LEADER,Wide,"Order Book: ₹74,595 Cr (as of Oct 2024) | EBITDA Margin: 30.4% (Q2 FY25) | Order Inflow: ₹9,801 Cr (YTD FY25)"
-BHARTIARTL,INFRA,Telecom Services,LEADER,Wide,ARPU: Rs 256 (Q2 FY26) | Data Usage per Customer: 28.3 GB/month | 4G/5G Subscriber Base: ~286 Mn
-LT,INFRA,"Engineering, Procurement, and Construction (EPC)",LEADER,Wide,"Order Book: ₹ 6.67 Lakh Crore | Order Inflow: ₹ 1,15,784 Crore (Q2 FY26) | EBITDA Margin: 10.0%"
-ADANIENT,INFRA,"Integrated Infrastructure Incubator (Airports, Roads, Green Energy, Data Centers)",LEADER,Narrow,"Consol. EBITDA: ₹4,354 Cr (+46% YoY, Q2 FY25) | Airport Pax Traffic: 22.3 Mn (Q2 FY25) | Net Debt / EBITDA: 2.2x (FY24)"
-TECHM,IT,IT Services & Consulting (Telecom),CHALLENGER,Narrow,Deal Wins (TCV): $809 Mn (Q1 FY26) | Attrition Rate: 12.6% (LTM) | EBIT Margin: 11.1%
-HCLTECH,IT,IT Services & Consulting,CHALLENGER,Narrow,"Attrition Rate: 12.9% (LTM) | Deal Wins (TCV): $2.22 Billion | Revenue/Employee: ~$63,000 (Annualized)"
-WIPRO,IT,IT Services & Consulting,CHALLENGER,Narrow,Attrition Rate (LTM): 14.9% | Large Deal Bookings (TCV): $2.85 Billion | Operating Margin: 16.7%
-TCS,IT,IT Services & Consulting,LEADER,Wide,Deal Wins (TCV): $10.0 Billion (Q2 FY26) | Attrition Rate (LTM): 13.8% (Reported Q1 FY26) | Revenue/Employee: ~₹44.4 Lakhs (Annualized)
-INFY,IT,IT Services & Consulting,LEADER,Wide,"Attrition Rate: 14.3% (LTM) | Deal Wins (TCV): $3.1 Billion (Q2) | Revenue/Employee: ~$59,600 (FY25)"
-COALINDIA,METAL,Coal Mining,LEADER,Wide,Production Volume: 773.6 MT (FY24) | Offtake Volume: 753.5 MT (FY24) | EBITDA/Tonne: ₹519 (Q2 FY25)
-HINDALCO,METAL,Non-Ferrous Metals (Aluminium & Copper),LEADER,Narrow,"India Aluminium Upstream EBITDA/Tonne: $1,349 (Q2 FY25) | Novelis Adjusted EBITDA/Tonne: $489 (Q2 FY25) | Net Debt/EBITDA: 1.19x"
-TATASTEEL,METAL,Steel,LEADER,Narrow,"EBITDA/Tonne (India): ~₹13,526 | Capacity Utilization: ~98% | Net Debt/EBITDA: ~3.4x"
-APOLLOHOSP,PHARMA,Hospitals & Healthcare Services,LEADER,Wide,"ARPOB: ₹63,569 | Occupancy Rate: 65% | HealthCo Revenue Growth: 17%"
-MAXHEALTH,PHARMA,Hospitals & Healthcare Services,LEADER,Wide,"ARPOB (Avg Revenue Per Occupied Bed): ₹77,300 | Occupancy Rate: 77% | EBITDA Margin: 26.9%"
-CIPLA,PHARMA,Generic Formulations & Respiratory,LEADER,Narrow,North America Revenue: $237 Mn (Q2 FY25) | EBITDA Margin: 26.7% (Highest-ever quarterly) | India Business Growth: 5% YoY (Chronic therapies outpaced market)
-SUNPHARMA,PHARMA,Specialty Generics & Complex Formulations,LEADER,Wide,US Formulation Sales: $517 Million (Q2 FY25) | EBITDA Margin: 29.6% (Q2 FY25) | R&D Spend: 6.0% of Sales (Q2 FY25)
-DRREDDY,PHARMA,Generics & Biosimilars,LEADER,Narrow,"North America Revenue: ₹3,728 Cr (+17% YoY) | EBITDA Margin: 28.4% | R&D Spend: 9.1% of Sales"
+TVSMOTOR,AUTO,Two-Wheelers and Three-Wheelers,CHALLENGER,Narrow,Volume Growth: 14% | EBITDA Margin: 12.3% | Market Share (2W): 18.2%
+ASHOKLEY,AUTO,Commercial Vehicles (MHCV & LCV),LEADER,Narrow,MHCV Market Share: 31% (H1 FY26) | EBITDA Margin: 12.1% (Q2 FY26) | Volume Growth: MHCV +3% YoY (Q2 FY26)
+BAJAJ-AUTO,AUTO,2-Wheelers & 3-Wheelers,LEADER,Wide,Volume Growth: 16% YoY (Q2 FY25) | EBITDA Margin: 20.2% (Q2 FY25) | 3W Market Share: ~65% (Domestic Leader)
+BHARATFORG,AUTO,Auto Components / Forging & Defence,LEADER,Wide,"Shipment Tonnage: 56,500 MT (Q2 FY26, -12% YoY) | EBITDA Margin: 28.3% (Standalone, +50 bps YoY) | Defence Order Book: ₹9,467 Cr (H1 FY26)"
+BOSCHLTD,AUTO,Auto Ancillaries (Mobility Solutions),LEADER,Wide,Revenue Growth: 9.1% YoY (Q2 FY26) | EBITDA Margin: ~13.4% (LTM) | Auto Segment Growth: 11.9% YoY (Q2 FY26)
+EXIDEIND,AUTO,Lead-acid and Lithium-ion Storage Batteries,LEADER,Narrow,Volume Growth: 9% YoY | EBITDA Margin: 12.8% | Market Share (Organized): 60%
+EICHERMOT,AUTO,Premium Mid-Weight Motorcycles (250cc-750cc) & Commercial Vehicles,LEADER,Wide,Volume Growth (Royal Enfield): 9% (FY24) | EBITDA Margin: 26.5% (Industry-leading profit level) | Average Selling Price (ASP): ₹1.84 Lakhs per unit
+HEROMOTOCO,AUTO,Two-Wheelers (2W),LEADER,Narrow,Volume Growth: 5.5% (FY24) | EBITDA Margin: 14.1% | 2W Market Share: 32.2%
+MARUTI,AUTO,Passenger Vehicles,LEADER,Wide,Volume Growth: 9.5% (FY24) | EBITDA Margin: 11.6% (Normalized) | Market Share: 41.6% (PV Segment)
+M&M,AUTO,Utility Vehicles (SUVs) & Farm Equipment (Tractors),LEADER,Wide,SUV Revenue Market Share: 22.5% (FY25) | Domestic Tractor Market Share: 43.3% (FY25) | Farm Segment PBIT Margin: 18.4% (FY25)
+MOTHERSON,AUTO,Global Automotive Component Manufacturing,LEADER,Narrow,EBITDA Margin: 9.6% | Booked Business: USD 88.5 Billion | Net Debt/EBITDA: 0.9x
+SONACOMS,AUTO,EV Powertrain & Precision Driveline Systems,LEADER,Wide,"BEV Revenue Share: 39% | EBITDA Margin: 27% | Order Book: INR 23,200 Cr"
+TIINDIA,AUTO,Precision Engineering and Auto Components,LEADER,Wide,Revenue Growth: 18.2% | EBITDA Margin: 12.5% | ROCE: 34.0%
+TMPV,AUTO,Passenger Electric Vehicles & SUVs,LEADER,Narrow,EV Market Share: 65% | PV EBITDA Margin: 6.9% | SUV Portfolio Share: 55%
+UNOMINDA,AUTO,"Auto Ancillaries - Diversified (Lighting, Switches, Casting, Acoustics)",LEADER,Narrow,"EBITDA Margin: 11.1% | Revenue Growth (YoY): 26% | EV Content per Vehicle potential: INR 35,000-50,000"
+AXISBANK,BANK,Private Sector Bank,CHALLENGER,Narrow,Gross NPA%: 1.46% (Q2 FY26) | NIM: 3.73% (Q2 FY26) | CASA Ratio: 40% (Q2 FY26)
+BANDHANBNK,BANK,Private Sector Bank (Microbanking focus),CHALLENGER,Narrow,Gross NPA%: 4.7% | NIM: 7.4% | CASA Ratio: 33.2%
+BANKINDIA,BANK,Public Sector Bank,CHALLENGER,Narrow,Gross NPA: 4.41% (Q2 FY25) | NIM (Global): 2.82% (Q2 FY25) | CASA Ratio: 41.18% (Q2 FY25)
+CANBK,BANK,Public Sector Bank,CHALLENGER,Narrow,Gross NPA: 2.35% (Q2 FY26) | NIM: 2.52% (Q2 FY26) | CASA Ratio: ~30.7% (Q2 FY26)
+BANKBARODA,BANK,Public Sector Bank (PSB),CHALLENGER,Narrow,Gross NPA%: 2.16% | Net Interest Margin (NIM): 3.10% | CASA Ratio: 38.42%
+FEDERALBNK,BANK,Private Sector Commercial Banking,CHALLENGER,Narrow,Gross NPA: 1.83% | Net Interest Margin: 3.06% | CASA Ratio: 31.01%
+IDFCFIRSTB,BANK,Retail-Focused Private Banking,CHALLENGER,Narrow,Gross NPA: 1.94% | NIM: 6.04% | CASA Ratio: 47.7%
+INDIANB,BANK,Public Sector Banking,CHALLENGER,Narrow,Gross NPA: 3.95% | Net Interest Margin (NIM): 3.44% | CASA Ratio: 40.65%
+PNB,BANK,Public Sector Banking,CHALLENGER,Narrow,Gross NPA: 3.95% | NIM: 2.93% | CASA Ratio: 37.95%
+RBLBANK,BANK,Private Sector Banking,CHALLENGER,Narrow,Gross NPA: 2.88% | Net Interest Margin (NIM): 5.04% | CASA Ratio: 33.6%
+UNIONBANK,BANK,Public Sector Banking,CHALLENGER,None,Gross NPA: 3.29% | NIM: 2.76% | CASA Ratio: 32.50%
+YESBANK,BANK,Private Sector Banking,CHALLENGER,None,Gross NPA: 1.6% | Net Interest Margin: 2.7% | CASA Ratio: 34.3%
+AUBANK,BANK,Small Finance Bank,LEADER,Narrow,Gross NPA: 2.47% (Q2 FY26) | NIM: 5.40% (Q2 FY26) | CASA Ratio: 29.00% (Q2 FY26)
+HDFCBANK,BANK,Private Sector Banking,LEADER,Wide,Gross NPA: 1.26% | Net Interest Margin (NIM): 3.4% | CASA Ratio: 38.2%
+ICICIBANK,BANK,Private Sector Commercial Banking,LEADER,Wide,Net Interest Margin (NIM): 4.27% | Gross NPA: 1.97% | CASA Ratio: 39.6%
+KOTAKBANK,BANK,Private Sector Banking,LEADER,Wide,Gross NPA: 1.48% | NIM: 4.65% | CASA Ratio: 40.9%
+SBIN,BANK,Public Sector Banking,LEADER,Wide,Gross NPA: 1.73% | Net Interest Margin (NIM): 3.09% | CASA Ratio: 40.03%
+DALBHARAT,CEMENT,Building Materials - Grey Cement,CHALLENGER,Narrow,EBITDA per Tonne: ₹820 (FY25) | Capacity Utilization: 83% (FY24) | Installed Capacity: 49.5 MTPA
+AMBUJACEM,CEMENT,Cement & Building Materials,LEADER,Narrow,EBITDA/Tonne: ₹780 (Q2 FY25) | Sales Volume: 14.2 MnT | EBITDA Margin: 14.8%
+SHREECEM,CEMENT,Cement & Building Materials,LEADER,Wide,"EBITDA per Tonne: Rs 1,114 (FY24 average) | Installed Capacity: 56.4 MTPA | Capacity Utilization: 77% (FY24)"
+ULTRACEMCO,CEMENT,Building Materials,LEADER,Wide,"EBITDA per Tonne: ₹1,270 | Capacity Utilization: 85% | Installed Capacity: 183.36 MTPA"
+BLUESTARCO,CONSUMER,Air Conditioning & Commercial Refrigeration,CHALLENGER,Narrow,"Market Share (RAC): ~14% | Order Book (EMP): ₹6,598 Cr | UCP EBIT Margin: 7.0%"
+KALYANKJIL,CONSUMER,Gems and Jewelry Retail,CHALLENGER,Narrow,SSSG (Same Store Sales Growth): 18-21% | Inventory Turnover: 3.2x | EBITDA Margin: 6.4-7.0%
+PGEL,CONSUMER,Electronic Manufacturing Services (EMS) & Consumer Durables,CHALLENGER,Narrow,Revenue Growth: 72% YoY | EBITDA Margin: 8.2% | Asset Turnover Ratio: 3.5x
+AMBER,CONSUMER,Electronics Manufacturing Services (EMS) / Room Air Conditioners (RAC),LEADER,Narrow,Revenue Growth (H1 FY26): 24.7% | EBITDA Margin (Q2 FY26): 5.5% | RAC Market Share: ~27%
+ASIANPAINT,CONSUMER,Paints & Coatings,LEADER,Wide,Domestic Volume Growth: ~3% (Q2 FY26) | EBITDA Margin: 17.6% (Q2 FY26) | Market Share: ~52%
+CROMPTON,CONSUMER,Consumer Electricals and Durables,LEADER,Narrow,Inventory Turnover: 6.09x | EBITDA Margin: 12.8% | Market Share (Fans): ~27%
+DIXON,CONSUMER,Electronic Manufacturing Services (EMS),LEADER,Narrow,EBITDA Margin: 4.3% | Revenue Growth (YoY): 120% | Working Capital Cycle: 1 Day
+DMART,CONSUMER,Food and Grocery Retail,LEADER,Wide,"SSSG: 8.3% | Inventory Turnover: 11.3x | Sales per Sq. Ft.: ₹36,200"
+ETERNAL,CONSUMER,E-commerce & Quick Commerce,LEADER,Wide,"Gross Order Value (GOV): ₹31,995 Cr (TTM) | Contribution Margin: 7.1% (Food Delivery Segment) | Monthly Transacting Users (MTU): 20.7 Million"
+HAVELLS,CONSUMER,Fast Moving Electrical Goods (FMEG),LEADER,Wide,EBITDA Margin: 10.8% | Ad-Spend to Sales Ratio: 4.0% | Inventory Turnover Ratio: 6.2x
+INDHOTEL,CONSUMER,Luxury Hospitality & Resorts,LEADER,Wide,"RevPAR: ₹15,996 (Q3FY25 Standalone) | Average Room Rate (ARR): ₹20,440 (Q3FY25) | Occupancy Rate: 80% (Q4FY25)"
+INDIGO,CONSUMER,Aviation - Low Cost Carrier,LEADER,Wide,Domestic Market Share: 63.6% | Passenger Load Factor (PLF): 85.5% | RASK: ₹5.12
+IRCTC,CONSUMER,Railway E-commerce and Catering Monopoly,LEADER,Wide,Internet Ticketing EBIT Margin: ~84% | Catering Revenue Contribution: ~45% | Rail Neer Capacity Utilization: ~80%
+NAUKRI,CONSUMER,Online Recruitment & Classifieds,LEADER,Wide,"Recruitment Billings Growth: 12.1% YoY | Standalone EBITDA Margin: 38.3% | Cash and Equivalents: ₹4,268 Cr"
+NYKAA,CONSUMER,"Specialized E-commerce (Beauty, Wellness & Fashion)",LEADER,Narrow,GMV Growth: 24-28% YoY | Contribution Margin: 9.4% (BPC Segment) | Annual Transacting Customers: 11 Million+
+PAGEIND,CONSUMER,Premium Innerwear & Athleisure,LEADER,Wide,Inventory Turnover: 5.75x | SSSG: 6.7% | EBITDA Margin: 22.6%
+PIDILITIND,CONSUMER,"Adhesives, Sealants and Construction Chemicals",LEADER,Wide,Domestic Volume Growth: 10-12% | EBITDA Margin: 20-22% | VAM (Vinyl Acetate Monomer) Input Cost: $1000-1200/Tonne
+PHOENIXLTD,CONSUMER,Retail-led Real Estate Development,LEADER,Wide,Retail Consumption Growth: 22% YoY | Portfolio Occupancy: 94% | Rental Income Growth: 27% YoY
+POLYCAB,CONSUMER,"Wires, Cables and Fast Moving Electrical Goods (FMEG)",LEADER,Wide,Market Share (Organised W&C): 26-27% | EBITDA Margin: 13.2% | Revenue Growth (YoY): 24.2%
+SUPREMEIND,CONSUMER,Plastic Products & Piping Systems,LEADER,Wide,Volume Growth: 32.5% (FY24) | EBITDA per Kg: ₹24.6 | Value-Added Product Share: 38%
+SWIGGY,CONSUMER,Food Tech and Quick Commerce,LEADER,Narrow,Gross Order Value (GOV) Growth: 26% YoY | Average Monthly Transacting Users (MTU): 14.03 Million | Contribution Margin as % of GOV: 1.05%
+TITAN,CONSUMER,Jewellery and Lifestyle Retail,LEADER,Wide,Same Store Sales Growth (SSSG): 15% | Inventory Turnover: 2.1x | Jewellery EBIT Margin: 11.5%
+TRENT,CONSUMER,Lifestyle and Value Fashion Retail,LEADER,Wide,Same Store Sales Growth (SSSG): 10%+ | Inventory Turnover: 7.5x | Revenue per Square Foot: 15800
+VOLTAS,CONSUMER,Consumer Durables (Room Air Conditioners & MEP Services),LEADER,Wide,"RAC Market Share: 19.5% | UCP EBIT Margin: 8.5% | Order Book (EMPS): INR 8,600+ Cr"
+BPCL,ENERGY,Oil Refining & Marketing (OMC),CHALLENGER,Narrow,Gross Refining Margin (GRM): $4.41 / bbl (Q2 FY25) | Market Sales Volume: 12.39 MMT (Q2 FY25) | Refinery Throughput: 10.28 MMT (Q2 FY25)
+HINDPETRO,ENERGY,Oil Marketing and Refining,CHALLENGER,Narrow,Gross Refining Margin (GRM): $3.12/bbl | Refinery Throughput: 6.30 MMT | Market Sales Volume: 11.62 MMT
+INOXWIND,ENERGY,Wind Turbine Generator Manufacturing & EPC,CHALLENGER,Narrow,Order Book: 3.3 GW | Quarterly Execution: 140 MW | EBITDA Margin: 20%
+JSWENERGY,ENERGY,Power Generation & Renewables,CHALLENGER,Narrow,Net Generation: 27.9 BUs (FY24) | Renewable Mix: 56% of Operational Capacity | EBITDA Margin: 49% (FY24)
+OIL,ENERGY,Upstream Oil & Gas Exploration and Production,CHALLENGER,Narrow,Crude Oil Production: 3.36 MMT | Natural Gas Production: 3.18 BCM | EBITDA Margin: 44.2%
+TORNTPOWER,ENERGY,Integrated Power Utility,CHALLENGER,Narrow,AT&C Losses: 3.5%-7.0% (Best-in-class) | EBITDA Margin: 18%-20% | Net Debt to EBITDA: 1.41x
+ADANIGREEN,ENERGY,Renewable Power Producer (Solar & Wind),LEADER,Narrow,"Operational Capacity: 16.7 GW (Q2 FY25) | Capacity Utilization Factor (CUF): Solar 23.9%, Wind 35.7% (Q2 FY25) | EBITDA Margin (Power Supply): 91.7% (Q2 FY25)"
+COALINDIA,ENERGY,Coal Mining and Extraction,LEADER,Wide,Production Volume: 773.6 Million Tonnes (FY24) | EBITDA per Tonne: 585 INR | Off-take Volume: 753.5 Million Tonnes (FY24)
+GAIL,ENERGY,Natural Gas Transmission and Marketing,LEADER,Wide,Transmission Volume: 120.32 MMSCMD | Gas Marketing Margin: $0.15-$0.20 per MMBTU | Petrochemical Capacity Utilization: 96%
+IOC,ENERGY,Oil Refining and Marketing,LEADER,Wide,Gross Refining Margin (GRM): $7.08 per barrel | Refinery Capacity Utilization: 103.0% | Marketing Sales Volume: 98.6 MMT
+NTPC,ENERGY,Thermal and Renewable Power Generation,LEADER,Wide,"Plant Load Factor (PLF): 77.25% | Total Installed Capacity: 76,015 MW | Plant Availability Factor (PAF): 90.52%"
+NHPC,ENERGY,Hydroelectric Power Generation,LEADER,Wide,"Plant Availability Factor (PAF): 88.2% | Installed Capacity: 7,071 MW | Regulated Equity: ₹13,674 Cr"
+ONGC,ENERGY,Oil and Gas Exploration and Production,LEADER,Wide,Reserve Replacement Ratio (RRR): 1.35x | Average Crude Realization: $76.90/bbl | Annual Hydrocarbon Production: 41.1 MMT
+PETRONET,ENERGY,LNG Import & Regasification,LEADER,Wide,Dahej Terminal Utilization: 109% | Annual Volume Throughput: 934 TBTU | LNG Import Market Share: ~75%
+POWERGRID,ENERGY,Electric Power Transmission,LEADER,Wide,"Transmission Availability: 99.85% | Regulated Equity: INR 77,290 Cr | Receivable Days: 31 Days"
+POWERINDIA,ENERGY,Power Transmission and Distribution Equipment,LEADER,Narrow,"Order Backlog: INR 29,412 Cr | Operational EBITDA Margin: 10.1% | Order Inflow Growth: 209% (H1FY26 YoY)"
+PREMIERENE,ENERGY,Solar Photovoltaic (PV) Manufacturing,LEADER,Narrow,"Order Book: ₹13,250 Cr | EBITDA Margin: 30.5% | Capacity Utilization: 81%"
+RELIANCE,ENERGY,Integrated Energy and Consumer Conglomerate,LEADER,Wide,GRM (Gross Refining Margin): $11.5/bbl | ARPU (Jio): ₹181.7 | EBITDA Margin (O2C): 14.5%
+SUZLON,ENERGY,Renewable Energy - Wind Turbine Manufacturing & O&M Services,LEADER,Narrow,Order Book: 5.1 GW | Net Debt to EBITDA: Net Cash Positive | Fleet Management (O&M): 14.9 GW
+TATAPOWER,ENERGY,Integrated Power Utility,LEADER,Narrow,Renewable Mix: 43% | Net Debt to EBITDA: 2.93x | AT&C Losses: <15%
+WAAREEENER,ENERGY,Solar PV Module Manufacturing,LEADER,Wide,"Order Book: 24 GW (₹47,000 Cr) | Module Capacity: 18.7 GW | EBITDA Margin: 22.8%"
+ABCAPITAL,FINANCE,Diversified NBFC,CHALLENGER,Narrow,"Lending Portfolio AUM: ₹1,77,855 Cr (+29% YoY) | NIM (NBFC): 6.06% | Asset Quality (GS2 + GS3): 3.03%"
+ANGELONE,FINANCE,Discount Broking & Wealth Management,CHALLENGER,Narrow,NSE Active Client Market Share: ~15.2% (Rank 3) | Average Daily Turnover (ADTO): ₹45.8 Lakh Crore | Total Client Base: 33.6 Million
+BSE,FINANCE,Stock Exchange / Capital Markets,CHALLENGER,Wide,"Equity Cash ADTV: ₹9,768 Cr | Derivatives Premium ADTV: ₹8,203 Cr | EBITDA Margin: 52%"
+JIOFIN,FINANCE,Digital-first NBFC & Asset Management,CHALLENGER,Wide,Net Interest Margin (NIM): 3.3% | Capital Adequacy Ratio: 38.2% | Gross NPA: ~0.0%
+KFINTECH,FINANCE,Registrar and Transfer Agency (RTA) & Fintech,CHALLENGER,Wide,Domestic MF AAUM Market Share: 32.5% | EBITDA Margin: 43.9% | SIP Inflow Market Share: 39.4%
+LICHSGFIN,FINANCE,Housing Finance,CHALLENGER,Narrow,Gross NPA Ratio: 4.41% | Net Interest Margin (NIM): 3.00% | Net Interest Spread: 2.42%
+LTF,FINANCE,Retail-focused Diversified NBFC,CHALLENGER,Narrow,NIM + Fees: 10.59% | Gross NPA (GS3): 3.14% | Retail Mix: 98%
+PAYTM,FINANCE,Digital Payments and Fintech Ecosystem,CHALLENGER,Narrow,Monthly Transacting Users (MTU): 78 Million | Gross Merchandise Value (GMV): 4.4 Trillion INR | Contribution Margin: 54%
+PNBHOUSING,FINANCE,Housing Finance,CHALLENGER,Narrow,Gross NPA: 1.04% | NIM: 3.67% | CRAR: 29.13%
+360ONE,FINANCE,Wealth & Asset Management,LEADER,Wide,Total AUM: ₹6.72 Lakh Cr (ARR AUM: ₹2.95 Lakh Cr) | ARR Retention / Yield: ~76 bps | Cost-to-Income Ratio: ~47-48%
+BAJFINANCE,FINANCE,NBFC - Consumer Finance,LEADER,Wide,AUM Growth: 29% YoY | Gross NPA: 1.24% | Net Interest Income Growth: 23% YoY
+BAJAJHLDNG,FINANCE,Investment Holding Company,LEADER,Wide,"Book Value per Share: ₹6,095 | Dividend Yield: 0.84% | Price to Book (P/B) Ratio: 1.83x"
+BAJAJFINSV,FINANCE,Diversified Financial Services (NBFC & Insurance),LEADER,Wide,"AUM (Consolidated): ₹4,62,261 Cr | Gross NPA: 1.24% | Net Interest Margin (NIM): 9.7%"
+CAMS,FINANCE,Mutual Fund Registrar & Transfer Agent (RTA),LEADER,Wide,Market Share (AAUM): ~68% | EBITDA Margin: 44.5% | Equity Net Sales Share: 69%
+CHOLAFIN,FINANCE,NBFC - Vehicle Finance,LEADER,Narrow,AUM Growth: 33% | Net Interest Margin (NIM): 7.5% | Gross Stage 3 Assets: 2.8%
+CDSL,FINANCE,Capital Market Infrastructure (Depository),LEADER,Wide,Demat Market Share (Vol): ~79% | EBITDA Margin: ~60% | Total Demat Accounts: 14.65 Crore
+HDFCLIFE,FINANCE,Life Insurance,LEADER,Wide,VNB Margin: 26.3% | 13th Month Persistency: 87.0% | Solvency Ratio: 187%
+HDFCAMC,FINANCE,Asset Management,LEADER,Wide,"Equity AUM Market Share: 12.8% | Operating Margin: 79.9% | Monthly SIP Inflow: INR 3,820 Cr"
+HUDCO,FINANCE,Housing & Infrastructure Finance (PSU),LEADER,Narrow,Gross NPA: 1.21% | Net Interest Margin (NIM): 2.94% | Capital Adequacy Ratio (CRAR): 41.72%
+ICICIGI,FINANCE,General Insurance,LEADER,Wide,Combined Ratio: 102.3% | Solvency Ratio: 2.62x | GDPI Growth: 17.8%
+ICICIPRULI,FINANCE,Life Insurance,LEADER,Narrow,VNB Margin: 28.4% | Solvency Ratio: 191.0% | 13th Month Persistency: 86.6%
+IEX,FINANCE,Power Trading Exchange,LEADER,Wide,Market Share: ~84% (Total Electricity) | Electricity Volume Growth: 18.7% YoY (FY25) | EBITDA Margin: 86.0%
+IREDA,FINANCE,Renewable Energy Financing (NBFC),LEADER,Wide,Gross NPA: 2.19% | Net Interest Margin (NIM): 3.82% | Loan Book Growth: 35.8% YoY
+IRFC,FINANCE,Sovereign-backed Railway Infrastructure Financing,LEADER,Wide,Gross NPA: 0.0% | Capital Adequacy Ratio (CAR): 672.85% | Net Interest Margin (NIM): 1.37%
+LICI,FINANCE,Life Insurance,LEADER,Wide,VNB Margin: 17.1% | Solvency Ratio: 2.02 | 13th Month Persistency: 76.66%
+MCX,FINANCE,Commodity Exchange,LEADER,Wide,"Market Share (Commodity Futures): 95.9% | Average Daily Turnover (ADT): ₹4,11,270 Cr (Q2 FY26) | EBITDA Margin: 63% (FY25)"
+MFSL,FINANCE,Life Insurance,LEADER,Narrow,"VNB Margin: 25.3% | Embedded Value: 20,449 Cr | 13th Month Persistency: 85%"
+MUTHOOTFIN,FINANCE,Gold Loan NBFC,LEADER,Wide,Net Interest Margin (NIM): 11.4% | Asset Under Management (AUM) Growth: 37% (YoY) | Gross NPA (Stage 3 Assets): 3.5%
+NUVAMA,FINANCE,Wealth Management and Capital Markets,LEADER,Narrow,"AUA (Assets Under Advisory): ₹2,80,000+ Cr | Cost to Income Ratio: 60.1% | Wealth Management Revenue Yield: 65-70 bps"
+PFC,FINANCE,Power Infrastructure Finance,LEADER,Wide,Gross NPA: 3.34% | Net Interest Margin (NIM): 3.65% | Capital Adequacy Ratio (CRAR): 25.49%
+POLICYBZR,FINANCE,InsurTech Aggregator,LEADER,Wide,Total Premium Growth: 40% YoY (Q2 FY26) | Market Share: ~93% (Online Aggregator Segment) | Adjusted EBITDA Margin: 4.4% (Core Business)
+RECLTD,FINANCE,Power Infrastructure Financing,LEADER,Wide,Gross NPA Ratio: 2.71% | Net Interest Margin (NIM): 3.30% | Capital Adequacy Ratio (CRAR): 25.82%
+SBICARD,FINANCE,Credit Cards & Payment Services,LEADER,Wide,Gross NPA: 3.27% | Net Interest Margin (NIM): 10.9% | Market Share (Cards): 18.5%
+SBILIFE,FINANCE,Life Insurance,LEADER,Wide,VNB Margin: 26.8% | 13th Month Persistency: 87.4% | Solvency Ratio: 2.04x
+SHRIRAMFIN,FINANCE,Asset Financing (Used Commercial Vehicles & MSME),LEADER,Wide,Net Interest Margin (NIM): 8.93% | Gross Stage 3 Assets (GNPA): 5.39% | AUM Growth: 21% YoY
+BRITANNIA,FMCG,Biscuits & Bakery,LEADER,Wide,Volume Growth: ~8% (Q2 FY25 Reported) | Operating Margin: ~15.5% (maintained despite inflation) | Market Share: ~33% (Leader in Organized Biscuits)
+COLPAL,FMCG,Oral Care,LEADER,Wide,Volume Growth: 7% (FY25E) | Gross Margin: 70.3% | Toothpaste Market Share: ~50%
+DABUR,FMCG,Ayurvedic Healthcare and Wellness,LEADER,Wide,Volume Growth: 4.2% (FY24) | EBITDA Margin: 19.4% | Inventory Turnover: 3.3x
+HINDUNILVR,FMCG,Home & Personal Care,LEADER,Wide,Underlying Volume Growth: 2% | EBITDA Margin: 23.4% | A&P Spend: 10.3% of Sales
+ITC,FMCG,Cigarettes and Diversified FMCG,LEADER,Wide,Cigarette EBIT Margin: 61.4% | FMCG-Others EBITDA Margin: 11.2% | Inventory Turnover Ratio: 2.22x
+MARICO,FMCG,"Consumer Goods (Personal Care, Edible Oils, and Health Foods)",LEADER,Wide,Domestic Volume Growth: 8% (Q2FY25) | EBITDA Margin: 20.2% | Inventory Turnover Ratio: 8.4
+NESTLEIND,FMCG,Packaged Foods and Beverages,LEADER,Wide,Volume Growth: 5.2% | EBITDA Margin: 24.1% | Inventory Turnover: 14.8x
+PATANJALI,FMCG,Edible Oils and Food Processing,LEADER,Narrow,Inventory Turnover: 8.94x | EBITDA Margin: 4.8% | FMCG Revenue Contribution: 30.1%
+TATACONSUM,FMCG,Packaged Foods and Beverages,LEADER,Wide,Underlying Volume Growth (UVG): 4.5% - 5.9% | EBITDA Margin: 14.1% - 15.3% | Direct Distribution Reach: 4.4 Million Outlets
+UNITDSPR,FMCG,Spirits & Distilleries,LEADER,Wide,Prestige & Above Mix: 89.2% | EBITDA Margin: 17.1% | Inventory Turnover: 2.93x
+VBL,FMCG,Beverage Bottling and Distribution,LEADER,Wide,Sales Volume Growth: 23.2% | EBITDA Margin: 23.5% | Inventory Turnover: 9.8x
+KEI,INFRA,Electrical Wires and Cables,CHALLENGER,Narrow,Capacity Utilization: 91% | EBITDA Margin: 11.02% | B2C Sales Mix: 45%
+OBEROIRLTY,INFRA,Luxury Residential Real Estate,CHALLENGER,Narrow,"Pre-sales (FY24): Rs 3,940 Cr | EBITDA Margin: 53.8% | Net Debt to Equity: 0.12x"
+IDEA,INFRA,Telecommunication Services,LAGGARD,None,ARPU: ₹180 | Wireless Market Share: 18.01% | Net Debt: ₹2.27 Trillion
+ABB,INFRA,Heavy Electrical Equipment / Industrial Automation,LEADER,Wide,"Order Backlog: > ₹10,000 Cr (Q2 CY25) | EBITDA Margin: 13.0% (Q2 CY25) | Revenue Growth: 12% YoY"
+ADANIENT,INFRA,"Diversified Infrastructure (Airports, Roads, New Energy)",LEADER,Wide,Net Debt to EBITDA: 2.46x | Consolidated EBITDA Growth: 46% YoY (Q2 FY25) | Airport Passenger Traffic: 22.3 Mn (Q2 FY25)
+ADANIPORTS,INFRA,Ports & Logistics,LEADER,Wide,"Cargo Volume: 420 MMT (FY24, +24% YoY) | Market Share: ~27% (All India Cargo), ~44% (Containers) | Domestic Port EBITDA Margin: ~72%"
+ASTRAL,INFRA,Building Materials (Plastic Pipes & Adhesives),LEADER,Narrow,EBITDA per Kg: ₹35 - ₹37 | Pipe Volume Growth: ~10-12% (Guidance) | Revenue Growth: 15.2% (Q2 FY26 YoY)
+BDL,INFRA,Defence Manufacturing,LEADER,Wide,"Order Book: ₹23,029 Cr (as of Aug 2025) | Book-to-Bill Ratio: ~7x (High Revenue Visibility) | EBITDA Margin: ~22.4% (FY25)"
+BHARTIARTL,INFRA,Telecommunications,LEADER,Wide,ARPU: ₹256 (Q2 FY26) | Data Usage per Customer: 28.3 GB/month | India EBITDA Margin: 60.0%
+BHEL,INFRA,Heavy Electrical Equipment / Power Gen EPC,LEADER,Narrow,"Order Book: ₹1.96 Lakh Cr (FY25 End) | Order Inflow: ₹92,534 Cr (Record High FY25) | EBITDA Margin: 7.7% (Q2 FY26)"
+BEL,INFRA,Defence Electronics,LEADER,Wide,"Order Book: ₹74,453 Cr | EBITDA Margin: 29.4% | Revenue Growth: 26%"
+CGPOWER,INFRA,Electrical Equipment & Engineering,LEADER,Narrow,"Order Book: ₹7,965 Cr (Q2 FY25) | EBITDA Margin: 15.2% (Q2 FY25) | ROCE: 37.5% (FY24)"
+CONCOR,INFRA,Container Rail Logistics,LEADER,Wide,Market Share (Rail-led Container Traffic): ~60% | Annual Throughput (TEUs): 4.7 Million | EBITDA Margin: 20-22%
+CUMMINSIND,INFRA,Power Generation and Industrial Engines,LEADER,Wide,EBITDA Margin: 21.8% | Domestic Revenue Growth: 26% | Export Mix: 23%
+DELHIVERY,INFRA,Integrated Logistics and E-commerce Supply Chain,LEADER,Narrow,"Express Parcel Volume: 740 Million (FY24) | Serviceable Pin Codes: 18,600+ (India-wide) | Adjusted EBITDA Margin: 0.7% (Full Year FY24)"
+DLF,INFRA,Residential & Commercial Real Estate,LEADER,Wide,"New Sales Bookings: INR 21,223 Cr (FY25) | Rental Income (DCCDL): INR 4,754 Cr (FY25) | Net Debt to Equity: 0.05x (FY25)"
+GODREJPROP,INFRA,Residential Real Estate Development,LEADER,Wide,"Booking Value: INR 22,527 Cr (FY24) | Cash Collections: INR 11,436 Cr (FY24) | Sales Volume: 20 Million Sq. Ft."
+HAL,INFRA,Aerospace & Defense,LEADER,Wide,"Order Book: ₹94,000 Crore+ | EBITDA Margin: 26.5% | Order-to-Sales Ratio: 3.1x"
+INDUSTOWER,INFRA,Telecom Tower Infrastructure,LEADER,Wide,"Tenancy Ratio: 1.65x | Total Tower Count: 229,658 | Sharing Revenue per Tower: ₹71,198/month"
+LODHA,INFRA,Residential Real Estate Development,LEADER,Narrow,"Pre-sales: INR 14,520 Cr | Net Debt/Equity: 0.17x | Collections: INR 11,260 Cr"
+LT,INFRA,"Engineering, Procurement and Construction (EPC)",LEADER,Wide,Order Book: ₹5.10 Lakh Crore | Order Inflow: ₹3.03 Lakh Crore | EBITDA Margin: 10.6%
+MAZDOCK,INFRA,Naval Shipbuilding and Submarines,LEADER,Wide,"Order Book: ₹34,787 Crore | EBITDA Margin: 26.0% | Order Book-to-Sales Ratio: 3.06x"
+NBCC,INFRA,Project Management Consultancy (PMC) and Real Estate Development,LEADER,Narrow,"Order Book: ₹81,300 Cr | EBITDA Margin: 5.4% | Order Book to Sales Ratio: 7.8x"
+RVNL,INFRA,Railway Infrastructure Engineering (EPC),LEADER,Wide,"Order Book: ₹90,000 Cr | EBITDA Margin: 4.2% | Order-to-Sales Ratio: 4.1x"
+SIEMENS,INFRA,Industrial Automation and Smart Infrastructure,LEADER,Wide,Order Backlog: 466.7 Billion INR | EBITDA Margin: 15.3% | Order Inflow Growth: 10% YoY
+SOLARINDS,INFRA,Industrial Explosives & Defense,LEADER,Wide,"EBITDA Margin: 25.8% | Total Order Book: ₹17,000 Cr | Domestic Explosives Market Share: ~30%"
+COFORGE,IT,"Digital IT Solutions (Travel, Insurance & BFS)",CHALLENGER,Narrow,"LTM Attrition Rate: 11.3% | Annual Order Intake: $2.1 Billion | Revenue per Employee: $42,413"
+LTIM,IT,IT Services & Digital Transformation,CHALLENGER,Narrow,Attrition Rate (TTM): 14.4% | Annual Order Inflow: $6.0 Billion | Operating Margin (EBIT): 14.5%
+MPHASIS,IT,BFSI-focused Digital Transformation,CHALLENGER,Narrow,New TCV Wins: $528 Million (Q2 FY26) | LTM Attrition: ~11.0% | Revenue per Employee: ₹4.94 Million
+PERSISTENT,IT,Product Engineering and Digital Transformation Services,CHALLENGER,Narrow,"Attrition Rate: 11.5% | Deal Wins (TCV): $493.5 Million | Revenue per Employee: $63,400"
+TECHM,IT,IT Services & Telecom Solutions,CHALLENGER,Narrow,Attrition Rate (LTM): 11.2% | New Deal Wins (TCV): $745M | Utilization Rate: 85.6%
+WIPRO,IT,IT Services and Digital Consulting,CHALLENGER,Narrow,Voluntary Attrition: 14.5% (TTM) | Total Bookings (TCV): $3.56 Billion | IT Services Operating Margin: 16.8%
+HCLTECH,IT,"Digital Transformation, Infrastructure, and Engineering R&D Services",LEADER,Wide,"Attrition Rate (LTM): 12.4% | New Deal Wins (TCV): $9.76 Billion (FY24) | Revenue per Employee: $58,466"
+INFY,IT,IT Services & Consulting,LEADER,Wide,"Attrition Rate: 13.7% (LTM) | Deal Wins (TCV): $2.5 Billion (Q3FY25) | Revenue per Employee: ~$61,100 (Annualized)"
+KAYNES,IT,Electronic Manufacturing Services (EMS),LEADER,Narrow,"Order Book: ₹81,000 Mn | EBITDA Margin: 14.4% | Working Capital Cycle: 95 Days"
+KPITTECH,IT,Automotive Embedded Software & Mobility ER&D,LEADER,Wide,TCV (Deal Wins): $236 Million (Q3 FY25) | Attrition Rate: ~13% (LTM) | EBITDA Margin: 21.1% (Q3 FY25)
+OFSS,IT,Core Banking Product Software & SaaS,LEADER,Wide,Attrition Rate: 12.0% (TTM) | License and Cloud Signings (TCV): $137M+ | Revenue per Employee: ₹8.79M
+TATAELXSI,IT,Engineering Research & Development (ER&D),LEADER,Wide,Attrition Rate: 12.4% (Q3 FY25) | Major Deal Win: €50 Million (European Automotive OEM) | Revenue Per Employee: ₹30.8 Lakhs
+TCS,IT,IT Services & Digital Transformation,LEADER,Wide,"Attrition Rate (LTM): 12.5% | Total Contract Value (TCV): $42.7 Billion (FY24) | Revenue per Employee: $48,333"
+TATATECH,IT,Engineering Research & Development (ER&D),LEADER,Narrow,"Attrition Rate: 15.1% | Deal Wins (TCV): $1B+ | Revenue/Employee: $51,000"
+NATIONALUM,METAL,Integrated Aluminium and Alumina Production,CHALLENGER,Narrow,"EBITDA per Tonne: INR 30,000 - 50,000 (Highly sensitive to LME Aluminium and Alumina prices) | Capacity Utilization: 101% for Alumina Refinery and ~97% for Aluminium Smelter | Resource Securitization: 100% captive bauxite mines and increasing captive coal (Utkal D & E)"
+APLAPOLLO,METAL,Structural Steel Tubes,LEADER,Narrow,"EBITDA/Tonne: ₹5,228 (Q2 FY26) | Sales Volume: 3.16 Mn Tonnes (FY25) | Market Share: ~55%"
+HINDALCO,METAL,Aluminum Smelting and Downstream Rolling,LEADER,Wide,Novelis Adjusted EBITDA/Tonne: $489 | India Aluminium Upstream EBITDA/Tonne: $967 | Consolidated Net Debt/EBITDA: 1.21x
+HINDZINC,METAL,Zinc-Lead-Silver Mining and Smelting,LEADER,Wide,"Zinc Cost of Production: $1,010/MT | EBITDA Margin: 49.4% | Mined Metal Production: 1.0 - 1.1 Mtpa"
+JSWSTEEL,METAL,Integrated Steel Manufacturing,LEADER,Wide,Capacity Utilization: 91% | EBITDA per Tonne: Rs 10250 | Net Debt to EBITDA: 2.62x
+SAIL,METAL,Integrated Steel Manufacturing,LEADER,Narrow,"EBITDA per Tonne: ₹7,094 (Q4 FY25) | Crude Steel Capacity Utilization: 98.6% | Annual Sales Volume: 17.1 Million Tonnes"
+VEDL,METAL,Diversified Natural Resources,LEADER,Wide,Aluminium EBITDA/Tonne: $485 | Zinc Production: 1.03 Million Tonnes | Net Debt/EBITDA: 1.64x
+ALKEM,PHARMA,Domestic Formulations (Acute Therapies) & US Generics,CHALLENGER,Narrow,India Sales Growth: 12.4% (Q2 FY26) | US Revenue Growth: 28.0% (Q2 FY26) | EBITDA Margin: 23.0% (Q2 FY26)
+FORTIS,PHARMA,Healthcare Delivery & Diagnostics,CHALLENGER,Narrow,"ARPOB: ₹60,821 per day | Occupancy Rate: 65% | ALOS: 4.28 Days"
+GLENMARK,PHARMA,Specialty & Generic Formulations,CHALLENGER,Narrow,EBITDA Margin: 17.6% | R&D Expenditure to Sales: 9.2% | India Market Share: 2.3% (Rank 13)
+LAURUSLABS,PHARMA,API & CDMO Services,CHALLENGER,Narrow,EBITDA Margin: 14.9% (H1-FY25) | CDMO Revenue Contribution: 28% | R&D Intensity: 4.3% of Revenue
+LUPIN,PHARMA,Generic and Specialty Pharmaceuticals,CHALLENGER,Narrow,R&D Spend: 8.0% of Revenue | US Sales Mix: 36% | EBITDA Margin: 24.7%
+PPLPHARMA,PHARMA,CDMO and Complex Hospital Generics,CHALLENGER,Narrow,EBITDA Margin: 18% | CDMO Revenue Share: 58% | Net Debt / EBITDA: 3.8x
+TORNTPHARM,PHARMA,Branded Generics (Chronic & Sub-chronic Therapies),CHALLENGER,Narrow,EBITDA Margin: 32.8% | Domestic Revenue Contribution: 53% | R&D Spend: 5.0% of Sales
+ZYDUSLIFE,PHARMA,"Generics, Biosimilars and Specialty Medicines",CHALLENGER,Narrow,R&D Spend: 7-8% of Revenue | US Generic Business Growth: 15-18% YoY | EBITDA Margin: 25.5%
+APOLLOHOSP,PHARMA,Hospitals & Healthcare Services,LEADER,Wide,"ARPOB (Avg Revenue Per Occupied Bed): ₹59,011 (Q2 FY25, +3% YoY) | Bed Occupancy Rate: 73% (Q2 FY25, up from 68% YoY) | Healthcare Services EBITDA Margin: 24.9% (Q2 FY25)"
+AUROPHARMA,PHARMA,Generics & Active Pharmaceutical Ingredients (API),LEADER,Narrow,"US Formulations Revenue: ₹3,638 Cr (Q2 FY26) | EBITDA Margin: 20.3% (Q2 FY26) | R&D Spend: ~5.0% of Revenue"
+BIOCON,PHARMA,Biosimilars & Biopharmaceuticals,LEADER,Narrow,R&D Spend: 7% of Revenue | Core EBITDA Margin: 28% | Biosimilars Rev Growth: 25% YoY
+CIPLA,PHARMA,Pharmaceuticals - Respiratory & Generics,LEADER,Narrow,North America Revenue: $237 Million | EBITDA Margin: 26.7% | India Business Growth: 5%
+DIVISLAB,PHARMA,Active Pharmaceutical Ingredients (API) and Custom Synthesis,LEADER,Wide,EBITDA Margin: 35.5% | Export Revenue Contribution: 88% | Asset Turnover Ratio: 0.75x
+DRREDDY,PHARMA,Generic Pharmaceuticals & Biosimilars,LEADER,Narrow,R&D Intensity: 8.2% of Revenue | EBITDA Margin: 29.7% | US Revenue Contribution: 48%
+MANKIND,PHARMA,Domestic Branded Formulations,LEADER,Wide,EBITDA Margin: 25.1% | Chronic Segment Mix: 36% | MR Productivity: ₹7.2 Lakhs
+MAXHEALTH,PHARMA,Tertiary & Quaternary Care Hospitals,LEADER,Wide,"ARPOB: ₹78,000 | Occupancy Rate: 76% | EBITDA per Bed: ₹73.9 Lakhs"
+PIIND,PHARMA,Agrochemicals & Custom Synthesis Manufacturing (CSM),LEADER,Wide,CSM Order Book: $1.8 Billion | EBITDA Margin: 25.7% | Export Revenue Contribution: 78%
+SRF,PHARMA,Fluorochemicals and Specialty Chemicals,LEADER,Wide,Chemical Segment EBITDA Margin: 28.9% | Chemical Revenue Contribution: 46% | Asset Turnover: 0.65x
+SUNPHARMA,PHARMA,Specialty Generics & Global Formulations,LEADER,Wide,Global Specialty Sales: $1.04 Billion (FY24) | R&D Spend: 6.7% of Sales | EBITDA Margin: 26.9% (FY24)
+SYNGENE,PHARMA,Contract Research and Manufacturing Services (CRAMS),LEADER,Wide,EBITDA Margin: 29.8% | Active Client Count: 420+ | Fixed Asset Turnover: 1.1x

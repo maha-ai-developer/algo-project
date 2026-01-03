@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 106.3,
+      "profit_growth_3yr_avg": 145.5,
+      "roe_latest": 34.6,
+      "roce_latest": 42.0,
+      "pe_ratio": 32.5,
+      "debt_to_equity": 0.47,
+      "beta": 1.0
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -1062.0,
+      "growth_rate_projection": 46.0,
+      "shares_outstanding_cr": 45.3,
+      "net_debt_cr": -520.0,
+      "tax_rate": 22.0
+    },
+    "qualitative": {
+      "management_integrity_score": 0.95,
+      "reasoning": "Premier Energies demonstrates strong management integrity with a high promoter holding (~64%) and zero pledged shares. The leadership has successfully executed aggressive expansion plans, preponing capacity targets by 18 months, which reflects high competence. The company maintains clean audit reports with no reported frauds or material regulatory adverse orders. Corporate governance policies, including whistleblower and anti-bribery mechanisms, are explicitly in place and active."
+    }
+  },
+  "_cached_at": "2025-12-31T12:03:59.138786",
+  "_symbol": "PREMIERENE"
+}

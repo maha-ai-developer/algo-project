@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "Tertiary & Quaternary Care Hospitals",
+    "sector_kpis": {
+      "kpi_1": "ARPOB: \u20b978,000",
+      "kpi_2": "Occupancy Rate: 76%",
+      "kpi_3": "EBITDA per Bed: \u20b973.9 Lakhs"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:03.283842",
+  "_symbol": "MAXHEALTH"
+}

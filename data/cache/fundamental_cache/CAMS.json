@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 16.57,
+      "profit_growth_3yr_avg": 14.61,
+      "roe_latest": 43.94,
+      "roce_latest": 54.75,
+      "pe_ratio": 40.7,
+      "debt_to_equity": 0.06,
+      "beta": 0.1
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 396,
+      "growth_rate_projection": 12.8,
+      "shares_outstanding_cr": 24.77,
+      "net_debt_cr": -744,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9,
+      "reasoning": "CAMS operates as a dominant leader (duopoly) with ~69% market share in the critical mutual fund RTA business, enjoying a wide economic moat due to high switching costs. The company features a professional management structure with strong institutional ownership and a clean track record of corporate governance. It consistently maintains a high dividend payout ratio (~65-70%), demonstrating a shareholder-friendly capital allocation policy."
+    }
+  },
+  "_cached_at": "2025-12-31T11:28:12.653884",
+  "_symbol": "CAMS"
+}

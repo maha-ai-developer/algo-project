@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.82,
+      "profit_growth_3yr_avg": -3.24,
+      "roe_latest": 10.1,
+      "roce_latest": 11.0,
+      "pe_ratio": 16.03,
+      "debt_to_equity": 2.9,
+      "beta": 0.63
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -7295.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 84.64,
+      "net_debt_cr": 35637.0,
+      "tax_rate": 21.8
+    },
+    "qualitative": {
+      "management_integrity_score": 5.0,
+      "reasoning": "The company has faced regulatory scrutiny, including Enforcement Directorate (ED) searches in 2023 related to legacy non-compliant activities (pre-2012) and challenges highlighted by rating agencies like Fitch regarding corporate governance structures in family-driven firms. While recent growth is visible, these governance issues and the recent sharp decline in profitability (FY25) weigh on the integrity and stability score."
+    }
+  },
+  "_cached_at": "2025-12-31T11:52:00.730289",
+  "_symbol": "MANAPPURAM"
+}

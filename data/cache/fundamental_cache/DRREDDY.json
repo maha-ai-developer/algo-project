@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.9,
+      "profit_growth_3yr_avg": 37.92,
+      "roe_latest": 20.25,
+      "roce_latest": 25.6,
+      "pe_ratio": 19.6,
+      "debt_to_equity": 0.12,
+      "beta": 0.5
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1910,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 83.46,
+      "net_debt_cr": -6460,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 0.8,
+      "reasoning": "Dr. Reddy's is led by a professionally competent management team (G.V. Prasad, Erez Israeli) with a strong track record of R&D and global expansion. The company maintains high transparency in financial reporting and has a net-cash surplus balance sheet, indicating prudent capital allocation. However, like many Indian pharma majors, it faces recurring regulatory scrutiny from the USFDA (data integrity warning letters in the past) and ongoing FCPA investigations regarding operations in Ukraine/emerging markets. Despite these sector-specific regulatory challenges, the overall governance structure is robust."
+    }
+  },
+  "_cached_at": "2025-12-31T11:33:09.818602",
+  "_symbol": "DRREDDY"
+}

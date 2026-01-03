@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 28.7,
+      "profit_growth_3yr_avg": 21.6,
+      "roe_latest": 20.3,
+      "roce_latest": 24.8,
+      "pe_ratio": 50.4,
+      "debt_to_equity": 0.22,
+      "beta": 1.04
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 360.5,
+      "growth_rate_projection": 16.0,
+      "shares_outstanding_cr": 27.75,
+      "net_debt_cr": -297.5,
+      "tax_rate": 25.1
+    },
+    "qualitative": {
+      "management_integrity_score": 0.85,
+      "reasoning": "The management has maintained a strong market leadership position (55% market share) and a 'AA' credit rating from ICRA, indicating financial stability. The company has a transparent corporate governance policy and has successfully executed capacity expansions without over-leveraging, maintaining a low debt-to-equity ratio. Regular dividends and clear communication of future targets (e.g., FY26 guidance) further support a high integrity score."
+    }
+  },
+  "_cached_at": "2025-12-31T11:20:30.501484",
+  "_symbol": "APLAPOLLO"
+}

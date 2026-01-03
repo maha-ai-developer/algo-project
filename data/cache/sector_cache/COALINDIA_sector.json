@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Coal Mining and Extraction",
+    "sector_kpis": {
+      "kpi_1": "Production Volume: 773.6 Million Tonnes (FY24)",
+      "kpi_2": "EBITDA per Tonne: 585 INR",
+      "kpi_3": "Off-take Volume: 753.5 Million Tonnes (FY24)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:05:21.094347",
+  "_symbol": "COALINDIA"
+}

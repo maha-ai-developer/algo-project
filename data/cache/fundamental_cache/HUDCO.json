@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.03,
+      "profit_growth_3yr_avg": 16.43,
+      "roe_latest": 15.67,
+      "roce_latest": 9.62,
+      "pe_ratio": 16.02,
+      "debt_to_equity": 7.06,
+      "beta": 0.97
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -31902.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 200.19,
+      "net_debt_cr": 125080.0,
+      "tax_rate": 25.53
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "HUDCO is a 'Miniratna' Central Public Sector Enterprise (CPSE) under the Indian Ministry of Housing and Urban Affairs, ensuring high management stability and government backing. While its high debt-to-equity ratio (7.06) and negative Free Cash Flow are standard for Non-Banking Financial Companies (NBFCs) due to their lending business model (where loans issued are cash outflows), it maintains healthy Profit Growth (16.43% 3-Yr CAGR) and ROE (15.67%)."
+    }
+  },
+  "_cached_at": "2025-12-31T11:39:39.959048",
+  "_symbol": "HUDCO"
+}

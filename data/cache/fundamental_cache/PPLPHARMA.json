@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 16.53,
+      "profit_growth_3yr_avg": 23.45,
+      "roe_latest": 1.11,
+      "roce_latest": 6.45,
+      "pe_ratio": -958.6,
+      "debt_to_equity": 0.58,
+      "beta": 1.09
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 404,
+      "growth_rate_projection": 13,
+      "shares_outstanding_cr": 132.6,
+      "net_debt_cr": 4100,
+      "tax_rate": 25
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "Piramal Pharma benefits from the strong pedigree of the Piramal Group and a diverse CDMO/generics portfolio. While the company is in a turnaround phase with volatile profitability (reflected in the negative/high P/E and low ROE) due to high depreciation and interest costs post-demerger, revenue growth remains robust. A past SEBI adjudication regarding non-disclosure was technical and related to the pre-listing period, deemed not liable to the listed entity."
+    }
+  },
+  "_cached_at": "2025-12-31T12:04:03.857664",
+  "_symbol": "PPLPHARMA"
+}

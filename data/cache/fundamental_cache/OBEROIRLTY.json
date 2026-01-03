@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 62.84,
+      "profit_growth_3yr_avg": 66.69,
+      "roe_latest": 14.79,
+      "roce_latest": 17.7,
+      "pe_ratio": 26.8,
+      "debt_to_equity": 0.23,
+      "beta": 0.45
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2200,
+      "growth_rate_projection": 24,
+      "shares_outstanding_cr": 36.36,
+      "net_debt_cr": 213,
+      "tax_rate": 24.4
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "Oberoi Realty is a premium brand with a strong reputation for quality and timely delivery in the Mumbai market. The management, led by Vikas Oberoi, has maintained a clean balance sheet and high corporate governance standards compared to peers. While there have been minor litigations (common in real estate) and a recent FIR related to a joint venture dispute, the company's transparency, 'Zero GST' customer-centric initiatives, and high promoter holding (67.7%) reflect strong alignment with shareholder interests. The consistent financial performance and prudent capital allocation further support a high integrity score."
+    }
+  },
+  "_cached_at": "2025-12-31T11:57:56.194959",
+  "_symbol": "OBEROIRLTY"
+}

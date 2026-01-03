@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FMCG",
+    "niche_industry": "Packaged Foods and Beverages",
+    "sector_kpis": {
+      "kpi_1": "Volume Growth: 5.2%",
+      "kpi_2": "EBITDA Margin: 24.1%",
+      "kpi_3": "Inventory Turnover: 14.8x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:37.486524",
+  "_symbol": "NESTLEIND"
+}

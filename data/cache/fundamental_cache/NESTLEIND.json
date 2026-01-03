@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 11.0,
+      "profit_growth_3yr_avg": 16.0,
+      "roe_latest": 88.88,
+      "roce_latest": 111.22,
+      "pe_ratio": 81.25,
+      "debt_to_equity": 0.18,
+      "beta": 0.54
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2450.0,
+      "growth_rate_projection": 11.0,
+      "shares_outstanding_cr": 192.83,
+      "net_debt_cr": -322.0,
+      "tax_rate": 25.47
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Nestle India maintains high standards of corporate governance typical of its Swiss MNC parentage, reflected in consistent financial reporting and shareholder returns. However, the score is tempered by recurring product-related controversies, such as the 2024 'added sugar in baby food' report and the 2015 Maggi ban, which question the 'health' aspect of its portfolio. Recent regulatory scrutiny by SEBI regarding insider trading compliance adds a minor governance caution, though no systemic fraud is evident."
+    }
+  },
+  "_cached_at": "2025-12-31T11:55:29.420746",
+  "_symbol": "NESTLEIND"
+}

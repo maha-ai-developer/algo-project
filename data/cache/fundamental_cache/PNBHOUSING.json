@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 7.52,
+      "profit_growth_3yr_avg": 33.35,
+      "roe_latest": 12.31,
+      "roce_latest": 9.46,
+      "pe_ratio": 11.21,
+      "debt_to_equity": 2.62,
+      "beta": 0.03
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -9225,
+      "growth_rate_projection": 13.0,
+      "shares_outstanding_cr": 26.06,
+      "net_debt_cr": 44017,
+      "tax_rate": 22.55
+    },
+    "qualitative": {
+      "management_integrity_score": 7.5,
+      "reasoning": "The company has demonstrated strong recovery in asset quality and profitability under its transformation strategy 'Projectignite'. While the sudden resignation of MD & CEO Girish Kousgi in July 2025 caused temporary volatility, the prompt appointment of seasoned veteran Ajai Kumar Shukla (ex-Tata Capital) in Dec 2025 has stabilized sentiment. Backing from Punjab National Bank and high institutional holding (approx 60%) supports a decent integrity score, though the leadership transition warrants monitoring."
+    }
+  },
+  "_cached_at": "2025-12-31T12:01:42.157657",
+  "_symbol": "PNBHOUSING"
+}

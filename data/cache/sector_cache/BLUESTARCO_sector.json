@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Air Conditioning & Commercial Refrigeration",
+    "sector_kpis": {
+      "kpi_1": "Market Share (RAC): ~14%",
+      "kpi_2": "Order Book (EMP): \u20b96,598 Cr",
+      "kpi_3": "UCP EBIT Margin: 7.0%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T12:39:21.719203",
+  "_symbol": "BLUESTARCO"
+}

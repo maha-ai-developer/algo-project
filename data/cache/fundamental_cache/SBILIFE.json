@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.1,
+      "profit_growth_3yr_avg": 17.02,
+      "roe_latest": 15.38,
+      "roce_latest": 16.9,
+      "pe_ratio": 82.3,
+      "debt_to_equity": 0.0,
+      "beta": 0.36
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 32267.0,
+      "growth_rate_projection": 15.9,
+      "shares_outstanding_cr": 100.28,
+      "net_debt_cr": 0.0,
+      "tax_rate": 12.5
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "SBI Life is a joint venture between State Bank of India (India's largest lender) and BNP Paribas Cardif, ensuring a high standard of corporate governance and professional management. The company has a clean regulatory track record with no major reported governance lapses. Recent tax disputes are procedural and common in the industry, not indicating malfeasance. The board composition is diverse and compliant with IRDAI regulations."
+    }
+  },
+  "_cached_at": "2025-12-31T12:07:04.923863",
+  "_symbol": "SBILIFE"
+}

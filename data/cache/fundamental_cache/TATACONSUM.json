@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.3,
+      "profit_growth_3yr_avg": 9.0,
+      "roe_latest": 8.1,
+      "roce_latest": 11.3,
+      "pe_ratio": 85.0,
+      "debt_to_equity": 0.09,
+      "beta": 0.8
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1603.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 98.95,
+      "net_debt_cr": 254.0,
+      "tax_rate": 23.3
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Part of the Tata Group, which is renowned for its high corporate governance standards, ethical practices, and transparency. Management has been successfully executing a transformation strategy, integrating acquisitions like Capital Foods and Organic India, and expanding distribution."
+    }
+  },
+  "_cached_at": "2025-12-31T12:10:18.459257",
+  "_symbol": "TATACONSUM"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FMCG",
+    "niche_industry": "Biscuits & Bakery",
+    "sector_kpis": {
+      "kpi_1": "Volume Growth: ~8% (Q2 FY25 Reported)",
+      "kpi_2": "Operating Margin: ~15.5% (maintained despite inflation)",
+      "kpi_3": "Market Share: ~33% (Leader in Organized Biscuits)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:40:16.814047",
+  "_symbol": "BRITANNIA"
+}

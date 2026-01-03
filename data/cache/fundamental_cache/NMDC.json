@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": -3.04,
+      "profit_growth_3yr_avg": -10.86,
+      "roe_latest": 24.35,
+      "roce_latest": 30.51,
+      "pe_ratio": 10.44,
+      "debt_to_equity": 0.13,
+      "beta": 1.28
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 5334,
+      "growth_rate_projection": 10,
+      "shares_outstanding_cr": 293.06,
+      "net_debt_cr": -7397,
+      "tax_rate": 28.48
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "NMDC is a Navratna Public Sector Enterprise (PSU) under the Ministry of Steel, ensuring high government oversight and stability. While it faces risks related to regulatory changes (like export duties) and cyclical iron ore prices, its management is considered reliable with a strong balance sheet and consistent dividend payouts. The demerger of the steel plant was executed to unlock value, though recent financials show consolidation effects."
+    }
+  },
+  "_cached_at": "2025-12-31T11:56:52.366005",
+  "_symbol": "NMDC"
+}

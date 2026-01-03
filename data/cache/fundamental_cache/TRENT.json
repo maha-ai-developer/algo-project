@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 62.55,
+      "profit_growth_3yr_avg": 85.17,
+      "roe_latest": 29.67,
+      "roce_latest": 30.39,
+      "pe_ratio": 89.02,
+      "debt_to_equity": 0.09,
+      "beta": 0.12
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 612,
+      "growth_rate_projection": 25,
+      "shares_outstanding_cr": 35.55,
+      "net_debt_cr": -379,
+      "tax_rate": 25.1
+    },
+    "qualitative": {
+      "management_integrity_score": 10,
+      "reasoning": "Trent Limited is part of the Tata Group, one of India's most respected conglomerates known for its high standards of corporate governance, ethical business practices, and transparency. The management has consistently demonstrated strong execution capabilities (as seen in the rapid expansion of Zudio and Westside) while maintaining financial discipline."
+    }
+  },
+  "_cached_at": "2025-12-31T12:13:35.478909",
+  "_symbol": "TRENT"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 2.68,
+      "profit_growth_3yr_avg": -4.47,
+      "roe_latest": 8.16,
+      "roce_latest": 7.42,
+      "pe_ratio": 25.11,
+      "debt_to_equity": 0.94,
+      "beta": 1.17
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -2524.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 1004.5,
+      "net_debt_cr": 44185.0,
+      "tax_rate": 28.43
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "NHPC is a 'Miniratna' Public Sector Undertaking (PSU) under the Government of India, ensuring a high degree of regulatory oversight and governance standards. While operational efficiency can sometimes lag private peers due to bureaucratic processes, the management integrity is generally considered robust with no major recent financial scandals reported. The company maintains transparency in its disclosures and adheres to government mandates."
+    }
+  },
+  "_cached_at": "2025-12-31T11:56:27.383526",
+  "_symbol": "NHPC"
+}

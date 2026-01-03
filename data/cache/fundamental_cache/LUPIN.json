@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.96,
+      "profit_growth_3yr_avg": 184.61,
+      "roe_latest": 21.1,
+      "roce_latest": 22.0,
+      "pe_ratio": 22.45,
+      "debt_to_equity": 0.3,
+      "beta": 0.56
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2940.0,
+      "growth_rate_projection": 12.7,
+      "shares_outstanding_cr": 45.66,
+      "net_debt_cr": -309.6,
+      "tax_rate": 17.65
+    },
+    "qualitative": {
+      "management_integrity_score": 7.0,
+      "reasoning": "Lupin exhibits strong corporate governance with transparent reporting (e.g., dedicated Tax Transparency Reports) and a professional management team. However, the score is constrained by recurring regulatory compliance challenges, specifically USFDA Warning Letters and 'Official Action Indicated' (OAI) classifications for key facilities (e.g., Pithampur Unit-2 in late 2025), which reflect operational oversight issues rather than financial malfeasance. Financial recovery is robust with improving ROE/ROCE and a net cash position."
+    }
+  },
+  "_cached_at": "2025-12-31T11:51:01.129975",
+  "_symbol": "LUPIN"
+}

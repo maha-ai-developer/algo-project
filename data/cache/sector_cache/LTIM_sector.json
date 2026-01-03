@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "IT Services & Digital Transformation",
+    "sector_kpis": {
+      "kpi_1": "Attrition Rate (TTM): 14.4%",
+      "kpi_2": "Annual Order Inflow: $6.0 Billion",
+      "kpi_3": "Operating Margin (EBIT): 14.5%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:09:32.974296",
+  "_symbol": "LTIM"
+}

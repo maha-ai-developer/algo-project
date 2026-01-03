@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 7.51,
+      "profit_growth_3yr_avg": 22.98,
+      "roe_latest": 14.4,
+      "roce_latest": 7.51,
+      "pe_ratio": 21.1,
+      "debt_to_equity": 1.06,
+      "beta": 0.83
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 75184,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 1539,
+      "net_debt_cr": 184817,
+      "tax_rate": 25.17
+    },
+    "qualitative": {
+      "management_integrity_score": 0.95,
+      "reasoning": "HDFC Bank is widely regarded as the 'gold standard' in Indian banking, known for its impeccable management integrity, conservative lending practices, and consistent growth. The leadership transition from Aditya Puri to Sashidhar Jagdishan has been smooth. The recent merger with HDFC Ltd creates a financial behemoth, though it temporarily impacts return ratios like ROA/ROE due to the higher reserve requirements and integration costs. The 3-year sales growth figure (7.51%) appears artificially low, likely due to accounting adjustments or base effects from the merger, whereas the median sales growth over 10 years is ~16%. Profit growth remains robust at ~23%. The bank maintains clean asset quality with low NPAs compared to peers."
+    }
+  },
+  "_cached_at": "2025-12-31T11:38:16.203809",
+  "_symbol": "HDFCBANK"
+}

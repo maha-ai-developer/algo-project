@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Renewable Power Producer (Solar & Wind)",
+    "sector_kpis": {
+      "kpi_1": "Operational Capacity: 16.7 GW (Q2 FY25)",
+      "kpi_2": "Capacity Utilization Factor (CUF): Solar 23.9%, Wind 35.7% (Q2 FY25)",
+      "kpi_3": "EBITDA Margin (Power Supply): 91.7% (Q2 FY25)"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:32:48.504674",
+  "_symbol": "ADANIGREEN"
+}

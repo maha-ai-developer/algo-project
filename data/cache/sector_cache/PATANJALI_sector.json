@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FMCG",
+    "niche_industry": "Edible Oils and Food Processing",
+    "sector_kpis": {
+      "kpi_1": "Inventory Turnover: 8.94x",
+      "kpi_2": "EBITDA Margin: 4.8%",
+      "kpi_3": "FMCG Revenue Contribution: 30.1%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:11:21.153467",
+  "_symbol": "PATANJALI"
+}

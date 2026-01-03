@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 33.0,
+      "profit_growth_3yr_avg": 38.92,
+      "roe_latest": 18.05,
+      "roce_latest": 9.37,
+      "pe_ratio": 22.32,
+      "debt_to_equity": 5.55,
+      "beta": 1.2
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -11100.0,
+      "growth_rate_projection": 25.0,
+      "shares_outstanding_cr": 268.78,
+      "net_debt_cr": 38100.0,
+      "tax_rate": 20.56
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "IREDA is a 'Navratna' Public Sector Undertaking (PSU) under the Ministry of New and Renewable Energy, ensuring high standards of corporate governance, transparency, and established vigilance mechanisms (e.g., whistle-blower portal). While generally stable and reliable, it carries the typical bureaucratic characteristics of a state-owned enterprise."
+    }
+  },
+  "_cached_at": "2025-12-31T11:45:21.892926",
+  "_symbol": "IREDA"
+}

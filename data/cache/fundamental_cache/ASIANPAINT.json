@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 5.47,
+      "profit_growth_3yr_avg": 4.57,
+      "roe_latest": 20.6,
+      "roce_latest": 25.7,
+      "pe_ratio": 66.2,
+      "debt_to_equity": 0.12,
+      "beta": 0.86
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 4400,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 95.92,
+      "net_debt_cr": -2400,
+      "tax_rate": 27.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.5,
+      "reasoning": "Asian Paints is widely regarding as a 'Gold Standard' for corporate governance in India. The company has a long history of professional management, transparency, and shareholder-friendly policies. It consistently maintains high ROE/ROCE and has successfully transitioned from a promoter-led to a professionally managed structure while maintaining market dominance."
+    }
+  },
+  "_cached_at": "2025-12-31T11:21:19.017759",
+  "_symbol": "ASIANPAINT"
+}

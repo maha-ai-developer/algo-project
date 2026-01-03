@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 15.0,
+      "profit_growth_3yr_avg": 17.0,
+      "roe_latest": 11.0,
+      "roce_latest": 9.82,
+      "pe_ratio": 17.5,
+      "debt_to_equity": 0.0,
+      "beta": 0.82
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1941.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 11.13,
+      "net_debt_cr": -2269.0,
+      "tax_rate": 1.81
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Bajaj Holdings is part of the renowned Bajaj Group, led by Sanjiv Bajaj, which is widely recognized for high corporate governance standards and ethical management. The company maintains a pristine balance sheet with negligible debt and has a consistent track record of rewarding shareholders through dividends. The promoter holding is strong at over 51%, aligning management interests with shareholders."
+    }
+  },
+  "_cached_at": "2025-12-31T11:23:40.063815",
+  "_symbol": "BAJAJHLDNG"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "API & CDMO Services",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 14.9% (H1-FY25)",
+      "kpi_2": "CDMO Revenue Contribution: 28%",
+      "kpi_3": "R&D Intensity: 4.3% of Revenue"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:09:08.399083",
+  "_symbol": "LAURUSLABS"
+}

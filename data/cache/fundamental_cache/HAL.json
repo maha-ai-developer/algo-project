@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 7.96,
+      "profit_growth_3yr_avg": 17.81,
+      "roe_latest": 26.04,
+      "roce_latest": 33.89,
+      "pe_ratio": 34.54,
+      "debt_to_equity": 0.0,
+      "beta": 0.44
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 16987,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 66.88,
+      "net_debt_cr": -44460,
+      "tax_rate": 25.4
+    },
+    "qualitative": {
+      "management_integrity_score": 85,
+      "reasoning": "Strong government backing (PSU) with a virtual monopoly in the Indian aerospace defense sector. The company boasts a pristine balance sheet with zero debt and a massive cash surplus (~\u20b944,000 Cr). Recent execution has improved significantly, supported by a record order book exceeding \u20b92 lakh crore. Key risks remain bureaucratic hurdles and single-customer dependency (Indian Armed Forces), but the 'Atmanirbhar Bharat' push provides long-term structural tailwinds."
+    }
+  },
+  "_cached_at": "2025-12-31T11:37:03.816341",
+  "_symbol": "HAL"
+}

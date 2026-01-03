@@ -8,7 +8,7 @@ class StatArbBot:
     Implements Method 2: Cointegration & Statistical Arbitrage.
     Theory: Trading the Mean Reversion of Residuals (Errors).
     """
-    def __init__(self, entry_z=2.5, exit_z=0.0, stop_z=3.5, lookback=20):
+    def __init__(self, entry_z=2.5, exit_z=0.0, stop_z=3.0, lookback=20):
         self.entry_z = entry_z
         self.exit_z = exit_z
         self.stop_z = stop_z

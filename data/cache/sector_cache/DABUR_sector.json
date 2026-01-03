@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FMCG",
+    "niche_industry": "Ayurvedic Healthcare and Wellness",
+    "sector_kpis": {
+      "kpi_1": "Volume Growth: 4.2% (FY24)",
+      "kpi_2": "EBITDA Margin: 19.4%",
+      "kpi_3": "Inventory Turnover: 3.3x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:05:37.043418",
+  "_symbol": "DABUR"
+}

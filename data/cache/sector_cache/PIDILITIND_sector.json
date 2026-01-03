@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Adhesives, Sealants and Construction Chemicals",
+    "sector_kpis": {
+      "kpi_1": "Domestic Volume Growth: 10-12%",
+      "kpi_2": "EBITDA Margin: 20-22%",
+      "kpi_3": "VAM (Vinyl Acetate Monomer) Input Cost: $1000-1200/Tonne"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:11:39.848665",
+  "_symbol": "PIDILITIND"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Diversified Infrastructure (Airports, Roads, New Energy)",
+    "sector_kpis": {
+      "kpi_1": "Net Debt to EBITDA: 2.46x",
+      "kpi_2": "Consolidated EBITDA Growth: 46% YoY (Q2 FY25)",
+      "kpi_3": "Airport Passenger Traffic: 22.3 Mn (Q2 FY25)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:32:49.123107",
+  "_symbol": "ADANIENT"
+}

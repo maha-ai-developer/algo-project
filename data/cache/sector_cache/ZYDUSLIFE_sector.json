@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "Generics, Biosimilars and Specialty Medicines",
+    "sector_kpis": {
+      "kpi_1": "R&D Spend: 7-8% of Revenue",
+      "kpi_2": "US Generic Business Growth: 15-18% YoY",
+      "kpi_3": "EBITDA Margin: 25.5%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:15:21.750880",
+  "_symbol": "ZYDUSLIFE"
+}

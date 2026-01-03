@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "IT Services & Digital Transformation",
+    "sector_kpis": {
+      "kpi_1": "Attrition Rate (LTM): 12.5%",
+      "kpi_2": "Total Contract Value (TCV): $42.7 Billion (FY24)",
+      "kpi_3": "Revenue per Employee: $48,333"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:14:03.108716",
+  "_symbol": "TCS"
+}

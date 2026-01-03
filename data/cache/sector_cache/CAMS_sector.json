@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Mutual Fund Registrar & Transfer Agent (RTA)",
+    "sector_kpis": {
+      "kpi_1": "Market Share (AAUM): ~68%",
+      "kpi_2": "EBITDA Margin: 44.5%",
+      "kpi_3": "Equity Net Sales Share: 69%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:40:07.597469",
+  "_symbol": "CAMS"
+}

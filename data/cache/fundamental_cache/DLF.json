@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 13.45,
+      "profit_growth_3yr_avg": 78.7,
+      "roe_latest": 11.4,
+      "roce_latest": 6.51,
+      "pe_ratio": 44.1,
+      "debt_to_equity": 0.09,
+      "beta": 1.63
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 4385.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 247.53,
+      "net_debt_cr": -4534.0,
+      "tax_rate": 24.2
+    },
+    "qualitative": {
+      "management_integrity_score": 80.0,
+      "reasoning": "DLF has significantly improved its corporate governance and balance sheet strength under the leadership of Rajiv Singh, achieving a 'Net Cash' positive status in FY24/25. While the company faced regulatory hurdles in the past (e.g., SEBI ban in 2014), recent execution, debt reduction, and transparent communication regarding its rental (DCCDL) and development businesses indicate strong management quality today."
+    }
+  },
+  "_cached_at": "2025-12-31T11:33:28.017608",
+  "_symbol": "DLF"
+}

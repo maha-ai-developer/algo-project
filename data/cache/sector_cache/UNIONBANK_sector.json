@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "BANK",
+    "niche_industry": "Public Sector Banking",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 3.29%",
+      "kpi_2": "NIM: 2.76%",
+      "kpi_3": "CASA Ratio: 32.50%"
+    },
+    "moat_rating": "None",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:14:48.779059",
+  "_symbol": "UNIONBANK"
+}

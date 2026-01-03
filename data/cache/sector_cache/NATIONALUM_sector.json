@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "METAL",
+    "niche_industry": "Integrated Aluminium and Alumina Production",
+    "sector_kpis": {
+      "kpi_1": "EBITDA per Tonne: INR 30,000 - 50,000 (Highly sensitive to LME Aluminium and Alumina prices)",
+      "kpi_2": "Capacity Utilization: 101% for Alumina Refinery and ~97% for Aluminium Smelter",
+      "kpi_3": "Resource Securitization: 100% captive bauxite mines and increasing captive coal (Utkal D & E)"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:10:29.831758",
+  "_symbol": "NATIONALUM"
+}

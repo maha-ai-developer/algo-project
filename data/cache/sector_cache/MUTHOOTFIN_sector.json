@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Gold Loan NBFC",
+    "sector_kpis": {
+      "kpi_1": "Net Interest Margin (NIM): 11.4%",
+      "kpi_2": "Asset Under Management (AUM) Growth: 37% (YoY)",
+      "kpi_3": "Gross NPA (Stage 3 Assets): 3.5%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:40.151266",
+  "_symbol": "MUTHOOTFIN"
+}

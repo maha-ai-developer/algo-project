@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Life Insurance",
+    "sector_kpis": {
+      "kpi_1": "VNB Margin: 28.4%",
+      "kpi_2": "Solvency Ratio: 191.0%",
+      "kpi_3": "13th Month Persistency: 86.6%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:07:25.003494",
+  "_symbol": "ICICIPRULI"
+}

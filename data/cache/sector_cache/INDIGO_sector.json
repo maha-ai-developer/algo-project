@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Aviation - Low Cost Carrier",
+    "sector_kpis": {
+      "kpi_1": "Domestic Market Share: 63.6%",
+      "kpi_2": "Passenger Load Factor (PLF): 85.5%",
+      "kpi_3": "RASK: \u20b95.12"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:07:51.598359",
+  "_symbol": "INDIGO"
+}

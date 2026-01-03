@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Global Automotive Component Manufacturing",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 9.6%",
+      "kpi_2": "Booked Business: USD 88.5 Billion",
+      "kpi_3": "Net Debt/EBITDA: 0.9x"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:12.296618",
+  "_symbol": "MOTHERSON"
+}

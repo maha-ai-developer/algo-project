@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Utility Vehicles (SUVs) & Farm Equipment (Tractors)",
+    "sector_kpis": {
+      "kpi_1": "SUV Revenue Market Share: 22.5% (FY25)",
+      "kpi_2": "Domestic Tractor Market Share: 43.3% (FY25)",
+      "kpi_3": "Farm Segment PBIT Margin: 18.4% (FY25)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:09:48.949962",
+  "_symbol": "M&M"
+}

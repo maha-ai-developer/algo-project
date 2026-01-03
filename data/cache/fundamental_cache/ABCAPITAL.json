@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 24.5,
+      "profit_growth_3yr_avg": 43.5,
+      "roe_latest": 12.67,
+      "roce_latest": 9.5,
+      "pe_ratio": 28.0,
+      "debt_to_equity": 4.6,
+      "beta": 0.6
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -30230,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 262.0,
+      "net_debt_cr": 150200,
+      "tax_rate": 30.07
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "Aditya Birla Capital is the holding company for the financial services businesses of the Aditya Birla Group, a conglomerate with a strong reputation for corporate governance and integrity. The company has a diversified portfolio across lending, insurance, and asset management. While the high debt-to-equity ratio is typical for financial institutions, the strong parentage provides a significant safety net and access to capital."
+    }
+  },
+  "_cached_at": "2025-12-31T11:17:32.652407",
+  "_symbol": "ABCAPITAL"
+}

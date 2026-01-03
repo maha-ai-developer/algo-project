@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Telecommunication Services",
+    "sector_kpis": {
+      "kpi_1": "ARPU: \u20b9180",
+      "kpi_2": "Wireless Market Share: 18.01%",
+      "kpi_3": "Net Debt: \u20b92.27 Trillion"
+    },
+    "moat_rating": "None",
+    "competitive_position": "LAGGARD"
+  },
+  "_cached_at": "2025-12-31T13:07:40.539287",
+  "_symbol": "IDEA"
+}

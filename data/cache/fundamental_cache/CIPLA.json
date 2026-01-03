@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 7.9,
+      "profit_growth_3yr_avg": 20.36,
+      "roe_latest": 16.5,
+      "roce_latest": 22.7,
+      "pe_ratio": 22.2,
+      "debt_to_equity": 0.02,
+      "beta": 0.36
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2818,
+      "growth_rate_projection": 10,
+      "shares_outstanding_cr": 80.74,
+      "net_debt_cr": -7532,
+      "tax_rate": 27.1
+    },
+    "qualitative": {
+      "management_integrity_score": 9,
+      "reasoning": "Cipla is renowned for its humanitarian approach ('Caring for Life') and strong corporate governance. The management has maintained a consistent track record of capital allocation and transparency. Despite typical sector regulatory hurdles (FDA observations), the company generally resolves them efficiently. High ESG scores and a debt-free status further reflect prudent management."
+    }
+  },
+  "_cached_at": "2025-12-31T11:29:12.867780",
+  "_symbol": "CIPLA"
+}

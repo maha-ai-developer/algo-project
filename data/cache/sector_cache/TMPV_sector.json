@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Passenger Electric Vehicles & SUVs",
+    "sector_kpis": {
+      "kpi_1": "EV Market Share: 65%",
+      "kpi_2": "PV EBITDA Margin: 6.9%",
+      "kpi_3": "SUV Portfolio Share: 55%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:14:31.449180",
+  "_symbol": "TMPV"
+}

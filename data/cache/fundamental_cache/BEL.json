@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 15.65,
+      "profit_growth_3yr_avg": 31.06,
+      "roe_latest": 29.56,
+      "roce_latest": 39.7,
+      "pe_ratio": 50.49,
+      "debt_to_equity": 0.0,
+      "beta": 0.25
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 952.2,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 731.0,
+      "net_debt_cr": -8116.5,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 90,
+      "reasoning": "Bharat Electronics Limited (BEL) is a 'Navratna' Public Sector Undertaking (PSU) under the Ministry of Defence, ensuring high levels of government oversight and adherence to strict vigilance and governance standards. The company has a clean track record with no major recent corporate governance scandals. It consistently pays dividends and maintains transparency in its financial reporting, though it operates within the bureaucratic framework typical of PSUs."
+    }
+  },
+  "_cached_at": "2025-12-31T11:25:14.068482",
+  "_symbol": "BEL"
+}

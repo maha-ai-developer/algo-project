@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Integrated Power Utility",
+    "sector_kpis": {
+      "kpi_1": "Renewable Mix: 43%",
+      "kpi_2": "Net Debt to EBITDA: 2.93x",
+      "kpi_3": "AT&C Losses: <15%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:55.734227",
+  "_symbol": "TATAPOWER"
+}

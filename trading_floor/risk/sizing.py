@@ -37,9 +37,7 @@ def get_optimal_quantity(equity, max_risk_pct, entry_price, stop_loss_price, win
 
     qty = int(optimized_risk_amount / risk_per_share)
     
-    # Logging the math for transparency
-    print(f"   ⧖ Risk Math: Equity ₹{equity} | MaxRisk ₹{max_loss_allowed:.1f} | Kelly {kelly_factor:.2f}")
-    print(f"   ⧖ Optimized Risk: ₹{optimized_risk_amount:.1f} | Risk/Share ₹{risk_per_share:.1f} -> Qty {qty}")
+    # Risk calculation done silently for compact mode
 
     return max(1, qty) # Always return at least 1 to test
 
@@ -82,5 +80,5 @@ def get_futures_margin(symbol, qty, price, margin_pct=0.15):
     """
     contract_value = qty * price
     margin_required = contract_value * margin_pct
-    print(f"   💰 Margin Estimate: {symbol} | Value ₹{contract_value:,.0f} | Margin ₹{margin_required:,.0f}")
+    # Margin calculation done silently for compact mode
     return margin_required

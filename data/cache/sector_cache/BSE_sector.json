@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Stock Exchange / Capital Markets",
+    "sector_kpis": {
+      "kpi_1": "Equity Cash ADTV: \u20b99,768 Cr",
+      "kpi_2": "Derivatives Premium ADTV: \u20b98,203 Cr",
+      "kpi_3": "EBITDA Margin: 52%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T12:39:50.801982",
+  "_symbol": "BSE"
+}

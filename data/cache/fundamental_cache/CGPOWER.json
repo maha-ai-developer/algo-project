@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 21.83,
+      "profit_growth_3yr_avg": 15.83,
+      "roe_latest": 27.7,
+      "roce_latest": 37.5,
+      "pe_ratio": 94.5,
+      "debt_to_equity": 0.01,
+      "beta": 1.37
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 517.1,
+      "growth_rate_projection": 20.0,
+      "shares_outstanding_cr": 157.47,
+      "net_debt_cr": -868.0,
+      "tax_rate": 24.8
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "The company is now backed by the Murugappa Group (Tube Investments), which acquired it in 2020 following a fraud scandal under previous management. The new promoters have a strong reputation for corporate governance and have successfully turned the company around, clearing most debt and resolving legacy issues."
+    }
+  },
+  "_cached_at": "2025-12-31T11:28:55.253173",
+  "_symbol": "CGPOWER"
+}

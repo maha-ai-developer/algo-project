@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CEMENT",
+    "niche_industry": "Cement & Building Materials",
+    "sector_kpis": {
+      "kpi_1": "EBITDA/Tonne: \u20b9780 (Q2 FY25)",
+      "kpi_2": "Sales Volume: 14.2 MnT",
+      "kpi_3": "EBITDA Margin: 14.8%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:33:57.111523",
+  "_symbol": "AMBUJACEM"
+}

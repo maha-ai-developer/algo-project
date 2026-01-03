@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Oil Refining & Marketing (OMC)",
+    "sector_kpis": {
+      "kpi_1": "Gross Refining Margin (GRM): $4.41 / bbl (Q2 FY25)",
+      "kpi_2": "Market Sales Volume: 12.39 MMT (Q2 FY25)",
+      "kpi_3": "Refinery Throughput: 10.28 MMT (Q2 FY25)"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T12:39:38.925112",
+  "_symbol": "BPCL"
+}

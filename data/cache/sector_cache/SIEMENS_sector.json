@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Industrial Automation and Smart Infrastructure",
+    "sector_kpis": {
+      "kpi_1": "Order Backlog: 466.7 Billion INR",
+      "kpi_2": "EBITDA Margin: 15.3%",
+      "kpi_3": "Order Inflow Growth: 10% YoY"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:05.319115",
+  "_symbol": "SIEMENS"
+}

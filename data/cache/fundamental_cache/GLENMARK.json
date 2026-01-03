@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 4.26,
+      "profit_growth_3yr_avg": -6.93,
+      "roe_latest": 12.6,
+      "roce_latest": 16.2,
+      "pe_ratio": 55.6,
+      "debt_to_equity": 0.13,
+      "beta": 0.65
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1788,
+      "growth_rate_projection": 10.7,
+      "shares_outstanding_cr": 28.22,
+      "net_debt_cr": -1466,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 5,
+      "reasoning": "Management integrity is a concern due to repeated FDA warning letters and regulatory actions across multiple manufacturing sites (e.g., Goa, Baddi, Monroe). Issues cited include inadequate investigation of out-of-specification results, data integrity lapses, and failure to maintain quality standards, leading to product recalls (e.g., Potassium Chloride ER capsules). While the company has reduced debt and is targeting net cash positivity, these recurring compliance failures indicate significant gaps in operational oversight and quality control."
+    }
+  },
+  "_cached_at": "2025-12-31T11:35:25.191262",
+  "_symbol": "GLENMARK"
+}

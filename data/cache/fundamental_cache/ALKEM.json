@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 9.2,
+      "profit_growth_3yr_avg": 9.0,
+      "roe_latest": 19.4,
+      "roce_latest": 20.4,
+      "pe_ratio": 28.0,
+      "debt_to_equity": 0.17,
+      "beta": 0.31
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1036.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 11.96,
+      "net_debt_cr": -2796.0,
+      "tax_rate": 13.0
+    },
+    "qualitative": {
+      "management_integrity_score": 7.0,
+      "reasoning": "Alkem Laboratories maintains a strong market position in the Indian domestic formulations market (ranked 5th) and has a net cash balance sheet. However, it faces standard pharmaceutical industry risks including USFDA regulatory observations and recent income tax disputes (disallowance of deduction claims worth ~Rs 375 Cr). Management has guided for reasonable growth (10% CAGR) and is expanding into CDMO and biosimilars. The promoter holding is significant, though slightly decreased recently."
+    }
+  },
+  "_cached_at": "2025-12-31T11:19:23.044197",
+  "_symbol": "ALKEM"
+}

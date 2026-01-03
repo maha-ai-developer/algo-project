@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "Fluorochemicals and Specialty Chemicals",
+    "sector_kpis": {
+      "kpi_1": "Chemical Segment EBITDA Margin: 28.9%",
+      "kpi_2": "Chemical Revenue Contribution: 46%",
+      "kpi_3": "Asset Turnover: 0.65x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:30.134756",
+  "_symbol": "SRF"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 8.12,
+      "profit_growth_3yr_avg": -18.77,
+      "roe_latest": 7.29,
+      "roce_latest": 8.13,
+      "pe_ratio": 9.1,
+      "debt_to_equity": 0.75,
+      "beta": 0.77
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 33700.0,
+      "growth_rate_projection": 2.0,
+      "shares_outstanding_cr": 1412.0,
+      "net_debt_cr": 124122.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Indian Oil Corporation is a Maharatna PSU, indicating the highest level of operational autonomy and government trust. It plays a critical strategic role in India's energy security. Management is professional but operates within the constraints of government policy, particularly regarding fuel pricing which often impacts profitability during periods of high crude prices. The company has a consistent track record of dividend payments."
+    }
+  },
+  "_cached_at": "2025-12-31T11:44:17.077117",
+  "_symbol": "IOC"
+}

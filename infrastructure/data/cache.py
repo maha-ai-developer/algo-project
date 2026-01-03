@@ -169,8 +169,7 @@ class DataCache:
         if not to_fetch:
             return results
         
-        # Parallel fetch for cache misses
-        print(f"   ⚡ Parallel fetch: {len(to_fetch)} symbols with {self.max_workers} workers")
+        # Parallel fetch for cache misses (silent in compact mode)
         
         def fetch_one(sym: str) -> Tuple[str, Optional[pd.DataFrame]]:
             time.sleep(0.35)  # Rate limit: ~3 req/sec
@@ -260,7 +259,7 @@ class DataCache:
             for full_key, spot_sym in symbol_map.items():
                 if full_key in ltp_data:
                     result[spot_sym] = ltp_data[full_key]['last_price']
-                    print(f"   📡 LTP: {spot_sym} = ₹{ltp_data[full_key]['last_price']:,.2f}")
+                    # Verbose LTP logging removed for compact mode
             
             return result
             

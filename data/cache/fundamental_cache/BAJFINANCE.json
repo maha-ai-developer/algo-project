@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 30.11,
+      "profit_growth_3yr_avg": 33.65,
+      "roe_latest": 17.73,
+      "roce_latest": 12.3,
+      "pe_ratio": 33.92,
+      "debt_to_equity": 3.78,
+      "beta": 1.5
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -65402.0,
+      "growth_rate_projection": 22.5,
+      "shares_outstanding_cr": 621.0,
+      "net_debt_cr": 287324.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Bajaj Finance is part of the Bajaj Group, widely respected for high corporate governance standards. The management maintains transparency in financial reporting and proactively communicates strategic shifts, such as recent guidance revisions due to risk actions in the MSME portfolio. They have a strong track record of adhering to RBI regulations and creating long-term shareholder value."
+    }
+  },
+  "_cached_at": "2025-12-31T11:23:35.352027",
+  "_symbol": "BAJFINANCE"
+}

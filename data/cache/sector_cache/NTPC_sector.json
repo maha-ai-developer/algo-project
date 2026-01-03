@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Thermal and Renewable Power Generation",
+    "sector_kpis": {
+      "kpi_1": "Plant Load Factor (PLF): 77.25%",
+      "kpi_2": "Total Installed Capacity: 76,015 MW",
+      "kpi_3": "Plant Availability Factor (PAF): 90.52%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:44.450707",
+  "_symbol": "NTPC"
+}

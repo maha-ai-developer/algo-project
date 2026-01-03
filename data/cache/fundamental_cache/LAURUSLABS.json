@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 3.49,
+      "profit_growth_3yr_avg": -20.25,
+      "roe_latest": 7.45,
+      "roce_latest": 9.15,
+      "pe_ratio": 86.2,
+      "debt_to_equity": 0.51,
+      "beta": 0.8
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -57.0,
+      "growth_rate_projection": 25.0,
+      "shares_outstanding_cr": 54.0,
+      "net_debt_cr": 2565.0,
+      "tax_rate": 26.8
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "Management demonstrates strong governance with a high level of transparency in reporting, particularly regarding their strategic shift towards CDMO and non-ARV segments. The board structure is robust with independent oversight. While there is a minor promoter pledge (~2.7%), it remains low and stable. The leadership's commitment to heavy capex for long-term growth despite short-term profitability pressures reflects a focus on sustainable value creation."
+    }
+  },
+  "_cached_at": "2025-12-31T11:48:58.455101",
+  "_symbol": "LAURUSLABS"
+}

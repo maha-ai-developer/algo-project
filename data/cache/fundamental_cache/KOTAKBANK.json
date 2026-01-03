@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 17.2,
+      "profit_growth_3yr_avg": 15.3,
+      "roe_latest": 15.4,
+      "roce_latest": 15.14,
+      "pe_ratio": 23.1,
+      "debt_to_equity": 3.76,
+      "beta": 0.82
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 15702,
+      "growth_rate_projection": 12,
+      "shares_outstanding_cr": 198.85,
+      "net_debt_cr": 11190,
+      "tax_rate": 22.5
+    },
+    "qualitative": {
+      "management_integrity_score": 9,
+      "reasoning": "Kotak Mahindra Bank is widely regarded for its high corporate governance standards and the strong reputation of its founder, Uday Kotak. The bank has maintained a pristine asset quality record relative to peers, avoiding major NPA crises that plagued other Indian banks. Management is known for its conservative lending practices and consistent execution, though recent regulatory actions regarding IT systems indicate areas for operational improvement."
+    }
+  },
+  "_cached_at": "2025-12-31T11:48:22.820151",
+  "_symbol": "KOTAKBANK"
+}

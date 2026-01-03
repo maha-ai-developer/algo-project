@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 19.35,
+      "profit_growth_3yr_avg": 22.78,
+      "roe_latest": 15.63,
+      "roce_latest": 21.47,
+      "pe_ratio": 51.77,
+      "debt_to_equity": 0.03,
+      "beta": 0.85
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -729.8,
+      "growth_rate_projection": 18.0,
+      "shares_outstanding_cr": 9.55,
+      "net_debt_cr": -500.0,
+      "tax_rate": 25.6
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "KEI Industries is led by a professional management team (Anil Gupta) that has consistently delivered on revenue guidance (17-18% CAGR target met or exceeded). The company maintains a conservative capital structure (Net Debt Free) despite aggressive capex plans for capacity expansion (Sanand plant). Return ratios (ROCE >20%) indicate efficient capital allocation. Transparency in reporting and strategic focus on retail/export segments further supports a high integrity score."
+    }
+  },
+  "_cached_at": "2025-12-31T11:48:02.819012",
+  "_symbol": "KEI"
+}

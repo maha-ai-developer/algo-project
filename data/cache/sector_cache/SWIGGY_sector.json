@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Food Tech and Quick Commerce",
+    "sector_kpis": {
+      "kpi_1": "Gross Order Value (GOV) Growth: 26% YoY",
+      "kpi_2": "Average Monthly Transacting Users (MTU): 14.03 Million",
+      "kpi_3": "Contribution Margin as % of GOV: 1.05%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:39.350339",
+  "_symbol": "SWIGGY"
+}

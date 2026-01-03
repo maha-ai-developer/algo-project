@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 5.0,
+      "profit_growth_3yr_avg": -43.0,
+      "roe_latest": 4.46,
+      "roce_latest": 8.11,
+      "pe_ratio": 45.1,
+      "debt_to_equity": 0.94,
+      "beta": 1.69
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 8205.0,
+      "growth_rate_projection": 6.0,
+      "shares_outstanding_cr": 244.55,
+      "net_debt_cr": 76563.0,
+      "tax_rate": 31.24
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "The JSW Group management has demonstrated strong execution capabilities, scaling capacity significantly (targeting 50 MTPA by FY31) while maintaining leverage ratios within manageable limits (Net Debt/EBITDA ~3.34x). Despite the cyclical nature of the industry and high capital expenditure requirements, the company has managed to reduce net debt recently and maintain a dominant market position."
+    }
+  },
+  "_cached_at": "2025-12-31T11:46:35.091938",
+  "_symbol": "JSWSTEEL"
+}

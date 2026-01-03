@@ -32,9 +32,10 @@ from core import (
     ADF_THRESHOLD,
     QUALITY_EXCELLENT,
     QUALITY_GOOD,
-    QUALITY_FAIR
+    QUALITY_FAIR,
+    calculate_hurst_exponent
 )
-from core.constants import INTERCEPT_HIGH_RISK
+from core.constants import INTERCEPT_HIGH_RISK, HURST_THRESHOLD, ADF_THRESHOLD
 
 
 # ============================================================
@@ -42,7 +43,7 @@ from core.constants import INTERCEPT_HIGH_RISK
 # ============================================================
 
 MIN_DATA_POINTS = 60         # Minimum data points for analysis
-ADF_P_VALUE_THRESHOLD = 0.05 # Cointegration threshold
+ADF_P_VALUE_THRESHOLD = ADF_THRESHOLD # Strict 0.01 from core
 CACHE_EXPIRY_DAYS = 7        # Cache valid for 7 days
 MAX_INTERCEPT_PERCENT = 70   # Reject if intercept > 70% of Y price
 MIN_R_SQUARED = 0.64         # CRITICAL: R² > 0.64 = Correlation > 0.8
@@ -60,7 +61,7 @@ class PairsCache:
     """
     
     def __init__(self, cache_file: Optional[str] = None):
-        self.cache_file = cache_file or os.path.join(config.DATA_DIR, "pairs_test_cache.json")
+        self.cache_file = cache_file or os.path.join(config.CACHE_DIR, "pairs_test_cache.json")
         self._lock = threading.Lock()
         self._cache: Dict[str, Dict] = {}
         self._load()
@@ -135,7 +136,7 @@ class PairsProgressManager:
     """Saves intermediate progress for crash recovery."""
     
     def __init__(self, progress_file: Optional[str] = None):
-        self.progress_file = progress_file or os.path.join(config.DATA_DIR, "pairs_scan_progress.json")
+        self.progress_file = progress_file or os.path.join(config.CACHE_DIR, "pairs_scan_progress.json")
         self._lock = threading.Lock()
         self.candidates: List[Dict] = []
         self.tested_pairs: Set[str] = set()
@@ -240,11 +241,12 @@ def scan_pairs(use_cache: bool = True, resume: bool = True):
     
     print(f"💎 Universe: {len(all_symbols)} Stocks from {len(sector_groups)} Sectors.")
     
-    # 2. Bulk Download (730 days = 2 years for robust backtest)
-    print("\n⬇️ Fetching Historical Data...")
+    # 2. Bulk Download to PAIR_SELECTION folder (250 days per research recommendation)
+    print("\n⬇️ Fetching Historical Data for Pair Selection...")
     end_date = datetime.now().strftime("%Y-%m-%d")
-    start_date = (datetime.now() - timedelta(days=730)).strftime("%Y-%m-%d")
-    download_historical_data(all_symbols, start_date, end_date, interval="day")
+    start_date = (datetime.now() - timedelta(days=config.PAIR_SELECTION_DAYS)).strftime("%Y-%m-%d")
+    download_historical_data(all_symbols, start_date, end_date, interval="day",
+                             output_dir=config.PAIR_SELECTION_DIR)
 
     # 3. Load Data to RAM
     print("📊 Loading price data to memory...")
@@ -252,7 +254,7 @@ def scan_pairs(use_cache: bool = True, resume: bool = True):
     loaded = 0
     
     for symbol in all_symbols:
-        path = os.path.join(config.DATA_DIR, f"{symbol}_day.csv")
+        path = os.path.join(config.PAIR_SELECTION_DIR, f"{symbol}_day.csv")
         if os.path.exists(path):
             try:
                 df = pd.read_csv(path)
@@ -429,12 +431,27 @@ def scan_pairs(use_cache: bool = True, resume: bool = True):
                     progress.add_result(s1, s2, None, rejected_reason="half_life")
                     continue
                 
+                # Step 7: NEW - Hurst Exponent (Strict Mean Reversion)
+                hurst = calculate_hurst_exponent(pair.residuals)
+                if hurst > HURST_THRESHOLD:
+                    print(f"\n      🚫 REJECTED: {sym_y}/{sym_x} | Hurst={hurst:.2f} > {HURST_THRESHOLD} (Trending)")
+                    cache_entry = {
+                        'is_valid': False,
+                        'reason': 'hurst_trending',
+                        'hurst': hurst
+                    }
+                    if pairs_cache:
+                        pairs_cache.set(s1, s2, cache_entry)
+                    progress.add_result(s1, s2, None, rejected_reason="hurst")
+                    continue
+
+                
                 # Step 7: PASSED ALL CHECKS - Save validated pair
                 explained_percent = 100 - intercept_percent
                 
                 print(f"\n      ✅ FOUND: {sym_y} (Y) vs {sym_x} (X)")
-                print(f"         β={pair.beta:.3f} | ADF={pair.adf_value:.4f} | σ={pair.residual_std_dev:.2f}")
-                print(f"         R²={r_squared:.3f} | Half-Life={half_life:.1f} days")
+                print(f"         β={pair.beta:.3f} | ADF={pair.adf_value:.4f} (p<{ADF_THRESHOLD})")
+                print(f"         R²={r_squared:.3f} | Half-Life={half_life:.1f}d | Hurst={hurst:.2f}")
                 print(f"         Quality: {pair.quality} | Z-Score: {pair.z_score:.2f}")
                 
                 result = {

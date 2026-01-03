@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 20.1,
+      "profit_growth_3yr_avg": 54.7,
+      "roe_latest": 15.9,
+      "roce_latest": 21.8,
+      "pe_ratio": 35.3,
+      "debt_to_equity": 0.0,
+      "beta": 1.57
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 7646,
+      "growth_rate_projection": 14.0,
+      "shares_outstanding_cr": 31.44,
+      "net_debt_cr": -7540,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Maruti Suzuki is a subsidiary of Suzuki Motor Corporation (Japan) and is India's largest passenger vehicle manufacturer. It is known for strong corporate governance, a debt-free balance sheet, and consistent dividend payouts. The company has maintained market leadership (~40% share) despite intense competition. Recent financial performance shows robust recovery with high sales and profit growth (3-year CAGRs of 20% and 54% respectively) and healthy return ratios (ROCE ~22%)."
+    }
+  },
+  "_cached_at": "2025-12-31T11:52:27.760572",
+  "_symbol": "MARUTI"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Wealth Management and Capital Markets",
+    "sector_kpis": {
+      "kpi_1": "AUA (Assets Under Advisory): \u20b92,80,000+ Cr",
+      "kpi_2": "Cost to Income Ratio: 60.1%",
+      "kpi_3": "Wealth Management Revenue Yield: 65-70 bps"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:52.847664",
+  "_symbol": "NUVAMA"
+}

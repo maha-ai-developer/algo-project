@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 10.36,
+      "profit_growth_3yr_avg": 3.37,
+      "roe_latest": 17.1,
+      "roce_latest": 22.0,
+      "pe_ratio": 49.74,
+      "debt_to_equity": 0.01,
+      "beta": 1.24
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 863.6,
+      "growth_rate_projection": 14.0,
+      "shares_outstanding_cr": 12.7,
+      "net_debt_cr": -58.73,
+      "tax_rate": 24.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Supreme Industries is led by the Taparia Group, known for high corporate governance standards and consistent dividend payouts (approx. 40-50%). The company is the largest plastic piping manufacturer in India with a 14% market share and a strong, debt-free balance sheet. Management has provided optimistic volume growth guidance of 14-15% for FY26 and is on track with capacity expansions to 1 million MT by 2026."
+    }
+  },
+  "_cached_at": "2025-12-31T12:09:05.344453",
+  "_symbol": "SUPREMEIND"
+}

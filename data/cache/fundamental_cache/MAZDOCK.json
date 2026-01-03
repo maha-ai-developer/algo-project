@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 25.86,
+      "profit_growth_3yr_avg": 58.27,
+      "roe_latest": 36.46,
+      "roce_latest": 48.97,
+      "pe_ratio": 44.55,
+      "debt_to_equity": 0.0,
+      "beta": 0.65
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1273.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 40.34,
+      "net_debt_cr": -12992.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "Mazagon Dock Shipbuilders (MAZDOCK) acts as a strategic defense PSU with a near-monopoly in building destroyers and submarines for the Indian Navy. The company boasts a pristine balance sheet with zero debt and a massive cash pile (Net Debt is significantly negative). Operational efficiency has surged, evidenced by high double-digit ROE and ROCE. The order book provides strong revenue visibility for the medium term. Risks include the cyclical nature of shipbuilding, potential execution delays common in PSUs, and reliance on government defense spending cycles."
+    }
+  },
+  "_cached_at": "2025-12-31T11:53:14.866835",
+  "_symbol": "MAZDOCK"
+}

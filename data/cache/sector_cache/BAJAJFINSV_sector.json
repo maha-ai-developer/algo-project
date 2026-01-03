@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Diversified Financial Services (NBFC & Insurance)",
+    "sector_kpis": {
+      "kpi_1": "AUM (Consolidated): \u20b94,62,261 Cr",
+      "kpi_2": "Gross NPA: 1.24%",
+      "kpi_3": "Net Interest Margin (NIM): 9.7%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:36:52.629120",
+  "_symbol": "BAJAJFINSV"
+}

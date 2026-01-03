@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Auto Components / Forging & Defence",
+    "sector_kpis": {
+      "kpi_1": "Shipment Tonnage: 56,500 MT (Q2 FY26, -12% YoY)",
+      "kpi_2": "EBITDA Margin: 28.3% (Standalone, +50 bps YoY)",
+      "kpi_3": "Defence Order Book: \u20b99,467 Cr (H1 FY26)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:38:11.268999",
+  "_symbol": "BHARATFORG"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 35.5,
+      "profit_growth_3yr_avg": 25.9,
+      "roe_latest": 35.3,
+      "roce_latest": 50.0,
+      "pe_ratio": 40.0,
+      "debt_to_equity": 0.02,
+      "beta": 1.37
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1148.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 80.0,
+      "net_debt_cr": -2872.0,
+      "tax_rate": 25.2
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "IRCTC is a 'Mini Ratna' PSU with a near-monopoly in Indian railway ticketing and catering. It boasts a debt-free balance sheet, high return ratios (ROE > 35%, ROCE > 50%), and a cash-rich position (Net Debt is negative). However, as a PSU, it is subject to government policy risks (e.g., convenience fee sharing). Management integrity is generally considered high within the PSU framework, though bureaucratic."
+    }
+  },
+  "_cached_at": "2025-12-31T11:44:16.462240",
+  "_symbol": "IRCTC"
+}

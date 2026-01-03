@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Luxury Residential Real Estate",
+    "sector_kpis": {
+      "kpi_1": "Pre-sales (FY24): Rs 3,940 Cr",
+      "kpi_2": "EBITDA Margin: 53.8%",
+      "kpi_3": "Net Debt to Equity: 0.12x"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:11:05.135787",
+  "_symbol": "OBEROIRLTY"
+}

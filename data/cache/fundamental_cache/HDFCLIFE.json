@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 17.8,
+      "profit_growth_3yr_avg": 4.9,
+      "roe_latest": 11.4,
+      "roce_latest": 6.58,
+      "pe_ratio": 85.6,
+      "debt_to_equity": 0.14,
+      "beta": 0.57
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 10585.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 215.09,
+      "net_debt_cr": 2308.0,
+      "tax_rate": 14.5
+    },
+    "qualitative": {
+      "management_integrity_score": 90.0,
+      "reasoning": "HDFC Life is part of the renowned HDFC Group (now HDFC Bank), known for its high standards of corporate governance and professional management. The company has consistently been recognized as a 'Next Leader' in Indian Corporate Governance assessments and maintains a clean track record with no significant regulatory sanctions or ethical scandals reported."
+    }
+  },
+  "_cached_at": "2025-12-31T11:38:20.922436",
+  "_symbol": "HDFCLIFE"
+}

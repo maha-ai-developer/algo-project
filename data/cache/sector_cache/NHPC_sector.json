@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Hydroelectric Power Generation",
+    "sector_kpis": {
+      "kpi_1": "Plant Availability Factor (PAF): 88.2%",
+      "kpi_2": "Installed Capacity: 7,071 MW",
+      "kpi_3": "Regulated Equity: \u20b913,674 Cr"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:45.831021",
+  "_symbol": "NHPC"
+}

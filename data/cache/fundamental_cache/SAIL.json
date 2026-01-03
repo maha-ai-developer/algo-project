@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 10.7,
+      "profit_growth_3yr_avg": -41.0,
+      "roe_latest": 4.39,
+      "roce_latest": 6.76,
+      "pe_ratio": 21.67,
+      "debt_to_equity": 0.58,
+      "beta": 1.52
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 4646.0,
+      "growth_rate_projection": 5.0,
+      "shares_outstanding_cr": 413.04,
+      "net_debt_cr": 26427.0,
+      "tax_rate": 27.1
+    },
+    "qualitative": {
+      "management_integrity_score": 6.0,
+      "reasoning": "State-owned enterprise (PSU) with generally stable governance. However, recent auditor reports flagged minor 'irregular transactions' (approx. \u20b93.6 Cr) and compliance delays (e.g., appointment of women directors). Bureaucratic inefficiencies are a typical risk factor."
+    }
+  },
+  "_cached_at": "2025-12-31T12:06:13.106586",
+  "_symbol": "SAIL"
+}

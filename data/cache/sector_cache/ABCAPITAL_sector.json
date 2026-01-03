@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Diversified NBFC",
+    "sector_kpis": {
+      "kpi_1": "Lending Portfolio AUM: \u20b91,77,855 Cr (+29% YoY)",
+      "kpi_2": "NIM (NBFC): 6.06%",
+      "kpi_3": "Asset Quality (GS2 + GS3): 3.03%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T12:32:28.023915",
+  "_symbol": "ABCAPITAL"
+}

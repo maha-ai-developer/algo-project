@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 34.89,
+      "profit_growth_3yr_avg": 250.4,
+      "roe_latest": 16.1,
+      "roce_latest": 17.2,
+      "pe_ratio": 62.0,
+      "debt_to_equity": 0.61,
+      "beta": 0.43
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 753.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 142.34,
+      "net_debt_cr": 0.0,
+      "tax_rate": 26.86
+    },
+    "qualitative": {
+      "management_integrity_score": 95.0,
+      "reasoning": "The Indian Hotels Company (IHCL) is a part of the Tata Group, which is widely recognized as the gold standard for corporate governance, ethics, and management integrity in India. The company has a strong track record of transparency and shareholder-friendly policies."
+    }
+  },
+  "_cached_at": "2025-12-31T11:42:05.233770",
+  "_symbol": "INDHOTEL"
+}

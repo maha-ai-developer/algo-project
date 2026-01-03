@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "2-Wheelers & 3-Wheelers",
+    "sector_kpis": {
+      "kpi_1": "Volume Growth: 16% YoY (Q2 FY25)",
+      "kpi_2": "EBITDA Margin: 20.2% (Q2 FY25)",
+      "kpi_3": "3W Market Share: ~65% (Domestic Leader)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:36:26.615541",
+  "_symbol": "BAJAJ-AUTO"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FMCG",
+    "niche_industry": "Cigarettes and Diversified FMCG",
+    "sector_kpis": {
+      "kpi_1": "Cigarette EBIT Margin: 61.4%",
+      "kpi_2": "FMCG-Others EBITDA Margin: 11.2%",
+      "kpi_3": "Inventory Turnover Ratio: 2.22x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:08:20.697240",
+  "_symbol": "ITC"
+}

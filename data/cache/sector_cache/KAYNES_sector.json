@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "Electronic Manufacturing Services (EMS)",
+    "sector_kpis": {
+      "kpi_1": "Order Book: \u20b981,000 Mn",
+      "kpi_2": "EBITDA Margin: 14.4%",
+      "kpi_3": "Working Capital Cycle: 95 Days"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:08:53.858288",
+  "_symbol": "KAYNES"
+}

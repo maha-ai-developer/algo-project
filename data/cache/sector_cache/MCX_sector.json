@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Commodity Exchange",
+    "sector_kpis": {
+      "kpi_1": "Market Share (Commodity Futures): 95.9%",
+      "kpi_2": "Average Daily Turnover (ADT): \u20b94,11,270 Cr (Q2 FY26)",
+      "kpi_3": "EBITDA Margin: 63% (FY25)"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:00.417706",
+  "_symbol": "MCX"
+}

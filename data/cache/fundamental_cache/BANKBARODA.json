@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 20.0,
+      "profit_growth_3yr_avg": 38.0,
+      "roe_latest": 15.5,
+      "roce_latest": 6.29,
+      "pe_ratio": 7.7,
+      "debt_to_equity": 0.95,
+      "beta": 0.78
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 28559.0,
+      "growth_rate_projection": 7.5,
+      "shares_outstanding_cr": 517.0,
+      "net_debt_cr": 20858.0,
+      "tax_rate": 29.0
+    },
+    "qualitative": {
+      "management_integrity_score": 7.0,
+      "reasoning": "Bank of Baroda is a major Public Sector Undertaking (PSU) bank with strong government backing, ensuring high stability. However, recent regulatory scrutiny regarding the 'bob World' mobile app user onboarding irregularities indicated lapses in internal controls, impacting the integrity score. The bank has since taken corrective measures and RBI restrictions have been lifted. Financial performance has been robust with improving asset quality."
+    }
+  },
+  "_cached_at": "2025-12-31T11:24:32.681331",
+  "_symbol": "BANKBARODA"
+}

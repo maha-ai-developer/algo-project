@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Jewellery and Lifestyle Retail",
+    "sector_kpis": {
+      "kpi_1": "Same Store Sales Growth (SSSG): 15%",
+      "kpi_2": "Inventory Turnover: 2.1x",
+      "kpi_3": "Jewellery EBIT Margin: 11.5%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:14:15.595796",
+  "_symbol": "TITAN"
+}

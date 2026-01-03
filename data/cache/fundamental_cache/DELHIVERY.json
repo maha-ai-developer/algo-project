@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 11.77,
+      "profit_growth_3yr_avg": 28.67,
+      "roe_latest": 1.47,
+      "roce_latest": 2.47,
+      "pe_ratio": 218.0,
+      "debt_to_equity": 0.0,
+      "beta": 1.37
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 84.0,
+      "growth_rate_projection": 14.0,
+      "shares_outstanding_cr": 74.8,
+      "net_debt_cr": -242.0,
+      "tax_rate": 0.0
+    },
+    "qualitative": {
+      "management_integrity_score": 0.85,
+      "reasoning": "Managed by founders with strong professional background (Sahil Barua). Backed by high-profile institutional investors. Board consists of reputed independent directors (e.g., Romesh Sobti). Clean governance track record since listing."
+    }
+  },
+  "_cached_at": "2025-12-31T11:32:16.162206",
+  "_symbol": "DELHIVERY"
+}

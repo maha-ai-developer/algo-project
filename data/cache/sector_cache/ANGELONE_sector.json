@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Discount Broking & Wealth Management",
+    "sector_kpis": {
+      "kpi_1": "NSE Active Client Market Share: ~15.2% (Rank 3)",
+      "kpi_2": "Average Daily Turnover (ADTO): \u20b945.8 Lakh Crore",
+      "kpi_3": "Total Client Base: 33.6 Million"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T12:34:08.785681",
+  "_symbol": "ANGELONE"
+}

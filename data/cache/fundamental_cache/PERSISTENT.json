@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 28.0,
+      "profit_growth_3yr_avg": 27.0,
+      "roe_latest": 26.2,
+      "roce_latest": 29.0,
+      "pe_ratio": 59.7,
+      "debt_to_equity": 0.06,
+      "beta": 1.29
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1672.0,
+      "growth_rate_projection": 18.0,
+      "shares_outstanding_cr": 14.93,
+      "net_debt_cr": -1305.0,
+      "tax_rate": 23.2
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Persistent Systems is widely regarded for its strong corporate governance and professional management. The company has a consistent track record of growth (20+ quarters of sequential revenue growth) and transparent disclosures. It has received awards like the Golden Peacock Award for Excellence in Corporate Governance. There are no significant red flags or regulatory issues found in recent reports."
+    }
+  },
+  "_cached_at": "2025-12-31T11:59:25.757451",
+  "_symbol": "PERSISTENT"
+}

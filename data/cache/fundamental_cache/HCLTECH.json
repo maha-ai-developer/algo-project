@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 7.94,
+      "profit_growth_3yr_avg": 4.1,
+      "roe_latest": 25.0,
+      "roce_latest": 31.6,
+      "pe_ratio": 26.0,
+      "debt_to_equity": 0.03,
+      "beta": 0.86
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 22004,
+      "growth_rate_projection": 8.5,
+      "shares_outstanding_cr": 271,
+      "net_debt_cr": -23159,
+      "tax_rate": 25.2
+    },
+    "qualitative": {
+      "management_integrity_score": 9,
+      "reasoning": "HCL Technologies is a top-tier global IT services firm with a reputation for strong corporate governance and transparency (HCL Group/Shiv Nadar). The company maintains a pristine balance sheet with substantial negative net debt (cash rich) and a consistent track record of dividend payouts (typically >75% payout ratio). While recent growth has moderated due to global macroeconomic headwinds, the management remains focused on high-growth verticals like Engineering and R&D services."
+    }
+  },
+  "_cached_at": "2025-12-31T11:37:29.505552",
+  "_symbol": "HCLTECH"
+}

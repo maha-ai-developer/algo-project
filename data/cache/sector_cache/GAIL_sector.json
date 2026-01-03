@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Natural Gas Transmission and Marketing",
+    "sector_kpis": {
+      "kpi_1": "Transmission Volume: 120.32 MMSCMD",
+      "kpi_2": "Gas Marketing Margin: $0.15-$0.20 per MMBTU",
+      "kpi_3": "Petrochemical Capacity Utilization: 96%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:06:20.837330",
+  "_symbol": "GAIL"
+}

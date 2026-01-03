@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CEMENT",
+    "niche_industry": "Building Materials",
+    "sector_kpis": {
+      "kpi_1": "EBITDA per Tonne: \u20b91,270",
+      "kpi_2": "Capacity Utilization: 85%",
+      "kpi_3": "Installed Capacity: 183.36 MTPA"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:14:40.790614",
+  "_symbol": "ULTRACEMCO"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Oil Refining and Marketing",
+    "sector_kpis": {
+      "kpi_1": "Gross Refining Margin (GRM): $7.08 per barrel",
+      "kpi_2": "Refinery Capacity Utilization: 103.0%",
+      "kpi_3": "Marketing Sales Volume: 98.6 MMT"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:08:11.677036",
+  "_symbol": "IOC"
+}

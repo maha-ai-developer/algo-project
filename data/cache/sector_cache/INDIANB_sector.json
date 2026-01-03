@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "BANK",
+    "niche_industry": "Public Sector Banking",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 3.95%",
+      "kpi_2": "Net Interest Margin (NIM): 3.44%",
+      "kpi_3": "CASA Ratio: 40.65%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:07:54.264252",
+  "_symbol": "INDIANB"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 10.18,
+      "profit_growth_3yr_avg": 2.21,
+      "roe_latest": 12.77,
+      "roce_latest": 5.83,
+      "pe_ratio": 21.78,
+      "debt_to_equity": 7.83,
+      "beta": 0.3
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 3542.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 1307.0,
+      "net_debt_cr": 390200.0,
+      "tax_rate": 0.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "IRFC is a 'Miniratna' PSU under the Ministry of Railways, effectively serving as the dedicated financing arm of the Indian Railways. It operates on a low-risk, cost-plus leasing model with a sovereign guarantee on its receivables, ensuring zero Non-Performing Assets (NPAs). Management integrity is considered high due to government backing and stringent oversight. The company enjoys a monopoly in its niche, though its growth is entirely dependent on the Indian Railways' capex cycles. The tax rate is currently effectively nil due to specific exemptions/structures."
+    }
+  },
+  "_cached_at": "2025-12-31T11:44:54.560820",
+  "_symbol": "IRFC"
+}

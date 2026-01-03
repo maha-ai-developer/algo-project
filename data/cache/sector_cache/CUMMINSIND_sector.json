@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Power Generation and Industrial Engines",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 21.8%",
+      "kpi_2": "Domestic Revenue Growth: 26%",
+      "kpi_3": "Export Mix: 23%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:05:34.312177",
+  "_symbol": "CUMMINSIND"
+}

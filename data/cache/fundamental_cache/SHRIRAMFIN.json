@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 31.0,
+      "profit_growth_3yr_avg": 47.0,
+      "roe_latest": 17.9,
+      "roce_latest": 11.77,
+      "pe_ratio": 12.91,
+      "debt_to_equity": 2.79,
+      "beta": 1.46
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 13040,
+      "growth_rate_projection": 18.0,
+      "shares_outstanding_cr": 188,
+      "net_debt_cr": 157155,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 90,
+      "reasoning": "Shriram Finance (part of the Shriram Group) exhibits strong corporate governance, evidenced by an 'Outstanding' governance score of 82 from ICRA ESG ratings. The company maintains a transparent board structure with independent oversight and has a long-standing track record of regulatory compliance and ethical business practices in the NBFC sector."
+    }
+  },
+  "_cached_at": "2025-12-31T12:07:47.110886",
+  "_symbol": "SHRIRAMFIN"
+}

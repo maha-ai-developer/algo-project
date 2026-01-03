@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Food and Grocery Retail",
+    "sector_kpis": {
+      "kpi_1": "SSSG: 8.3%",
+      "kpi_2": "Inventory Turnover: 11.3x",
+      "kpi_3": "Sales per Sq. Ft.: \u20b936,200"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:05:58.755531",
+  "_symbol": "DMART"
+}

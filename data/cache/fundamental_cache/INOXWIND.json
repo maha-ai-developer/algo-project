@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 81.0,
+      "profit_growth_3yr_avg": 50.42,
+      "roe_latest": 12.2,
+      "roce_latest": 14.4,
+      "pe_ratio": 48.0,
+      "debt_to_equity": 0.01,
+      "beta": 1.44
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -1010.0,
+      "growth_rate_projection": 27.0,
+      "shares_outstanding_cr": 172.82,
+      "net_debt_cr": 650.0,
+      "tax_rate": 19.0
+    },
+    "qualitative": {
+      "management_integrity_score": 7.0,
+      "reasoning": "The company is part of the established Inox GFL Group and has successfully reduced promoter pledges to zero, signalling financial strengthening. While the company has executed a significant turnaround in FY25 (moving from loss to profit) and reduced net debt substantially, historical issues with financial statement quality and the complex recent merger/restructuring prevent a higher score. The management's focus on clearing un-commissioned inventory and securing a robust order book is a positive indicator."
+    }
+  },
+  "_cached_at": "2025-12-31T11:44:15.625731",
+  "_symbol": "INOXWIND"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "IT Services and Digital Consulting",
+    "sector_kpis": {
+      "kpi_1": "Voluntary Attrition: 14.5% (TTM)",
+      "kpi_2": "Total Bookings (TCV): $3.56 Billion",
+      "kpi_3": "IT Services Operating Margin: 16.8%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:15:16.020324",
+  "_symbol": "WIPRO"
+}

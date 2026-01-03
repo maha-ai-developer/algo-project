@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Integrated Logistics and E-commerce Supply Chain",
+    "sector_kpis": {
+      "kpi_1": "Express Parcel Volume: 740 Million (FY24)",
+      "kpi_2": "Serviceable Pin Codes: 18,600+ (India-wide)",
+      "kpi_3": "Adjusted EBITDA Margin: 0.7% (Full Year FY24)"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:05:42.036873",
+  "_symbol": "DELHIVERY"
+}

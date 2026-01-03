@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 69.02,
+      "profit_growth_3yr_avg": 55.84,
+      "roe_latest": 1.71,
+      "roce_latest": 2.66,
+      "pe_ratio": 1432.0,
+      "debt_to_equity": 0.0,
+      "beta": 0.6
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -627.0,
+      "growth_rate_projection": 35.0,
+      "shares_outstanding_cr": 907.0,
+      "net_debt_cr": -12000.0,
+      "tax_rate": 10.5
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Management (led by Deepinder Goyal) shows high integrity with a strong ESG rating of 77 (Leader category) and transparent corporate governance, including the voluntary dissolution of inactive subsidiaries. The company has successfully transitioned to profitability while maintaining a dominant market position."
+    }
+  },
+  "_cached_at": "2025-12-31T11:34:18.320024",
+  "_symbol": "ETERNAL"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.92,
+      "profit_growth_3yr_avg": 24.54,
+      "roe_latest": 16.83,
+      "roce_latest": 17.29,
+      "pe_ratio": 32.27,
+      "debt_to_equity": 0.45,
+      "beta": 0.19
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1112.0,
+      "growth_rate_projection": 18.0,
+      "shares_outstanding_cr": 99.87,
+      "net_debt_cr": 5080.0,
+      "tax_rate": 20.83
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "Management demonstrates strong execution with consistent pre-sales growth and adherence to debt reduction guidance (net debt/equity well below 0.5x ceiling). Transparency is evident in the proactive handling of internal misconduct (resignation of a director) and clear communication regarding the trademark dispute with a related entity. Institutional holding is significant, and credit ratings have improved."
+    }
+  },
+  "_cached_at": "2025-12-31T11:49:50.476142",
+  "_symbol": "LODHA"
+}

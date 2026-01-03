@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 11.5,
+      "profit_growth_3yr_avg": -3.37,
+      "roe_latest": 9.88,
+      "roce_latest": 8.71,
+      "pe_ratio": 25.07,
+      "debt_to_equity": 0.43,
+      "beta": 1.32
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 30400,
+      "growth_rate_projection": 10,
+      "shares_outstanding_cr": 1353,
+      "net_debt_cr": 117000,
+      "tax_rate": 24
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "Reliance Industries, led by Mukesh Ambani, has demonstrated exceptional execution capabilities, successfully diversifying from oil-to-chemicals into consumer-facing sectors like Retail and Telecom (Jio) which now contribute significantly to EBITDA. The management has a strong track record of creating shareholder value and executing large-scale capital projects. While the conglomerate structure is complex, transparency and corporate governance standards are generally regarded as high for the Indian market."
+    }
+  },
+  "_cached_at": "2025-12-31T12:05:07.051424",
+  "_symbol": "RELIANCE"
+}

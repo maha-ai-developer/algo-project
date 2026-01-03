@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Sovereign-backed Railway Infrastructure Financing",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 0.0%",
+      "kpi_2": "Capital Adequacy Ratio (CAR): 672.85%",
+      "kpi_3": "Net Interest Margin (NIM): 1.37%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:08:20.885876",
+  "_symbol": "IRFC"
+}

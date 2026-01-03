@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "BANK",
+    "niche_industry": "Private Sector Bank (Microbanking focus)",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA%: 4.7%",
+      "kpi_2": "NIM: 7.4%",
+      "kpi_3": "CASA Ratio: 33.2%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T12:37:26.623175",
+  "_symbol": "BANDHANBNK"
+}

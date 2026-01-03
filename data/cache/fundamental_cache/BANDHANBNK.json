@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 17,
+      "profit_growth_3yr_avg": 177,
+      "roe_latest": 10.7,
+      "roce_latest": 10.3,
+      "pe_ratio": 19.2,
+      "debt_to_equity": 7.0,
+      "beta": 1.38
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2460,
+      "growth_rate_projection": 20,
+      "shares_outstanding_cr": 161.1,
+      "net_debt_cr": 1016,
+      "tax_rate": 24.2
+    },
+    "qualitative": {
+      "management_integrity_score": 0.8,
+      "reasoning": "Bandhan Bank has recently appointed Partha Pratim Sengupta (ex-SBI, ex-IOB) as MD & CEO, approved by RBI, which is expected to bring stability and improved governance. The bank is successfully navigating a turnaround with improving asset quality (GNPA reduced to ~3.8% in FY24) and shifting focus towards secured lending (targeting 50% secured book by FY26). The extremely high 3-year profit growth (177%) reflects a recovery from a low base in FY22 caused by high provisioning. Management guidance remains optimistic with ~20% growth projections."
+    }
+  },
+  "_cached_at": "2025-12-31T11:24:39.661875",
+  "_symbol": "BANDHANBNK"
+}

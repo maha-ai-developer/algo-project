@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Oil Marketing and Refining",
+    "sector_kpis": {
+      "kpi_1": "Gross Refining Margin (GRM): $3.12/bbl",
+      "kpi_2": "Refinery Throughput: 6.30 MMT",
+      "kpi_3": "Market Sales Volume: 11.62 MMT"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:07:08.591865",
+  "_symbol": "HINDPETRO"
+}

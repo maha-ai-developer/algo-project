@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Consumer Electricals and Durables",
+    "sector_kpis": {
+      "kpi_1": "Inventory Turnover: 6.09x",
+      "kpi_2": "EBITDA Margin: 12.8%",
+      "kpi_3": "Market Share (Fans): ~27%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:05:33.301286",
+  "_symbol": "CROMPTON"
+}

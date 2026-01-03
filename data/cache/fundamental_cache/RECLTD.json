@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 13.0,
+      "profit_growth_3yr_avg": 30.0,
+      "roe_latest": 21.5,
+      "roce_latest": 9.96,
+      "pe_ratio": 5.45,
+      "debt_to_equity": 6.16,
+      "beta": 1.35
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -15060.0,
+      "growth_rate_projection": 8.0,
+      "shares_outstanding_cr": 263.32,
+      "net_debt_cr": 511000.0,
+      "tax_rate": 21.04
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "REC Limited is a 'Maharatna' Central Public Sector Enterprise (CPSE) under the Ministry of Power, Government of India. This status reflects high operational autonomy and strategic importance. The company has a strong track record of consistent dividend payments and adherence to corporate governance norms, backed by sovereign support."
+    }
+  },
+  "_cached_at": "2025-12-31T12:04:39.821014",
+  "_symbol": "RECLTD"
+}

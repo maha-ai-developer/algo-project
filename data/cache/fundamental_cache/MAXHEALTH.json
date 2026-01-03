@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 21.3,
+      "profit_growth_3yr_avg": 21.15,
+      "roe_latest": 14.4,
+      "roce_latest": 14.7,
+      "pe_ratio": 77.1,
+      "debt_to_equity": 0.27,
+      "beta": 0.15
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 494.0,
+      "growth_rate_projection": 20.0,
+      "shares_outstanding_cr": 97.28,
+      "net_debt_cr": 1755.0,
+      "tax_rate": 25.2
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "Max Healthcare is led by a professional management team under CMD Abhay Soi, known for successfully turning around assets and maintaining high operational efficiency. The company demonstrates strong corporate governance with transparent financial reporting, ISO certifications, and significant institutional backing. Despite aggressive expansion, they have maintained a stable balance sheet and healthy return ratios."
+    }
+  },
+  "_cached_at": "2025-12-31T11:52:47.423801",
+  "_symbol": "MAXHEALTH"
+}

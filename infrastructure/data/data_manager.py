@@ -42,17 +42,29 @@ class DataManager:
             print(f"Error loading {symbol}: {e}")
             return None
 
-def download_historical_data(symbols, from_date, to_date, interval="5m"):
+def download_historical_data(symbols, from_date, to_date, interval="5m", output_dir=None):
     """
     Downloads historical data for a list of symbols.
+    
+    Args:
+        symbols: List of stock symbols
+        from_date: Start date (YYYY-MM-DD)
+        to_date: End date (YYYY-MM-DD)
+        interval: Data interval ("day", "5m", etc.)
+        output_dir: Optional output directory (defaults to DATA_DIR)
     """
     kite = get_kite()
     api_interval = INTERVAL_MAP.get(interval, "5minute")
+    
+    # Use specified output_dir or default to DATA_DIR
+    save_dir = output_dir if output_dir else config.DATA_DIR
+    os.makedirs(save_dir, exist_ok=True)
     
     start_dt = datetime.strptime(from_date, "%Y-%m-%d")
     end_dt = datetime.strptime(to_date, "%Y-%m-%d")
     
     print(f"--- 📥 Downloading {interval} data ({from_date} to {to_date}) ---")
+    print(f"    📂 Output: {save_dir}")
 
     for symbol in symbols:
         print(f"🔄 Processing {symbol}...", end=" ")
@@ -99,8 +111,8 @@ def download_historical_data(symbols, from_date, to_date, interval="5m"):
             print(f"⚠️ No data fetched")
             continue
 
-        # Save to CSV
+        # Save to specified directory
         df = pd.DataFrame(all_records)
-        path = DataManager.get_csv_path(symbol, interval)
+        path = os.path.join(save_dir, f"{symbol}_{interval}.csv")
         df.to_csv(path, index=False)
         print(f"✅ Saved {len(df)} rows")

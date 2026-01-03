@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 11.53,
+      "profit_growth_3yr_avg": 20.29,
+      "roe_latest": -10.3,
+      "roce_latest": -10.1,
+      "pe_ratio": -138.32,
+      "debt_to_equity": 0.0,
+      "beta": -0.66
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -119,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 63.95,
+      "net_debt_cr": -12769,
+      "tax_rate": 25.17
+    },
+    "qualitative": {
+      "management_integrity_score": 4,
+      "reasoning": "Management credibility has been severely impacted by the Reserve Bank of India's (RBI) ban on Paytm Payments Bank due to 'persistent non-compliance' and continued material supervisory concerns regarding KYC norms and data privacy. While the company is restructuring to focus on third-party payment aggregation, the regulatory crackdown highlights significant historical governance lapses."
+    }
+  },
+  "_cached_at": "2025-12-31T11:59:23.301977",
+  "_symbol": "PAYTM"
+}

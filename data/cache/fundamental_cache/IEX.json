@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 8.0,
+      "profit_growth_3yr_avg": 12.0,
+      "roe_latest": 41.2,
+      "roce_latest": 53.2,
+      "pe_ratio": 26.5,
+      "debt_to_equity": 0.0,
+      "beta": 0.32
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 380.0,
+      "growth_rate_projection": 6.0,
+      "shares_outstanding_cr": 89.17,
+      "net_debt_cr": -1380.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 0.85,
+      "reasoning": "IEX displays robust financial health with a debt-free balance sheet, high ROE (41.2%), and strong cash reserves (Net Debt: -1380 Cr). Management has maintained efficient operations despite regulatory headwinds. The lower growth projection (6%) reflects the potential impact of 'Market Coupling' and regulatory scrutiny, which remains the primary risk factor despite the company's monopoly-like position and operational excellence."
+    }
+  },
+  "_cached_at": "2025-12-31T11:41:29.331319",
+  "_symbol": "IEX"
+}

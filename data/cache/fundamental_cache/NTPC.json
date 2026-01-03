@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.0,
+      "profit_growth_3yr_avg": 6.5,
+      "roe_latest": 12.7,
+      "roce_latest": 11.17,
+      "pe_ratio": 13.4,
+      "debt_to_equity": 1.36,
+      "beta": 1.04
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 9152.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 969.67,
+      "net_debt_cr": 246000.0,
+      "tax_rate": 26.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "NTPC is a 'Maharatna' PSU with robust government oversight and high transparency. Management has demonstrated strong strategic direction by aggressively expanding into renewable energy (NTPC Green Energy) while maintaining operational efficiency in thermal plants. Consistent dividend history and no recent major governance controversies support a high integrity score."
+    }
+  },
+  "_cached_at": "2025-12-31T11:56:17.356600",
+  "_symbol": "NTPC"
+}

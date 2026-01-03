@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "Engineering Research & Development (ER&D)",
+    "sector_kpis": {
+      "kpi_1": "Attrition Rate: 15.1%",
+      "kpi_2": "Deal Wins (TCV): $1B+",
+      "kpi_3": "Revenue/Employee: $51,000"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:14:10.479490",
+  "_symbol": "TATATECH"
+}

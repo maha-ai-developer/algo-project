@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 24.07,
+      "profit_growth_3yr_avg": 41.41,
+      "roe_latest": 32.6,
+      "roce_latest": 38.1,
+      "pe_ratio": 84.5,
+      "debt_to_equity": 0.17,
+      "beta": 1.16
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 776,
+      "growth_rate_projection": 18,
+      "shares_outstanding_cr": 9.05,
+      "net_debt_cr": 590,
+      "tax_rate": 23
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "Solar Industries is a market leader in industrial explosives with a growing defense portfolio. The company exhibits strong corporate governance, consistent high growth in sales and profits, and maintains a high promoter holding of approximately 73%, indicating skin in the game. Financial reporting is transparent with no major red flags identified."
+    }
+  },
+  "_cached_at": "2025-12-31T12:08:10.049591",
+  "_symbol": "SOLARINDS"
+}

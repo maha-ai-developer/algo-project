@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 7.65,
+      "profit_growth_3yr_avg": -11.3,
+      "roe_latest": 14.6,
+      "roce_latest": 18.6,
+      "pe_ratio": 34.9,
+      "debt_to_equity": 0.03,
+      "beta": 0.95
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 5610,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 97.97,
+      "net_debt_cr": -6000,
+      "tax_rate": 25.7
+    },
+    "qualitative": {
+      "management_integrity_score": 9,
+      "reasoning": "Tech Mahindra is part of the reputable Mahindra Group, known for high corporate governance standards. The company maintains high transparency with detailed quarterly disclosures. Recently, under the new CEO Mohit Joshi, the management has initiated 'Project Fortius' to structurally improve margins and organizational efficiency, demonstrating proactive leadership. Despite recent financial headwinds, the governance framework remains robust."
+    }
+  },
+  "_cached_at": "2025-12-31T12:11:42.775719",
+  "_symbol": "TECHM"
+}

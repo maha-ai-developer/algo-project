@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 41.0,
+      "profit_growth_3yr_avg": 62.0,
+      "roe_latest": 20.23,
+      "roce_latest": 21.8,
+      "pe_ratio": 80.32,
+      "debt_to_equity": 0.28,
+      "beta": 1.06
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 376.0,
+      "growth_rate_projection": 20.0,
+      "shares_outstanding_cr": 19.35,
+      "net_debt_cr": -1760.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Tube Investments of India is a flagship company of the Murugappa Group, which is widely respected for its high corporate governance standards, ethical business practices, and long-standing reputation ('The Five Lights' values). The management has successfully diversified revenue streams and executed value-accretive acquisitions like CG Power."
+    }
+  },
+  "_cached_at": "2025-12-31T12:12:18.512754",
+  "_symbol": "TIINDIA"
+}

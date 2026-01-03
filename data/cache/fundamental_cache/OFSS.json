@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 9.38,
+      "profit_growth_3yr_avg": 22.76,
+      "roe_latest": 32.89,
+      "roce_latest": 40.6,
+      "pe_ratio": 28.52,
+      "debt_to_equity": 0.0,
+      "beta": 0.15
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1950.0,
+      "growth_rate_projection": 9.5,
+      "shares_outstanding_cr": 8.7,
+      "net_debt_cr": -4809.0,
+      "tax_rate": 28.34
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Oracle Financial Services Software (OFSS) is a subsidiary of Oracle Corporation, ensuring strong corporate governance standards. The company maintains a pristine balance sheet with virtually zero debt and has a consistent track record of high dividend payouts (yield >3%), demonstrating shareholder-friendly capital allocation. Management has successfully navigated the transition to cloud-based banking solutions, driving recent growth. No major governance red flags or accounting irregularities have been reported."
+    }
+  },
+  "_cached_at": "2025-12-31T11:57:47.251218",
+  "_symbol": "OFSS"
+}

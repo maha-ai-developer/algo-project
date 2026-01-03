@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 8.74,
+      "profit_growth_3yr_avg": 10.77,
+      "roe_latest": 48.54,
+      "roce_latest": 68.24,
+      "pe_ratio": 52.2,
+      "debt_to_equity": 0.19,
+      "beta": 0.71
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1124.0,
+      "growth_rate_projection": 11.0,
+      "shares_outstanding_cr": 1.115,
+      "net_debt_cr": -200.0,
+      "tax_rate": 25.5
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Page Industries holds the exclusive license for Jockey International in India, maintaining a dominant market leader position in the innerwear segment with a strong brand recall. The company consistently demonstrates high capital efficiency with ROE and ROCE well above 40%. It maintains a pristine balance sheet, being net debt-free with significant cash reserves. Management has a strong track record of corporate governance, transparent reporting, and maintaining the integrity of the licensed brands. Recent growth has moderated, but the long-term structural story remains intact due to the organized market shift."
+    }
+  },
+  "_cached_at": "2025-12-31T11:58:43.569344",
+  "_symbol": "PAGEIND"
+}

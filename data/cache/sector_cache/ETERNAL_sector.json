@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "E-commerce & Quick Commerce",
+    "sector_kpis": {
+      "kpi_1": "Gross Order Value (GOV): \u20b931,995 Cr (TTM)",
+      "kpi_2": "Contribution Margin: 7.1% (Food Delivery Segment)",
+      "kpi_3": "Monthly Transacting Users (MTU): 20.7 Million"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:06:21.897060",
+  "_symbol": "ETERNAL"
+}

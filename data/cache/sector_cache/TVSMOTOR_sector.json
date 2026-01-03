@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Two-Wheelers and Three-Wheelers",
+    "sector_kpis": {
+      "kpi_1": "Volume Growth: 14%",
+      "kpi_2": "EBITDA Margin: 12.3%",
+      "kpi_3": "Market Share (2W): 18.2%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:14:43.616287",
+  "_symbol": "TVSMOTOR"
+}

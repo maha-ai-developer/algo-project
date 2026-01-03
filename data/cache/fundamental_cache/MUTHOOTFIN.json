@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 15.55,
+      "profit_growth_3yr_avg": 9.56,
+      "roe_latest": 19.65,
+      "roce_latest": 13.27,
+      "pe_ratio": 21.13,
+      "debt_to_equity": 3.38,
+      "beta": 0.82
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -26741,
+      "growth_rate_projection": 19.8,
+      "shares_outstanding_cr": 40.15,
+      "net_debt_cr": 90648,
+      "tax_rate": 26.44
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "Muthoot Finance is the market leader in the Indian gold loan sector with a strong brand heritage and high promoter holding (~73%), indicating significant skin in the game. The management has maintained a robust Capital Adequacy Ratio (~27%) well above regulatory requirements and has recently received credit rating upgrades (e.g., Fitch to BB+). Corporate governance is viewed positively with no major regulatory red flags, and the company demonstrates prudent lending practices even during sector-wide stress."
+    }
+  },
+  "_cached_at": "2025-12-31T11:55:11.919246",
+  "_symbol": "MUTHOOTFIN"
+}

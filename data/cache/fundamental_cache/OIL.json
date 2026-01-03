@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 29.0,
+      "profit_growth_3yr_avg": 16.3,
+      "roe_latest": 13.65,
+      "roce_latest": 12.9,
+      "pe_ratio": 11.2,
+      "debt_to_equity": 0.58,
+      "beta": 0.74
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -2440.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 163.0,
+      "net_debt_cr": 25590.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Oil India is a 'Maharatna' PSU with strong government backing, consistent dividend history (approx. 2.8% yield), and transparent financial reporting. While subject to bureaucratic processes common in PSUs, it maintains high compliance standards and stability."
+    }
+  },
+  "_cached_at": "2025-12-31T11:58:21.658281",
+  "_symbol": "OIL"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 23.94,
+      "profit_growth_3yr_avg": 21.9,
+      "roe_latest": 13.4,
+      "roce_latest": 18.0,
+      "pe_ratio": 89.4,
+      "debt_to_equity": 0.01,
+      "beta": 0.97
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -960.0,
+      "growth_rate_projection": 18.0,
+      "shares_outstanding_cr": 65.07,
+      "net_debt_cr": 60.0,
+      "tax_rate": 26.0
+    },
+    "qualitative": {
+      "management_integrity_score": 10,
+      "reasoning": "Promoted by Radhakishan Damani, a veteran investor known for impeccable integrity and a disciplined, long-term business approach. The company maintains high transparency, consistently clean audits, and a very high promoter holding (~75%), signaling strong alignment with shareholder interests. The 'ownership model' of owning stores rather than leasing reflects a prudent, asset-heavy strategy unique to the Indian retail sector."
+    }
+  },
+  "_cached_at": "2025-12-31T11:32:55.461374",
+  "_symbol": "DMART"
+}

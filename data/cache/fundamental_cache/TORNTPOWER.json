@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 26.9,
+      "profit_growth_3yr_avg": 48.0,
+      "roe_latest": 20.61,
+      "roce_latest": 17.19,
+      "pe_ratio": 21.7,
+      "debt_to_equity": 0.54,
+      "beta": 0.4
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 714.0,
+      "growth_rate_projection": 5.0,
+      "shares_outstanding_cr": 50.39,
+      "net_debt_cr": 8350.0,
+      "tax_rate": 26.6
+    },
+    "qualitative": {
+      "management_integrity_score": 90,
+      "reasoning": "Torrent Power is part of the Torrent Group, known for strong corporate governance and operational efficiency. The company maintains a high promoter holding (~51%) and significant institutional participation (~18%), reflecting investor confidence. Management has consistently focused on reliability ('Reliable, Responsible, Resilient') and is actively expanding into renewable energy while maintaining healthy financial ratios despite capital-intensive operations. No major governance issues or red flags have been reported recently."
+    }
+  },
+  "_cached_at": "2025-12-31T12:13:01.834945",
+  "_symbol": "TORNTPOWER"
+}

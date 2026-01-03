@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 5.7,
+      "profit_growth_3yr_avg": 21.73,
+      "roe_latest": 34.46,
+      "roce_latest": 44.0,
+      "pe_ratio": 9.2,
+      "debt_to_equity": 0.0,
+      "beta": 1.41
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 5240.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 183.66,
+      "net_debt_cr": -7850.0,
+      "tax_rate": 25.1
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "National Aluminium Company (NALCO) is a Navratna CPSE under the Ministry of Mines, Govt. of India, implying high standards of corporate governance, transparency, and government oversight. The company maintains a robust balance sheet with negative net debt (cash-rich) and has a consistent dividend track record. While the business is cyclical, management integrity is considered very high."
+    }
+  },
+  "_cached_at": "2025-12-31T11:54:47.831519",
+  "_symbol": "NATIONALUM"
+}

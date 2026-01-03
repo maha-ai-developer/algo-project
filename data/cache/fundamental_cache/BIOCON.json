@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 22.6,
+      "profit_growth_3yr_avg": 10.0,
+      "roe_latest": 4.76,
+      "roce_latest": 6.25,
+      "pe_ratio": 68.45,
+      "debt_to_equity": 0.82,
+      "beta": 0.24
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1955,
+      "growth_rate_projection": 13.0,
+      "shares_outstanding_cr": 133.7,
+      "net_debt_cr": 10432,
+      "tax_rate": 22.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "Biocon is led by Kiran Mazumdar-Shaw, a highly respected figure in the Indian pharmaceutical industry. The company maintains a strong governance framework with an established Integrity Committee and Whistleblower policy. Promoter holding is high at approximately 54.45% with zero promoter pledging, indicating management confidence and alignment with shareholder interests. Despite recent financial fluctuations, the corporate governance standards remain high."
+    }
+  },
+  "_cached_at": "2025-12-31T11:26:25.132329",
+  "_symbol": "BIOCON"
+}

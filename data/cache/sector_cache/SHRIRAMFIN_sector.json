@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Asset Financing (Used Commercial Vehicles & MSME)",
+    "sector_kpis": {
+      "kpi_1": "Net Interest Margin (NIM): 8.93%",
+      "kpi_2": "Gross Stage 3 Assets (GNPA): 5.39%",
+      "kpi_3": "AUM Growth: 21% YoY"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:13:07.782872",
+  "_symbol": "SHRIRAMFIN"
+}

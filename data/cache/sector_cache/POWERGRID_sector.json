@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Electric Power Transmission",
+    "sector_kpis": {
+      "kpi_1": "Transmission Availability: 99.85%",
+      "kpi_2": "Regulated Equity: INR 77,290 Cr",
+      "kpi_3": "Receivable Days: 31 Days"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:11:59.203110",
+  "_symbol": "POWERGRID"
+}

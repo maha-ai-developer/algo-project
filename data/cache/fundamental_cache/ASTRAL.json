@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 10.0,
+      "profit_growth_3yr_avg": 7.04,
+      "roe_latest": 15.3,
+      "roce_latest": 21.1,
+      "pe_ratio": 75.1,
+      "debt_to_equity": 0.04,
+      "beta": 1.0
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 270.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 26.86,
+      "net_debt_cr": -395.0,
+      "tax_rate": 25.6
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "High promoter holding (~54%) indicates strong skin in the game. The company has a clean governance track record with no major regulatory red flags reported. Management has consistently delivered on guidance and maintains transparent reporting standards ('tone from the top'). Professional management team with a focus on innovation and expansion into new verticals like paints and adhesives."
+    }
+  },
+  "_cached_at": "2025-12-31T11:21:31.881118",
+  "_symbol": "ASTRAL"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 17.0,
+      "profit_growth_3yr_avg": 40.0,
+      "roe_latest": 17.1,
+      "roce_latest": 6.38,
+      "pe_ratio": 9.5,
+      "debt_to_equity": 0.58,
+      "beta": 1.18
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 22707.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 134.7,
+      "net_debt_cr": 14295.0,
+      "tax_rate": 27.55
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Indian Bank is a prominent Public Sector Undertaking (PSU) bank in India. It has shown consistent financial improvement, with net profits growing significantly (CAGR ~70% recently) and asset quality improving (GNPA down to ~3.48%). While there have been isolated incidents of branch-level fraud (e.g., manager arrests for misappropriation), there are no reports of systemic corporate governance failures or top-level management scandals comparable to other major banking controversies. The bank is compliant with regulatory norms and has successfully integrated Allahabad Bank. The management is viewed as stable and capable, delivering strong return ratios."
+    }
+  },
+  "_cached_at": "2025-12-31T11:43:05.335211",
+  "_symbol": "INDIANB"
+}

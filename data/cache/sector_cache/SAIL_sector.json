@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "METAL",
+    "niche_industry": "Integrated Steel Manufacturing",
+    "sector_kpis": {
+      "kpi_1": "EBITDA per Tonne: \u20b97,094 (Q4 FY25)",
+      "kpi_2": "Crude Steel Capacity Utilization: 98.6%",
+      "kpi_3": "Annual Sales Volume: 17.1 Million Tonnes"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:12:48.562677",
+  "_symbol": "SAIL"
+}

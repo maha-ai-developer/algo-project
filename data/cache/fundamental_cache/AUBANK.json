@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 39.46,
+      "profit_growth_3yr_avg": 23.07,
+      "roe_latest": 14.26,
+      "roce_latest": 15.45,
+      "pe_ratio": 34.1,
+      "debt_to_equity": 7.4,
+      "beta": 0.9
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 6584.0,
+      "growth_rate_projection": 24.0,
+      "shares_outstanding_cr": 74.69,
+      "net_debt_cr": -2802.0,
+      "tax_rate": 24.6
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "AU Small Finance Bank is led by its founder Sanjay Agarwal, who has a strong reputation and was named EY Entrepreneur of the Year. The bank has demonstrated robust 3-year sales growth (~39% CAGR) and profit growth (~23% CAGR). Despite a high P/E of 34x, the premium is supported by its high growth trajectory and transition to a universal bank. Asset quality remains managed with Net NPA around 0.6%, though some stress in unsecured portfolios exists. Governance is considered strong with no major recent scandals."
+    }
+  },
+  "_cached_at": "2025-12-31T11:22:03.522713",
+  "_symbol": "AUBANK"
+}

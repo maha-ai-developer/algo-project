@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Upstream Oil & Gas Exploration and Production",
+    "sector_kpis": {
+      "kpi_1": "Crude Oil Production: 3.36 MMT",
+      "kpi_2": "Natural Gas Production: 3.18 BCM",
+      "kpi_3": "EBITDA Margin: 44.2%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:11:01.471020",
+  "_symbol": "OIL"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 0.89,
+      "profit_growth_3yr_avg": -24.92,
+      "roe_latest": 7.17,
+      "roce_latest": 8.91,
+      "pe_ratio": 31.36,
+      "debt_to_equity": 1.0,
+      "beta": 1.02
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 14490,
+      "growth_rate_projection": 5.6,
+      "shares_outstanding_cr": 1248,
+      "net_debt_cr": 84835,
+      "tax_rate": 40.1
+    },
+    "qualitative": {
+      "management_integrity_score": 9,
+      "reasoning": "Tata Steel, as part of the Tata Group, is widely recognized for its high corporate governance standards, ethical business practices, and transparency. The company consistently ranks high in global transparency and ethics assessments (e.g., Transparency International, Ethisphere), reinforcing a strong reputation for management integrity."
+    }
+  },
+  "_cached_at": "2025-12-31T12:11:27.822215",
+  "_symbol": "TATASTEEL"
+}

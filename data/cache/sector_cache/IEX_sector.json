@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Power Trading Exchange",
+    "sector_kpis": {
+      "kpi_1": "Market Share: ~84% (Total Electricity)",
+      "kpi_2": "Electricity Volume Growth: 18.7% YoY (FY25)",
+      "kpi_3": "EBITDA Margin: 86.0%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:07:31.558903",
+  "_symbol": "IEX"
+}

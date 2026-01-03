@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 10.14,
+      "profit_growth_3yr_avg": 7.73,
+      "roe_latest": 2.16,
+      "roce_latest": 4.45,
+      "pe_ratio": 175.56,
+      "debt_to_equity": 0.36,
+      "beta": 2.29
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1550,
+      "growth_rate_projection": 18,
+      "shares_outstanding_cr": 348.2,
+      "net_debt_cr": 2594,
+      "tax_rate": 25
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "BHEL is a 'Maharatna' Public Sector Undertaking (PSU) under the Government of India, ensuring high transparency, regulatory compliance, and audit standards. While it faces typical bureaucratic efficiency challenges, the management's integrity regarding financial reporting and corporate governance is generally considered strong. Recent strategic shifts towards renewable energy and defence, along with a record order book (FY25), demonstrate proactive leadership despite legacy issues."
+    }
+  },
+  "_cached_at": "2025-12-31T11:25:58.713599",
+  "_symbol": "BHEL"
+}

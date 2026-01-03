@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 7.22,
+      "profit_growth_3yr_avg": 128.37,
+      "roe_latest": 45.7,
+      "roce_latest": 53.1,
+      "pe_ratio": 10.6,
+      "debt_to_equity": 0,
+      "beta": 1.22
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 27523,
+      "growth_rate_projection": 15,
+      "shares_outstanding_cr": 632.5,
+      "net_debt_cr": 0,
+      "tax_rate": 14
+    },
+    "qualitative": {
+      "management_integrity_score": 9,
+      "reasoning": "LICI is a PSU backed by a sovereign guarantee under Section 37 of the LIC Act, ensuring the highest level of policyholder safety and management stability. It holds a dominant market leadership position (>58% market share). While PSU status implies some operational rigidity compared to private peers, the management has successfully navigated the IPO and recent embedded value enhancements."
+    }
+  },
+  "_cached_at": "2025-12-31T11:49:29.804536",
+  "_symbol": "LICI"
+}

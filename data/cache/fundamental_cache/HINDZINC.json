@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 5.0,
+      "profit_growth_3yr_avg": 3.0,
+      "roe_latest": 77.7,
+      "roce_latest": 60.0,
+      "pe_ratio": 25.0,
+      "debt_to_equity": 0.85,
+      "beta": 1.29
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 10154.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 422.53,
+      "net_debt_cr": 1722.0,
+      "tax_rate": 24.72
+    },
+    "qualitative": {
+      "management_integrity_score": 0.4,
+      "reasoning": "While operationally world-class (lowest cost zinc producer), the company faces significant governance headwinds. Key concerns include the parent company (Vedanta Resources) using HINDZINC's cash reserves and high dividend payouts to service its own debt obligations. Recent allegations by short-seller Viceroy Research regarding related-party transactions and brand fees, along with penalties from the Ministry of Corporate Affairs, further weigh on the governance score."
+    }
+  },
+  "_cached_at": "2025-12-31T11:39:46.412997",
+  "_symbol": "HINDZINC"
+}

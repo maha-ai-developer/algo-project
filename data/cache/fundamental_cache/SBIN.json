@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 11.57,
+      "profit_growth_3yr_avg": 36.3,
+      "roe_latest": 16.57,
+      "roce_latest": 13.76,
+      "pe_ratio": 10.93,
+      "debt_to_equity": 1.14,
+      "beta": 0.91
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 80792.0,
+      "growth_rate_projection": 14.0,
+      "shares_outstanding_cr": 892.3,
+      "net_debt_cr": 236660.0,
+      "tax_rate": 24.65
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "State Bank of India (SBIN) is the largest public sector bank in India with a strong government backing (Fortune 500). Management has successfully navigated asset quality cycles, reducing GNPA to multi-year lows (~2.07%) and driving digital transformation via YONO. Despite being a PSU, it has shown robust profit growth (CAGR ~36%) and improved ROE (~16%+). Governance is overseen by a central board with RBI nomination, ensuring high integrity, though operational agility can be constrained by regulations compared to private peers."
+    }
+  },
+  "_cached_at": "2025-12-31T12:07:23.764328",
+  "_symbol": "SBIN"
+}

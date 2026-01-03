@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "Product Engineering and Digital Transformation Services",
+    "sector_kpis": {
+      "kpi_1": "Attrition Rate: 11.5%",
+      "kpi_2": "Deal Wins (TCV): $493.5 Million",
+      "kpi_3": "Revenue per Employee: $63,400"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:11:28.483180",
+  "_symbol": "PERSISTENT"
+}

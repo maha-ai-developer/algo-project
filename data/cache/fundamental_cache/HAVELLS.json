@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 16.12,
+      "profit_growth_3yr_avg": 7.61,
+      "roe_latest": 18.67,
+      "roce_latest": 25.3,
+      "pe_ratio": 60.7,
+      "debt_to_equity": 0.04,
+      "beta": 1.17
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 749.0,
+      "growth_rate_projection": 14.0,
+      "shares_outstanding_cr": 62.73,
+      "net_debt_cr": -1176.0,
+      "tax_rate": 26.14
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Havells India is widely regarded for its strong professional management and high corporate governance standards. The company has a stable promoter holding of approximately 59.4% with no significant pledged shares. It has successfully integrated acquisitions (like Lloyd) and maintains a robust distribution network. There are no recent reports of major governance issues or fraud, supporting a high integrity score."
+    }
+  },
+  "_cached_at": "2025-12-31T11:37:00.630821",
+  "_symbol": "HAVELLS"
+}

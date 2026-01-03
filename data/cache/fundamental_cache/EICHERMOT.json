@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 22.15,
+      "profit_growth_3yr_avg": 39.21,
+      "roe_latest": 24.2,
+      "roce_latest": 29.8,
+      "pe_ratio": 38.7,
+      "debt_to_equity": 0.01,
+      "beta": 0.95
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2745.0,
+      "growth_rate_projection": 13.5,
+      "shares_outstanding_cr": 27.43,
+      "net_debt_cr": -12800.0,
+      "tax_rate": 23.1
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Eicher Motors is led by Siddhartha Lal, who is credited with the turnaround of Royal Enfield. The company demonstrates strong corporate governance, consistent financial reporting, and high transparency. It has zero debt (net cash positive), high institutional ownership (FIIs ~27%, DIIs ~11%), and maintains a high return on capital, indicating efficient capital allocation and management integrity."
+    }
+  },
+  "_cached_at": "2025-12-31T11:33:41.772389",
+  "_symbol": "EICHERMOT"
+}

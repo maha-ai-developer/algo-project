@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 4.13,
+      "profit_growth_3yr_avg": 0.93,
+      "roe_latest": 0,
+      "roce_latest": -2.07,
+      "pe_ratio": -5.05,
+      "debt_to_equity": -2.83,
+      "beta": 1.43
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2710,
+      "growth_rate_projection": 0.03,
+      "shares_outstanding_cr": 10831.76,
+      "net_debt_cr": 229786,
+      "tax_rate": 0
+    },
+    "qualitative": {
+      "management_integrity_score": 0.8,
+      "reasoning": "Backed by the reputable Aditya Birla Group and Vodafone Group, the management has maintained transparency regarding the company's severe financial stress and regulatory challenges (AGR dues). Despite the distressed balance sheet, governance standards remain high, with active engagement with the government and lenders to secure the company's survival and competitive position."
+    }
+  },
+  "_cached_at": "2025-12-31T11:41:03.729008",
+  "_symbol": "IDEA"
+}

@@ -32,7 +32,7 @@ class InstrumentCache:
     _stale_warning_shown = False  # Class-level flag to prevent spam
     
     def __init__(self, cache_file: Optional[str] = None):
-        self.cache_file = cache_file or os.path.join(config.DATA_DIR, "nfo_instruments.json")
+        self.cache_file = cache_file or os.path.join(config.CACHE_DIR, "nfo_instruments.json")
         self._instruments: List[Dict] = []
         self._cache_date: Optional[date] = None
         self._loaded = False

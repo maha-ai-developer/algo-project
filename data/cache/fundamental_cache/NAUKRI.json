@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 21.0,
+      "profit_growth_3yr_avg": -46.0,
+      "roe_latest": 2.93,
+      "roce_latest": 5.17,
+      "pe_ratio": 65.7,
+      "debt_to_equity": 0.0,
+      "beta": 0.76
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1002.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 64.84,
+      "net_debt_cr": -4000.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 0.95,
+      "reasoning": "Info Edge is led by Sanjeev Bikhchandani, widely regarded for high corporate governance standards and prudent capital allocation. The company holds a dominant position in the recruitment market (Naukri.com) with >70% traffic share, generating strong free cash flows that fund losses in other verticals like 99acres and strategic investments (Zomato, PB Fintech). The balance sheet is pristine with virtually zero debt and substantial cash reserves."
+    }
+  },
+  "_cached_at": "2025-12-31T11:54:47.818952",
+  "_symbol": "NAUKRI"
+}

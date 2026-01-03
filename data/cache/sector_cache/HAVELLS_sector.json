@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Fast Moving Electrical Goods (FMEG)",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 10.8%",
+      "kpi_2": "Ad-Spend to Sales Ratio: 4.0%",
+      "kpi_3": "Inventory Turnover Ratio: 6.2x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:06:38.504976",
+  "_symbol": "HAVELLS"
+}

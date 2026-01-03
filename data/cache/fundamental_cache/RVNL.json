@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 0.9,
+      "profit_growth_3yr_avg": 3.01,
+      "roe_latest": 14.42,
+      "roce_latest": 14.98,
+      "pe_ratio": 67.45,
+      "debt_to_equity": 0.63,
+      "beta": 0.79
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2005.0,
+      "growth_rate_projection": 8.0,
+      "shares_outstanding_cr": 208.5,
+      "net_debt_cr": 1656.0,
+      "tax_rate": 22.0
+    },
+    "qualitative": {
+      "management_integrity_score": 0.85,
+      "reasoning": "Rail Vikas Nigam Limited (RVNL) is a 'Navratna' CPSE under the Ministry of Railways, ensuring high stability and adherence to government governance standards. While execution delays and lower margins in competitive bidding are concerns, the management has maintained a robust order book (>\u20b990,000 Cr) and is diversifying into global and non-railway projects. The low 3-year sales/profit growth (CAGR ~1-3%) contrasts with high market valuation, but the government backing provides a strong safety net."
+    }
+  },
+  "_cached_at": "2025-12-31T12:05:28.411848",
+  "_symbol": "RVNL"
+}

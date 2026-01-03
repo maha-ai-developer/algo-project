@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 30.79,
+      "profit_growth_3yr_avg": -2.02,
+      "roe_latest": 7.42,
+      "roce_latest": 12.4,
+      "pe_ratio": 711.14,
+      "debt_to_equity": 0.98,
+      "beta": 1.19
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 358.0,
+      "growth_rate_projection": 25.0,
+      "shares_outstanding_cr": 286.0,
+      "net_debt_cr": 1193.0,
+      "tax_rate": 30.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "Nykaa is led by Falguni Nayar with a strong founder-led management team and high promoter holding (~52%). The company has maintained a clean governance record with no major reported scandals. While valuation remains high and profit growth has been volatile due to expansion investments, the management's transparency and strategic execution in the BPC and Fashion segments are viewed positively."
+    }
+  },
+  "_cached_at": "2025-12-31T11:56:56.869433",
+  "_symbol": "NYKAA"
+}

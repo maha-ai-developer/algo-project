@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 14.3,
+      "profit_growth_3yr_avg": -22.0,
+      "roe_latest": 5.07,
+      "roce_latest": 8.81,
+      "pe_ratio": 29.8,
+      "debt_to_equity": 4.01,
+      "beta": 1.53
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -4781.0,
+      "growth_rate_projection": 14.0,
+      "shares_outstanding_cr": 42.5,
+      "net_debt_cr": 52824.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 6.0,
+      "reasoning": "Management integrity score is impacted by the significant RBI regulatory action in March 2024, which banned the company's gold loan business due to material supervisory concerns including deviations in gold purity certification and cash disbursal limits. The ban was lifted in September 2024 following corrective measures, indicating a willingness to remediate, but the initial lapse highlights governance risks."
+    }
+  },
+  "_cached_at": "2025-12-31T11:42:15.714148",
+  "_symbol": "IIFL"
+}

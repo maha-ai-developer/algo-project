@@ -24,6 +24,7 @@ class TestBacktestDocCompliance(unittest.TestCase):
         source = self._read_file('research_lab/backtest_pairs.py')
         match = re.search(r'LOOKBACK_WINDOW\s*=\s*(\d+)', source)
         self.assertIsNotNone(match, "LOOKBACK_WINDOW should be defined")
+        # Updated to match paper-maharajan.md Section 8.4.1
         self.assertEqual(int(match.group(1)), 250, "Lookback should be 250 days per paper-maharajan.md")
     
     def test_z_exit_threshold(self):
@@ -50,6 +51,24 @@ class TestBacktestDocCompliance(unittest.TestCase):
         """Verify rolling window comment indicating no look-ahead"""
         source = self._read_file('research_lab/backtest_pairs.py')
         self.assertIn('NO LOOK-AHEAD', source.upper())
+    
+    def test_walk_forward_method(self):
+        """Verify walk-forward optimization method exists"""
+        source = self._read_file('research_lab/backtest_pairs.py')
+        self.assertIn('def run_walk_forward', source)
+        self.assertIn('train_window', source)
+        self.assertIn('test_window', source)
+    
+    def test_half_life_calculation(self):
+        """Verify half-life calculation using Ornstein-Uhlenbeck"""
+        source = self._read_file('research_lab/backtest_pairs.py')
+        self.assertIn('_calculate_half_life_ou', source)
+        self.assertIn('Ornstein-Uhlenbeck', source)
+    
+    def test_rolling_adf_check(self):
+        """Verify rolling ADF validation for cointegration monitoring"""
+        source = self._read_file('research_lab/backtest_pairs.py')
+        self.assertIn('_rolling_adf_check', source)
 
 
 class TestBacktestOptimizations(unittest.TestCase):

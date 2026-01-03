@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Engineering, Procurement and Construction (EPC)",
+    "sector_kpis": {
+      "kpi_1": "Order Book: \u20b95.10 Lakh Crore",
+      "kpi_2": "Order Inflow: \u20b93.03 Lakh Crore",
+      "kpi_3": "EBITDA Margin: 10.6%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:09:21.042201",
+  "_symbol": "LT"
+}

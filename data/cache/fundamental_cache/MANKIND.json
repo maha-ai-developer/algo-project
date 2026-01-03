@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 16.0,
+      "profit_growth_3yr_avg": 14.5,
+      "roe_latest": 20.8,
+      "roce_latest": 26.0,
+      "pe_ratio": 51.26,
+      "debt_to_equity": 0.54,
+      "beta": 0.28
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2350.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 41.28,
+      "net_debt_cr": 4870.0,
+      "tax_rate": 20.26
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "Mankind Pharma is led by the Juneja family with a strong reputation for disrupting the Indian pharma market through affordable pricing and extensive field force. The company has maintained high governance standards, with no major red flags reported. Despite a recent tax demand (common in the sector), management's focus on chronic therapies and consumer healthcare (Manforce, Prega News) demonstrates strategic acumen. High promoter holding (~73%) aligns interests with shareholders."
+    }
+  },
+  "_cached_at": "2025-12-31T11:51:41.684990",
+  "_symbol": "MANKIND"
+}

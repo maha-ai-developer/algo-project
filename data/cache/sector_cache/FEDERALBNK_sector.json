@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "BANK",
+    "niche_industry": "Private Sector Commercial Banking",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 1.83%",
+      "kpi_2": "Net Interest Margin: 3.06%",
+      "kpi_3": "CASA Ratio: 31.01%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:06:20.262156",
+  "_symbol": "FEDERALBNK"
+}

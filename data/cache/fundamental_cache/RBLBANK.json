@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 20.0,
+      "profit_growth_3yr_avg": 124.0,
+      "roe_latest": 4.8,
+      "roce_latest": 6.0,
+      "pe_ratio": 34.2,
+      "debt_to_equity": 0.94,
+      "beta": 0.73
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 319.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 61.7,
+      "net_debt_cr": 4387.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 7.0,
+      "reasoning": "Management has navigated a stabilization phase following the 2022 leadership transition. While a planned succession was announced in late 2025, the bank faces ongoing operational challenges including declining profits and asset quality stress in the microloan segment."
+    }
+  },
+  "_cached_at": "2025-12-31T12:05:05.163637",
+  "_symbol": "RBLBANK"
+}

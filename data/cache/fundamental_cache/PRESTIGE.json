@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": -14.27,
+      "profit_growth_3yr_avg": -41.83,
+      "roe_latest": 3.48,
+      "roce_latest": 7.66,
+      "pe_ratio": 91.29,
+      "debt_to_equity": 0.7,
+      "beta": 1.53
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2013.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 43.07,
+      "net_debt_cr": 9078.0,
+      "tax_rate": 18.4
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "Prestige Estates is led by a highly experienced management team (Irfan Razack) with a strong track record of delivery and transparency. The group successfully executed a massive portfolio deal with Blackstone, demonstrating agility and value creation. Recent disclosures and investor communication regarding the 157% jump in pre-sales for H1 FY26 further validate operational competence."
+    }
+  },
+  "_cached_at": "2025-12-31T12:03:42.324237",
+  "_symbol": "PRESTIGE"
+}

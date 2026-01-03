@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Electronic Manufacturing Services (EMS)",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 4.3%",
+      "kpi_2": "Revenue Growth (YoY): 120%",
+      "kpi_3": "Working Capital Cycle: 1 Day"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:05:47.489656",
+  "_symbol": "DIXON"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.0,
+      "profit_growth_3yr_avg": 23.0,
+      "roe_latest": 26.33,
+      "roce_latest": 30.3,
+      "pe_ratio": 21.63,
+      "debt_to_equity": 0.03,
+      "beta": 0.68
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 4170,
+      "growth_rate_projection": 8.5,
+      "shares_outstanding_cr": 20.01,
+      "net_debt_cr": -10076,
+      "tax_rate": 23.85
+    },
+    "qualitative": {
+      "management_integrity_score": 0.75,
+      "reasoning": "Hero MotoCorp is a market leader with a strong legacy and historically solid corporate governance. However, the score is slightly adjusted due to the August 2023 Enforcement Directorate (ED) searches at Chairman Pawan Munjal's residence related to a PMLA case involving a third-party service provider. Despite this, the company maintains a robust dividend payout and transparency in financial reporting."
+    }
+  },
+  "_cached_at": "2025-12-31T11:38:21.526202",
+  "_symbol": "HEROMOTOCO"
+}

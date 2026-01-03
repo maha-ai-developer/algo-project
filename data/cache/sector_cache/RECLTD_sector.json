@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Power Infrastructure Financing",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA Ratio: 2.71%",
+      "kpi_2": "Net Interest Margin (NIM): 3.30%",
+      "kpi_3": "Capital Adequacy Ratio (CRAR): 25.82%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:12:32.378705",
+  "_symbol": "RECLTD"
+}

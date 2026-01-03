@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 6.66,
+      "profit_growth_3yr_avg": -4.04,
+      "roe_latest": 10.6,
+      "roce_latest": 12.0,
+      "pe_ratio": 8.1,
+      "debt_to_equity": 0.44,
+      "beta": 0.26
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 52440,
+      "growth_rate_projection": 5.0,
+      "shares_outstanding_cr": 1258.03,
+      "net_debt_cr": 125750,
+      "tax_rate": 27.8
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "ONGC is a 'Maharatna' PSU, representing the highest tier of state-owned enterprises in India, ensuring high standards of reporting and governance. It is a strategic asset for India's energy security. However, as a PSU, it faces risks of government intervention in pricing and capital allocation (dividends/buybacks) which can impact minority shareholder returns. The management is professional but operates within the bureaucratic framework of the Government of India."
+    }
+  },
+  "_cached_at": "2025-12-31T11:58:30.464717",
+  "_symbol": "ONGC"
+}

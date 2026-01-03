@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Power Transmission and Distribution Equipment",
+    "sector_kpis": {
+      "kpi_1": "Order Backlog: INR 29,412 Cr",
+      "kpi_2": "Operational EBITDA Margin: 10.1%",
+      "kpi_3": "Order Inflow Growth: 209% (H1FY26 YoY)"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:12:13.949060",
+  "_symbol": "POWERINDIA"
+}

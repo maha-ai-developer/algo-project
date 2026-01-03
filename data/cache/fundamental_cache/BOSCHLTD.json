@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 15.36,
+      "profit_growth_3yr_avg": 18.26,
+      "roe_latest": 15.6,
+      "roce_latest": 21.25,
+      "pe_ratio": 39.15,
+      "debt_to_equity": 0.01,
+      "beta": 0.8
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1790,
+      "growth_rate_projection": 12,
+      "shares_outstanding_cr": 2.95,
+      "net_debt_cr": -5000,
+      "tax_rate": 25.2
+    },
+    "qualitative": {
+      "management_integrity_score": 90,
+      "reasoning": "Bosch Limited is the flagship Indian subsidiary of Robert Bosch GmbH, known for impeccable corporate governance and technological leadership in the automotive sector. The company maintains a pristine, debt-free balance sheet (significant cash and liquid investments reflected in negative net debt) and consistent dividend payouts. It is strategically pivoting towards EV and hydrogen technologies, ensuring future relevance."
+    }
+  },
+  "_cached_at": "2025-12-31T11:26:55.155882",
+  "_symbol": "BOSCHLTD"
+}

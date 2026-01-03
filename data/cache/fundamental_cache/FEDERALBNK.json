@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 24.5,
+      "profit_growth_3yr_avg": 28.95,
+      "roe_latest": 12.97,
+      "roce_latest": 12.76,
+      "pe_ratio": 15.45,
+      "debt_to_equity": 9.22,
+      "beta": 0.87
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -22982,
+      "growth_rate_projection": 16.6,
+      "shares_outstanding_cr": 245.54,
+      "net_debt_cr": 3368,
+      "tax_rate": 25.17
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "Federal Bank is an old private sector bank with a strong reputation for professional management and corporate governance. Unlike some peers, it has avoided major lending scams or leadership controversies in recent years. The board is diverse and complies with RBI's stringent fit-and-proper criteria."
+    }
+  },
+  "_cached_at": "2025-12-31T11:34:35.629882",
+  "_symbol": "FEDERALBNK"
+}

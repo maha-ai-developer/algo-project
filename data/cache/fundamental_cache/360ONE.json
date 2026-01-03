@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 20.81,
+      "profit_growth_3yr_avg": 24.18,
+      "roe_latest": 20.6,
+      "roce_latest": 14.9,
+      "pe_ratio": 42.9,
+      "debt_to_equity": 1.6,
+      "beta": 1.3
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 804.0,
+      "growth_rate_projection": 17.7,
+      "shares_outstanding_cr": 40.53,
+      "net_debt_cr": 9000.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "360 ONE WAM (formerly IIFL Wealth) is India's largest independent wealth manager for UHNIs, backed by marquee investors like Bain Capital and General Atlantic. The management (Karan Bhagat et al.) has successfully pivoted the business model towards Annual Recurring Revenue (ARR), which now constitutes a majority of revenues, enhancing stability. Financials show robust 3-year growth (Sales ~21%, Profit ~24%). The negative Operating Cash Flow reported in some periods is typical for wealth managers with lending arms (NBFC), as capital is deployed into loans; thus, Net Profit (approx \u20b9804 Cr FY24) is a more appropriate proxy for Free Cash Flow in valuation. Promoter pledge issues appear to have been resolved or are technical (recent reports cite 0% pledge in Sep 2025), though historic data showed high levels. The high P/E (40x+) reflects the premium for market leadership and growth longevity in the under-penetrated Indian wealth market."
+    }
+  },
+  "_cached_at": "2025-12-31T11:17:43.814265",
+  "_symbol": "360ONE"
+}

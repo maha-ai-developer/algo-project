@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "BFSI-focused Digital Transformation",
+    "sector_kpis": {
+      "kpi_1": "New TCV Wins: $528 Million (Q2 FY26)",
+      "kpi_2": "LTM Attrition: ~11.0%",
+      "kpi_3": "Revenue per Employee: \u20b94.94 Million"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:10:25.199149",
+  "_symbol": "MPHASIS"
+}

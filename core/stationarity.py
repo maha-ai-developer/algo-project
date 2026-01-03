@@ -210,3 +210,35 @@ def classify_stationarity(p_value: float) -> Tuple[str, int]:
         return "MARGINAL", 15
     else:
         return "POOR", 0
+
+
+def calculate_hurst_exponent(series: Union[np.ndarray, List[float]], max_lag: int = 20) -> float:
+    """
+    Calculate the Hurst Exponent to determine mean-reverting behavior.
+    
+    H < 0.5: Mean Reverting (Good for StatArb)
+    H = 0.5: Random Walk (Geometric Brownian Motion)
+    H > 0.5: Trending (Momentum)
+    
+    Args:
+        series: Time series data (prices or residuals)
+        max_lag: Maximum lag for R/S calculation
+        
+    Returns:
+        Hurst Exponent (float)
+    """
+    try:
+        ts = np.array(series)
+        if len(ts) < max_lag + 5:
+            return 0.5
+            
+        lags = range(2, max_lag)
+        tau = [np.sqrt(np.std(np.subtract(ts[lag:], ts[:-lag]))) for lag in lags]
+        
+        # Polyfit to finding slope (H)
+        poly = np.polyfit(np.log(lags), np.log(tau), 1)
+        return poly[0] * 2.0
+        
+    except Exception:
+        return 0.5
+

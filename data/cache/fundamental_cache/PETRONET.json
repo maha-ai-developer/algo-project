@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 5.7,
+      "profit_growth_3yr_avg": 5.4,
+      "roe_latest": 20.8,
+      "roce_latest": 25.4,
+      "pe_ratio": 11.4,
+      "debt_to_equity": 0.02,
+      "beta": 0.66
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2940,
+      "growth_rate_projection": 6.0,
+      "shares_outstanding_cr": 150,
+      "net_debt_cr": -7751,
+      "tax_rate": 25.7
+    },
+    "qualitative": {
+      "management_integrity_score": 85,
+      "reasoning": "Petronet LNG is a joint venture promoted by four leading Indian PSUs (GAIL, ONGC, IOCL, BPCL), ensuring high standards of corporate governance, stability, and transparency. The company has a consistent track record of dividend payments and operational efficiency."
+    }
+  },
+  "_cached_at": "2025-12-31T11:59:52.588121",
+  "_symbol": "PETRONET"
+}

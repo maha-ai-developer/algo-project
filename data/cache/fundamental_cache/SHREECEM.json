@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 8.03,
+      "profit_growth_3yr_avg": -20.45,
+      "roe_latest": 5.32,
+      "roce_latest": 6.81,
+      "pe_ratio": 55.15,
+      "debt_to_equity": 0.04,
+      "beta": 0.9
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1460,
+      "growth_rate_projection": 0.08,
+      "shares_outstanding_cr": 3.61,
+      "net_debt_cr": -6937,
+      "tax_rate": 14.39
+    },
+    "qualitative": {
+      "management_integrity_score": 3,
+      "reasoning": "Management integrity is a significant concern due to recent serious allegations. Reports from mid-2023 and early 2024 indicate Income Tax department searches claiming alleged tax evasion to the tune of Rs 23,000 crore (approx $2.8B) and falsified bills related to waste management plants. While the company has denied these claims and is cooperating, the magnitude of the alleged fraud and the resulting regulatory scrutiny severely impact the integrity score."
+    }
+  },
+  "_cached_at": "2025-12-31T12:06:58.590192",
+  "_symbol": "SHREECEM"
+}

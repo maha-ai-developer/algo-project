@@ -121,8 +121,7 @@ class PairStrategy:
         if latest_y <= 0 or latest_x <= 0 or pd.isna(latest_y) or pd.isna(latest_x):
             return {'signal': 'WAIT', 'health': 'YELLOW', 'zscore': 0.0}
         
-        # DEBUG
-        print(f"      🔍 DEBUG: Y={latest_y:.2f} | X={latest_x:.2f} (used in Z-calc)")
+        # Z-score calculation uses latest_y and latest_x
         
         # --- Calibrate on first run ---
         if not self._calibrated:
@@ -218,8 +217,8 @@ class PairStrategy:
                 return 'EXIT'
         
         # HOLD or no signal
-        if abs(z) < 0.5:
-            return 'EXIT'  # Near mean
+        if abs(z) < 1.0:
+            return 'EXIT'  # Near mean (PDF: Exit at ±1.0 SD)
         
         return 'WAIT'
 

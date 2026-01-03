@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 21.2,
+      "profit_growth_3yr_avg": 30.71,
+      "roe_latest": 17.83,
+      "roce_latest": 14.02,
+      "pe_ratio": 28.05,
+      "debt_to_equity": 0.85,
+      "beta": 1.46
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 9320,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 230.4,
+      "net_debt_cr": 46326,
+      "tax_rate": 15.0
+    },
+    "qualitative": {
+      "management_integrity_score": 6.0,
+      "reasoning": "Adani Ports is the dominant market leader in India's port sector with strong operational execution and robust cash flows. Recently, the company has received upgrades in ESG ratings (CDP A- score) and maintained stable credit outlooks, signaling improved governance perception. However, the company carries a 'Management Integrity Score' of 6 due to lingering historic concerns regarding group-level leverage and governance controversies (e.g., Hindenburg report), despite proactive debt reduction and transparency initiatives."
+    }
+  },
+  "_cached_at": "2025-12-31T11:18:53.545963",
+  "_symbol": "ADANIPORTS"
+}

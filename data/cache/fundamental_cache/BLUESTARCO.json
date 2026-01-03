@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 28.04,
+      "profit_growth_3yr_avg": 55.99,
+      "roe_latest": 20.6,
+      "roce_latest": 26.2,
+      "pe_ratio": 65.4,
+      "debt_to_equity": 0.07,
+      "beta": -0.09
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 290.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 20.56,
+      "net_debt_cr": -640.35,
+      "tax_rate": 24.5
+    },
+    "qualitative": {
+      "management_integrity_score": 9,
+      "reasoning": "Blue Star is professionally managed by the Advani family with a reputation for high corporate governance standards. The company maintains transparency in its financial disclosures and has robust internal control systems. Leadership changes in audit committees have been proactive to ensure compliance, and the company has a strong code of conduct applicable to all stakeholders."
+    }
+  },
+  "_cached_at": "2025-12-31T11:26:39.137547",
+  "_symbol": "BLUESTARCO"
+}

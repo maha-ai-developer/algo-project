@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 19.17,
+      "profit_growth_3yr_avg": 5.84,
+      "roe_latest": 13.91,
+      "roce_latest": 11.79,
+      "pe_ratio": 42.7,
+      "debt_to_equity": 3.3,
+      "beta": 0.9
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -2372,
+      "growth_rate_projection": 16.0,
+      "shares_outstanding_cr": 95.16,
+      "net_debt_cr": 45892,
+      "tax_rate": 25.7
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "SBI Cards is a subsidiary of the State Bank of India (SBI), ensuring high management integrity and stability. It is the second-largest credit card issuer in India, benefiting from a strong parentage and wide distribution network. While the company has shown robust sales growth (~19% CAGR), profit growth has been tempered (~6%) by rising credit costs and operating expenses. The negative Free Cash Flow is characteristic of a growing lending institution where capital is deployed to expand the loan book (receivables). The company faces short-term headwinds from slightly elevated NPAs (Net NPA ~1.42%) and cost of funds, but the long-term structural story remains intact due to low credit card penetration in India."
+    }
+  },
+  "_cached_at": "2025-12-31T12:06:17.613336",
+  "_symbol": "SBICARD"
+}

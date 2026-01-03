@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Two-Wheelers (2W)",
+    "sector_kpis": {
+      "kpi_1": "Volume Growth: 5.5% (FY24)",
+      "kpi_2": "EBITDA Margin: 14.1%",
+      "kpi_3": "2W Market Share: 32.2%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:07:01.010238",
+  "_symbol": "HEROMOTOCO"
+}

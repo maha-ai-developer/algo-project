@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 33.2,
+      "profit_growth_3yr_avg": 28.0,
+      "roe_latest": 32.7,
+      "roce_latest": 42.0,
+      "pe_ratio": 63.4,
+      "debt_to_equity": 0.0,
+      "beta": 0.26
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 389.0,
+      "growth_rate_projection": 18.0,
+      "shares_outstanding_cr": 20.9,
+      "net_debt_cr": -960.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "CDSL is a professionally managed institution backed by BSE and leading banks, operating under strict SEBI regulations. It functions as a duopoly in the Indian depository market with high governance standards, transparency, and no significant history of management-related controversies or fraud."
+    }
+  },
+  "_cached_at": "2025-12-31T11:28:36.000335",
+  "_symbol": "CDSL"
+}

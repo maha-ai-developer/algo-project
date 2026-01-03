@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Capital Market Infrastructure (Depository)",
+    "sector_kpis": {
+      "kpi_1": "Demat Market Share (Vol): ~79%",
+      "kpi_2": "EBITDA Margin: ~60%",
+      "kpi_3": "Total Demat Accounts: 14.65 Crore"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:40:33.399438",
+  "_symbol": "CDSL"
+}

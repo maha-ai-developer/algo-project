@@ -45,7 +45,7 @@ class SectorCache:
     """
     
     def __init__(self, cache_dir: Optional[str] = None):
-        self.cache_dir = cache_dir or os.path.join(config.DATA_DIR, "sector_cache")
+        self.cache_dir = cache_dir or os.path.join(config.CACHE_DIR, "sector_cache")
         os.makedirs(self.cache_dir, exist_ok=True)
         self._lock = threading.Lock()
     
@@ -104,7 +104,7 @@ class SectorProgressManager:
     """Saves intermediate progress for crash recovery."""
     
     def __init__(self, progress_file: Optional[str] = None):
-        self.progress_file = progress_file or os.path.join(config.DATA_DIR, "sector_progress.json")
+        self.progress_file = progress_file or os.path.join(config.CACHE_DIR, "sector_progress.json")
         self._lock = threading.Lock()
         self.results: List[Dict] = []
         self.processed: set = set()

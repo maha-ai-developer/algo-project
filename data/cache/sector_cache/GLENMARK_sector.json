@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "PHARMA",
+    "niche_industry": "Specialty & Generic Formulations",
+    "sector_kpis": {
+      "kpi_1": "EBITDA Margin: 17.6%",
+      "kpi_2": "R&D Expenditure to Sales: 9.2%",
+      "kpi_3": "India Market Share: 2.3% (Rank 13)"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:06:34.390264",
+  "_symbol": "GLENMARK"
+}

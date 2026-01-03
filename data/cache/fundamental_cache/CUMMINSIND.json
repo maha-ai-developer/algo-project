@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 19.0,
+      "profit_growth_3yr_avg": 29.0,
+      "roe_latest": 28.2,
+      "roce_latest": 36.6,
+      "pe_ratio": 53.4,
+      "debt_to_equity": 0.0,
+      "beta": 1.13
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1440.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 27.72,
+      "net_debt_cr": -1760.5,
+      "tax_rate": 22.9
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "Cummins India is a subsidiary of Cummins Inc. (USA), known for high corporate governance standards. The company has a clean track record, strong parentage (51% stake), and consistent dividend payouts, indicating high management integrity."
+    }
+  },
+  "_cached_at": "2025-12-31T11:31:16.360979",
+  "_symbol": "CUMMINSIND"
+}

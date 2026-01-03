@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Asset Management",
+    "sector_kpis": {
+      "kpi_1": "Equity AUM Market Share: 12.8%",
+      "kpi_2": "Operating Margin: 79.9%",
+      "kpi_3": "Monthly SIP Inflow: INR 3,820 Cr"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:06:52.997688",
+  "_symbol": "HDFCAMC"
+}

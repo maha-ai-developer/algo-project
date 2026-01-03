@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Commercial Vehicles (MHCV & LCV)",
+    "sector_kpis": {
+      "kpi_1": "MHCV Market Share: 31% (H1 FY26)",
+      "kpi_2": "EBITDA Margin: 12.1% (Q2 FY26)",
+      "kpi_3": "Volume Growth: MHCV +3% YoY (Q2 FY26)"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:35:14.934113",
+  "_symbol": "ASHOKLEY"
+}

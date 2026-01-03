@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "METAL",
+    "niche_industry": "Aluminum Smelting and Downstream Rolling",
+    "sector_kpis": {
+      "kpi_1": "Novelis Adjusted EBITDA/Tonne: $489",
+      "kpi_2": "India Aluminium Upstream EBITDA/Tonne: $967",
+      "kpi_3": "Consolidated Net Debt/EBITDA: 1.21x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:07:05.725322",
+  "_symbol": "HINDALCO"
+}

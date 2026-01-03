@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "Core Banking Product Software & SaaS",
+    "sector_kpis": {
+      "kpi_1": "Attrition Rate: 12.0% (TTM)",
+      "kpi_2": "License and Cloud Signings (TCV): $137M+",
+      "kpi_3": "Revenue per Employee: \u20b98.79M"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:10:58.991740",
+  "_symbol": "OFSS"
+}

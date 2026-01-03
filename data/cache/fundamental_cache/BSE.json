@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 43.8,
+      "profit_growth_3yr_avg": 78.65,
+      "roe_latest": 36.0,
+      "roce_latest": 46.6,
+      "pe_ratio": 58.5,
+      "debt_to_equity": 0.0,
+      "beta": 1.05
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1812.0,
+      "growth_rate_projection": 25.0,
+      "shares_outstanding_cr": 41.18,
+      "net_debt_cr": -4706.78,
+      "tax_rate": 25.17
+    },
+    "qualitative": {
+      "management_integrity_score": 7.0,
+      "reasoning": "BSE Ltd is a highly regulated market infrastructure institution with a long history. Management quality is generally considered high, but a recent SEBI penalty (June 2025) of Rs 25 Lakh regarding 'laxity' in data dissemination and client code modification supervision highlights some internal control weaknesses. The company has zero debt and strong return ratios, reinforcing operational efficiency."
+    }
+  },
+  "_cached_at": "2025-12-31T11:28:04.228816",
+  "_symbol": "BSE"
+}

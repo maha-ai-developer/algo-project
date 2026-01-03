@@ -58,7 +58,8 @@ from .error_ratio import (
 from .stationarity import (
     perform_adf_test,
     perform_adf_test_statsmodels,
-    classify_stationarity
+    classify_stationarity,
+    calculate_hurst_exponent
 )
 
 from .pair_analyzer import (
@@ -143,6 +144,7 @@ __all__ = [
     'perform_adf_test',
     'perform_adf_test_statsmodels',
     'classify_stationarity',
+    'calculate_hurst_exponent',
     # Pair Analyzer
     'analyze_pair',
     'analyze_pair_from_prices',

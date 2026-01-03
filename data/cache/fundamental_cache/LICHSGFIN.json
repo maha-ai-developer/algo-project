@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.1,
+      "profit_growth_3yr_avg": 33.5,
+      "roe_latest": 16.2,
+      "roce_latest": 8.9,
+      "pe_ratio": 5.4,
+      "debt_to_equity": 7.44,
+      "beta": 0.79
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -16830,
+      "growth_rate_projection": 12,
+      "shares_outstanding_cr": 55.0,
+      "net_debt_cr": 260663,
+      "tax_rate": 21.3
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "LIC Housing Finance is a subsidiary of Life Insurance Corporation of India (LIC), a trusted state-owned insurance giant, ensuring high management stability and integrity. The company maintains transparent financial reporting and has navigated industry cycles effectively, although being a PSU, it may exhibit more conservative operational aggression compared to private peers. Recent improvements in asset quality and stable margins reinforce the management's capability."
+    }
+  },
+  "_cached_at": "2025-12-31T11:49:17.512872",
+  "_symbol": "LICHSGFIN"
+}

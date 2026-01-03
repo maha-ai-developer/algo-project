@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 4.9,
+      "profit_growth_3yr_avg": -0.7,
+      "roe_latest": 17.0,
+      "roce_latest": 20.2,
+      "pe_ratio": 48.6,
+      "debt_to_equity": 0.1,
+      "beta": 0.25
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1437,
+      "growth_rate_projection": 11.0,
+      "shares_outstanding_cr": 177.21,
+      "net_debt_cr": -3054,
+      "tax_rate": 22.7
+    },
+    "qualitative": {
+      "management_integrity_score": 8.0,
+      "reasoning": "Dabur India maintains a strong reputation for corporate governance with a 'Leader' ESG rating (72-77) and professional management. While the promoter Burman family has faced external controversies (e.g., Religare open offer battle, Mahadev app allegations), these issues have largely remained outside Dabur India's direct operational governance."
+    }
+  },
+  "_cached_at": "2025-12-31T11:31:20.465492",
+  "_symbol": "DABUR"
+}

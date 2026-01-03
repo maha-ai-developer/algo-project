@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 18.79,
+      "profit_growth_3yr_avg": 89.58,
+      "roe_latest": 9.8,
+      "roce_latest": 12.1,
+      "pe_ratio": 66.3,
+      "debt_to_equity": 0.2,
+      "beta": 0.89
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 497,
+      "growth_rate_projection": 14.5,
+      "shares_outstanding_cr": 75.5,
+      "net_debt_cr": 2219,
+      "tax_rate": 19.6
+    },
+    "qualitative": {
+      "management_integrity_score": 8,
+      "reasoning": "Since the acquisition by IHH Healthcare Berhad in 2018, Fortis has seen a significant turnaround in governance and professionalism, effectively distancing itself from the legacy issues and fraud allegations associated with the previous promoters (Singh brothers). The current management is backed by a reputable global healthcare group."
+    }
+  },
+  "_cached_at": "2025-12-31T11:35:19.093479",
+  "_symbol": "FORTIS"
+}

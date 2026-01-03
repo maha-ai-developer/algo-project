@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 53.73,
+      "profit_growth_3yr_avg": 86.4,
+      "roe_latest": 36.39,
+      "roce_latest": 49.1,
+      "pe_ratio": 52.35,
+      "debt_to_equity": 0.18,
+      "beta": 1.4
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 640,
+      "growth_rate_projection": 55,
+      "shares_outstanding_cr": 6.07,
+      "net_debt_cr": 200,
+      "tax_rate": 25.3
+    },
+    "qualitative": {
+      "management_integrity_score": 0.9,
+      "reasoning": "Dixon Technologies exhibits high management integrity, led by Atul Lall, with a strong track record of corporate governance and execution. The company is a primary beneficiary of India's PLI schemes, demonstrating consistent delivery on capacity expansion and new vertical integration (mobile, IT hardware, refrigerators) without significant regulatory or governance red flags. Financial reporting is transparent, and the company maintains healthy return ratios despite capital-intensive expansion."
+    }
+  },
+  "_cached_at": "2025-12-31T11:32:21.838991",
+  "_symbol": "DIXON"
+}

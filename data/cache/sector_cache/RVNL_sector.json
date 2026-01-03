@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "INFRA",
+    "niche_industry": "Railway Infrastructure Engineering (EPC)",
+    "sector_kpis": {
+      "kpi_1": "Order Book: \u20b990,000 Cr",
+      "kpi_2": "EBITDA Margin: 4.2%",
+      "kpi_3": "Order-to-Sales Ratio: 4.1x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:12:47.538780",
+  "_symbol": "RVNL"
+}

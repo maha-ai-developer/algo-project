@@ -128,7 +128,9 @@ class GeminiAgent:
                 )
             )
             return json.loads(response.text)
-        except: return None
+        except Exception as e:
+            # Log error type for debugging (don't print every time - too noisy)
+            return None
 
     def monitor_corporate_actions(self, symbols: list):
         """
@@ -279,3 +281,129 @@ class GeminiAgent:
         except Exception as e:
             return {"symbol": symbol, "error": str(e), "recommendation": "MONITOR"}
 
+    def analyze_system_health(self, context: dict) -> dict:
+        """
+        AI ADVISOR: Analyzes entire StatArb system state and provides recommendations.
+        
+        This method provides system-wide oversight by analyzing:
+        - Pair candidates and quality scores
+        - Backtest results (Sharpe, drawdown, win rate)
+        - Fundamental report summary
+        - Sector distribution
+        - Risk metrics
+        
+        Args:
+            context: Dictionary containing system state data
+            
+        Returns:
+            AI analysis with health status, opportunities, risks, and suggestions
+        """
+        schema = {
+            "type": "OBJECT",
+            "properties": {
+                "system_health": {
+                    "type": "STRING",
+                    "enum": ["GREEN", "YELLOW", "RED"],
+                    "description": "Overall system health status"
+                },
+                "health_reasoning": {
+                    "type": "STRING",
+                    "description": "Brief explanation of health status"
+                },
+                "top_opportunities": {
+                    "type": "ARRAY",
+                    "items": {
+                        "type": "OBJECT",
+                        "properties": {
+                            "pair": {"type": "STRING"},
+                            "action": {"type": "STRING"},
+                            "reasoning": {"type": "STRING"},
+                            "priority": {"type": "STRING", "enum": ["HIGH", "MEDIUM", "LOW"]}
+                        },
+                        "required": ["pair", "action", "reasoning"]
+                    },
+                    "description": "Top 3 trading opportunities"
+                },
+                "risk_alerts": {
+                    "type": "ARRAY",
+                    "items": {
+                        "type": "OBJECT",
+                        "properties": {
+                            "type": {"type": "STRING"},
+                            "description": {"type": "STRING"},
+                            "severity": {"type": "STRING", "enum": ["CRITICAL", "WARNING", "INFO"]}
+                        },
+                        "required": ["type", "description", "severity"]
+                    },
+                    "description": "Risk alerts and warnings"
+                },
+                "suggestions": {
+                    "type": "ARRAY",
+                    "items": {"type": "STRING"},
+                    "description": "Actionable suggestions for the trader"
+                },
+                "market_outlook": {
+                    "type": "STRING",
+                    "description": "Brief market context from recent news"
+                }
+            },
+            "required": ["system_health", "health_reasoning", "top_opportunities", "risk_alerts", "suggestions"]
+        }
+        
+        # Format context for prompt
+        pairs_summary = context.get('pairs_summary', 'No pair data available')
+        backtest_summary = context.get('backtest_summary', 'No backtest data available')
+        fundamental_summary = context.get('fundamental_summary', 'No fundamental data available')
+        sector_summary = context.get('sector_summary', 'No sector data available')
+        
+        prompt = f"""
+        You are an AI Trading Advisor for a Statistical Arbitrage (Pair Trading) system on Indian NSE stocks.
+        
+        SYSTEM STATE:
+        
+        1. PAIR CANDIDATES:
+        {pairs_summary}
+        
+        2. BACKTEST RESULTS:
+        {backtest_summary}
+        
+        3. FUNDAMENTAL HEALTH:
+        {fundamental_summary}
+        
+        4. SECTOR DISTRIBUTION:
+        {sector_summary}
+        
+        TASK:
+        Analyze the entire system and provide:
+        1. Overall HEALTH STATUS (GREEN/YELLOW/RED)
+        2. TOP 3 TRADING OPPORTUNITIES with reasoning
+        3. RISK ALERTS that need attention
+        4. ACTIONABLE SUGGESTIONS for improvement
+        5. Brief MARKET OUTLOOK from current Indian market news
+        
+        Be specific and actionable. Reference actual pair names and metrics where possible.
+        Focus on pairs with high Z-scores, good Sharpe ratios, and strong fundamentals.
+        """
+        
+        try:
+            response = self.client.models.generate_content(
+                model=self.model_id,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    tools=[types.Tool(google_search=types.GoogleSearch())],
+                    response_mime_type="application/json",
+                    response_schema=schema
+                )
+            )
+            result = json.loads(response.text)
+            result['_timestamp'] = __import__('datetime').datetime.now().isoformat()
+            return result
+        except Exception as e:
+            return {
+                "system_health": "YELLOW",
+                "health_reasoning": f"AI analysis failed: {str(e)}",
+                "top_opportunities": [],
+                "risk_alerts": [{"type": "SYSTEM", "description": f"AI error: {e}", "severity": "WARNING"}],
+                "suggestions": ["Check API connectivity", "Retry analysis"],
+                "error": str(e)
+            }

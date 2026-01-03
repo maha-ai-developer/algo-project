@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "AUTO",
+    "niche_industry": "Lead-acid and Lithium-ion Storage Batteries",
+    "sector_kpis": {
+      "kpi_1": "Volume Growth: 9% YoY",
+      "kpi_2": "EBITDA Margin: 12.8%",
+      "kpi_3": "Market Share (Organized): 60%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:06:08.379128",
+  "_symbol": "EXIDEIND"
+}

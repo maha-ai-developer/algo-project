@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "METAL",
+    "niche_industry": "Zinc-Lead-Silver Mining and Smelting",
+    "sector_kpis": {
+      "kpi_1": "Zinc Cost of Production: $1,010/MT",
+      "kpi_2": "EBITDA Margin: 49.4%",
+      "kpi_3": "Mined Metal Production: 1.0 - 1.1 Mtpa"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:07:19.445712",
+  "_symbol": "HINDZINC"
+}

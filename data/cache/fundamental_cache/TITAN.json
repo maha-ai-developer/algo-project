@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 26.32,
+      "profit_growth_3yr_avg": 15.22,
+      "roe_latest": 31.92,
+      "roce_latest": 20.99,
+      "pe_ratio": 85.47,
+      "debt_to_equity": 1.79,
+      "beta": 1.01
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 1050,
+      "growth_rate_projection": 20.5,
+      "shares_outstanding_cr": 88.78,
+      "net_debt_cr": 19924,
+      "tax_rate": 26.42
+    },
+    "qualitative": {
+      "management_integrity_score": 10,
+      "reasoning": "Titan Company is a part of the Tata Group, which is widely recognized for its exemplary corporate governance, ethical business practices, and high management integrity. The company maintains transparent financial disclosures and has a strong professional leadership team."
+    }
+  },
+  "_cached_at": "2025-12-31T12:12:11.423192",
+  "_symbol": "TITAN"
+}

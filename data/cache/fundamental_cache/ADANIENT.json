@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.1,
+      "profit_growth_3yr_avg": 78.26,
+      "roe_latest": 9.82,
+      "roce_latest": 11.4,
+      "pe_ratio": 104.0,
+      "debt_to_equity": 2.03,
+      "beta": 1.6
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -12054.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 129.27,
+      "net_debt_cr": 80000.0,
+      "tax_rate": 28.3
+    },
+    "qualitative": {
+      "management_integrity_score": 2.0,
+      "reasoning": "Management integrity is under severe scrutiny following a US Department of Justice indictment in November 2024 charging top executives, including the Chairman, with bribery and fraud. This follows the Hindenburg Research report alleging stock manipulation. Although SEBI provided a clean chit on some local regulatory matters, the international legal challenges and allegations of accounting fraud present extreme governance risks."
+    }
+  },
+  "_cached_at": "2025-12-31T11:18:24.057614",
+  "_symbol": "ADANIENT"
+}

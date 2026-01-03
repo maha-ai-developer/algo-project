@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 17.8,
+      "profit_growth_3yr_avg": 42.8,
+      "roe_latest": 13.89,
+      "roce_latest": 14.61,
+      "pe_ratio": 11.2,
+      "debt_to_equity": 0.55,
+      "beta": 1.33
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 9780.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 222.0,
+      "net_debt_cr": 26500.0,
+      "tax_rate": 27.5
+    },
+    "qualitative": {
+      "management_integrity_score": 6.0,
+      "reasoning": "Hindalco is a flagship company of the reputable Aditya Birla Group, generally known for strong corporate governance and professional management. However, the score is tempered by recent legal developments, including a CBI court summoning the company and executives in April 2025 regarding alleged irregularities in coal block allocations from over a decade ago. While the group has a strong track record, these recurring regulatory challenges present a governance risk factor."
+    }
+  },
+  "_cached_at": "2025-12-31T11:39:12.316489",
+  "_symbol": "HINDALCO"
+}

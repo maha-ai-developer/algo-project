@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 75.66,
+      "profit_growth_3yr_avg": 48.38,
+      "roe_latest": 1.23,
+      "roce_latest": 1.47,
+      "pe_ratio": 117.5,
+      "debt_to_equity": 0.08,
+      "beta": 0.96
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -678.36,
+      "growth_rate_projection": 25.0,
+      "shares_outstanding_cr": 635.31,
+      "net_debt_cr": -72858.0,
+      "tax_rate": 17.44
+    },
+    "qualitative": {
+      "management_integrity_score": 9.0,
+      "reasoning": "The company is part of the Reliance Industries group, led by Mukesh Ambani, ensuring high management pedigree and strong corporate governance standards. As a newly demerged entity, it benefits from the parent group's reputation and massive capital buffer (net cash positive)."
+    }
+  },
+  "_cached_at": "2025-12-31T11:45:47.376943",
+  "_symbol": "JIOFIN"
+}

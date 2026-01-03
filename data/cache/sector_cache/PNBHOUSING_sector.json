@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Housing Finance",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 1.04%",
+      "kpi_2": "NIM: 3.67%",
+      "kpi_3": "CRAR: 29.13%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:12:00.722096",
+  "_symbol": "PNBHOUSING"
+}

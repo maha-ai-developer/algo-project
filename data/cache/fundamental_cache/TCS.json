@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 10.25,
+      "profit_growth_3yr_avg": 7.96,
+      "roe_latest": 50.3,
+      "roce_latest": 64.6,
+      "pe_ratio": 23.76,
+      "debt_to_equity": 0.0,
+      "beta": 0.5
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 40400.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 361.8,
+      "net_debt_cr": -31480.0,
+      "tax_rate": 25.6
+    },
+    "qualitative": {
+      "management_integrity_score": 10.0,
+      "reasoning": "TCS is the crown jewel of the Tata Group, renowned globally for its impeccable corporate governance, ethical leadership, and shareholder-friendly policies including consistent buybacks and dividends."
+    }
+  },
+  "_cached_at": "2025-12-31T12:11:22.020548",
+  "_symbol": "TCS"
+}

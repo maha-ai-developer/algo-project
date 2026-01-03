@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Premium Innerwear & Athleisure",
+    "sector_kpis": {
+      "kpi_1": "Inventory Turnover: 5.75x",
+      "kpi_2": "SSSG: 6.7%",
+      "kpi_3": "EBITDA Margin: 22.6%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:11:20.291232",
+  "_symbol": "PAGEIND"
+}

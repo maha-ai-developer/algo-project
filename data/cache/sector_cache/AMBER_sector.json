@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "CONSUMER",
+    "niche_industry": "Electronics Manufacturing Services (EMS) / Room Air Conditioners (RAC)",
+    "sector_kpis": {
+      "kpi_1": "Revenue Growth (H1 FY26): 24.7%",
+      "kpi_2": "EBITDA Margin (Q2 FY26): 5.5%",
+      "kpi_3": "RAC Market Share: ~27%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:33:33.869534",
+  "_symbol": "AMBER"
+}

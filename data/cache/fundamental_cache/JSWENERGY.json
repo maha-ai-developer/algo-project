@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 17.79,
+      "profit_growth_3yr_avg": 28.92,
+      "roe_latest": 8.3,
+      "roce_latest": 8.7,
+      "pe_ratio": 41.33,
+      "debt_to_equity": 2.19,
+      "beta": 1.31
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -1799,
+      "growth_rate_projection": 25,
+      "shares_outstanding_cr": 174.44,
+      "net_debt_cr": 26636,
+      "tax_rate": 20.41
+    },
+    "qualitative": {
+      "management_integrity_score": 0.85,
+      "reasoning": "Part of the reputable JSW Group with a strong track record of execution and project delivery. Management has set ambitious targets to reach 20GW capacity by 2030. While there was a minor administrative warning from SEBI regarding insider trading in late 2024, it had no operational impact. The company demonstrates robust governance with professional management and clear strategic visibility."
+    }
+  },
+  "_cached_at": "2025-12-31T11:46:24.446966",
+  "_symbol": "JSWENERGY"
+}

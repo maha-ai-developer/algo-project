@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "BANK",
+    "niche_industry": "Retail-Focused Private Banking",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 1.94%",
+      "kpi_2": "NIM: 6.04%",
+      "kpi_3": "CASA Ratio: 47.7%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:07:35.036517",
+  "_symbol": "IDFCFIRSTB"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 9.4,
+      "profit_growth_3yr_avg": -1.7,
+      "roe_latest": 17.0,
+      "roce_latest": 20.7,
+      "pe_ratio": 34.0,
+      "debt_to_equity": 0.09,
+      "beta": 0.6
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 759.0,
+      "growth_rate_projection": 12.0,
+      "shares_outstanding_cr": 64.39,
+      "net_debt_cr": -389.0,
+      "tax_rate": 25.0
+    },
+    "qualitative": {
+      "management_integrity_score": 90.0,
+      "reasoning": "Crompton Greaves Consumer Electricals is a professionally managed company with 0% promoter holding and significant institutional ownership (approx 76-83%). It has received high corporate governance scores (e.g., 89.2/100 from SES) and has no reported major governance issues or red flags in recent years. The board is diverse and independent."
+    }
+  },
+  "_cached_at": "2025-12-31T11:30:41.135636",
+  "_symbol": "CROMPTON"
+}

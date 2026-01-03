@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "IT",
+    "niche_industry": "IT Services & Telecom Solutions",
+    "sector_kpis": {
+      "kpi_1": "Attrition Rate (LTM): 11.2%",
+      "kpi_2": "New Deal Wins (TCV): $745M",
+      "kpi_3": "Utilization Rate: 85.6%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:14:14.371709",
+  "_symbol": "TECHM"
+}

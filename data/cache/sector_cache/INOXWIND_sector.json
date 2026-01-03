@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Wind Turbine Generator Manufacturing & EPC",
+    "sector_kpis": {
+      "kpi_1": "Order Book: 3.3 GW",
+      "kpi_2": "Quarterly Execution: 140 MW",
+      "kpi_3": "EBITDA Margin: 20%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:08:07.163703",
+  "_symbol": "INOXWIND"
+}

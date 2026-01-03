@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 21.35,
+      "profit_growth_3yr_avg": 82.68,
+      "roe_latest": 25.39,
+      "roce_latest": 15.37,
+      "pe_ratio": 22.36,
+      "debt_to_equity": 4.08,
+      "beta": 1.1
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 2010.0,
+      "growth_rate_projection": 15.0,
+      "shares_outstanding_cr": 587.0,
+      "net_debt_cr": -243.0,
+      "tax_rate": 25.7
+    },
+    "qualitative": {
+      "management_integrity_score": 6.5,
+      "reasoning": "Ashok Leyland is the flagship company of the Hinduja Group, a well-established conglomerate with a long track record. However, the integrity score is constrained by a relatively high level of promoter pledging (approx. 41.2%), which is considered a governance risk factor. While the company has shown strong recovery and operational efficiency, the pledging issue and the complexity of its finance arm's consolidation warrant a cautious score."
+    }
+  },
+  "_cached_at": "2025-12-31T11:21:57.838896",
+  "_symbol": "ASHOKLEY"
+}

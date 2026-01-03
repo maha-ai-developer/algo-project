@@ -1,15 +1,297 @@
 {
   "trackers": {
-    "AXISBANK-SBIN": {
+    "MUTHOOTFIN-LTF": {
       "config": {
-        "stock_y": "AXISBANK",
-        "stock_x": "SBIN",
+        "stock_y": "MUTHOOTFIN",
+        "stock_x": "LTF",
+        "sector": "FINANCE",
+        "beta": 9.4171,
+        "intercept": 754.6508,
+        "sigma": 140.833,
+        "lot_size_y": 275,
+        "lot_size_x": 2250,
+        "adf_value": 0.0206
+      },
+      "position": {
+        "is_open": false,
+        "position_type": "",
+        "entry_date": "",
+        "entry_time": "",
+        "entry_price_y": 0.0,
+        "entry_price_x": 0.0,
+        "entry_z_score": 0.0,
+        "lots_y": 0,
+        "lots_x": 0,
+        "current_price_y": 3892.5,
+        "current_price_x": 320.15,
+        "current_z_score": 0.8731237352041089,
+        "pnl_y": 0.0,
+        "pnl_x": 0.0,
+        "total_pnl": 0.0
+      },
+      "logs": [
+        {
+          "date": "2026-01-02",
+          "time": "13:00",
+          "fut_x": 320.5,
+          "fut_y": 3894.6,
+          "z_score": 0.8646
+        },
+        {
+          "date": "2026-01-02",
+          "time": "13:01",
+          "fut_x": 320.15,
+          "fut_y": 3892.5,
+          "z_score": 0.8731
+        }
+      ],
+      "last_update": "2026-01-02T13:01:29.180187"
+    },
+    "BAJAJ-AUTO-HEROMOTOCO": {
+      "config": {
+        "stock_y": "BAJAJ-AUTO",
+        "stock_x": "HEROMOTOCO",
+        "sector": "AUTO",
+        "beta": 0.5582,
+        "intercept": 5867.337,
+        "sigma": 269.094,
+        "lot_size_y": 75,
+        "lot_size_x": 150,
+        "adf_value": 0.002
+      },
+      "position": {
+        "is_open": false,
+        "position_type": "",
+        "entry_date": "",
+        "entry_time": "",
+        "entry_price_y": 0.0,
+        "entry_price_x": 0.0,
+        "entry_z_score": 0.0,
+        "lots_y": 0,
+        "lots_x": 0,
+        "current_price_y": 9603.5,
+        "current_price_x": 5986.5,
+        "current_z_score": 1.4660256267326663,
+        "pnl_y": 0.0,
+        "pnl_x": 0.0,
+        "total_pnl": 0.0
+      },
+      "logs": [
+        {
+          "date": "2026-01-02",
+          "time": "13:00",
+          "fut_x": 5987.5,
+          "fut_y": 9597,
+          "z_score": 1.4398
+        },
+        {
+          "date": "2026-01-02",
+          "time": "13:01",
+          "fut_x": 5986.5,
+          "fut_y": 9603.5,
+          "z_score": 1.466
+        }
+      ],
+      "last_update": "2026-01-02T13:01:29.397747"
+    },
+    "MARUTI-HEROMOTOCO": {
+      "config": {
+        "stock_y": "MARUTI",
+        "stock_x": "HEROMOTOCO",
+        "sector": "AUTO",
+        "beta": 2.1666,
+        "intercept": 3548.713,
+        "sigma": 520.7656,
+        "lot_size_y": 50,
+        "lot_size_x": 150,
+        "adf_value": 0.0421
+      },
+      "position": {
+        "is_open": false,
+        "position_type": "",
+        "entry_date": "",
+        "entry_time": "",
+        "entry_price_y": 0.0,
+        "entry_price_x": 0.0,
+        "entry_z_score": 0.0,
+        "lots_y": 0,
+        "lots_x": 0,
+        "current_price_y": 17027,
+        "current_price_x": 5986.5,
+        "current_z_score": 0.9753641561577782,
+        "pnl_y": 0.0,
+        "pnl_x": 0.0,
+        "total_pnl": 0.0
+      },
+      "logs": [
+        {
+          "date": "2026-01-02",
+          "time": "13:00",
+          "fut_x": 5987.5,
+          "fut_y": 17032,
+          "z_score": 0.9808
+        },
+        {
+          "date": "2026-01-02",
+          "time": "13:01",
+          "fut_x": 5986.5,
+          "fut_y": 17027,
+          "z_score": 0.9754
+        }
+      ],
+      "last_update": "2026-01-02T13:01:29.598277"
+    },
+    "M&M-HEROMOTOCO": {
+      "config": {
+        "stock_y": "M&M",
+        "stock_x": "HEROMOTOCO",
+        "sector": "AUTO",
+        "beta": 0.3987,
+        "intercept": 1353.5494,
+        "sigma": 114.5052,
+        "lot_size_y": 200,
+        "lot_size_x": 150,
+        "adf_value": 0.0007
+      },
+      "position": {
+        "is_open": false,
+        "position_type": "",
+        "entry_date": "",
+        "entry_time": "",
+        "entry_price_y": 0.0,
+        "entry_price_x": 0.0,
+        "entry_z_score": 0.0,
+        "lots_y": 0,
+        "lots_x": 0,
+        "current_price_y": 3819.1,
+        "current_price_x": 5986.5,
+        "current_z_score": 0.6875936638685349,
+        "pnl_y": 0.0,
+        "pnl_x": 0.0,
+        "total_pnl": 0.0
+      },
+      "logs": [
+        {
+          "date": "2026-01-02",
+          "time": "13:00",
+          "fut_x": 5987.5,
+          "fut_y": 3817.4,
+          "z_score": 0.6693
+        },
+        {
+          "date": "2026-01-02",
+          "time": "13:01",
+          "fut_x": 5986.5,
+          "fut_y": 3819.1,
+          "z_score": 0.6876
+        }
+      ],
+      "last_update": "2026-01-02T13:01:29.999327"
+    },
+    "UNOMINDA-HEROMOTOCO": {
+      "config": {
+        "stock_y": "UNOMINDA",
+        "stock_x": "HEROMOTOCO",
+        "sector": "AUTO",
+        "beta": 0.1809,
+        "intercept": 256.4689,
+        "sigma": 62.5965,
+        "lot_size_y": 550,
+        "lot_size_x": 150,
+        "adf_value": 0.0027
+      },
+      "position": {
+        "is_open": false,
+        "position_type": "",
+        "entry_date": "",
+        "entry_time": "",
+        "entry_price_y": 0.0,
+        "entry_price_x": 0.0,
+        "entry_z_score": 0.0,
+        "lots_y": 0,
+        "lots_x": 0,
+        "current_price_y": 1318.7,
+        "current_price_x": 5986.5,
+        "current_z_score": -0.3311167557291548,
+        "pnl_y": 0.0,
+        "pnl_x": 0.0,
+        "total_pnl": 0.0
+      },
+      "logs": [
+        {
+          "date": "2026-01-02",
+          "time": "13:00",
+          "fut_x": 5987.5,
+          "fut_y": 1318.1,
+          "z_score": -0.3436
+        },
+        {
+          "date": "2026-01-02",
+          "time": "13:01",
+          "fut_x": 5986.5,
+          "fut_y": 1318.7,
+          "z_score": -0.3311
+        }
+      ],
+      "last_update": "2026-01-02T13:01:30.206497"
+    },
+    "BANKINDIA-CANBK": {
+      "config": {
+        "stock_y": "BANKINDIA",
+        "stock_x": "CANBK",
         "sector": "BANK",
-        "beta": 0.7253,
-        "intercept": 556.2798,
-        "sigma": 59.145,
-        "lot_size_y": 625,
-        "lot_size_x": 750,
+        "beta": 0.7188,
+        "intercept": 36.9799,
+        "sigma": 4.3428,
+        "lot_size_y": 5200,
+        "lot_size_x": 6750,
+        "adf_value": 0.0052
+      },
+      "position": {
+        "is_open": false,
+        "position_type": "",
+        "entry_date": "",
+        "entry_time": "",
+        "entry_price_y": 0.0,
+        "entry_price_x": 0.0,
+        "entry_z_score": 0.0,
+        "lots_y": 0,
+        "lots_x": 0,
+        "current_price_y": 150.62,
+        "current_price_x": 155.32,
+        "current_z_score": 0.4596306530349074,
+        "pnl_y": 0.0,
+        "pnl_x": 0.0,
+        "total_pnl": 0.0
+      },
+      "logs": [
+        {
+          "date": "2026-01-02",
+          "time": "13:00",
+          "fut_x": 155.3,
+          "fut_y": 150.6,
+          "z_score": 0.4583
+        },
+        {
+          "date": "2026-01-02",
+          "time": "13:01",
+          "fut_x": 155.32,
+          "fut_y": 150.62,
+          "z_score": 0.4596
+        }
+      ],
+      "last_update": "2026-01-02T13:01:30.413656"
+    },
+    "BANKINDIA-AUBANK": {
+      "config": {
+        "stock_y": "BANKINDIA",
+        "stock_x": "AUBANK",
+        "sector": "BANK",
+        "beta": 0.1078,
+        "intercept": 37.9876,
+        "sigma": 5.8986,
+        "lot_size_y": 5200,
+        "lot_size_x": 1000,
         "adf_value": 0.0491
       },
       "position": {
@@ -22,287 +304,42 @@
         "entry_z_score": 0.0,
         "lots_y": 0,
         "lots_x": 0,
-        "current_price_y": 1230.7,
-        "current_price_x": 965.5,
-        "current_z_score": -0.43717896694563985,
+        "current_price_y": 150.62,
+        "current_price_x": 1009,
+        "current_z_score": 0.65476553758519,
         "pnl_y": 0.0,
         "pnl_x": 0.0,
         "total_pnl": 0.0
       },
       "logs": [
         {
-          "date": "2025-12-29",
-          "time": "21:55",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
+          "date": "2026-01-02",
+          "time": "13:00",
+          "fut_x": 1009,
+          "fut_y": 150.6,
+          "z_score": 0.6514
         },
         {
-          "date": "2025-12-29",
-          "time": "21:56",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:57",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:58",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:59",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:00",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:01",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:02",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:03",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:04",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:05",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:06",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:07",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:09",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:10",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:11",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:12",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:13",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:14",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:15",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:16",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:17",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:18",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:19",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:20",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:21",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:22",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:23",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:24",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:25",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:26",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:27",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:29",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:30",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:31",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:32",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:33",
-          "fut_x": 965.5,
-          "fut_y": 1230.7,
-          "z_score": -0.4372
+          "date": "2026-01-02",
+          "time": "13:01",
+          "fut_x": 1009,
+          "fut_y": 150.62,
+          "z_score": 0.6548
         }
       ],
-      "last_update": "2025-12-29T22:33:23.513253"
+      "last_update": "2026-01-02T13:01:30.815833"
     },
-    "KOTAKBANK-HDFCBANK": {
+    "BANKBARODA-CANBK": {
       "config": {
-        "stock_y": "KOTAKBANK",
-        "stock_x": "HDFCBANK",
+        "stock_y": "BANKBARODA",
+        "stock_x": "CANBK",
         "sector": "BANK",
-        "beta": 1.5071,
-        "intercept": 594.885,
-        "sigma": 93.5779,
-        "lot_size_y": 400,
-        "lot_size_x": 550,
-        "adf_value": 0.0305
+        "beta": 1.2669,
+        "intercept": 102.2656,
+        "sigma": 6.5652,
+        "lot_size_y": 2925,
+        "lot_size_x": 6750,
+        "adf_value": 0.0143
       },
       "position": {
         "is_open": false,
@@ -314,287 +351,42 @@
         "entry_z_score": 0.0,
         "lots_y": 0,
         "lots_x": 0,
-        "current_price_y": 2156.7,
-        "current_price_x": 990.2,
-        "current_z_score": 0.7425319439739444,
+        "current_price_y": 305.15,
+        "current_price_x": 155.32,
+        "current_z_score": 0.9305873393042083,
         "pnl_y": 0.0,
         "pnl_x": 0.0,
         "total_pnl": 0.0
       },
       "logs": [
         {
-          "date": "2025-12-29",
-          "time": "21:55",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
+          "date": "2026-01-02",
+          "time": "13:00",
+          "fut_x": 155.3,
+          "fut_y": 305.35,
+          "z_score": 0.9649
         },
         {
-          "date": "2025-12-29",
-          "time": "21:56",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:57",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:58",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:59",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:00",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:01",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:02",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:03",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:04",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:05",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:06",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:07",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:09",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:10",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:11",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:12",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:13",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:14",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:15",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:16",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:17",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:18",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:19",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:20",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:21",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:22",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:23",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:24",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:25",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:26",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:27",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:29",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:30",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:31",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:32",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:33",
-          "fut_x": 990.2,
-          "fut_y": 2156.7,
-          "z_score": 0.7425
+          "date": "2026-01-02",
+          "time": "13:01",
+          "fut_x": 155.32,
+          "fut_y": 305.15,
+          "z_score": 0.9306
         }
       ],
-      "last_update": "2025-12-29T22:33:23.921285"
+      "last_update": "2026-01-02T13:01:31.224513"
     },
-    "KOTAKBANK-ICICIBANK": {
+    "PNB-CANBK": {
       "config": {
-        "stock_y": "KOTAKBANK",
-        "stock_x": "ICICIBANK",
+        "stock_y": "PNB",
+        "stock_x": "CANBK",
         "sector": "BANK",
-        "beta": 0.9699,
-        "intercept": 684.566,
-        "sigma": 109.3876,
-        "lot_size_y": 400,
-        "lot_size_x": 700,
-        "adf_value": 0.0403
+        "beta": 0.4996,
+        "intercept": 50.0337,
+        "sigma": 3.0477,
+        "lot_size_y": 8000,
+        "lot_size_x": 6750,
+        "adf_value": 0.0266
       },
       "position": {
         "is_open": false,
@@ -606,287 +398,42 @@
         "entry_z_score": 0.0,
         "lots_y": 0,
         "lots_x": 0,
-        "current_price_y": 2156.7,
-        "current_price_x": 1344.4,
-        "current_z_score": 1.537655456377136,
+        "current_price_y": 125.76,
+        "current_price_x": 155.32,
+        "current_z_score": -0.6140932506480299,
         "pnl_y": 0.0,
         "pnl_x": 0.0,
         "total_pnl": 0.0
       },
       "logs": [
         {
-          "date": "2025-12-29",
-          "time": "21:55",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
+          "date": "2026-01-02",
+          "time": "13:00",
+          "fut_x": 155.3,
+          "fut_y": 125.81,
+          "z_score": -0.5944
         },
         {
-          "date": "2025-12-29",
-          "time": "21:56",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:57",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:58",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:59",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:00",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:01",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:02",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:03",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:04",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:05",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:06",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:07",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:09",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:10",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:11",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:12",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:13",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:14",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:15",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:16",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:17",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:18",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:19",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:20",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:21",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:22",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:23",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:24",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:25",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:26",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:27",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:29",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:30",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:31",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:32",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:33",
-          "fut_x": 1344.4,
-          "fut_y": 2156.7,
-          "z_score": 1.5377
+          "date": "2026-01-02",
+          "time": "13:01",
+          "fut_x": 155.32,
+          "fut_y": 125.76,
+          "z_score": -0.6141
         }
       ],
-      "last_update": "2025-12-29T22:33:24.130308"
+      "last_update": "2026-01-02T13:01:31.429553"
     },
-    "ICICIBANK-HDFCBANK": {
+    "AUBANK-CANBK": {
       "config": {
-        "stock_y": "ICICIBANK",
-        "stock_x": "HDFCBANK",
+        "stock_y": "AUBANK",
+        "stock_x": "CANBK",
         "sector": "BANK",
-        "beta": 1.3192,
-        "intercept": 112.9406,
-        "sigma": 50.7744,
-        "lot_size_y": 700,
-        "lot_size_x": 550,
-        "adf_value": 0.0001
+        "beta": 6.1445,
+        "intercept": 48.528,
+        "sigma": 40.4454,
+        "lot_size_y": 1000,
+        "lot_size_x": 6750,
+        "adf_value": 0.0222
       },
       "position": {
         "is_open": false,
@@ -898,2028 +445,31 @@
         "entry_z_score": 0.0,
         "lots_y": 0,
         "lots_x": 0,
-        "current_price_y": 1344.4,
-        "current_price_x": 990.2,
-        "current_z_score": -1.473428341841552,
+        "current_price_y": 1009,
+        "current_price_x": 155.32,
+        "current_z_score": 0.15102483842414927,
         "pnl_y": 0.0,
         "pnl_x": 0.0,
         "total_pnl": 0.0
       },
       "logs": [
         {
-          "date": "2025-12-29",
-          "time": "21:55",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
+          "date": "2026-01-02",
+          "time": "13:00",
+          "fut_x": 155.3,
+          "fut_y": 1009,
+          "z_score": 0.1541
         },
         {
-          "date": "2025-12-29",
-          "time": "21:56",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:57",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:58",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:59",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:00",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:01",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:02",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:03",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:04",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:05",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:06",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:07",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:09",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:10",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:11",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:12",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:13",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:14",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:15",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:16",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:17",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:18",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:19",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:20",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:21",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:22",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:23",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:24",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:25",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:26",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:27",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:29",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:30",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:31",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:32",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:33",
-          "fut_x": 990.2,
-          "fut_y": 1344.4,
-          "z_score": -1.4734
+          "date": "2026-01-02",
+          "time": "13:01",
+          "fut_x": 155.32,
+          "fut_y": 1009,
+          "z_score": 0.151
         }
       ],
-      "last_update": "2025-12-29T22:33:24.535993"
-    },
-    "BAJAJFINSV-HDFCLIFE": {
-      "config": {
-        "stock_y": "BAJAJFINSV",
-        "stock_x": "HDFCLIFE",
-        "sector": "FINANCE",
-        "beta": 2.181,
-        "intercept": 319.6384,
-        "sigma": 108.0969,
-        "lot_size_y": 250,
-        "lot_size_x": 1100,
-        "adf_value": 0.0346
-      },
-      "position": {
-        "is_open": false,
-        "position_type": "",
-        "entry_date": "",
-        "entry_time": "",
-        "entry_price_y": 0.0,
-        "entry_price_x": 0.0,
-        "entry_z_score": 0.0,
-        "lots_y": 0,
-        "lots_x": 0,
-        "current_price_y": 2008,
-        "current_price_x": 746.4,
-        "current_z_score": 0.5593425898430011,
-        "pnl_y": 0.0,
-        "pnl_x": 0.0,
-        "total_pnl": 0.0
-      },
-      "logs": [
-        {
-          "date": "2025-12-29",
-          "time": "21:55",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:56",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:57",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:58",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:59",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:00",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:01",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:02",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:03",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:04",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:05",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:06",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:07",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:09",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:10",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:11",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:12",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:13",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:14",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:15",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:16",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:17",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:18",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:19",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:20",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:21",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:22",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:23",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:24",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:25",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:26",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:27",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:29",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:30",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:31",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:32",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:33",
-          "fut_x": 746.4,
-          "fut_y": 2008,
-          "z_score": 0.5593
-        }
-      ],
-      "last_update": "2025-12-29T22:33:24.745213"
-    },
-    "NESTLEIND-TATACONSUM": {
-      "config": {
-        "stock_y": "NESTLEIND",
-        "stock_x": "TATACONSUM",
-        "sector": "FMCG",
-        "beta": 0.6998,
-        "intercept": 443.9382,
-        "sigma": 41.1537,
-        "lot_size_y": 500,
-        "lot_size_x": 550,
-        "adf_value": 0.0
-      },
-      "position": {
-        "is_open": false,
-        "position_type": "",
-        "entry_date": "",
-        "entry_time": "",
-        "entry_price_y": 0.0,
-        "entry_price_x": 0.0,
-        "entry_z_score": 0.0,
-        "lots_y": 0,
-        "lots_x": 0,
-        "current_price_y": 1277.6,
-        "current_price_x": 1193.7,
-        "current_z_score": -0.04105244485915127,
-        "pnl_y": 0.0,
-        "pnl_x": 0.0,
-        "total_pnl": 0.0
-      },
-      "logs": [
-        {
-          "date": "2025-12-29",
-          "time": "21:55",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:56",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:57",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:58",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:59",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:00",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:01",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:02",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:03",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:04",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:05",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:06",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:07",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:09",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:10",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:11",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:12",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:13",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:14",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:15",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:16",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:17",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:18",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:19",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:20",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:21",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:22",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:23",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:24",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:25",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:26",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:27",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:29",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:30",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:31",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:32",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:33",
-          "fut_x": 1193.7,
-          "fut_y": 1277.6,
-          "z_score": -0.0411
-        }
-      ],
-      "last_update": "2025-12-29T22:33:25.151328"
-    },
-    "LT-ADANIPORTS": {
-      "config": {
-        "stock_y": "LT",
-        "stock_x": "ADANIPORTS",
-        "sector": "INFRA",
-        "beta": 0.9447,
-        "intercept": 2330.527,
-        "sigma": 159.232,
-        "lot_size_y": 175,
-        "lot_size_x": 475,
-        "adf_value": 0.0233
-      },
-      "position": {
-        "is_open": false,
-        "position_type": "",
-        "entry_date": "",
-        "entry_time": "",
-        "entry_price_y": 0.0,
-        "entry_price_x": 0.0,
-        "entry_z_score": 0.0,
-        "lots_y": 0,
-        "lots_x": 0,
-        "current_price_y": 4038.7,
-        "current_price_x": 1454.7,
-        "current_z_score": 2.0970527908963,
-        "pnl_y": 0.0,
-        "pnl_x": 0.0,
-        "total_pnl": 0.0
-      },
-      "logs": [
-        {
-          "date": "2025-12-29",
-          "time": "21:55",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:56",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:57",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:58",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:59",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:00",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:01",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:02",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:03",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:04",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:05",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:06",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:07",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:09",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:10",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:11",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:12",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:13",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:14",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:15",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:16",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:17",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:18",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:19",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:20",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:21",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:22",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:23",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:24",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:25",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:26",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:27",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:29",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:30",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:31",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:32",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:33",
-          "fut_x": 1454.7,
-          "fut_y": 4038.7,
-          "z_score": 2.0971
-        }
-      ],
-      "last_update": "2025-12-29T22:33:25.355452"
-    },
-    "CIPLA-APOLLOHOSP": {
-      "config": {
-        "stock_y": "CIPLA",
-        "stock_x": "APOLLOHOSP",
-        "sector": "PHARMA",
-        "beta": 0.0739,
-        "intercept": 992.2773,
-        "sigma": 59.4235,
-        "lot_size_y": 375,
-        "lot_size_x": 125,
-        "adf_value": 0.0015
-      },
-      "position": {
-        "is_open": false,
-        "position_type": "",
-        "entry_date": "",
-        "entry_time": "",
-        "entry_price_y": 0.0,
-        "entry_price_x": 0.0,
-        "entry_z_score": 0.0,
-        "lots_y": 0,
-        "lots_x": 0,
-        "current_price_y": 1490.6,
-        "current_price_x": 7065,
-        "current_z_score": -0.4001918432943196,
-        "pnl_y": 0.0,
-        "pnl_x": 0.0,
-        "total_pnl": 0.0
-      },
-      "logs": [
-        {
-          "date": "2025-12-29",
-          "time": "21:55",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:56",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:57",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:58",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:59",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:00",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:01",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:02",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:03",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:04",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:05",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:06",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:08",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:09",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:10",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:11",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:12",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:13",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:14",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:15",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:16",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:17",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:18",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:19",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:20",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:21",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:22",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:23",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:24",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:25",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:26",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:27",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:29",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:30",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:31",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:32",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:33",
-          "fut_x": 7065,
-          "fut_y": 1490.6,
-          "z_score": -0.4002
-        }
-      ],
-      "last_update": "2025-12-29T22:33:25.560027"
-    },
-    "CIPLA-SUNPHARMA": {
-      "config": {
-        "stock_y": "CIPLA",
-        "stock_x": "SUNPHARMA",
-        "sector": "PHARMA",
-        "beta": 0.3396,
-        "intercept": 929.3462,
-        "sigma": 56.133,
-        "lot_size_y": 375,
-        "lot_size_x": 350,
-        "adf_value": 0.0009
-      },
-      "position": {
-        "is_open": false,
-        "position_type": "",
-        "entry_date": "",
-        "entry_time": "",
-        "entry_price_y": 0.0,
-        "entry_price_x": 0.0,
-        "entry_z_score": 0.0,
-        "lots_y": 0,
-        "lots_x": 0,
-        "current_price_y": 1490.6,
-        "current_price_x": 1714.8,
-        "current_z_score": -0.3757554379776615,
-        "pnl_y": 0.0,
-        "pnl_x": 0.0,
-        "total_pnl": 0.0
-      },
-      "logs": [
-        {
-          "date": "2025-12-29",
-          "time": "21:55",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:56",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:57",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:58",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:59",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:00",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:01",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:02",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:03",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:04",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:05",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:06",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:08",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:09",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:10",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:11",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:12",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:13",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:14",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:15",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:16",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:17",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:18",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:19",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:20",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:21",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:22",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:23",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:24",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:25",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:26",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:27",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:29",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:30",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:31",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:32",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:33",
-          "fut_x": 1714.8,
-          "fut_y": 1490.6,
-          "z_score": -0.3758
-        }
-      ],
-      "last_update": "2025-12-29T22:33:25.766268"
-    },
-    "CIPLA-DRREDDY": {
-      "config": {
-        "stock_y": "CIPLA",
-        "stock_x": "DRREDDY",
-        "sector": "PHARMA",
-        "beta": 0.6222,
-        "intercept": 717.1695,
-        "sigma": 58.8126,
-        "lot_size_y": 375,
-        "lot_size_x": 625,
-        "adf_value": 0.0025
-      },
-      "position": {
-        "is_open": false,
-        "position_type": "",
-        "entry_date": "",
-        "entry_time": "",
-        "entry_price_y": 0.0,
-        "entry_price_x": 0.0,
-        "entry_z_score": 0.0,
-        "lots_y": 0,
-        "lots_x": 0,
-        "current_price_y": 1490.6,
-        "current_price_x": 1268.1,
-        "current_z_score": -0.2649316643032276,
-        "pnl_y": 0.0,
-        "pnl_x": 0.0,
-        "total_pnl": 0.0
-      },
-      "logs": [
-        {
-          "date": "2025-12-29",
-          "time": "21:55",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:56",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:57",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:58",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "21:59",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:00",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:01",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:02",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:03",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:04",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:05",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:06",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:08",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:09",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:10",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:11",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:12",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:13",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:14",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:15",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:16",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:17",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:18",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:19",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:20",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:21",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:22",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:23",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:24",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:25",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:26",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:27",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:29",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:30",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:31",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:32",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        },
-        {
-          "date": "2025-12-29",
-          "time": "22:33",
-          "fut_x": 1268.1,
-          "fut_y": 1490.6,
-          "z_score": -0.2649
-        }
-      ],
-      "last_update": "2025-12-29T22:33:25.977501"
+      "last_update": "2026-01-02T13:01:32.149765"
     }
   },
-  "last_updated": "2025-12-29T22:33:51.392859"
+  "last_updated": "2026-01-02T13:01:46.972185"
 }

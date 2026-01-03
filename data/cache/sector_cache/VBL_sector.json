@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FMCG",
+    "niche_industry": "Beverage Bottling and Distribution",
+    "sector_kpis": {
+      "kpi_1": "Sales Volume Growth: 23.2%",
+      "kpi_2": "EBITDA Margin: 23.5%",
+      "kpi_3": "Inventory Turnover: 9.8x"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:15:06.802636",
+  "_symbol": "VBL"
+}

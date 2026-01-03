@@ -6,12 +6,25 @@ import json
 # =========================================================
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Define Data Directories
+# Define Data Directories (Legacy - kept for backward compatibility)
 DATA_DIR = os.path.join(BASE_DIR, "data", "historical")
 ARTIFACTS_DIR = os.path.join(BASE_DIR, "data", "artifacts")
 LOG_DIR = os.path.join(BASE_DIR, "data", "logs")
 CACHE_DIR = os.path.join(BASE_DIR, "data", "cache")
 UNIVERSE_DIR = os.path.join(BASE_DIR, "data", "universe")
+
+# NEW: Structured Data Paths (Research-backed separation)
+# ───────────────────────────────────────────────────────
+# Pair Selection: Short-term spot data for scanning cointegrated pairs
+PAIR_SELECTION_DIR = os.path.join(BASE_DIR, "data", "pair_selection", "spot")
+
+# Backtesting: Long-term data for robust statistical validation
+BACKTEST_SPOT_DIR = os.path.join(BASE_DIR, "data", "historical", "spot")
+BACKTEST_FUTURES_DIR = os.path.join(BASE_DIR, "data", "historical", "futures")
+
+# Data Duration Settings (per research benchmarks)
+PAIR_SELECTION_DAYS = 365   # 1 year for pair scanning
+BACKTEST_SPOT_DAYS = 750    # 3 years for robust backtesting
 
 # Define Config Directory
 CONFIG_DIR = os.path.join(BASE_DIR, "infrastructure", "config")
@@ -19,7 +32,8 @@ CONFIG_FILE = os.path.join(CONFIG_DIR, "config.json")
 SESSION_FILE = os.path.join(CONFIG_DIR, "kite_session.json")
 
 # Ensure critical directories exist
-for d in [DATA_DIR, ARTIFACTS_DIR, LOG_DIR, CACHE_DIR, UNIVERSE_DIR, CONFIG_DIR]:
+for d in [DATA_DIR, ARTIFACTS_DIR, LOG_DIR, CACHE_DIR, UNIVERSE_DIR, CONFIG_DIR,
+          PAIR_SELECTION_DIR, BACKTEST_SPOT_DIR, BACKTEST_FUTURES_DIR]:
     os.makedirs(d, exist_ok=True)
 
 # --- KEY FILES ---
@@ -46,7 +60,7 @@ PAIR_PVALUE_MAX = 0.05
 # - gemini-2.5-pro
 # - gemini-2.0-flash
 # - gemini-2.0-flash-lite
-GENAI_MODEL = "gemini-3-pro-preview"  # <--- DEFAULT MODEL SET HERE
+GENAI_MODEL = "gemini-3-flash-preview"  # <--- SWITCHED: Higher RPD limit than pro
 
 # =========================================================
 # 2. CREDENTIALS LOADER

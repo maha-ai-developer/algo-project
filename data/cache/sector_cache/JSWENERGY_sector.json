@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "ENERGY",
+    "niche_industry": "Power Generation & Renewables",
+    "sector_kpis": {
+      "kpi_1": "Net Generation: 27.9 BUs (FY24)",
+      "kpi_2": "Renewable Mix: 56% of Operational Capacity",
+      "kpi_3": "EBITDA Margin: 49% (FY24)"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T13:08:31.811947",
+  "_symbol": "JSWENERGY"
+}

@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": -0.42,
+      "profit_growth_3yr_avg": -19.0,
+      "roe_latest": 14.34,
+      "roce_latest": 10.7,
+      "pe_ratio": 37.36,
+      "debt_to_equity": 0.39,
+      "beta": 1.17
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": -2509.0,
+      "growth_rate_projection": 6.0,
+      "shares_outstanding_cr": 102.01,
+      "net_debt_cr": 11203.0,
+      "tax_rate": 23.2
+    },
+    "qualitative": {
+      "management_integrity_score": 0.65,
+      "reasoning": "The company is led by Naveen Jindal, who has faced legal scrutiny in the past regarding the coal block allocation cases. However, the company has demonstrated strong operational execution, becoming a low-cost steel producer with significant capacity expansion (Angul). Recent financial reports have unmodified audit opinions, and the management has successfully deleveraged the balance sheet significantly from peak debt levels, although a new capex cycle has begun. The score reflects a balance between historical governance concerns and recent professional management performance."
+    }
+  },
+  "_cached_at": "2025-12-31T11:46:14.203128",
+  "_symbol": "JINDALSTEL"
+}

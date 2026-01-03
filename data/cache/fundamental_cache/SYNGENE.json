@@ -1,0 +1,26 @@
+{
+  "data": {
+    "financials": {
+      "sales_growth_3yr_avg": 12.0,
+      "profit_growth_3yr_avg": 5.0,
+      "roe_latest": 10.5,
+      "roce_latest": 13.5,
+      "pe_ratio": 56.1,
+      "debt_to_equity": 0.03,
+      "beta": 0.82
+    },
+    "dcf_inputs": {
+      "free_cash_flow_latest_cr": 220.0,
+      "growth_rate_projection": 10.0,
+      "shares_outstanding_cr": 40.29,
+      "net_debt_cr": -456.0,
+      "tax_rate": 23.0
+    },
+    "qualitative": {
+      "management_integrity_score": 8.5,
+      "reasoning": "Syngene is a subsidiary of Biocon with a high-integrity management team and strong governance standards. It is a leading integrated CRO/CDMO with a robust client base including top global pharma companies. While the company faces short-term headwinds due to a slowdown in US biotech funding (leading to single-digit growth guidance for FY25/FY26), its long-term fundamentals are secured by capacity expansions (e.g., Mangalore, Hyderabad) and a debt-free balance sheet (net cash position)."
+    }
+  },
+  "_cached_at": "2025-12-31T12:09:55.111009",
+  "_symbol": "SYNGENE"
+}

@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "BANK",
+    "niche_industry": "Public Sector Bank (PSB)",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA%: 2.16%",
+      "kpi_2": "Net Interest Margin (NIM): 3.10%",
+      "kpi_3": "CASA Ratio: 38.42%"
+    },
+    "moat_rating": "Narrow",
+    "competitive_position": "CHALLENGER"
+  },
+  "_cached_at": "2025-12-31T12:38:08.811974",
+  "_symbol": "BANKBARODA"
+}

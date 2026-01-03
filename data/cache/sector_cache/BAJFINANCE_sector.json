@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "NBFC - Consumer Finance",
+    "sector_kpis": {
+      "kpi_1": "AUM Growth: 29% YoY",
+      "kpi_2": "Gross NPA: 1.24%",
+      "kpi_3": "Net Interest Income Growth: 23% YoY"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T12:36:04.293967",
+  "_symbol": "BAJFINANCE"
+}

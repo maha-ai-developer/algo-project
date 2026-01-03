@@ -1,0 +1,15 @@
+{
+  "data": {
+    "broad_sector": "FINANCE",
+    "niche_industry": "Power Infrastructure Finance",
+    "sector_kpis": {
+      "kpi_1": "Gross NPA: 3.34%",
+      "kpi_2": "Net Interest Margin (NIM): 3.65%",
+      "kpi_3": "Capital Adequacy Ratio (CRAR): 25.49%"
+    },
+    "moat_rating": "Wide",
+    "competitive_position": "LEADER"
+  },
+  "_cached_at": "2025-12-31T13:11:33.399489",
+  "_symbol": "PFC"
+}
